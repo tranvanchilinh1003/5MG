@@ -1,0 +1,36 @@
+<header class="site-header bg-white/95 backdrop-blur-md sticky top-0 z-50 border-0 shadow-none ring-0 outline-none" x-data="headerComponent()">
+  <!-- Top Bar -->
+  
+  <!-- Home: nền gradient tách lớp để vệt sáng nằm giữa nền và nội dung -->
+  <div class="site-header-gradient-layer" aria-hidden="true"></div>
+  <!-- Ánh sáng góc: ẩn mặc định; bật bằng class .mg-header-corner-shine trên <body> -->
+  <div class="mg-corner-shine mg-corner-shine--top" aria-hidden="true"></div>
+  <div class="site-header-body">
+    <div class="">
+      <div class="header-bar flex-between h-16 items-center lg:h-[4.25rem]">
+        <div class="header-brand shrink-0">
+          <a
+  href="/index.html"
+  class="header-logo-link inline-flex items-center font-semibold text-lg tracking-tight text-gray-900 transition-colors hover:text-gray-700 md:text-xl"
+>
+ 
+</a>
+        </div>
+        <!-- Navigation — hiển thị thẳng trên header mọi kích thước màn hình -->
+<div class="header-desktop-menu mg-nav-desktop relative flex min-w-0 items-center self-stretch">
+  <nav class="header-desktop-nav relative z-20" aria-label="Menu desktop">
+    <ul class="home-hero-nav-list">
+      <li><a class="home-hero-nav-is-muted" href="index.html">Home</a></li>
+      <li><a class="home-hero-nav-is-muted" href="about.html">About</a></li>
+      <li><a class="home-hero-nav-is-muted" href="service.html">Services</a></li>
+      <li><a class="home-hero-nav-is-muted" href="ourworks.html">Ourworks</a></li>
+    </ul>
+  </nav>
+</div>
+
+        <div class="header-bar-spacer" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+  
+</header>

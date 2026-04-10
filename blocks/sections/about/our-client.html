@@ -1,0 +1,269 @@
+<section
+  id="about-our-clients"
+  class="about-our-clients reveal-on-scroll relative overflow-x-clip overflow-y-visible bg-[#efefef] text-black"
+  aria-labelledby="about-our-clients-heading">
+  <style>
+    #about-our-clients [x-cloak] {
+      display: none !important;
+    }
+  </style>
+
+  <header
+    class="relative z-[1] rounded-bl-[2.125rem] bg-[var(--mg-bar-bg)] px-4 pb-8  shadow-[14px_12px_40px_3px_rgba(0,0,0,0.68),24px_26px_76px_8px_rgba(0,0,0,0.52)] sm:rounded-bl-[2.5rem] sm:px-6 md:pb-10 lg:rounded-bl-[3rem]">
+    <div class="container mx-auto">
+      <h2
+        id="about-our-clients-heading"
+        class="text-right font-synthesis-none text-[3.625rem] font-black leading-[0.82] tracking-[-0.07em] text-[#f9552f] md:text-[5.5rem] lg:text-[6.875rem]">
+        <span class="block">Our</span>
+        <span class="block">Clients</span>
+      </h2>
+    </div>
+  </header>
+
+  <div class="container mx-auto  pt-8  md:pt-10  lg:pt-12">
+    <div
+      class="grid w-full min-w-0 grid-cols-1 gap-8 md:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] md:items-start md:gap-x-6 md:gap-y-0 lg:gap-x-8 xl:gap-x-10">
+      <div
+        class="flex w-full min-w-0 items-start justify-center md:-ml-6 md:justify-start lg:-ml-8">
+        <img
+          src="assets/images/user.webp"
+          alt="Hình ảnh minh họa đối tác"
+          class="mx-auto block h-auto w-full max-w-[220px] object-contain object-center sm:max-w-[260px] md:mx-0 md:max-w-full md:object-left"
+          loading="lazy"
+          decoding="async" />
+      </div>
+
+      <div class="min-w-0 bg-[#efefef]">
+        <img
+          src="assets/images/brand_about.png"
+          alt="Thương hiệu và đối tác"
+          class="mx-auto block h-auto w-full max-w-full object-contain md:mx-0"
+          loading="lazy"
+          decoding="async" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Nút trong container; panel Join us full chiều ngang + bg-mg-hero (không bị giới hạn .container) -->
+  <div
+    id="about-join-us-block"
+    class="w-full min-w-0"
+    x-data="{
+      joinOpen: false,
+      joinInView: false,
+      init() {
+        var self = this;
+        var el = document.getElementById('about-join-us-block');
+        if (!el || typeof IntersectionObserver === 'undefined') return;
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (e) {
+              self.joinInView = e.isIntersecting;
+            });
+          },
+          { root: null, rootMargin: '0px 0px -8% 0px', threshold: [0, 0.12, 0.2] }
+        );
+        io.observe(el);
+      }
+    }">
+    <div
+      class="container mx-auto  py-6">
+      <div class="isolate flex w-full min-w-0 flex-col items-stretch">
+        <div
+          class="relative z-20 flex shrink-0 flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-4">
+          <button
+            type="button"
+            id="about-join-us-toggle"
+            class="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--mg-primary)] px-6 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-[0_8px_24px_rgba(249,85,47,0.35)] transition hover:bg-[var(--mg-primary-deep)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f9552f] focus-visible:ring-offset-2 focus-visible:ring-offset-[#efefef] md:px-7 md:py-3.5 md:text-[0.9375rem] xl:gap-2.5 xl:px-10 xl:py-4 xl:text-base xl:tracking-[0.08em] xl:shadow-[0_12px_36px_rgba(249,85,47,0.38)]"
+            @click="joinOpen = !joinOpen"
+            :aria-expanded="joinOpen ? 'true' : 'false'"
+            aria-controls="about-join-us-panel">
+            <span>Join us</span>
+            <svg
+              class="h-4 w-4 shrink-0 transition-transform duration-200 md:h-[1.125rem] md:w-[1.125rem] xl:h-5 xl:w-5"
+              :class="joinOpen ? 'rotate-180' : ''"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="about-join-us-panel"
+      x-cloak
+      x-show="joinOpen"
+      x-transition:enter="transition ease-out duration-200"
+      x-transition:enter-start="opacity-0"
+      x-transition:enter-end="opacity-100"
+      x-transition:leave="transition ease-in duration-150"
+      x-transition:leave-start="opacity-100"
+      x-transition:leave-end="opacity-0"
+      role="region"
+      aria-labelledby="about-join-us-toggle"
+      class="relative z-10 mt-8 w-full min-w-0 bg-mg-hero bg-cover bg-center bg-no-repeat">
+      <!-- Nội dung Join us — include trong #about-join-us-panel (nền bg-mg-hero full width ở our-client) -->
+<div
+    class="about-join-us-surface about-join-us-surface--on-mg-hero relative flex flex-col overflow-visible rounded-none py-12 sm:py-24">
+    <!-- Vệt sáng: chỉ khi scroll tới khu Join (joinInView) VÀ đã mở tab (joinOpen) — Alpine ở #about-join-us-block -->
+    <img class="mg-corner-shine mg-corner-shine--join-contact" :class="{ 'is-visible': joinOpen && joinInView }"
+        src="assets/images/light_white.webp" alt="" width="640" height="640" decoding="async" />
+
+
+
+    <div class="relative z-[2] mx-auto container text-black">
+      <div class=" mb-6 max-w-5xl sm:mb-8 md:mb-10 xl:px-12 px-0">
+        <img
+          src="assets/images/join_us_black.png"
+          alt="JOIN US"
+          class=""
+          decoding="async"
+          loading="lazy" />
+      </div>
+      <div class="relative mx-auto max-w-5xl">
+            <p class="mt-5 text-base font-semibold leading-snug text-black sm:text-2xl md:mt-6">
+                Chúng tôi tìm kiếm những cá nhân:
+            </p>
+
+            <ul
+                class="mt-8 flex list-none flex-col gap-6 p-0 sm:mt-9 md:flex-row md:flex-wrap md:items-center md:justify-between md:gap-x-8 md:gap-y-6">
+                <li class="flex max-w-full items-center gap-3">
+                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-black shadow-sm"
+                        aria-hidden="true">
+                        <svg class="h-5 w-5 text-[#ff5a2d]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
+                            <path d="M9 18h6" />
+                            <path d="M10 22h4" />
+                        </svg>
+                    </span>
+                    <span class="text-sm font-normal leading-snug sm:text-base">Đam mê sáng tạo</span>
+                </li>
+                <li class="flex max-w-full items-center gap-3">
+                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-black shadow-sm"
+                        aria-hidden="true">
+                        <svg class="h-5 w-5 text-[#ff5a2d]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                        </svg>
+                    </span>
+                    <span class="text-sm font-normal leading-snug sm:text-base">Yêu thích truyền thông &amp; nội
+                        dung</span>
+                </li>
+                <li class="flex max-w-full items-center gap-3 md:max-w-[20rem]">
+                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-black shadow-sm"
+                        aria-hidden="true">
+                        <svg class="h-5 w-5 text-[#ff5a2d]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                        </svg>
+                    </span>
+                    <span class="text-sm font-normal leading-snug sm:text-base">Sẵn sàng học hỏi và phát triển cùng
+                        các dự án lớn</span>
+                </li>
+            </ul>
+
+            <h4 class="mt-10  text-base font-semibold text-black sm:mt-24 sm:text-lg">
+                Vị trí thường xuyên tuyển:
+            </h4>
+
+            <ul class="mt-5 grid list-none grid-cols-1 gap-3 p-0 sm:grid-cols-2 sm:gap-4 md:mt-6" role="list">
+                <li
+                    class="flex items-center gap-2 rounded-xl border-2 border-black/40 px-4 py-3.5 text-left shadow-sm backdrop-blur-sm">
+                    <span class="about-join-positions-bullet" aria-hidden="true"></span>
+                    <span class="text-sm font-semibold leading-snug text-black sm:text-base">Senior Planning Executive
+                        (IMC)</span>
+                </li>
+                <li
+                    class="flex items-center gap-2 rounded-xl border-2 border-black/40 px-4 py-3.5 text-left shadow-sm backdrop-blur-sm">
+                    <span class="about-join-positions-bullet" aria-hidden="true"></span>
+                    <span class="text-sm font-semibold leading-snug text-black sm:text-base">Senior Account Executive
+                        (IMC)</span>
+                </li>
+                <li
+                    class="flex items-center gap-2 rounded-xl border-2 border-black/40 px-4 py-3.5 text-left shadow-sm backdrop-blur-sm">
+                    <span class="about-join-positions-bullet" aria-hidden="true"></span>
+                    <span class="text-sm font-semibold leading-snug text-black sm:text-base">Business Development
+                        Manager</span>
+                </li>
+                <li
+                    class="flex items-center gap-2 rounded-xl border-2 border-black/40 px-4 py-3.5 text-left shadow-sm backdrop-blur-sm">
+                    <span class="about-join-positions-bullet" aria-hidden="true"></span>
+                    <span class="text-sm font-semibold leading-snug text-black sm:text-base">Content Creator / Social
+                        Executive</span>
+                </li>
+            </ul>
+            <!-- Liên hệ tuyển dụng (CV); fold neo ngoài .container — home-hero.css -->
+            <p class="relative z-20 mt-10 text-center sm:mt-12">
+                <a href="mailto:fivemediagroup@5mg.vn"
+                    class="inline-flex items-center gap-1.5 rounded-full border-b-2 border-black/30 px-6 pb-1.5 pt-0.5 text-[0.9375rem] font-semibold leading-snug tracking-wide text-black/85 outline-none transition-colors duration-200 ease-out hover:border-black/55 hover:bg-transparent hover:text-black focus-visible:ring-2 focus-visible:ring-black/15 focus-visible:ring-offset-2">
+                    Gửi CV về email
+                    <span class="text-[0.85em] text-black/50" aria-hidden="true">→</span>
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Neo đáy fold theo đáy .container, không cần bottom: 90px. -->
+    <div class="pointer-events-none relative z-[12] h-0 w-full shrink-0 overflow-visible" aria-hidden="true">
+        <div class="home-hero-fold home-hero-curve-fold home-hero-fold--join-bar [--mg-hero-bar-pad-y:0px]">
+            <svg class="home-hero-fold-clip-defs" width="0" height="0" aria-hidden="true" focusable="false">
+                <defs>
+                    <clipPath id="home-hero-fold-clip-join" clipPathUnits="objectBoundingBox">
+                        <path d="M 1 1 L 0 1 C 0.45 1, 0.8 0.6, 1 0.15 L 1 0 Z" />
+                    </clipPath>
+                    <filter id="home-hero-fold-shadow-filter-join" x="-110%" y="-110%" width="320%" height="320%"
+                        color-interpolation-filters="sRGB">
+                        <feDropShadow in="SourceAlpha" dx="-28" dy="34" stdDeviation="26" flood-color="#000000"
+                            flood-opacity="0.24" result="home-hero-fold-shadow-soft-join" />
+                        <feDropShadow in="SourceAlpha" dx="-24" dy="30" stdDeviation="7" flood-color="#000000"
+                            flood-opacity="0.48" result="home-hero-fold-shadow-edge-join" />
+                        <feMerge>
+                            <feMergeNode in="home-hero-fold-shadow-soft-join" />
+                            <feMergeNode in="home-hero-fold-shadow-edge-join" />
+                            <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                    </filter>
+                </defs>
+            </svg>
+
+            <div class="home-hero-fold-star-stage">
+                <img class="home-hero-fold-star" src="assets/images/star.png" alt="" decoding="async" />
+            </div>
+
+            <div class="home-hero-fold-layers-wrap">
+                <div class="home-hero-fold-layers"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<section
+    class="container mx-auto flex min-h-[min(80vh,50rem)] max-w-5xl flex-col px-4 py-10 md:min-h-[min(85vh,54rem)] md:py-14">
+    <!-- Căng ngang trên: viền full width + tiêu đề -->
+    <div class="w-full shrink-0  pt-6 md:pt-8">
+        <h2
+            class="text-center text-[32px] font-black leading-[0.95] tracking-[-0.04em] sm:mb-8 sm:text-[40px]  md:text-[44px] lg:text-[52px] xl:mb-12 xl:text-[56px] uppercase font-bold text-black">
+            Contact</h2>
+    </div>
+    <!-- Giữa trống (co giãn theo chiều cao khối) -->
+    <div class="min-h-[clamp(2.5rem,10vh,6rem)] flex-1" aria-hidden="true"></div>
+    <!-- Căng ngang dưới: thương hiệu + viền -->
+    <div class="w-full shrink-0  pb-6 md:pb-8">
+        <p
+            class="home-hero-about-brand text-gradient mx-auto mb-0 flex w-fit max-w-full flex-col items-center text-center font-archivo font-black font-synthesis-none lowercase tracking-[-0.04em] [font-size:clamp(2.5rem,7.25vw,3rem)]">
+            <span class="block w-fit max-w-full">five</span>
+            <span class="block w-fit max-w-full">media group</span>
+        </p>
+    </div>
+</section>
+    </div>
+  </div>
+</section>

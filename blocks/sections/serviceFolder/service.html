@@ -1,0 +1,249 @@
+<!-- Trang Dịch vụ — fragment riêng; responsive lưới giống blocks/sections/home/service.html -->
+<section
+  id="service-page"
+  class="service-section reveal-on-scroll relative overflow-hidden py-10 sm:py-12 md:py-16 lg:py-20 xl:overflow-visible xl:py-24 bg-mg-hero">
+  <div class="relative mx-auto container min-w-0">
+    <!-- Dưới md: một cột; md–lg: 3 cột (tablet hoa max 400px, lg 500px); xl: như Home -->
+    <div
+      class="flex min-w-0 flex-col gap-8 sm:gap-10 md:grid md:grid-cols-[minmax(0,1fr)_minmax(250px,min(92vw,400px))_minmax(0,1fr)] md:items-stretch md:gap-x-4 md:gap-y-8 md:gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(250px,min(92vw,500px))_minmax(0,1fr)] xl:grid xl:grid-cols-[minmax(0,1fr)_minmax(250px,min(92vw,600px))_minmax(0,1fr)] xl:items-stretch xl:gap-x-8 xl:gap-y-6 2xl:gap-x-10">
+      <!-- Hàng 1: tiêu đề Service + “The next level” mobile (xl ẩn — bản desktop trong cột phải) -->
+      <div class="order-0 w-full shrink-0 md:col-span-3 md:row-start-1">
+        <h2
+          class="service-section__title text-gradient relative z-[100] mx-auto mb-6 w-fit max-w-full font-archivo text-[32px] font-black uppercase leading-[0.95] tracking-[-0.04em] sm:mb-8 sm:text-[40px] md:mb-6 md:text-[44px] lg:text-[52px] xl:mb-0 xl:text-[56px]">
+          Service
+        </h2>
+        <div class="relative z-[100] mb-2 flex w-full justify-center sm:mb-4 xl:hidden">
+          <h2
+            class="text-gradient mx-auto w-fit max-w-full min-w-0 text-balance text-center font-bold uppercase leading-[0.95] tracking-[-0.03em] [font-size:clamp(1.375rem,4.2vw+0.35rem,3rem)]">
+            <span class="mx-auto block w-fit max-w-full text-center">The next level</span>
+            <span class="mx-auto block w-fit max-w-full text-center">of media</span>
+          </h2>
+        </div>
+      </div>
+
+      <!-- Cột 2: hoa -->
+      <div
+        class="order-1 flex w-full min-w-0 max-w-full items-center justify-center py-6 sm:py-8 md:col-start-2 md:row-start-2 md:row-span-2 md:min-h-0 md:py-6 lg:py-6 xl:order-2 xl:row-span-2 xl:min-h-[min(480px,60svh)] xl:overflow-visible xl:py-0">
+        <div
+          class="service-section__flower-frame service-section__flower-frame--sized relative mx-auto aspect-square w-full max-w-full bg-transparent md:w-[min(92vw,400px)] lg:w-[min(92vw,500px)] xl:w-auto xl:max-w-none">
+          <img
+            class="service-section__flower relative z-0 pointer-events-none h-full w-full select-none object-contain"
+            src="assets/images/flower.png"
+            width="512"
+            height="512"
+            alt=""
+            decoding="async" />
+          <nav
+            class="service-section__flower-petals absolute inset-0 z-[2]"
+            aria-label="Bốn dịch vụ — bốn ô vuông trên ảnh">
+            <a
+              class="service-flower-petal service-flower-petal--tl"
+              href="#service-page"
+              aria-label="Booking KOLs và Influencers"></a>
+            <a
+              class="service-flower-petal service-flower-petal--tr"
+              href="#service-page"
+              aria-label="Social Performance"></a>
+            <a
+              class="service-flower-petal service-flower-petal--bl"
+              href="#service-page"
+              aria-label="Sản xuất"></a>
+            <a
+              class="service-flower-petal service-flower-petal--br"
+              href="#service-page"
+              aria-label="TikTok Trending"></a>
+            <div
+              class="service-section__flower-labels text-md sm:text-md md:text-[1.125rem] lg:text-2xl xl:text-3xl"
+              aria-hidden="true">
+              <div class="service-flower-label-slot service-flower-label-slot--tl">
+                <span class="service-flower-petal__label service-flower-petal__label--nudge-left">
+                  <span class="service-flower-petal__nowrap text-right">Booking KOLs</span><br />Influencers
+                </span>
+              </div>
+              <div class="service-flower-label-slot service-flower-label-slot--tr">
+                <span class="service-flower-petal__label">Social<br />Performance</span>
+              </div>
+              <div class="service-flower-label-slot service-flower-label-slot--bl">
+                <span class="service-flower-petal__label service-flower-petal__label--lg">Sản xuất</span>
+              </div>
+              <div class="service-flower-label-slot service-flower-label-slot--br">
+                <span class="service-flower-petal__label">TikTok<br />Trending</span>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Cột 1: KOLs — AI -->
+      <div
+        class="order-2 flex min-w-0 flex-col space-y-6 text-center sm:space-y-8 md:col-start-1 md:row-start-2 md:row-span-2 md:h-full md:translate-y-2 md:justify-around md:text-right md:space-y-10 lg:justify-around lg:space-y-16 xl:order-1 xl:row-span-2 xl:h-full xl:justify-center xl:space-y-20 xl:translate-y-2 xl:text-right 2xl:space-y-24">
+        <div class="relative z-[100] flex justify-center md:justify-end lg:justify-end xl:block">
+          <p
+            class="max-w-[20rem] text-md font-extrabold uppercase leading-[1.25] sm:max-w-[22rem] sm:text-md md:text-md xl:text-[1.125rem] xl:max-w-none">
+            1. Cung cấp KOLs/ Influencers<br />
+            tương thích & hiệu quả cho từng<br />
+            chiến dịch
+          </p>
+        </div>
+        <div class="flex justify-center md:justify-end xl:block xl:translate-y-12 2xl:translate-y-16">
+          <div class="w-full max-w-md sm:max-w-lg md:max-w-none xl:max-w-none">
+            <p class="text-md font-extrabold italic uppercase leading-tight sm:text-md lg:text-md xl:text-lg">
+              1. AI Content
+            </p>
+            <div class="mt-2 flex flex-col gap-y-1.5 text-xs font-bold uppercase leading-[1.4] sm:text-xs lg:text-sm xl:text-sm">
+              <p>- Social Content: Ảnh & Video AI</p>
+              <p>- Shortfilm AI</p>
+              <p>2. Shortfilm</p>
+              <p class="mt-3">3. Social Content</p>
+              <p class="mt-3">4. Livestream</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cột 3: một ô lưới — xl: căng full chiều cao ô + justify-evenly (không dùng gap cố định để “ra giữa”) -->
+      <div
+        class="order-3 min-w-0 space-y-8 text-center sm:space-y-10 max-md:mx-auto max-md:max-w-2xl md:col-start-3 md:row-start-2 md:row-span-2 md:mx-0 md:flex md:max-w-none md:flex-col md:justify-around md:space-y-14 md:text-left lg:justify-around lg:space-y-14 xl:flex xl:flex-col xl:h-full xl:min-h-0 xl:justify-evenly xl:gap-0 xl:space-y-0 xl:self-stretch xl:text-left xl:mx-0 xl:max-w-none">
+        <div
+          class="flex min-h-0 w-full min-w-0 -translate-y-2 items-center justify-start text-left">
+          <div class="space-y-3 text-[12px] font-extrabold uppercase leading-[1.25] sm:text-[13px] lg:text-[14px]">
+            <p class="text-md font-extrabold italic uppercase leading-tight sm:text-md lg:text-md xl:text-lg">
+              1. Seeding all platforms<br />
+              <span class="text-xs font-semibold tracking-[0.02em] text-[color:var(--mg-service-text-muted)] sm:text-xs lg:text-sm xl:text-sm">
+                - View / Like / Share / Comment / Followers..
+              </span>
+            </p>
+            <p class="text-md font-extrabold italic uppercase leading-tight sm:text-md lg:text-md xl:text-lg">2. Voting</p>
+          </div>
+        </div>
+
+        <div
+          class="hidden w-full min-h-0 min-w-0 -translate-y-2 items-center justify-center text-center xl:flex xl:max-w-none xl:overflow-visible">
+          <h2
+            class="text-gradient w-full min-w-0 font-bold uppercase leading-[0.95] tracking-[-0.03em] [font-size:clamp(1.375rem,4.2vw+0.35rem,3rem)] flex flex-row flex-wrap justify-end items-baseline gap-x-2 sm:gap-x-3 text-center text-balance text-pretty">
+            <span class="whitespace-nowrap">The next level</span>
+            <span class="whitespace-nowrap">of media</span>
+          </h2>
+        </div>
+
+        <div
+          class="flex min-h-0 w-full min-w-0 -translate-y-2 items-center justify-start text-left">
+          <div class="space-y-3 text-md font-extrabold uppercase leading-[1.25] sm:text-md lg:text-md xl:text-lg">
+            <p>1. Tạo mẫu CapCut trending</p>
+            <p>2. Thiết kế branding template</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="reveal-on-scroll reveal-on-scroll--delay-1 relative overflow-hidden text-white py-12 sm:py-20" >
+  <div class="pointer-events-none absolute inset-0 z-0 flex min-h-full flex-col" aria-hidden="true">
+    <div class="h-1/2 min-h-0 bg-mg-hero"></div>
+    <div class="h-1/2 min-h-0 bg-[var(--mg-bar-bg)]"></div>
+  </div>
+  <div class="relative z-[1] mx-auto w-full ">
+    <div class="relative mx-auto container">
+      <div class="relative overflow-hidden rounded-sm bg-transparent">
+        <div class="swiper service-poster-swiper w-full" id="productionPosterSwiper">
+          <div class="swiper-wrapper">
+            <!-- Mobile: min-h-0 + autoHeight Swiper → chiều cao khớp ảnh; md+: min-h vùng slide -->
+            <div class="swiper-slide !h-auto">
+              <div
+                class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
+                <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
+                  <img
+                    src="assets/images/service/film_ngan.jpg"
+                    alt="Film ngắn — quảng cáo"
+                    class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
+                    loading="lazy"
+                    decoding="async" />
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-slide !h-auto">
+              <div
+                class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
+                <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
+                  <img
+                    src="assets/images/service/kols_clear.jpg"
+                    alt="KOL — booking"
+                    class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
+                    loading="lazy"
+                    decoding="async" />
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-slide !h-auto">
+              <div
+                class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
+                <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
+                  <img
+                    src="assets/images/service/livestream.jpg"
+                    alt="Livestream"
+                    class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
+                    loading="lazy"
+                    decoding="async" />
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-slide !h-auto">
+              <div
+                class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
+                <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
+                  <img
+                    src="assets/images/service/social_content.jpg"
+                    alt="Social content"
+                    class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
+                    loading="lazy"
+                    decoding="async" />
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-slide !h-auto">
+              <div
+                class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
+                <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
+                  <img
+                    src="assets/images/service/social_performance.jpg"
+                    alt="Social performance"
+                    class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
+                    loading="lazy"
+                    decoding="async" />
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-slide !h-auto">
+              <div
+                class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
+                <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
+                  <img
+                    src="assets/images/service/tiktokcapcut.jpg"
+                    alt="TikTok — CapCut"
+                    class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
+                    loading="lazy"
+                    decoding="async" />
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-slide !h-auto">
+              <div
+                class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
+                <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
+                  <img
+                    src="assets/images/service/vin.jpg"
+                    alt="Showcase"
+                    class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
+                    loading="lazy"
+                    decoding="async" />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>

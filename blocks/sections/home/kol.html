@@ -1,0 +1,145 @@
+<section
+  class="relative bg-[var(--mg-bar-bg)] py-14 text-white lg:py-24 [overflow-x:clip] overflow-y-visible reveal-on-scroll">
+  <div class="relative mx-auto container">
+    <div class="grid items-center gap-6 lg:grid-cols-[320px_minmax(0,1fr)] xl:grid-cols-[360px_minmax(0,1fr)]">
+      <!-- Cột trái -->
+      <div class="relative z-10 flex justify-center lg:justify-start">
+        <div class="relative">
+          <div
+            class="absolute -left-10 top-[-34px] h-[210px] w-[180px] border border-white/20 opacity-40 [clip-path:polygon(25%_0%,75%_0%,100%_50%,75%_100%,25%_100%,0%_50%)]"></div>
+          <img src="assets/images/partner.png" alt="" class="h-full w-full object-cover" />
+        </div>
+      </div>
+
+      <!-- Cột phải: 1 ảnh / slide; 2 vòng sáng góc trái-trên chồng nửa vòng -->
+      <div class="relative min-w-0">
+        <div class="kol-swiper-stage isolate">
+          <div class="kol-slide-top-lights" aria-hidden="true">
+            <div class="kol-slide-top-lights__blob kol-slide-top-lights__blob--a"></div>
+            <div class="kol-slide-top-lights__blob kol-slide-top-lights__blob--b"></div>
+            <div class="kol-slide-top-lights__hotspot"></div>
+          </div>
+          <div class="swiper celebrityKolsSlider relative z-[1] overflow-hidden pb-2">
+            <div class="swiper-wrapper">
+            <!-- Slide 1 — Nghệ sĩ -->
+            <div class="swiper-slide !h-auto">
+              <div
+                class="kol-slide-media relative w-full overflow-hidden rounded-none bg-black shadow-[0_18px_50px_rgba(0,0,0,0.55)]">
+                <img
+                  src="assets/images/celeb_nu.jpg"
+                  alt=""
+                  class="absolute inset-0 z-[2] h-full w-full object-cover object-center"
+                  decoding="async"
+                  loading="eager" />
+              </div>
+            </div>
+
+            <!-- Slide 2 — KOLs -->
+            <div class="swiper-slide !h-auto">
+              <div
+                class="kol-slide-media relative w-full overflow-hidden rounded-none bg-black shadow-[0_18px_50px_rgba(0,0,0,0.55)]">
+                <img
+                  src="assets/images/kols.jpg"
+                  alt=""
+                  class="absolute inset-0 z-[2] h-full w-full object-cover object-center"
+                  decoding="async"
+                  loading="eager" />
+              </div>
+            </div>
+
+            <!-- Slide 3 — Partner -->
+            <div class="swiper-slide !h-auto">
+              <div
+                class="kol-slide-media relative w-full overflow-hidden rounded-none bg-black shadow-[0_18px_50px_rgba(0,0,0,0.55)]">
+                <img
+                  src="assets/images/celeb_nam.jpg"
+                  alt=""
+                  class="absolute inset-0 z-[2] h-full w-full object-cover object-center"
+                  decoding="async"
+                  loading="eager" />
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="kol-swiper-fold kol-swiper-curve-fold" aria-hidden="true">
+            <svg class="kol-swiper-fold-clip-defs" width="0" height="0" aria-hidden="true" focusable="false">
+              <defs>
+                <clipPath id="kol-fold-clip" clipPathUnits="objectBoundingBox">
+                  <path d="M 1 1 L 0 1 C 0.45 1, 0.8 0.6, 1 0.15 L 1 0 Z" />
+                </clipPath>
+                <filter
+                  id="kol-fold-shadow-filter"
+                  x="-110%"
+                  y="-110%"
+                  width="320%"
+                  height="320%"
+                  color-interpolation-filters="sRGB">
+                  <feDropShadow
+                    in="SourceAlpha"
+                    dx="-28"
+                    dy="34"
+                    stdDeviation="26"
+                    flood-color="#000000"
+                    flood-opacity="0.24"
+                    result="kol-shadow-soft" />
+                  <feDropShadow
+                    in="SourceAlpha"
+                    dx="-24"
+                    dy="30"
+                    stdDeviation="7"
+                    flood-color="#000000"
+                    flood-opacity="0.48"
+                    result="kol-shadow-edge" />
+                  <feMerge>
+                    <feMergeNode in="kol-shadow-soft" />
+                    <feMergeNode in="kol-shadow-edge" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+            </svg>
+            <div class="kol-swiper-fold-star-stage">
+              <img class="kol-swiper-fold-star" src="assets/images/star.png" alt="" decoding="async" />
+            </div>
+            <div class="kol-swiper-fold-layers-wrap">
+              <div class="kol-swiper-fold-layers"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="celebrity-kols-pagination relative z-20 mt-8 flex justify-center"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    function initCelebrityKolsSlider() {
+      if (typeof Swiper === 'undefined') return;
+      var el = document.querySelector('.celebrityKolsSlider');
+      if (!el || el.dataset.kolSwiperInit === '1') return;
+      el.dataset.kolSwiperInit = '1';
+      new Swiper('.celebrityKolsSlider', {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        speed: 900,
+        loop: false,
+        rewind: true,
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.celebrity-kols-pagination',
+          clickable: true,
+        },
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initCelebrityKolsSlider);
+    } else {
+      initCelebrityKolsSlider();
+    }
+  })();
+</script>

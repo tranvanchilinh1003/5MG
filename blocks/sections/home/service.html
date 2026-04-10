@@ -1,0 +1,123 @@
+<section
+  id="service"
+  class="service-section relative overflow-hidden py-10 sm:py-12 md:py-16 lg:py-20 xl:overflow-visible xl:py-24 bg-mg-hero reveal-on-scroll">
+  <div class="relative mx-auto container min-w-0 ">
+    <!-- Dưới md: một cột; md–lg: 3 cột (tablet hoa max 400px, lg 500px); xl: như cũ -->
+    <div
+      class="flex min-w-0 flex-col gap-8 sm:gap-10 md:grid md:grid-cols-[minmax(0,1fr)_minmax(250px,min(92vw,400px))_minmax(0,1fr)] md:items-stretch md:gap-x-4 md:gap-y-8 md:gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(250px,min(92vw,500px))_minmax(0,1fr)] xl:grid xl:grid-cols-[minmax(0,1fr)_minmax(250px,min(92vw,620px))_minmax(0,1fr)] xl:items-stretch xl:gap-x-8 xl:gap-y-6 2xl:gap-x-10">
+      <!-- Tiêu đề hàng 1 (md+); ẩn từ xl -->
+      <h2
+        class="service-section__title font-archivo order-0 w-full shrink-0 text-center text-[32px] font-black uppercase leading-[0.95] tracking-[-0.04em] sm:text-[40px] md:col-span-3 md:row-start-1 md:text-[44px] lg:text-[52px] xl:hidden xl:text-[56px]">
+        Our Service
+      </h2>
+      <!-- Cột 2: hoa -->
+      <div
+        class="order-1 flex w-full min-w-0 max-w-full items-center justify-center py-6 sm:py-8 md:col-start-2 md:row-start-2 md:row-span-2 md:min-h-0 md:py-6 lg:py-6 xl:order-2 xl:row-span-2 xl:min-h-[min(480px,60svh)] xl:overflow-visible xl:py-0">
+        <!-- md: max 400px; lg: 500px; xl: home-hero.css -->
+        <div
+          class="service-section__flower-frame service-section__flower-frame--sized relative mx-auto aspect-square w-full max-w-full bg-transparent md:w-[min(92vw,400px)] lg:w-[min(92vw,500px)] xl:w-auto xl:max-w-none">
+          <img
+            class="service-section__flower relative z-0 pointer-events-none h-full w-full select-none object-contain"
+            src="assets/images/flower.png"
+            width="512"
+            height="512"
+            alt=""
+            decoding="async" />
+          <nav
+            class="service-section__flower-petals absolute inset-0 z-[2]"
+            aria-label="Bốn dịch vụ — bốn ô vuông trên ảnh">
+            <a
+              class="service-flower-petal service-flower-petal--tl"
+              href="/service.html"
+              aria-label="Booking KOLs và Influencers"></a>
+            <a
+              class="service-flower-petal service-flower-petal--tr"
+              href="/service.html"
+              aria-label="Social Performance"></a>
+            <a
+              class="service-flower-petal service-flower-petal--bl"
+              href="/service.html"
+              aria-label="Sản xuất"></a>
+            <a
+              class="service-flower-petal service-flower-petal--br"
+              href="/service.html"
+              aria-label="TikTok Trending"></a>
+            <!-- Chữ trên cùng, pointer-events none → click xuyên xuống <a> -->
+            <div
+              class="service-section__flower-labels text-md sm:text-md md:text-[1.125rem] lg:text-2xl xl:text-3xl"
+              aria-hidden="true">
+              <div class="service-flower-label-slot service-flower-label-slot--tl">
+                <span class="service-flower-petal__label service-flower-petal__label--nudge-left">
+                  <span class="service-flower-petal__nowrap text-right">Booking KOLs</span><br />Influencers
+                </span>
+              </div>
+              <div class="service-flower-label-slot service-flower-label-slot--tr">
+                <span class="service-flower-petal__label">Social<br />Performance</span>
+              </div>
+              <div class="service-flower-label-slot service-flower-label-slot--bl">
+                <span class="service-flower-petal__label service-flower-petal__label--lg">Sản xuất</span>
+              </div>
+              <div class="service-flower-label-slot service-flower-label-slot--br">
+                <span class="service-flower-petal__label">TikTok<br />Trending</span>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Cột 1: KOLs — Our Service — AI -->
+      <div
+        class="order-2 flex min-w-0 flex-col space-y-6 text-center sm:space-y-8 md:col-start-1 md:row-start-2 md:row-span-2 md:h-full md:translate-y-2 md:justify-around md:text-right md:space-y-10 lg:justify-around lg:space-y-16 xl:order-1 xl:row-span-2 xl:h-full xl:justify-center xl:space-y-20 xl:translate-y-2 xl:text-right 2xl:space-y-24">
+        <div class="flex justify-center md:justify-end lg:justify-end xl:block">
+          <p
+            class="max-w-[20rem] text-md font-extrabold uppercase leading-[1.25] sm:max-w-[22rem] sm:text-md md:text-md xl:text-[1.125rem] xl:max-w-none">
+            1. Cung cấp KOLs/ Influencers<br />
+            tương thích & hiệu quả cho từng<br />
+            chiến dịch
+          </p>
+        </div>
+        <h2
+          class="service-section__title font-archivo hidden shrink-0 text-[32px] font-black uppercase leading-[0.95] tracking-[-0.04em] sm:text-[40px] md:text-[44px] lg:text-[52px] xl:block xl:text-[56px]">
+          Our Service
+        </h2>
+        <div class="flex justify-center md:justify-end xl:block">
+          <div class="w-full max-w-md sm:max-w-lg md:max-w-none xl:max-w-none">
+            <p class="text-md font-extrabold italic uppercase leading-tight sm:text-md lg:text-md xl:text-lg">
+              1. AI Content
+            </p>
+            <div class="mt-2 flex flex-col gap-y-1.5 text-xs font-bold uppercase leading-[1.4] sm:text-xs lg:text-sm xl:text-sm  ">
+              <p>- Social Content: Ảnh & Video AI</p>
+              <p>- Shortfilm AI</p>
+              <p>2. Shortfilm</p>
+              <p class="mt-3">3. Social Content</p>
+              <p class="mt-3">4. Livestream</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cột 3: copy — xl:contents -->
+      <div
+        class="order-3 min-w-0 space-y-8 text-center sm:space-y-10 max-md:mx-auto max-md:max-w-2xl md:col-start-3 md:row-start-2 md:row-span-2 md:mx-0 md:flex md:max-w-none md:flex-col md:justify-around md:space-y-14 md:text-left lg:justify-around lg:space-y-14 xl:contents xl:mx-0 xl:max-w-none">
+        <div class="xl:order-3 xl:flex xl:min-h-0 xl:-translate-y-2 xl:items-center xl:justify-start xl:text-left">
+          <div class="space-y-3 text-[12px] font-extrabold uppercase leading-[1.25] sm:text-[13px] lg:text-[14px]">
+            <p class="text-md font-extrabold italic uppercase leading-tight sm:text-md lg:text-md xl:text-lg">
+              1. Seeding all platforms
+              </p>
+              <span class="text-xs font-semibold tracking-[0.02em] text-[color:var(--mg-service-text-muted)] sm:text-xs lg:text-sm xl:text-sm">
+                - View / Like / Share / Comment / Followers..
+              </span>
+        
+              <p class="text-md font-extrabold italic uppercase leading-tight sm:text-md lg:text-md xl:text-lg">2. Voting</p>
+          </div>
+        </div>
+        <div class="xl:order-6 xl:flex xl:min-h-0 xl:-translate-y-2 xl:items-center xl:justify-start xl:text-left">
+          <div class="space-y-3 text-md font-extrabold uppercase leading-[1.25] sm:text-md lg:text-md xl:text-lg">
+            <p>1. Tạo mẫu CapCut trending</p>
+            <p>2. Thiết kế branding template</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

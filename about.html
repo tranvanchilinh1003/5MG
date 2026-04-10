@@ -1,0 +1,607 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+		<title>5MG — Five Media Group</title>
+		<meta name="description"
+			content="Five Media Group — creative media, tổ chức sự kiện và digital marketing. Dare to be different.">
+		<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+		<script type="text/javascript">
+			const API_URL = "https://panel.dongnai.net/api/v2/";
+		</script>
+        <!-- Add Inline Hidden Class for Fix CLS -->
+        <style>
+        .hidden {
+            display: none;
+        }
+		</style>
+		<!-- Font: @font-face trong assets/css/fonts.css (local woff2) -->
+		<!-- all css -->
+        <link rel="stylesheet" href="assets/css/about_styles.css" />
+		
+		<!-- 1. CAC THU VIEN CAN SU DUNG -->
+		<!-- Notification Library -->
+		<script src="assets/js/libs/notification.js" defer></script>
+		<!-- Initialize FastNotice -->
+		<script>
+			// Khởi tạo FastNotice với cấu hình tùy chỉnh sau khi DOM sẵn sàng
+			document.addEventListener('DOMContentLoaded', function () {
+			    window.fastNotice = new FastNotice({
+			        position: 'top-center',    // Vị trí mặc định
+			        duration: 3000,              // Thời gian hiển thị (ms)
+			        maxNotifications: 3          // Số notification tối đa
+			    });
+			});
+		</script>
+		<!-- Lucide Icons - Custom Build -->
+		<script src="assets/js/lucide-custom.min.js" defer></script>
+		<!-- jModal manager -->
+		<script src="assets/js/libs/jmodal.1.1.0.js" defer></script>
+		<!-- Load BlazeSlider Library -->
+		<script src="assets/js/libs/blaze-slider.js" defer></script>
+		<!-- Libs Tabs JS Thuần -->
+		<script src="assets/js/libs/tabs.js" defer></script>
+		<!-- Image Fallback Utility -->
+		<script src="assets/js/libs/image-fallback.js" defer></script>
+
+
+		<!-- 2. CAC CODE JS TU VIET. -->
+
+		<!-- Header Component JS. Vi no goi Cart nen nam sau Cart -->
+		<script src="assets/js/header.js" defer></script>
+		<script src="assets/js/home-hero-shine.js" defer></script>
+		<script src="assets/js/home-scroll-reveal.js" defer></script>
+		<script src="assets/js/brand-section-vline.js" defer></script>
+		<!-- Run BlazeSlider -->
+		<script src="assets/js/sliders.js" defer></script>
+
+		<!-- Alpine.js (local). Nằm dưới cùng vì defer + auto-run -->
+		<script src="assets/js/libs/alpinejs.3.15.0.js" defer></script>
+		
+		<script src="assets/js/swiper-bundle.min.js"></script>
+	</head>
+	<body class="page-home page-about min-h-screen">
+		<div class="page-home-top">
+			<header class="site-header bg-white/95 backdrop-blur-md sticky top-0 z-50 border-0 shadow-none ring-0 outline-none" x-data="headerComponent()">
+  <!-- Top Bar -->
+  
+  <!-- Home: nền gradient tách lớp để vệt sáng nằm giữa nền và nội dung -->
+  <div class="site-header-gradient-layer" aria-hidden="true"></div>
+  <!-- Ánh sáng góc: ẩn mặc định; bật bằng class .mg-header-corner-shine trên <body> -->
+  <div class="mg-corner-shine mg-corner-shine--top" aria-hidden="true"></div>
+  <div class="site-header-body">
+    <div class="">
+      <div class="header-bar flex-between h-16 items-center lg:h-[4.25rem]">
+        <div class="header-brand shrink-0">
+          <a
+  href="/index.html"
+  class="header-logo-link inline-flex items-center font-semibold text-lg tracking-tight text-gray-900 transition-colors hover:text-gray-700 md:text-xl"
+>
+ 
+</a>
+        </div>
+        <!-- Navigation — hiển thị thẳng trên header mọi kích thước màn hình -->
+<div class="header-desktop-menu mg-nav-desktop relative flex min-w-0 items-center self-stretch">
+  <nav class="header-desktop-nav relative z-20" aria-label="Menu desktop">
+    <ul class="home-hero-nav-list">
+      <li><a class="home-hero-nav-is-muted" href="index.html">Home</a></li>
+      <li><a class="home-hero-nav-is-muted" href="about.html">About</a></li>
+      <li><a class="home-hero-nav-is-muted" href="service.html">Services</a></li>
+      <li><a class="home-hero-nav-is-muted" href="ourworks.html">Ourworks</a></li>
+    </ul>
+  </nav>
+</div>
+
+        <div class="header-bar-spacer" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+  
+</header>
+
+			<main class=" w-full min-w-0 overflow-x-clip">
+				<div
+  class="about-hero home-hero-shell relative z-50 mx-0 min-w-0 w-full overflow-hidden font-sans shadow-none"
+  aria-label="Five Media Group — About us">
+  <div class="reveal-on-scroll relative overflow-hidden bg-mg-hero pt-[max(env(safe-area-inset-top,0px),0.75rem)]">
+    <div class="relative z-30 mx-auto box-border w-full container">
+      <div
+        class="grid grid-cols-1 gap-6 pb-6 pt-4 min-[480px]:gap-10 min-[480px]:pb-8 min-[480px]:pt-5 md:gap-12 md:pb-12 md:pt-8 lg:grid-cols-12 lg:items-stretch lg:gap-x-4 lg:gap-y-6 lg:pb-16 lg:pt-12 xl:gap-x-10 min-[1440px]:gap-x-2">
+        <div
+          class="order-1 lg:order-none lg:col-span-4 xl:col-span-4 max-lg:mx-auto max-lg:w-full max-lg:max-w-xl max-lg:px-1 max-lg:text-center lg:flex lg:flex-col lg:justify-center lg:px-0 lg:text-left">
+          <h1
+            class="home-hero-about-title home-hero-about-title--split text-gradient w-fit max-w-full max-lg:mx-auto lg:mx-0 max-lg:flex max-lg:flex-row max-lg:flex-nowrap max-lg:items-baseline max-lg:justify-center max-lg:gap-x-2 lg:inline-block font-synthesis-none not-italic">
+            <span class="block max-lg:inline-block w-fit max-w-full whitespace-nowrap text-gradient">‘bout</span>
+            <span class="block max-lg:inline-block w-fit max-w-full whitespace-nowrap text-gradient">us</span>
+          </h1>
+
+          <div
+          class="mt-5 space-y-3.5 leading-snug text-[var(--mg-text-on-gradient-soft)] min-[480px]:mt-6 min-[480px]:space-y-6 md:mt-8 text-sm sm:text-sm md:text-md lg:text-lg xl:text-xl md:text-[length:var(--mg-text-side-line-lg)] md:leading-[1.35] tracking-[0.02em] md:tracking-normal">
+          <p>Sản xuất <br /> nội dung đa nền tảng.</p>
+          <p>
+            Đặc biệt là video ngắn <br />
+            <em class=" text-md md:text-lg lg:text-xl xl:text-xl">BẮT TREND</em> và
+            <em class="text-md font-medium uppercase italic text-white md:text-lg lg:text-xl xl:text-3xl">ỨNG DỤNG AI</em>
+          </p>
+
+          <p class="mt-8 font-medium leading-relaxed min-[480px]:!mt-10 md:mt-12 lg:!mt-12">
+            <span class="text-md font-medium uppercase md:text-[length:var(--mg-text-side-title-lg)]">FIVE MEDIA GROUP</span>
+            <br />
+            không chỉ kể câu chuyện thương hiệu một cách ấn tượng mà còn cá nhân hoá chiến lược, biến insight thành nội
+            dung viral.
+          </p>
+        </div>
+        </div>
+
+        <div
+          class="order-2 flex max-lg:mx-auto max-lg:w-full max-lg:max-w-xl flex-col items-center gap-6 sm:gap-8 lg:order-none lg:col-span-4 xl:col-span-4">
+          <p
+            class="home-hero-about-brand text-gradient mx-auto flex w-fit max-w-full flex-col items-center text-center font-archivo font-black font-synthesis-none lowercase mb-4 tracking-[-0.04em] [font-size:clamp(2.5rem,7.25vw,3rem)]">
+            <span class="block w-fit max-w-full">five</span>
+            <span class="block w-fit max-w-full">media group</span>
+          </p>
+
+          <nav class="flex w-full flex-col space-y-6 sm:space-y-10" aria-label="Dịch vụ chính">
+            <a
+              class="block w-full rounded-full border border-transparent bg-[linear-gradient(145deg,rgba(254,231,205,0.94)_0%,rgba(251,184,160,0.9)_52%,rgba(248,168,148,0.88)_100%)] px-7 py-[0.85rem] text-center font-sans text-xs font-normal font-synthesis-none uppercase tracking-[0.07em] text-[#3a2318] no-underline shadow-[0_6px_22px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.65)] backdrop-blur-[12px] transition-[transform,box-shadow,filter] duration-200 ease-out sm:text-sm md:text-base lg:text-lg xl:text-[1.5rem] hover:-translate-y-[2px] hover:brightness-[1.04] hover:shadow-[0_10px_28px_rgba(0,0,0,0.14),inset_0_1px_0_rgba(255,255,255,0.75)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-white/90"
+              href="index.html#service">Production</a>
+            <a
+              class="block w-full rounded-full border border-transparent bg-[linear-gradient(145deg,rgba(254,231,205,0.94)_0%,rgba(251,184,160,0.9)_52%,rgba(248,168,148,0.88)_100%)] px-7 py-[0.85rem] text-center font-sans text-xs font-normal font-synthesis-none uppercase tracking-[0.07em] text-[#3a2318] no-underline shadow-[0_6px_22px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.65)] backdrop-blur-[12px] transition-[transform,box-shadow,filter] duration-200 ease-out sm:text-sm md:text-base lg:text-lg xl:text-[1.5rem] hover:-translate-y-[2px] hover:brightness-[1.04] hover:shadow-[0_10px_28px_rgba(0,0,0,0.14),inset_0_1px_0_rgba(255,255,255,0.75)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-white/90"
+              href="index.html#service">Booking KOLs</a>
+            <a
+              class="block w-full rounded-full border border-transparent bg-[linear-gradient(145deg,rgba(254,231,205,0.94)_0%,rgba(251,184,160,0.9)_52%,rgba(248,168,148,0.88)_100%)] px-7 py-[0.85rem] text-center font-sans text-xs font-normal font-synthesis-none uppercase tracking-[0.07em] text-[#3a2318] no-underline shadow-[0_6px_22px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.65)] backdrop-blur-[12px] transition-[transform,box-shadow,filter] duration-200 ease-out sm:text-sm md:text-base lg:text-lg xl:text-[1.5rem] hover:-translate-y-[2px] hover:brightness-[1.04] hover:shadow-[0_10px_28px_rgba(0,0,0,0.14),inset_0_1px_0_rgba(255,255,255,0.75)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-white/90"
+              href="index.html#service">Social Performance</a>
+            <a
+              class="block w-full rounded-full border border-transparent bg-[linear-gradient(145deg,rgba(254,231,205,0.94)_0%,rgba(251,184,160,0.9)_52%,rgba(248,168,148,0.88)_100%)] px-7 py-[0.85rem] text-center font-sans text-xs font-normal font-synthesis-none uppercase tracking-[0.07em] text-[#3a2318] no-underline shadow-[0_6px_22px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.65)] backdrop-blur-[12px] transition-[transform,box-shadow,filter] duration-200 ease-out sm:text-sm md:text-base lg:text-lg xl:text-[1.5rem] hover:-translate-y-[2px] hover:brightness-[1.04] hover:shadow-[0_10px_28px_rgba(0,0,0,0.14),inset_0_1px_0_rgba(255,255,255,0.75)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-white/90"
+              href="index.html#service">TikTok Trending</a>
+          </nav>
+        </div>
+
+        <div
+          class="order-3 relative flex min-h-0 min-w-0 flex-col items-center justify-center px-2 text-center min-[480px]:px-3 sm:px-0 lg:col-span-4 lg:min-h-[min(280px,32svh)] lg:items-end lg:px-0 lg:text-right xl:col-span-4">
+          <h2
+            class="text-gradient mx-auto w-full min-w-0 max-w-full text-balance text-center font-bold uppercase leading-[1.05] tracking-[-0.03em] [font-size:clamp(1.375rem,4.2vw+0.35rem,3rem)] break-words lg:ml-0 lg:mr-0 lg:text-right lg:text-pretty">
+            <span class="block max-w-[22ch] max-lg:mx-auto lg:ml-auto lg:max-w-full lg:text-right">The next level</span>
+            <span class="block max-w-full max-lg:mx-auto lg:ml-auto lg:text-right">of media</span>
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="home-hero-bar reveal-on-scroll reveal-on-scroll--delay-1 relative z-[40] mt-0 w-full overflow-visible bg-[var(--mg-bar-bg)] text-[var(--mg-text-on-gradient)] shadow-[inset_0_-10px_40px_rgba(0,0,0,0.35)] [--mg-hero-bar-pad-y:clamp(1.25rem,0.85rem+2.4vw,2.5rem)]">
+    
+    <div class="home-hero-fold home-hero-curve-fold" aria-hidden="true">
+      <svg class="home-hero-fold-clip-defs" width="0" height="0" aria-hidden="true" focusable="false">
+        <defs>
+          <clipPath id="home-hero-fold-clip" clipPathUnits="objectBoundingBox">
+            <path d="M 1 1 L 0 1 C 0.45 1, 0.8 0.6, 1 0.15 L 1 0 Z" />
+          </clipPath>
+          <filter
+            id="home-hero-fold-shadow-filter"
+            x="-110%"
+            y="-110%"
+            width="320%"
+            height="320%"
+            color-interpolation-filters="sRGB">
+            <feDropShadow
+              in="SourceAlpha"
+              dx="-28"
+              dy="34"
+              stdDeviation="26"
+              flood-color="#000000"
+              flood-opacity="0.24"
+              result="home-hero-fold-shadow-soft" />
+            <feDropShadow
+              in="SourceAlpha"
+              dx="-24"
+              dy="30"
+              stdDeviation="7"
+              flood-color="#000000"
+              flood-opacity="0.48"
+              result="home-hero-fold-shadow-edge" />
+            <feMerge>
+              <feMergeNode in="home-hero-fold-shadow-soft" />
+              <feMergeNode in="home-hero-fold-shadow-edge" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
+      </svg>
+
+      <div class="home-hero-fold-star-stage">
+        <img class="home-hero-fold-star" src="assets/images/star.png" alt="" decoding="async" />
+      </div>
+
+      <div class="home-hero-fold-layers-wrap">
+        <div class="home-hero-fold-layers"></div>
+      </div>
+    </div>
+
+    <div
+      class="home-hero-bar-about-careers relative z-[2] mx-auto box-border grid min-h-0 w-full grid-cols-1 gap-6 px-4 pt-[var(--mg-hero-bar-pad-y)] pb-[calc(var(--mg-hero-bar-pad-y)+0.5rem)] sm:gap-7 sm:px-6 md:gap-8 md:px-0 lg:grid-cols-[minmax(72px,90px)_minmax(0,1fr)_minmax(0,1.2fr)] lg:items-center lg:gap-0 container">
+      <div class="flex justify-center lg:h-full lg:justify-center lg:self-stretch">
+        <div
+          class="home-hero-bar-brand-inner text-[clamp(1.75rem,5vw,var(--mg-text-brand-vertical))] font-black uppercase leading-none tracking-[-0.03em] text-[var(--mg-primary)] lg:flex lg:h-full lg:items-center lg:justify-center lg:origin-center lg:-rotate-90 lg:whitespace-nowrap">
+          5MG.VN
+        </div>
+      </div>
+
+      <div
+        class="flex min-h-0 w-full min-w-0 max-w-full flex-col items-center justify-center self-stretch text-center lg:h-full lg:items-start lg:justify-center lg:text-left">
+        <img
+          src="assets/images/join_us.png"
+          alt="Join us"
+          class="mx-auto block h-auto w-full max-w-[min(100%,20rem)] object-contain object-center sm:max-w-[22rem] lg:mx-0 lg:max-w-[min(100%,32rem)] lg:object-left"
+          decoding="async" />
+      </div>
+
+      <ul
+        class="m-0 min-w-0 list-none space-y-2 p-0 text-center text-sm font-bold uppercase leading-snug tracking-wide text-white/95 sm:text-sm md:text-md md:text-[length:var(--mg-text-side-line-lg)] md:tracking-normal lg:text-lg xl:text-xl min-[480px]:space-y-2 lg:pl-6 lg:text-left xl:pl-8">
+        <li>Senior Planning Executive (IMC)</li>
+        <li>Business Development Manager</li>
+        <li>Senior Account Executive</li>
+        <li>Content Creator / Social Executive</li>
+      </ul>
+    </div>
+  </div>
+</div>
+				<section
+  id="about-our-clients"
+  class="about-our-clients reveal-on-scroll relative overflow-x-clip overflow-y-visible bg-[#efefef] text-black"
+  aria-labelledby="about-our-clients-heading">
+  <style>
+    #about-our-clients [x-cloak] {
+      display: none !important;
+    }
+  </style>
+
+  <header
+    class="relative z-[1] rounded-bl-[2.125rem] bg-[var(--mg-bar-bg)] px-4 pb-8  shadow-[14px_12px_40px_3px_rgba(0,0,0,0.68),24px_26px_76px_8px_rgba(0,0,0,0.52)] sm:rounded-bl-[2.5rem] sm:px-6 md:pb-10 lg:rounded-bl-[3rem]">
+    <div class="container mx-auto">
+      <h2
+        id="about-our-clients-heading"
+        class="text-right font-synthesis-none text-[3.625rem] font-black leading-[0.82] tracking-[-0.07em] text-[#f9552f] md:text-[5.5rem] lg:text-[6.875rem]">
+        <span class="block">Our</span>
+        <span class="block">Clients</span>
+      </h2>
+    </div>
+  </header>
+
+  <div class="container mx-auto  pt-8  md:pt-10  lg:pt-12">
+    <div
+      class="grid w-full min-w-0 grid-cols-1 gap-8 md:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] md:items-start md:gap-x-6 md:gap-y-0 lg:gap-x-8 xl:gap-x-10">
+      <div
+        class="flex w-full min-w-0 items-start justify-center md:-ml-6 md:justify-start lg:-ml-8">
+        <img
+          src="assets/images/user.webp"
+          alt="Hình ảnh minh họa đối tác"
+          class="mx-auto block h-auto w-full max-w-[220px] object-contain object-center sm:max-w-[260px] md:mx-0 md:max-w-full md:object-left"
+          loading="lazy"
+          decoding="async" />
+      </div>
+
+      <div class="min-w-0 bg-[#efefef]">
+        <img
+          src="assets/images/brand_about.png"
+          alt="Thương hiệu và đối tác"
+          class="mx-auto block h-auto w-full max-w-full object-contain md:mx-0"
+          loading="lazy"
+          decoding="async" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Nút trong container; panel Join us full chiều ngang + bg-mg-hero (không bị giới hạn .container) -->
+  <div
+    id="about-join-us-block"
+    class="w-full min-w-0"
+    x-data="{
+      joinOpen: false,
+      joinInView: false,
+      init() {
+        var self = this;
+        var el = document.getElementById('about-join-us-block');
+        if (!el || typeof IntersectionObserver === 'undefined') return;
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (e) {
+              self.joinInView = e.isIntersecting;
+            });
+          },
+          { root: null, rootMargin: '0px 0px -8% 0px', threshold: [0, 0.12, 0.2] }
+        );
+        io.observe(el);
+      }
+    }">
+    <div
+      class="container mx-auto  py-6">
+      <div class="isolate flex w-full min-w-0 flex-col items-stretch">
+        <div
+          class="relative z-20 flex shrink-0 flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-4">
+          <button
+            type="button"
+            id="about-join-us-toggle"
+            class="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--mg-primary)] px-6 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-[0_8px_24px_rgba(249,85,47,0.35)] transition hover:bg-[var(--mg-primary-deep)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f9552f] focus-visible:ring-offset-2 focus-visible:ring-offset-[#efefef] md:px-7 md:py-3.5 md:text-[0.9375rem] xl:gap-2.5 xl:px-10 xl:py-4 xl:text-base xl:tracking-[0.08em] xl:shadow-[0_12px_36px_rgba(249,85,47,0.38)]"
+            @click="joinOpen = !joinOpen"
+            :aria-expanded="joinOpen ? 'true' : 'false'"
+            aria-controls="about-join-us-panel">
+            <span>Join us</span>
+            <svg
+              class="h-4 w-4 shrink-0 transition-transform duration-200 md:h-[1.125rem] md:w-[1.125rem] xl:h-5 xl:w-5"
+              :class="joinOpen ? 'rotate-180' : ''"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="about-join-us-panel"
+      x-cloak
+      x-show="joinOpen"
+      x-transition:enter="transition ease-out duration-200"
+      x-transition:enter-start="opacity-0"
+      x-transition:enter-end="opacity-100"
+      x-transition:leave="transition ease-in duration-150"
+      x-transition:leave-start="opacity-100"
+      x-transition:leave-end="opacity-0"
+      role="region"
+      aria-labelledby="about-join-us-toggle"
+      class="relative z-10 mt-8 w-full min-w-0 bg-mg-hero bg-cover bg-center bg-no-repeat">
+      <!-- Nội dung Join us — include trong #about-join-us-panel (nền bg-mg-hero full width ở our-client) -->
+<div
+    class="about-join-us-surface about-join-us-surface--on-mg-hero relative flex flex-col overflow-visible rounded-none py-12 sm:py-24">
+    <!-- Vệt sáng: chỉ khi scroll tới khu Join (joinInView) VÀ đã mở tab (joinOpen) — Alpine ở #about-join-us-block -->
+    <img class="mg-corner-shine mg-corner-shine--join-contact" :class="{ 'is-visible': joinOpen && joinInView }"
+        src="assets/images/light_white.webp" alt="" width="640" height="640" decoding="async" />
+
+
+
+    <div class="relative z-[2] mx-auto container text-black">
+      <div class=" mb-6 max-w-5xl sm:mb-8 md:mb-10 xl:px-12 px-0">
+        <img
+          src="assets/images/join_us_black.png"
+          alt="JOIN US"
+          class=""
+          decoding="async"
+          loading="lazy" />
+      </div>
+      <div class="relative mx-auto max-w-5xl">
+            <p class="mt-5 text-base font-semibold leading-snug text-black sm:text-2xl md:mt-6">
+                Chúng tôi tìm kiếm những cá nhân:
+            </p>
+
+            <ul
+                class="mt-8 flex list-none flex-col gap-6 p-0 sm:mt-9 md:flex-row md:flex-wrap md:items-center md:justify-between md:gap-x-8 md:gap-y-6">
+                <li class="flex max-w-full items-center gap-3">
+                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-black shadow-sm"
+                        aria-hidden="true">
+                        <svg class="h-5 w-5 text-[#ff5a2d]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
+                            <path d="M9 18h6" />
+                            <path d="M10 22h4" />
+                        </svg>
+                    </span>
+                    <span class="text-sm font-normal leading-snug sm:text-base">Đam mê sáng tạo</span>
+                </li>
+                <li class="flex max-w-full items-center gap-3">
+                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-black shadow-sm"
+                        aria-hidden="true">
+                        <svg class="h-5 w-5 text-[#ff5a2d]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                        </svg>
+                    </span>
+                    <span class="text-sm font-normal leading-snug sm:text-base">Yêu thích truyền thông &amp; nội
+                        dung</span>
+                </li>
+                <li class="flex max-w-full items-center gap-3 md:max-w-[20rem]">
+                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-black shadow-sm"
+                        aria-hidden="true">
+                        <svg class="h-5 w-5 text-[#ff5a2d]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                        </svg>
+                    </span>
+                    <span class="text-sm font-normal leading-snug sm:text-base">Sẵn sàng học hỏi và phát triển cùng
+                        các dự án lớn</span>
+                </li>
+            </ul>
+
+            <h4 class="mt-10  text-base font-semibold text-black sm:mt-24 sm:text-lg">
+                Vị trí thường xuyên tuyển:
+            </h4>
+
+            <ul class="mt-5 grid list-none grid-cols-1 gap-3 p-0 sm:grid-cols-2 sm:gap-4 md:mt-6" role="list">
+                <li
+                    class="flex items-center gap-2 rounded-xl border-2 border-black/40 px-4 py-3.5 text-left shadow-sm backdrop-blur-sm">
+                    <span class="about-join-positions-bullet" aria-hidden="true"></span>
+                    <span class="text-sm font-semibold leading-snug text-black sm:text-base">Senior Planning Executive
+                        (IMC)</span>
+                </li>
+                <li
+                    class="flex items-center gap-2 rounded-xl border-2 border-black/40 px-4 py-3.5 text-left shadow-sm backdrop-blur-sm">
+                    <span class="about-join-positions-bullet" aria-hidden="true"></span>
+                    <span class="text-sm font-semibold leading-snug text-black sm:text-base">Senior Account Executive
+                        (IMC)</span>
+                </li>
+                <li
+                    class="flex items-center gap-2 rounded-xl border-2 border-black/40 px-4 py-3.5 text-left shadow-sm backdrop-blur-sm">
+                    <span class="about-join-positions-bullet" aria-hidden="true"></span>
+                    <span class="text-sm font-semibold leading-snug text-black sm:text-base">Business Development
+                        Manager</span>
+                </li>
+                <li
+                    class="flex items-center gap-2 rounded-xl border-2 border-black/40 px-4 py-3.5 text-left shadow-sm backdrop-blur-sm">
+                    <span class="about-join-positions-bullet" aria-hidden="true"></span>
+                    <span class="text-sm font-semibold leading-snug text-black sm:text-base">Content Creator / Social
+                        Executive</span>
+                </li>
+            </ul>
+            <!-- Liên hệ tuyển dụng (CV); fold neo ngoài .container — home-hero.css -->
+            <p class="relative z-20 mt-10 text-center sm:mt-12">
+                <a href="mailto:fivemediagroup@5mg.vn"
+                    class="inline-flex items-center gap-1.5 rounded-full border-b-2 border-black/30 px-6 pb-1.5 pt-0.5 text-[0.9375rem] font-semibold leading-snug tracking-wide text-black/85 outline-none transition-colors duration-200 ease-out hover:border-black/55 hover:bg-transparent hover:text-black focus-visible:ring-2 focus-visible:ring-black/15 focus-visible:ring-offset-2">
+                    Gửi CV về email
+                    <span class="text-[0.85em] text-black/50" aria-hidden="true">→</span>
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Neo đáy fold theo đáy .container, không cần bottom: 90px. -->
+    <div class="pointer-events-none relative z-[12] h-0 w-full shrink-0 overflow-visible" aria-hidden="true">
+        <div class="home-hero-fold home-hero-curve-fold home-hero-fold--join-bar [--mg-hero-bar-pad-y:0px]">
+            <svg class="home-hero-fold-clip-defs" width="0" height="0" aria-hidden="true" focusable="false">
+                <defs>
+                    <clipPath id="home-hero-fold-clip-join" clipPathUnits="objectBoundingBox">
+                        <path d="M 1 1 L 0 1 C 0.45 1, 0.8 0.6, 1 0.15 L 1 0 Z" />
+                    </clipPath>
+                    <filter id="home-hero-fold-shadow-filter-join" x="-110%" y="-110%" width="320%" height="320%"
+                        color-interpolation-filters="sRGB">
+                        <feDropShadow in="SourceAlpha" dx="-28" dy="34" stdDeviation="26" flood-color="#000000"
+                            flood-opacity="0.24" result="home-hero-fold-shadow-soft-join" />
+                        <feDropShadow in="SourceAlpha" dx="-24" dy="30" stdDeviation="7" flood-color="#000000"
+                            flood-opacity="0.48" result="home-hero-fold-shadow-edge-join" />
+                        <feMerge>
+                            <feMergeNode in="home-hero-fold-shadow-soft-join" />
+                            <feMergeNode in="home-hero-fold-shadow-edge-join" />
+                            <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                    </filter>
+                </defs>
+            </svg>
+
+            <div class="home-hero-fold-star-stage">
+                <img class="home-hero-fold-star" src="assets/images/star.png" alt="" decoding="async" />
+            </div>
+
+            <div class="home-hero-fold-layers-wrap">
+                <div class="home-hero-fold-layers"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<section
+    class="container mx-auto flex min-h-[min(80vh,50rem)] max-w-5xl flex-col px-4 py-10 md:min-h-[min(85vh,54rem)] md:py-14">
+    <!-- Căng ngang trên: viền full width + tiêu đề -->
+    <div class="w-full shrink-0  pt-6 md:pt-8">
+        <h2
+            class="text-center text-[32px] font-black leading-[0.95] tracking-[-0.04em] sm:mb-8 sm:text-[40px]  md:text-[44px] lg:text-[52px] xl:mb-12 xl:text-[56px] uppercase font-bold text-black">
+            Contact</h2>
+    </div>
+    <!-- Giữa trống (co giãn theo chiều cao khối) -->
+    <div class="min-h-[clamp(2.5rem,10vh,6rem)] flex-1" aria-hidden="true"></div>
+    <!-- Căng ngang dưới: thương hiệu + viền -->
+    <div class="w-full shrink-0  pb-6 md:pb-8">
+        <p
+            class="home-hero-about-brand text-gradient mx-auto mb-0 flex w-fit max-w-full flex-col items-center text-center font-archivo font-black font-synthesis-none lowercase tracking-[-0.04em] [font-size:clamp(2.5rem,7.25vw,3rem)]">
+            <span class="block w-fit max-w-full">five</span>
+            <span class="block w-fit max-w-full">media group</span>
+        </p>
+    </div>
+</section>
+    </div>
+  </div>
+</section>
+
+			</main>
+		</div>
+		<!-- Modals (ngoài header để z-index / overlay đúng) -->
+		
+
+		<!-- Footer -->
+        <footer class="relative overflow-hidden border-t border-[#ff5a2a] bg-[var(--mg-bar-bg)] text-[#ff5a2a]">
+  <div class="mx-auto container py-6 sm:py-8 lg:py-10">
+    <div
+      class="flex flex-col items-stretch gap-8 md:gap-10 xl:flex-row xl:flex-nowrap xl:items-center xl:justify-between xl:gap-6 2xl:gap-8">
+      <!-- Logo -->
+      <div class="flex shrink-0 justify-center xl:justify-start">
+        <img
+          src="/assets/images/logo.png"
+          alt="Five Media Group"
+          class="h-16 w-auto object-contain sm:h-[4.75rem] md:h-20 xl:h-24 2xl:h-28" />
+      </div>
+
+      <!-- Email + địa chỉ + hotline: cột 2 (mobile) → 2 cột (sm) → 3 cột (md) → xl: cùng một hàng với flex cha -->
+      <div class="grid w-full grid-cols-2 gap-6 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-8 md:grid-cols-2 md:gap-6 lg:grid-cols-4 xl:contents">
+        <!-- Email -->
+        <div class="flex flex-col items-center gap-2 text-center sm:items-start sm:text-left sm:px-1 xl:shrink-0 xl:gap-1.5">
+            <img src="/assets/images/email.png" alt="" class="h-8 w-8 shrink-0 object-contain sm:h-10 sm:w-10 md:h-11 md:w-11 xl:h-10 xl:w-10 2xl:h-11 2xl:w-11" />
+          <div class="max-w-full break-all text-sm font-extrabold uppercase leading-snug tracking-wide sm:text-md">
+            FIVEMEDIAGROUP@5MG.VN
+          </div>
+        </div>
+
+        <!-- Địa chỉ -->
+        <div class="flex flex-col items-center gap-2 text-center sm:items-start sm:text-left sm:px-1 xl:shrink-0 xl:gap-1.5">
+            <img src="/assets/images/address.png" alt="" class="h-8 w-8 shrink-0 object-contain sm:h-10 sm:w-10 md:h-11 md:w-11 xl:h-10 xl:w-10 2xl:h-11 2xl:w-11" />
+          <div class="max-w-full text-sm font-extrabold uppercase leading-snug tracking-wide sm:text-md xl:max-w-[12rem] xl:leading-tight 2xl:max-w-none">
+            <span class="block">45 DINH TIEN HOANG, SAIGON WARD,</span>
+            <span class="block">HO CHI MINH CITY</span>
+          </div>
+        </div>
+
+        <!-- Hotline -->
+        <div class="flex flex-col items-center gap-2 text-center sm:items-start sm:text-left sm:col-span-2 sm:justify-self-center md:col-span-1 md:justify-self-stretch xl:shrink-0 xl:gap-1.5">
+         <img src="/assets/images/phone.png" alt="" class="h-8 w-8 shrink-0 object-contain sm:h-10 sm:w-10 md:h-11 md:w-11 xl:h-10 xl:w-10 2xl:h-11 2xl:w-11" />
+          <div class="text-sm font-extrabold uppercase leading-snug tracking-wide sm:text-md">
+            <span class="block">HOTLINE TƯ VẤN</span>
+            <span class="block">09.3114.0488</span>
+          </div>
+        </div>
+        <div class="flex shrink-0 md:justify-start sm:justify-center justify-center xl:justify-end">
+          <img
+            src="/assets/images/fmg.png"
+            alt="Five Media Group"
+            class="h-auto w-full max-w-[200px] object-contain sm:max-w-[240px] md:max-w-[260px] xl:w-[200px] xl:max-w-none 2xl:w-[220px]" />
+        </div>
+      </div>
+
+  
+
+      <!-- Slogan -->
+      <p
+        class="mb-0 text-center sm:text-center md:text-center xl:text-left text-sm italic leading-relaxed tracking-tight text-[#ff5a2a] sm:text-md sm:leading-snug md:max-w-2xl md:mx-auto xl:ml-auto xl:max-w-[min(100%,22rem)] 2xl:max-w-md">
+        Đồng hành cùng chúng tôi, thương hiệu của bạn không chỉ được nhìn thấy — mà còn được ghi nhớ và yêu thích.
+      </p>
+    </div>
+  </div>
+</footer>
+<button id="scrollToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+class="fixed bottom-8 sm:right-8 right-3 w-12 h-12 bg-home-primary hover:bg-home-primary-hover text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 opacity-0 pointer-events-none z-50"
+aria-label="Scroll to top">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M10 5L5 10L6.25 11.25L10 7.5L13.75 11.25L15 10L10 5Z" fill="currentColor" />
+</svg>
+</button>
+
+<script>
+// Show/hide scroll to top button
+window.addEventListener('scroll', function () {
+  const scrollButton = document.getElementById('scrollToTop');
+  if (window.pageYOffset > 300) {
+    scrollButton.classList.remove('opacity-0', 'pointer-events-none');
+    scrollButton.classList.add('opacity-100');
+  } else {
+    scrollButton.classList.add('opacity-0', 'pointer-events-none');
+    scrollButton.classList.remove('opacity-100');
+  }
+});
+</script>
+	</body>
+</html>

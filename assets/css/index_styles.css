@@ -1,0 +1,6018 @@
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+  --tw-contain-size:  ;
+  --tw-contain-layout:  ;
+  --tw-contain-paint:  ;
+  --tw-contain-style:  ;
+}
+
+/*
+! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: #e5e7eb;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
+*/
+
+html,
+:host {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: Montserrat, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+  font-variation-settings: normal;
+  /* 6 */
+  -webkit-tap-highlight-color: transparent;
+  /* 7 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-feature-settings: normal;
+  /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-feature-settings: inherit;
+  /* 1 */
+  font-variation-settings: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  letter-spacing: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+input:where([type='button']),
+input:where([type='reset']),
+input:where([type='submit']) {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Reset default styling for dialogs.
+*/
+
+dialog {
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden]:where(:not([hidden="until-found"])) {
+  display: none;
+}
+
+/* CSS Variables */
+
+:root {
+  /* Background Colors */
+  --background: #fff;
+  --foreground: #111827;
+  --card: #fff;
+  --card-foreground: #111827;
+  --popover: #fff;
+  --popover-foreground: #111827;
+  /* Primary Colors */
+  --primary: #059669;
+  --primary-foreground: #fff;
+  /* Title Colors */
+  --title: #047857;
+  --title-foreground: #fff;
+  /* Secondary Colors */
+  --secondary: #f3f4f6;
+  --secondary-foreground: #111827;
+  /* Muted Colors */
+  --muted: #f3f4f6;
+  --muted-foreground: #6b7280;
+  /* Accent Colors */
+  --accent: #f3f4f6;
+  --accent-foreground: #111827;
+  /* Status Colors */
+  --destructive: #ef4444;
+  --destructive-foreground: #fff;
+  /* Border & Input Colors */
+  --border: #e5e7eb;
+  --input: #e5e7eb;
+  --ring: #059669;
+  /* Border Radius */
+  --radius: 0.5rem;
+}
+
+/* Base Element Styles */
+
+* {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
+}
+
+body {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+  font-family: Montserrat, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity, 1));
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+@media (min-width: 1680px) {
+  .container {
+    max-width: 1680px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1920px;
+  }
+}
+
+/* Fix Container Response Theo Y Muon */
+
+/* Container */
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .container {
+    max-width: 1240px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+/* ========================================================================
+       BUTTON GROUP: Các thuộc tính cho Button
+       ======================================================================== */
+
+/* Button additional sizes */
+
+/* Button variants */
+
+/* ========================================================================
+       INPUT GROUP: Các thuộc tính cho Input
+       ======================================================================== */
+
+.input-icon .icon {
+  pointer-events: none;
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  height: 1.25rem;
+  width: 1.25rem;
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity, 1));
+}
+
+.input-icon input:focus + .icon {
+  --tw-text-opacity: 1;
+  color: rgb(16 185 129 / var(--tw-text-opacity, 1));
+}
+
+/* ========================================================================
+       CARD GROUP: Các thuộc tính cho Card
+       ======================================================================== */
+
+/* ========================================================================
+       BADGE GROUP: Các thuộc tính cho Badge
+       ======================================================================== */
+
+/* ========================================================================
+       SECTION GROUP: Các thuộc tính cho Section
+       ======================================================================== */
+
+.section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+/* ========================================================================
+       TAB GROUP: Các thuộc tính cho Tab
+       ======================================================================== */
+
+/* ========================================================================
+       JMODAL GROUP: jModal library styles (Optimized for performance & INP)
+       ======================================================================== */
+
+/* Base jModal container */
+
+/* Center content modal (auth, dialogs, etc) */
+
+/* jModal slide animations (GPU-accelerated for better INP) */
+
+/* Slide from right (for cart, mobile menu) */
+
+/* Slide from left */
+
+/* Slide from top (full width or centered) */
+
+/* Slide from bottom (sheet style - full width or centered) */
+
+/* Prevent header CLS when modal opens (body gets padding-right) */
+
+body:has(.jmodal:not(.hidden)) header.sticky,
+    body:has(.jmodal:not(.hidden)) header.fixed {
+  /* Compensate for body padding by adjusting header width */
+  width: 100%;
+  /* Box-sizing ensures padding doesn't affect layout */
+  box-sizing: border-box;
+}
+
+/* Choose edition swiper: card 1 & 3 giữ chiều cao tự nhiên (nhỏ), đáy 3 card thẳng hàng (align-items: flex-end) */
+
+.choose-edition-swiper--equal-height .swiper-wrapper {
+  align-items: flex-end;
+}
+
+.choose-edition-swiper--equal-height .swiper-slide {
+  height: auto;
+}
+
+/* ========================================================================
+       LOADING GROUP: Các thuộc tính cho Loading
+       ======================================================================== */
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  animation: spin 1s linear infinite;
+  border-radius: 9999px;
+  border-width: 2px;
+  border-color: rgb(209 213 219 / var(--tw-border-opacity, 1));
+  --tw-border-opacity: 1;
+  border-top-color: rgb(37 99 235 / var(--tw-border-opacity, 1));
+}
+
+/* ========================================================================
+       TEXT UTILITIES GROUP: Các thuộc tính cho Text
+       ======================================================================== */
+
+/* Tên cũ .text-gradient trùng gradient thương hiệu (mg-components.css) — đổi tên utility demo */
+
+/* Text color utilities (ported from initial CSS) */
+
+/* ========================================================================
+       HOVER EFFECTS GROUP: Các thuộc tính cho Hover Effects
+       ======================================================================== */
+
+/* ========================================================================
+       FORM ELEMENTS GROUP: Các thuộc tính cho Form Elements
+       ======================================================================== */
+
+/* ========================================================================
+       LINK GROUP: Các thuộc tính cho Link
+       ======================================================================== */
+
+.link {
+  --tw-text-opacity: 1;
+  color: rgb(5 150 105 / var(--tw-text-opacity, 1));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  animation-duration: 150ms;
+}
+
+.link:hover {
+  --tw-text-opacity: 1;
+  color: rgb(74 222 128 / var(--tw-text-opacity, 1));
+}
+
+/* ========================================================================
+       ICON BACKGROUND GROUP: Các thuộc tính cho Icon Background
+       ======================================================================== */
+
+/* ========================================================================
+       TOGGLE GROUP: Các thuộc tính cho Toggle
+       ======================================================================== */
+
+/* ========================================================================
+       TEXT TRUNCATION GROUP: Các thuộc tính cho Text Truncation
+       ======================================================================== */
+
+/* ========================================================================
+       IMAGE FALLBACK GROUP: Các thuộc tính cho Image Fallback
+       ======================================================================== */
+
+img {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  animation-duration: 300ms;
+}
+
+img.loading {
+  opacity: 0.5;
+}
+
+/* ========================================================================
+       LAYOUT UTILITIES GROUP: Các thuộc tính cho Layout Utilities
+       ======================================================================== */
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Grid auto layout utilities */
+
+/* ========================================================================
+       SIZE UTILITIES GROUP: Các thuộc tính cho Size Utilities
+       ======================================================================== */
+
+/* Fit utilities */
+
+/* Gradient helpers */
+
+/* Shadow helpers */
+
+/* ========================================================================
+       CUSTOM SCROLLBAR GROUP: Các thuộc tính cho Custom Scrollbar
+       ======================================================================== */
+
+/* Hide scrollbar */
+
+/* ========================================================================
+       ITEM GROUP: Các thuộc tính cho Item Components
+       ======================================================================== */
+
+/* ========================================================================
+       PAGINATION GROUP
+       ======================================================================== */
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+/* ========================================================================
+       ALERT GROUP
+       ======================================================================== */
+
+/* ========================================================================
+       LOADING SIZES
+       ======================================================================== */
+
+/* ========================================================================
+       SKELETON GROUP
+       ======================================================================== */
+
+/* ========================================================================
+       RATING GROUP
+       ======================================================================== */
+
+/* ========================================================================
+       PROGRESS GROUP
+       ======================================================================== */
+
+/* ========================================================================
+       STATUS GROUP
+       ======================================================================== */
+
+/* ========================================================================
+       TOOLTIP GROUP
+       ======================================================================== */
+
+/* ========================================================================
+       BREADCRUMB GROUP
+       ======================================================================== */
+
+/* ========================================================================
+       TEXT TRUNCATION EXTRAS & BREAK UTILITIES
+       ======================================================================== */
+
+.break-all {
+  word-break: break-all;
+}
+
+/* ========================================================================
+       IMAGE FALLBACK
+       ======================================================================== */
+
+/* ========================================================================
+       TOGGLE TRACK (chi tiết)
+       ======================================================================== */
+
+/* ========================================================================
+       HEADER LAYOUT GROUP: Các thuộc tính cho Header Layout
+       ======================================================================== */
+
+body:has(.jmodal:not(.hidden)) header.header {
+  /* Compensate for body padding by adjusting header width */
+  width: 100%;
+  /* Box-sizing ensures padding doesn't affect layout */
+  box-sizing: border-box;
+}
+
+.header {
+  position: sticky;
+  top: 0px;
+  z-index: 50;
+  width: 100%;
+  border-bottom-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
+  background-color: rgb(255 255 255 / 0.95);
+  --tw-backdrop-blur: blur(8px);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+@supports (backdrop-filter: var(--tw)) {
+  .header {
+    background-color: rgb(255 255 255 / 0.6);
+  }
+}
+
+/* ========================================================================
+       NAVIGATION GROUP: Các thuộc tính cho Navigation
+       ======================================================================== */
+
+/* Menu desktop — nền sáng (trang không phải home) */
+
+body:not(.page-home) header .header-desktop-menu ul.home-hero-nav-list {
+  color: rgb(17 24 39 / 0.92);
+  justify-content: flex-end;
+  max-width: none;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  -moz-column-gap: 1.25rem;
+       column-gap: 1.25rem;
+  row-gap: 0.25rem;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 1023px) {
+  body:not(.page-home) header .header-desktop-menu ul.home-hero-nav-list {
+    -moz-column-gap: clamp(1.35rem, 7vw, 2.75rem);
+         column-gap: clamp(1.35rem, 7vw, 2.75rem);
+    row-gap: 0.65rem;
+  }
+
+  body:not(.page-home) header .header-desktop-menu .home-hero-nav-list a {
+    padding: 0.45rem 0.7rem;
+    margin: -0.45rem -0.7rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  body:not(.page-home) header .header-desktop-menu ul.home-hero-nav-list {
+    font-size: 1.0625rem;
+    -moz-column-gap: 1.75rem;
+         column-gap: 1.75rem;
+  }
+}
+
+body:not(.page-home) header .header-desktop-menu .home-hero-nav-is-active {
+  color: rgb(17 24 39);
+  font-weight: 600;
+}
+
+body:not(.page-home) header .header-desktop-menu .home-hero-nav-is-muted {
+  color: rgb(55 65 81 / 0.95);
+}
+
+body:not(.page-home) header .header-desktop-menu .home-hero-nav-is-muted:hover {
+  color: rgb(17 24 39);
+  opacity: 1;
+}
+
+/* ========================================================================
+       BLAZE SLIDER CORE GROUP: Các thuộc tính cơ bản cho Blaze Slider
+       ======================================================================== */
+
+/* ========================================================================
+       HOT PRODUCTS SLIDER GROUP: Các thuộc tính cho Hot Products Slider
+       ======================================================================== */
+
+/* ========================================================================
+       TESTIMONIALS SLIDER GROUP: Các thuộc tính cho Testimonials Slider
+       ======================================================================== */
+
+/* ========================================================================
+       RESPONSIVE NAVIGATION GROUP: Các thuộc tính responsive cho Navigation
+       ======================================================================== */
+
+/* ========================================================================
+       RELATED PRODUCTS SLIDER GROUP: Các thuộc tính cho Related Products Slider
+       ======================================================================== */
+
+/* ========================================================================
+       SLIDER ANIMATIONS GROUP: Các thuộc tính cho Slider Animations
+       ======================================================================== */
+
+/* ========================================================================
+       SLIDER ACCESSIBILITY GROUP: Các thuộc tính cho Slider Accessibility
+       ======================================================================== */
+
+/* ========================================================================
+       SLIDER LOADING GROUP: Các thuộc tính cho Slider Loading States
+       ======================================================================== */
+
+.blaze-slider.loading .blaze-track {
+  opacity: 0.5;
+}
+
+.blaze-slider.loading .blaze-pagination {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* ========================================================================
+       SLIDER CUSTOM STYLES GROUP: Các thuộc tính tùy chỉnh cho Slider
+       ======================================================================== */
+
+/* ========================================================================
+       FOOTER LAYOUT GROUP: Các thuộc tính cho Footer Layout
+       ======================================================================== */
+
+.footer {
+  border-top-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
+
+/* ========================================================================
+       FOOTER LINKS GROUP: Các thuộc tính cho Footer Links
+       ======================================================================== */
+
+/* ========================================================================
+       FOOTER SOCIAL GROUP: Các thuộc tính cho Footer Social
+       ======================================================================== */
+
+/* ========================================================================
+       FOOTER BOTTOM GROUP: Các thuộc tính cho Footer Bottom
+       ======================================================================== */
+
+/* ========================================================================
+       FOOTER NEWSLETTER GROUP: Các thuộc tính cho Footer Newsletter
+       ======================================================================== */
+
+/* ========================================================================
+       FOOTER CONTACT GROUP: Các thuộc tính cho Footer Contact
+       ======================================================================== */
+
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.inset-0 {
+  inset: 0px;
+}
+
+.inset-y-0 {
+  top: 0px;
+  bottom: 0px;
+}
+
+.-left-10 {
+  left: -2.5rem;
+}
+
+.bottom-8 {
+  bottom: 2rem;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.right-3 {
+  right: 0.75rem;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.top-\[-34px\] {
+  top: -34px;
+}
+
+.isolate {
+  isolation: isolate;
+}
+
+.z-0 {
+  z-index: 0;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
+.z-30 {
+  z-index: 30;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+.z-\[1\] {
+  z-index: 1;
+}
+
+.z-\[2\] {
+  z-index: 2;
+}
+
+.z-\[30\] {
+  z-index: 30;
+}
+
+.z-\[40\] {
+  z-index: 40;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.order-3 {
+  order: 3;
+}
+
+.m-0 {
+  margin: 0px;
+}
+
+.mx-0 {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mb-0 {
+  margin-bottom: 0px;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.mt-0 {
+  margin-top: 0px;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.box-border {
+  box-sizing: border-box;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.hidden {
+  display: none;
+}
+
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+.\!h-auto {
+  height: auto !important;
+}
+
+.h-12 {
+  height: 3rem;
+}
+
+.h-16 {
+  height: 4rem;
+}
+
+.h-8 {
+  height: 2rem;
+}
+
+.h-\[210px\] {
+  height: 210px;
+}
+
+.h-auto {
+  height: auto;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.min-h-0 {
+  min-height: 0px;
+}
+
+.min-h-px {
+  min-height: 1px;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.w-12 {
+  width: 3rem;
+}
+
+.w-2\/5 {
+  width: 40%;
+}
+
+.w-3\/5 {
+  width: 60%;
+}
+
+.w-8 {
+  width: 2rem;
+}
+
+.w-\[100\%\] {
+  width: 100%;
+}
+
+.w-\[180px\] {
+  width: 180px;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.min-w-0 {
+  min-width: 0px;
+}
+
+.max-w-\[200px\] {
+  max-width: 200px;
+}
+
+.max-w-\[20rem\] {
+  max-width: 20rem;
+}
+
+.max-w-\[46rem\] {
+  max-width: 46rem;
+}
+
+.max-w-\[8\.5rem\] {
+  max-width: 8.5rem;
+}
+
+.max-w-full {
+  max-width: 100%;
+}
+
+.max-w-md {
+  max-width: 28rem;
+}
+
+.max-w-xl {
+  max-width: 36rem;
+}
+
+.max-w-xs {
+  max-width: 20rem;
+}
+
+.shrink-0 {
+  flex-shrink: 0;
+}
+
+.-translate-x-1\/2 {
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.select-none {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.list-none {
+  list-style-type: none;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-stretch {
+  align-items: stretch;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+.gap-\[0\.2rem\] {
+  gap: 0.2rem;
+}
+
+.gap-y-1\.5 {
+  row-gap: 0.375rem;
+}
+
+.gap-y-8 {
+  row-gap: 2rem;
+}
+
+.space-y-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+
+.space-y-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+}
+
+.self-stretch {
+  align-self: stretch;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-visible {
+  overflow: visible;
+}
+
+.overflow-x-clip {
+  overflow-x: clip;
+}
+
+.overflow-y-visible {
+  overflow-y: visible;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+.break-all {
+  word-break: break-all;
+}
+
+.rounded-\[var\(--mg-radius-shell\)\] {
+  border-radius: var(--mg-radius-shell);
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.rounded-none {
+  border-radius: 0px;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-0 {
+  border-width: 0px;
+}
+
+.border-t {
+  border-top-width: 1px;
+}
+
+.border-\[\#ff5a2a\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 90 42 / var(--tw-border-opacity, 1));
+}
+
+.border-white\/20 {
+  border-color: rgb(255 255 255 / 0.2);
+}
+
+.bg-\[var\(--mg-bar-bg\)\] {
+  background-color: var(--mg-bar-bg);
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+}
+
+.bg-home-primary {
+  background-color: var(--home-primary);
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.bg-white\/95 {
+  background-color: rgb(255 255 255 / 0.95);
+}
+
+.bg-mg-hero {
+  background-image: var(--mg-hero-gradient);
+}
+
+.object-contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.object-center {
+  -o-object-position: center;
+     object-position: center;
+}
+
+.p-0 {
+  padding: 0px;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.py-14 {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
+.pb-\[clamp\(1rem\2c 3vw\2c 2rem\)\] {
+  padding-bottom: clamp(1rem,3vw,2rem);
+}
+
+.pb-\[var\(--mg-hero-bar-pad-y\)\] {
+  padding-bottom: var(--mg-hero-bar-pad-y);
+}
+
+.pt-8 {
+  padding-top: 2rem;
+}
+
+.pt-\[max\(env\(safe-area-inset-top\2c 0px\)\2c 0\.75rem\)\] {
+  padding-top: max(env(safe-area-inset-top,0px),0.75rem);
+}
+
+.pt-\[var\(--mg-hero-bar-pad-y\)\] {
+  padding-top: var(--mg-hero-bar-pad-y);
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.font-archivo {
+  font-family: Archivo, Montserrat, Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-sans {
+  font-family: Montserrat, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.text-\[12px\] {
+  font-size: 12px;
+}
+
+.text-\[15px\] {
+  font-size: 15px;
+}
+
+.text-\[32px\] {
+  font-size: 32px;
+}
+
+.text-\[clamp\(1\.75rem\2c 5vw\2c var\(--mg-text-brand-vertical\)\)\] {
+  font-size: clamp(1.75rem,5vw,var(--mg-text-brand-vertical));
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-md {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.font-black {
+  font-weight: 900;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.not-italic {
+  font-style: normal;
+}
+
+.leading-\[0\.95\] {
+  line-height: 0.95;
+}
+
+.leading-\[1\.15\] {
+  line-height: 1.15;
+}
+
+.leading-\[1\.25\] {
+  line-height: 1.25;
+}
+
+.leading-\[1\.45\] {
+  line-height: 1.45;
+}
+
+.leading-\[1\.4\] {
+  line-height: 1.4;
+}
+
+.leading-\[1\.5\] {
+  line-height: 1.5;
+}
+
+.leading-none {
+  line-height: 1;
+}
+
+.leading-relaxed {
+  line-height: 1.625;
+}
+
+.leading-snug {
+  line-height: 1.375;
+}
+
+.leading-tight {
+  line-height: 1.25;
+}
+
+.tracking-\[-0\.03em\] {
+  letter-spacing: -0.03em;
+}
+
+.tracking-\[-0\.04em\] {
+  letter-spacing: -0.04em;
+}
+
+.tracking-\[0\.02em\] {
+  letter-spacing: 0.02em;
+}
+
+.tracking-tight {
+  letter-spacing: -0.025em;
+}
+
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+
+.text-\[\#ff4d1f\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 77 31 / var(--tw-text-opacity, 1));
+}
+
+.text-\[\#ff5a2a\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 90 42 / var(--tw-text-opacity, 1));
+}
+
+.text-\[color\:var\(--mg-service-text-muted\)\] {
+  color: var(--mg-service-text-muted);
+}
+
+.text-\[var\(--mg-primary\)\] {
+  color: var(--mg-primary);
+}
+
+.text-\[var\(--mg-text-bar\)\] {
+  color: var(--mg-text-bar);
+}
+
+.text-\[var\(--mg-text-on-gradient\)\] {
+  color: var(--mg-text-on-gradient);
+}
+
+.text-\[var\(--mg-text-on-gradient-soft\)\] {
+  color: var(--mg-text-on-gradient-soft);
+}
+
+.text-gray-900 {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity, 1));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-100 {
+  opacity: 1;
+}
+
+.opacity-40 {
+  opacity: 0.4;
+}
+
+.shadow-\[0_18px_50px_rgba\(0\2c 0\2c 0\2c 0\.55\)\] {
+  --tw-shadow: 0 18px 50px rgba(0,0,0,0.55);
+  --tw-shadow-colored: 0 18px 50px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[inset_0_-10px_40px_rgba\(0\2c 0\2c 0\2c 0\.35\)\] {
+  --tw-shadow: inset 0 -10px 40px rgba(0,0,0,0.35);
+  --tw-shadow-colored: inset 0 -10px 40px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-lg {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-none {
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.ring-0 {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.backdrop-blur-md {
+  --tw-backdrop-blur: blur(12px);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+@keyframes enter {
+  from {
+    opacity: var(--tw-enter-opacity, 1);
+    transform: translate3d(var(--tw-enter-translate-x, 0), var(--tw-enter-translate-y, 0), 0) scale3d(var(--tw-enter-scale, 1), var(--tw-enter-scale, 1), var(--tw-enter-scale, 1)) rotate(var(--tw-enter-rotate, 0));
+  }
+}
+
+@keyframes exit {
+  to {
+    opacity: var(--tw-exit-opacity, 1);
+    transform: translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0) scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1)) rotate(var(--tw-exit-rotate, 0));
+  }
+}
+
+.duration-300 {
+  animation-duration: 300ms;
+}
+
+.\[--mg-hero-bar-pad-y\:clamp\(1\.25rem\2c 0\.85rem\+2\.4vw\2c 2\.5rem\)\] {
+  --mg-hero-bar-pad-y: clamp(1.25rem,0.85rem + 2.4vw,2.5rem);
+}
+
+.\[clip-path\:polygon\(25\%_0\%\2c 75\%_0\%\2c 100\%_50\%\2c 75\%_100\%\2c 25\%_100\%\2c 0\%_50\%\)\] {
+  clip-path: polygon(25% 0%,75% 0%,100% 50%,75% 100%,25% 100%,0% 50%);
+}
+
+.\[overflow-x\:clip\] {
+  overflow-x: clip;
+}
+
+/* Local Fonts - Load first for fast rendering */
+
+/* ========================================================================
+   LOCAL FONTS — Archivo, Montserrat, Inter (variable woff2, không CDN)
+   Subset: tiếng Việt + Latin (+ Latin Ext). Có thêm Space Grotesk / Plus Jakarta nếu dùng font-space / font-plus.
+   ======================================================================== */
+
+/* --- Archivo (hero display) --- */
+
+@font-face {
+  font-family: "Archivo";
+
+  font-style: normal;
+
+  font-display: swap;
+
+  font-weight: 100 900;
+
+  font-stretch: 62% 125%;
+
+  src: url("../fonts/archivo-vietnamese.woff2") format("woff2-variations");
+
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Archivo";
+
+  font-style: normal;
+
+  font-display: swap;
+
+  font-weight: 100 900;
+
+  font-stretch: 62% 125%;
+
+  src: url("../fonts/archivo-latin-ext.woff2") format("woff2-variations");
+
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Archivo";
+
+  font-style: normal;
+
+  font-display: swap;
+
+  font-weight: 100 900;
+
+  font-stretch: 62% 125%;
+
+  src: url("../fonts/archivo-latin.woff2") format("woff2-variations");
+
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* --- Montserrat (sans chính) --- */
+
+@font-face {
+  font-family: "Montserrat";
+
+  font-style: normal;
+
+  font-display: swap;
+
+  font-weight: 100 900;
+
+  src: url("../fonts/montserrat-vietnamese.woff2") format("woff2-variations");
+
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Montserrat";
+
+  font-style: normal;
+
+  font-display: swap;
+
+  font-weight: 100 900;
+
+  src: url("../fonts/montserrat-latin-ext.woff2") format("woff2-variations");
+
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Montserrat";
+
+  font-style: normal;
+
+  font-display: swap;
+
+  font-weight: 100 900;
+
+  src: url("../fonts/montserrat-latin.woff2") format("woff2-variations");
+
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* --- Inter (fallback sans) --- */
+
+@font-face {
+  font-family: "Inter";
+
+  font-style: normal;
+
+  font-display: swap;
+
+  font-weight: 100 900;
+
+  src: url("../fonts/inter-vietnamese.woff2") format("woff2-variations");
+
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Inter";
+
+  font-style: normal;
+
+  font-display: swap;
+
+  font-weight: 100 900;
+
+  src: url("../fonts/inter-latin-ext.woff2") format("woff2-variations");
+
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Inter";
+
+  font-style: normal;
+
+  font-display: swap;
+
+  font-weight: 100 900;
+
+  src: url("../fonts/inter-latin.woff2") format("woff2-variations");
+
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* --- Space Grotesk & Plus Jakarta (tailwind font-space / font-plus) --- */
+
+@font-face {
+  font-family: "Space Grotesk";
+
+  src: url("../fonts/SpaceGrotesk-Vietnamese.woff2") format("woff2");
+
+  font-weight: 300 700;
+
+  font-style: normal;
+
+  font-display: swap;
+
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+
+  src: url("../fonts/SpaceGrotesk-Latin.woff2") format("woff2");
+
+  font-weight: 300 700;
+
+  font-style: normal;
+
+  font-display: swap;
+
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+
+  src: url("../fonts/PlusJakartaSans-Vietnamese.woff2") format("woff2");
+
+  font-weight: 400 700;
+
+  font-style: normal;
+
+  font-display: swap;
+
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+
+  src: url("../fonts/PlusJakartaSans-Latin.woff2") format("woff2");
+
+  font-weight: 400 700;
+
+  font-style: normal;
+
+  font-display: swap;
+
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/**
+ * Swiper 11.1.15
+ * Most modern mobile touch slider and framework with hardware accelerated transitions
+ * https://swiperjs.com
+ *
+ * Copyright 2014-2024 Vladimir Kharlampidi
+ *
+ * Released under the MIT License
+ *
+ * Released on: November 18, 2024
+ */
+
+@font-face{
+  font-family:swiper-icons;
+
+  src:url('data:application/font-woff;charset=utf-8;base64, d09GRgABAAAAAAZgABAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAGRAAAABoAAAAci6qHkUdERUYAAAWgAAAAIwAAACQAYABXR1BPUwAABhQAAAAuAAAANuAY7+xHU1VCAAAFxAAAAFAAAABm2fPczU9TLzIAAAHcAAAASgAAAGBP9V5RY21hcAAAAkQAAACIAAABYt6F0cBjdnQgAAACzAAAAAQAAAAEABEBRGdhc3AAAAWYAAAACAAAAAj//wADZ2x5ZgAAAywAAADMAAAD2MHtryVoZWFkAAABbAAAADAAAAA2E2+eoWhoZWEAAAGcAAAAHwAAACQC9gDzaG10eAAAAigAAAAZAAAArgJkABFsb2NhAAAC0AAAAFoAAABaFQAUGG1heHAAAAG8AAAAHwAAACAAcABAbmFtZQAAA/gAAAE5AAACXvFdBwlwb3N0AAAFNAAAAGIAAACE5s74hXjaY2BkYGAAYpf5Hu/j+W2+MnAzMYDAzaX6QjD6/4//Bxj5GA8AuRwMYGkAPywL13jaY2BkYGA88P8Agx4j+/8fQDYfA1AEBWgDAIB2BOoAeNpjYGRgYNBh4GdgYgABEMnIABJzYNADCQAACWgAsQB42mNgYfzCOIGBlYGB0YcxjYGBwR1Kf2WQZGhhYGBiYGVmgAFGBiQQkOaawtDAoMBQxXjg/wEGPcYDDA4wNUA2CCgwsAAAO4EL6gAAeNpj2M0gyAACqxgGNWBkZ2D4/wMA+xkDdgAAAHjaY2BgYGaAYBkGRgYQiAHyGMF8FgYHIM3DwMHABGQrMOgyWDLEM1T9/w8UBfEMgLzE////P/5//f/V/xv+r4eaAAeMbAxwIUYmIMHEgKYAYjUcsDAwsLKxc3BycfPw8jEQA/gZBASFhEVExcQlJKWkZWTl5BUUlZRVVNXUNTQZBgMAAMR+E+gAEQFEAAAAKgAqACoANAA+AEgAUgBcAGYAcAB6AIQAjgCYAKIArAC2AMAAygDUAN4A6ADyAPwBBgEQARoBJAEuATgBQgFMAVYBYAFqAXQBfgGIAZIBnAGmAbIBzgHsAAB42u2NMQ6CUAyGW568x9AneYYgm4MJbhKFaExIOAVX8ApewSt4Bic4AfeAid3VOBixDxfPYEza5O+Xfi04YADggiUIULCuEJK8VhO4bSvpdnktHI5QCYtdi2sl8ZnXaHlqUrNKzdKcT8cjlq+rwZSvIVczNiezsfnP/uznmfPFBNODM2K7MTQ45YEAZqGP81AmGGcF3iPqOop0r1SPTaTbVkfUe4HXj97wYE+yNwWYxwWu4v1ugWHgo3S1XdZEVqWM7ET0cfnLGxWfkgR42o2PvWrDMBSFj/IHLaF0zKjRgdiVMwScNRAoWUoH78Y2icB/yIY09An6AH2Bdu/UB+yxopYshQiEvnvu0dURgDt8QeC8PDw7Fpji3fEA4z/PEJ6YOB5hKh4dj3EvXhxPqH/SKUY3rJ7srZ4FZnh1PMAtPhwP6fl2PMJMPDgeQ4rY8YT6Gzao0eAEA409DuggmTnFnOcSCiEiLMgxCiTI6Cq5DZUd3Qmp10vO0LaLTd2cjN4fOumlc7lUYbSQcZFkutRG7g6JKZKy0RmdLY680CDnEJ+UMkpFFe1RN7nxdVpXrC4aTtnaurOnYercZg2YVmLN/d/gczfEimrE/fs/bOuq29Zmn8tloORaXgZgGa78yO9/cnXm2BpaGvq25Dv9S4E9+5SIc9PqupJKhYFSSl47+Qcr1mYNAAAAeNptw0cKwkAAAMDZJA8Q7OUJvkLsPfZ6zFVERPy8qHh2YER+3i/BP83vIBLLySsoKimrqKqpa2hp6+jq6RsYGhmbmJqZSy0sraxtbO3sHRydnEMU4uR6yx7JJXveP7WrDycAAAAAAAH//wACeNpjYGRgYOABYhkgZgJCZgZNBkYGLQZtIJsFLMYAAAw3ALgAeNolizEKgDAQBCchRbC2sFER0YD6qVQiBCv/H9ezGI6Z5XBAw8CBK/m5iQQVauVbXLnOrMZv2oLdKFa8Pjuru2hJzGabmOSLzNMzvutpB3N42mNgZGBg4GKQYzBhYMxJLMlj4GBgAYow/P/PAJJhLM6sSoWKfWCAAwDAjgbRAAB42mNgYGBkAIIbCZo5IPrmUn0hGA0AO8EFTQAA');
+
+  font-weight:400;
+
+  font-style:normal
+}
+
+:root{
+  --swiper-theme-color:#007aff
+}
+
+:host{
+  position:relative;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  z-index:1
+}
+
+.swiper{
+  margin-left:auto;
+  margin-right:auto;
+  position:relative;
+  overflow:hidden;
+  list-style:none;
+  padding:0;
+  z-index:1;
+  display:block
+}
+
+.swiper-vertical>.swiper-wrapper{
+  flex-direction:column
+}
+
+.swiper-wrapper{
+  position:relative;
+  width:100%;
+  height:100%;
+  z-index:1;
+  display:flex;
+  transition-property:transform;
+  transition-timing-function:var(--swiper-wrapper-transition-timing-function,initial);
+  box-sizing:content-box
+}
+
+.swiper-android .swiper-slide,.swiper-ios .swiper-slide,.swiper-wrapper{
+  transform:translate3d(0px,0,0)
+}
+
+.swiper-horizontal{
+  touch-action:pan-y
+}
+
+.swiper-vertical{
+  touch-action:pan-x
+}
+
+.swiper-slide{
+  flex-shrink:0;
+  width:100%;
+  height:100%;
+  position:relative;
+  transition-property:transform;
+  display:block
+}
+
+.swiper-slide-invisible-blank{
+  visibility:hidden
+}
+
+.swiper-autoheight,.swiper-autoheight .swiper-slide{
+  height:auto
+}
+
+.swiper-autoheight .swiper-wrapper{
+  align-items:flex-start;
+  transition-property:transform,height
+}
+
+.swiper-backface-hidden .swiper-slide{
+  transform:translateZ(0);
+  backface-visibility:hidden
+}
+
+.swiper-3d.swiper-css-mode .swiper-wrapper{
+  perspective:1200px
+}
+
+.swiper-3d .swiper-wrapper{
+  transform-style:preserve-3d
+}
+
+.swiper-3d{
+  perspective:1200px
+}
+
+.swiper-3d .swiper-cube-shadow,.swiper-3d .swiper-slide{
+  transform-style:preserve-3d
+}
+
+.swiper-css-mode>.swiper-wrapper{
+  overflow:auto;
+  scrollbar-width:none;
+  -ms-overflow-style:none
+}
+
+.swiper-css-mode>.swiper-wrapper::-webkit-scrollbar{
+  display:none
+}
+
+.swiper-css-mode>.swiper-wrapper>.swiper-slide{
+  scroll-snap-align:start start
+}
+
+.swiper-css-mode.swiper-horizontal>.swiper-wrapper{
+  scroll-snap-type:x mandatory
+}
+
+.swiper-css-mode.swiper-vertical>.swiper-wrapper{
+  scroll-snap-type:y mandatory
+}
+
+.swiper-css-mode.swiper-free-mode>.swiper-wrapper{
+  scroll-snap-type:none
+}
+
+.swiper-css-mode.swiper-free-mode>.swiper-wrapper>.swiper-slide{
+  scroll-snap-align:none
+}
+
+.swiper-css-mode.swiper-centered>.swiper-wrapper::before{
+  content:'';
+  flex-shrink:0;
+  order:9999
+}
+
+.swiper-css-mode.swiper-centered>.swiper-wrapper>.swiper-slide{
+  scroll-snap-align:center center;
+  scroll-snap-stop:always
+}
+
+.swiper-css-mode.swiper-centered.swiper-horizontal>.swiper-wrapper>.swiper-slide:first-child{
+  margin-inline-start:var(--swiper-centered-offset-before)
+}
+
+.swiper-css-mode.swiper-centered.swiper-horizontal>.swiper-wrapper::before{
+  height:100%;
+  min-height:1px;
+  width:var(--swiper-centered-offset-after)
+}
+
+.swiper-css-mode.swiper-centered.swiper-vertical>.swiper-wrapper>.swiper-slide:first-child{
+  margin-block-start:var(--swiper-centered-offset-before)
+}
+
+.swiper-css-mode.swiper-centered.swiper-vertical>.swiper-wrapper::before{
+  width:100%;
+  min-width:1px;
+  height:var(--swiper-centered-offset-after)
+}
+
+.swiper-3d .swiper-slide-shadow,.swiper-3d .swiper-slide-shadow-bottom,.swiper-3d .swiper-slide-shadow-left,.swiper-3d .swiper-slide-shadow-right,.swiper-3d .swiper-slide-shadow-top{
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index:10
+}
+
+.swiper-3d .swiper-slide-shadow{
+  background:rgba(0,0,0,.15)
+}
+
+.swiper-3d .swiper-slide-shadow-left{
+  background-image:linear-gradient(to left,rgba(0,0,0,.5),rgba(0,0,0,0))
+}
+
+.swiper-3d .swiper-slide-shadow-right{
+  background-image:linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,0))
+}
+
+.swiper-3d .swiper-slide-shadow-top{
+  background-image:linear-gradient(to top,rgba(0,0,0,.5),rgba(0,0,0,0))
+}
+
+.swiper-3d .swiper-slide-shadow-bottom{
+  background-image:linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,0))
+}
+
+.swiper-lazy-preloader{
+  width:42px;
+  height:42px;
+  position:absolute;
+  left:50%;
+  top:50%;
+  margin-left:-21px;
+  margin-top:-21px;
+  z-index:10;
+  transform-origin:50%;
+  box-sizing:border-box;
+  border:4px solid var(--swiper-preloader-color,var(--swiper-theme-color));
+  border-radius:50%;
+  border-top-color:transparent
+}
+
+.swiper-watch-progress .swiper-slide-visible .swiper-lazy-preloader,.swiper:not(.swiper-watch-progress) .swiper-lazy-preloader{
+  animation:swiper-preloader-spin 1s infinite linear
+}
+
+.swiper-lazy-preloader-white{
+  --swiper-preloader-color:#fff
+}
+
+.swiper-lazy-preloader-black{
+  --swiper-preloader-color:#000
+}
+
+@keyframes swiper-preloader-spin{
+  0%{
+    transform:rotate(0deg)
+  }
+
+  100%{
+    transform:rotate(360deg)
+  }
+}
+
+.swiper-virtual .swiper-slide{
+  -webkit-backface-visibility:hidden;
+  transform:translateZ(0)
+}
+
+.swiper-virtual.swiper-css-mode .swiper-wrapper::after{
+  content:'';
+  position:absolute;
+  left:0;
+  top:0;
+  pointer-events:none
+}
+
+.swiper-virtual.swiper-css-mode.swiper-horizontal .swiper-wrapper::after{
+  height:1px;
+  width:var(--swiper-virtual-size)
+}
+
+.swiper-virtual.swiper-css-mode.swiper-vertical .swiper-wrapper::after{
+  width:1px;
+  height:var(--swiper-virtual-size)
+}
+
+:root{
+  --swiper-navigation-size:44px
+}
+
+.swiper-button-next,.swiper-button-prev{
+  position:absolute;
+  top:var(--swiper-navigation-top-offset,50%);
+  width:calc(var(--swiper-navigation-size)/ 44 * 27);
+  height:var(--swiper-navigation-size);
+  margin-top:calc(0px - (var(--swiper-navigation-size)/ 2));
+  z-index:10;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--swiper-navigation-color,var(--swiper-theme-color))
+}
+
+.swiper-button-next.swiper-button-disabled,.swiper-button-prev.swiper-button-disabled{
+  opacity:.35;
+  cursor:auto;
+  pointer-events:none
+}
+
+.swiper-button-next.swiper-button-hidden,.swiper-button-prev.swiper-button-hidden{
+  opacity:0;
+  cursor:auto;
+  pointer-events:none
+}
+
+.swiper-navigation-disabled .swiper-button-next,.swiper-navigation-disabled .swiper-button-prev{
+  display:none!important
+}
+
+.swiper-button-next svg,.swiper-button-prev svg{
+  width:100%;
+  height:100%;
+  -o-object-fit:contain;
+     object-fit:contain;
+  transform-origin:center
+}
+
+.swiper-rtl .swiper-button-next svg,.swiper-rtl .swiper-button-prev svg{
+  transform:rotate(180deg)
+}
+
+.swiper-button-prev,.swiper-rtl .swiper-button-next{
+  left:var(--swiper-navigation-sides-offset,10px);
+  right:auto
+}
+
+.swiper-button-next,.swiper-rtl .swiper-button-prev{
+  right:var(--swiper-navigation-sides-offset,10px);
+  left:auto
+}
+
+.swiper-button-lock{
+  display:none
+}
+
+.swiper-button-next:after,.swiper-button-prev:after{
+  font-family:swiper-icons;
+  font-size:var(--swiper-navigation-size);
+  text-transform:none!important;
+  letter-spacing:0;
+  font-variant:initial;
+  line-height:1
+}
+
+.swiper-button-prev:after,.swiper-rtl .swiper-button-next:after{
+  content:'prev'
+}
+
+.swiper-button-next,.swiper-rtl .swiper-button-prev{
+  right:var(--swiper-navigation-sides-offset,10px);
+  left:auto
+}
+
+.swiper-button-next:after,.swiper-rtl .swiper-button-prev:after{
+  content:'next'
+}
+
+.swiper-pagination{
+  position:absolute;
+  text-align:center;
+  transition:.3s opacity;
+  transform:translate3d(0,0,0);
+  z-index:10
+}
+
+.swiper-pagination.swiper-pagination-hidden{
+  opacity:0
+}
+
+.swiper-pagination-disabled>.swiper-pagination,.swiper-pagination.swiper-pagination-disabled{
+  display:none!important
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,.swiper-pagination-bullets.swiper-pagination-horizontal,.swiper-pagination-custom,.swiper-pagination-fraction{
+  bottom:var(--swiper-pagination-bottom,8px);
+  top:var(--swiper-pagination-top,auto);
+  left:0;
+  width:100%
+}
+
+.swiper-pagination-bullets-dynamic{
+  overflow:hidden;
+  font-size:0
+}
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{
+  transform:scale(.33);
+  position:relative
+}
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active{
+  transform:scale(1)
+}
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main{
+  transform:scale(1)
+}
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev{
+  transform:scale(.66)
+}
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev{
+  transform:scale(.33)
+}
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next{
+  transform:scale(.66)
+}
+
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next{
+  transform:scale(.33)
+}
+
+.swiper-pagination-bullet{
+  width:var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,8px));
+  height:var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,8px));
+  display:inline-block;
+  border-radius:var(--swiper-pagination-bullet-border-radius,50%);
+  background:var(--swiper-pagination-bullet-inactive-color,#000);
+  opacity:var(--swiper-pagination-bullet-inactive-opacity, .2)
+}
+
+button.swiper-pagination-bullet{
+  border:none;
+  margin:0;
+  padding:0;
+  box-shadow:none;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+       appearance:none
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet{
+  cursor:pointer
+}
+
+.swiper-pagination-bullet:only-child{
+  display:none!important
+}
+
+.swiper-pagination-bullet-active{
+  opacity:var(--swiper-pagination-bullet-opacity, 1);
+  background:var(--swiper-pagination-color,var(--swiper-theme-color))
+}
+
+.swiper-pagination-vertical.swiper-pagination-bullets,.swiper-vertical>.swiper-pagination-bullets{
+  right:var(--swiper-pagination-right,8px);
+  left:var(--swiper-pagination-left,auto);
+  top:50%;
+  transform:translate3d(0px,-50%,0)
+}
+
+.swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet,.swiper-vertical>.swiper-pagination-bullets .swiper-pagination-bullet{
+  margin:var(--swiper-pagination-bullet-vertical-gap,6px) 0;
+  display:block
+}
+
+.swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,.swiper-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{
+  top:50%;
+  transform:translateY(-50%);
+  width:8px
+}
+
+.swiper-pagination-vertical.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,.swiper-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{
+  display:inline-block;
+  transition:.2s transform,.2s top
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+  margin:0 var(--swiper-pagination-bullet-horizontal-gap,4px)
+}
+
+.swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic,.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{
+  left:50%;
+  transform:translateX(-50%);
+  white-space:nowrap
+}
+
+.swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{
+  transition:.2s transform,.2s left
+}
+
+.swiper-horizontal.swiper-rtl>.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{
+  transition:.2s transform,.2s right
+}
+
+.swiper-pagination-fraction{
+  color:var(--swiper-pagination-fraction-color,inherit)
+}
+
+.swiper-pagination-progressbar{
+  background:var(--swiper-pagination-progressbar-bg-color,rgba(0,0,0,.25));
+  position:absolute
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+  background:var(--swiper-pagination-color,var(--swiper-theme-color));
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  transform:scale(0);
+  transform-origin:left top
+}
+
+.swiper-rtl .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+  transform-origin:right top
+}
+
+.swiper-horizontal>.swiper-pagination-progressbar,.swiper-pagination-progressbar.swiper-pagination-horizontal,.swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,.swiper-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite{
+  width:100%;
+  height:var(--swiper-pagination-progressbar-size,4px);
+  left:0;
+  top:0
+}
+
+.swiper-horizontal>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite,.swiper-pagination-progressbar.swiper-pagination-horizontal.swiper-pagination-progressbar-opposite,.swiper-pagination-progressbar.swiper-pagination-vertical,.swiper-vertical>.swiper-pagination-progressbar{
+  width:var(--swiper-pagination-progressbar-size,4px);
+  height:100%;
+  left:0;
+  top:0
+}
+
+.swiper-pagination-lock{
+  display:none
+}
+
+.swiper-scrollbar{
+  border-radius:var(--swiper-scrollbar-border-radius,10px);
+  position:relative;
+  touch-action:none;
+  background:var(--swiper-scrollbar-bg-color,rgba(0,0,0,.1))
+}
+
+.swiper-scrollbar-disabled>.swiper-scrollbar,.swiper-scrollbar.swiper-scrollbar-disabled{
+  display:none!important
+}
+
+.swiper-horizontal>.swiper-scrollbar,.swiper-scrollbar.swiper-scrollbar-horizontal{
+  position:absolute;
+  left:var(--swiper-scrollbar-sides-offset,1%);
+  bottom:var(--swiper-scrollbar-bottom,4px);
+  top:var(--swiper-scrollbar-top,auto);
+  z-index:50;
+  height:var(--swiper-scrollbar-size,4px);
+  width:calc(100% - 2 * var(--swiper-scrollbar-sides-offset,1%))
+}
+
+.swiper-scrollbar.swiper-scrollbar-vertical,.swiper-vertical>.swiper-scrollbar{
+  position:absolute;
+  left:var(--swiper-scrollbar-left,auto);
+  right:var(--swiper-scrollbar-right,4px);
+  top:var(--swiper-scrollbar-sides-offset,1%);
+  z-index:50;
+  width:var(--swiper-scrollbar-size,4px);
+  height:calc(100% - 2 * var(--swiper-scrollbar-sides-offset,1%))
+}
+
+.swiper-scrollbar-drag{
+  height:100%;
+  width:100%;
+  position:relative;
+  background:var(--swiper-scrollbar-drag-bg-color,rgba(0,0,0,.5));
+  border-radius:var(--swiper-scrollbar-border-radius,10px);
+  left:0;
+  top:0
+}
+
+.swiper-scrollbar-cursor-drag{
+  cursor:move
+}
+
+.swiper-scrollbar-lock{
+  display:none
+}
+
+.swiper-zoom-container{
+  width:100%;
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center
+}
+
+.swiper-zoom-container>canvas,.swiper-zoom-container>img,.swiper-zoom-container>svg{
+  max-width:100%;
+  max-height:100%;
+  -o-object-fit:contain;
+     object-fit:contain
+}
+
+.swiper-slide-zoomed{
+  cursor:move;
+  touch-action:none
+}
+
+.swiper .swiper-notification{
+  position:absolute;
+  left:0;
+  top:0;
+  pointer-events:none;
+  opacity:0;
+  z-index:-1000
+}
+
+.swiper-free-mode>.swiper-wrapper{
+  transition-timing-function:ease-out;
+  margin:0 auto
+}
+
+.swiper-grid>.swiper-wrapper{
+  flex-wrap:wrap
+}
+
+.swiper-grid-column>.swiper-wrapper{
+  flex-wrap:wrap;
+  flex-direction:column
+}
+
+.swiper-fade.swiper-free-mode .swiper-slide{
+  transition-timing-function:ease-out
+}
+
+.swiper-fade .swiper-slide{
+  pointer-events:none;
+  transition-property:opacity
+}
+
+.swiper-fade .swiper-slide .swiper-slide{
+  pointer-events:none
+}
+
+.swiper-fade .swiper-slide-active{
+  pointer-events:auto
+}
+
+.swiper-fade .swiper-slide-active .swiper-slide-active{
+  pointer-events:auto
+}
+
+.swiper.swiper-cube{
+  overflow:visible
+}
+
+.swiper-cube .swiper-slide{
+  pointer-events:none;
+  backface-visibility:hidden;
+  z-index:1;
+  visibility:hidden;
+  transform-origin:0 0;
+  width:100%;
+  height:100%
+}
+
+.swiper-cube .swiper-slide .swiper-slide{
+  pointer-events:none
+}
+
+.swiper-cube.swiper-rtl .swiper-slide{
+  transform-origin:100% 0
+}
+
+.swiper-cube .swiper-slide-active,.swiper-cube .swiper-slide-active .swiper-slide-active{
+  pointer-events:auto
+}
+
+.swiper-cube .swiper-slide-active,.swiper-cube .swiper-slide-next,.swiper-cube .swiper-slide-prev{
+  pointer-events:auto;
+  visibility:visible
+}
+
+.swiper-cube .swiper-cube-shadow{
+  position:absolute;
+  left:0;
+  bottom:0px;
+  width:100%;
+  height:100%;
+  opacity:.6;
+  z-index:0
+}
+
+.swiper-cube .swiper-cube-shadow:before{
+  content:'';
+  background:#000;
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  right:0;
+  filter:blur(50px)
+}
+
+.swiper-cube .swiper-slide-next+.swiper-slide{
+  pointer-events:auto;
+  visibility:visible
+}
+
+.swiper-cube .swiper-slide-shadow-cube.swiper-slide-shadow-bottom,.swiper-cube .swiper-slide-shadow-cube.swiper-slide-shadow-left,.swiper-cube .swiper-slide-shadow-cube.swiper-slide-shadow-right,.swiper-cube .swiper-slide-shadow-cube.swiper-slide-shadow-top{
+  z-index:0;
+  backface-visibility:hidden
+}
+
+.swiper.swiper-flip{
+  overflow:visible
+}
+
+.swiper-flip .swiper-slide{
+  pointer-events:none;
+  backface-visibility:hidden;
+  z-index:1
+}
+
+.swiper-flip .swiper-slide .swiper-slide{
+  pointer-events:none
+}
+
+.swiper-flip .swiper-slide-active,.swiper-flip .swiper-slide-active .swiper-slide-active{
+  pointer-events:auto
+}
+
+.swiper-flip .swiper-slide-shadow-flip.swiper-slide-shadow-bottom,.swiper-flip .swiper-slide-shadow-flip.swiper-slide-shadow-left,.swiper-flip .swiper-slide-shadow-flip.swiper-slide-shadow-right,.swiper-flip .swiper-slide-shadow-flip.swiper-slide-shadow-top{
+  z-index:0;
+  backface-visibility:hidden
+}
+
+.swiper-creative .swiper-slide{
+  backface-visibility:hidden;
+  overflow:hidden;
+  transition-property:transform,opacity,height
+}
+
+.swiper.swiper-cards{
+  overflow:visible
+}
+
+.swiper-cards .swiper-slide{
+  transform-origin:center bottom;
+  backface-visibility:hidden;
+  overflow:hidden
+}
+
+/* Các thành phần dùng lại cho all trang ví dụ btn, tab, input, bg, color, text, card, badge, .v.v. */
+
+/* ========================================================================
+   GLOBALS.CSS - CSS Variables & Component Styles
+   ======================================================================== */
+
+/* ========================================================================
+   @LAYER BASE - CSS Variables & Base Styles
+   ======================================================================== */
+
+/* ========================================================================
+   @LAYER COMPONENTS - Reusable Component Styles
+   ======================================================================== */
+
+/* Trang Dịch vụ — Swiper autoHeight: chiều cao khớp ảnh, không dư khoảng trống */
+
+.service-poster-swiper.swiper-autoheight .swiper-wrapper {
+  align-items: flex-start;
+}
+
+.service-poster-swiper.swiper-autoheight .swiper-slide {
+  height: auto;
+}
+
+/* Config theme trang Home (màu, font-size, border-radius) - sửa trong home-theme.css */
+
+/* ========================================================================
+   HOME THEME — 5MG: màu (primary / secondary), chữ, border-radius
+   Đổi giá trị trong :root để chỉnh cả header + hero.
+   ======================================================================== */
+
+:root {
+  /* ----- 5MG — màu thương hiệu ----- */
+  --mg-primary: #ff5a2d;
+  --mg-primary-mid: #ff542a;
+  --mg-primary-deep: #ff3f4a;
+  --mg-secondary: #f56b99;
+  /* Nền gradient hero (cam → hồng): bg-mg-hero, header overlay, mọi trang */
+  --mg-hero-gradient: linear-gradient(
+    90deg,
+    var(--mg-primary) 0%,
+    var(--mg-primary-mid) 48%,
+    var(--mg-primary-deep) 78%,
+    var(--mg-secondary) 100%
+  );
+  --mg-peach: #f8d6bf;
+  /* Section Our Service — chữ (tiêu đề .service-section__title = trắng) */
+  --mg-service-text: #fcd4bb;
+  --mg-service-text-muted: #ffd3c2;
+  --mg-service-ai-text: var(--mg-service-text);
+  /* Nền trang: fallback + gradient (chỉnh tại đây) */
+  --mg-page-bg: #121214;
+  --mg-page-bg-alt: #202124;
+  --mg-page-gradient: radial-gradient(
+      100% 70% at 100% -10%,
+      rgba(255, 90, 45, 0.14) 0%,
+      transparent 55%
+    ),
+    radial-gradient(85% 55% at -5% 105%, rgba(245, 107, 153, 0.1) 0%, transparent 52%),
+    linear-gradient(
+      165deg,
+      #161618 0%,
+      #141116 18%,
+      #18141a 42%,
+      #121214 68%,
+      #0e0e10 100%
+    );
+  --mg-shell-bg: #000000;
+  --mg-bar-bg: #000000;
+  --mg-text-on-gradient: #ffffff;
+  --mg-text-on-gradient-soft: rgba(255, 255, 255, 0.95);
+  /* Chữ gradient kem/đào — trái #fee7cd → phải #fbb8a0; dùng class .text-gradient / .mg-text-gradient (mg-components.css) */
+  --mg-text-gradient-from: #fee7cd;
+  --mg-text-gradient-to: #fbb8a0;
+  --mg-text-gradient: linear-gradient(
+    to right,
+    var(--mg-text-gradient-from) 0%,
+    var(--mg-text-gradient-to) 100%
+  );
+  --mg-text-bar: rgba(255, 255, 255, 0.92);
+  --mg-text-strong-on-bar: #ffffff;
+  /* Góc “bẻ giấy” — xám xanh (#a0aab8), có highlight */
+  --mg-fold-from: #dce3ec;
+  --mg-fold-mid: #c5ced9;
+  --mg-fold-base: #a0aab8;
+  --mg-fold-to: #a0aab8;
+  --mg-fold-deep: #7a8a9a;
+  --mg-fold-highlight: rgba(255, 255, 255, 0.55);
+  --mg-shell-ring: rgba(255, 255, 255, 0.04);
+  --mg-header-border: rgba(255, 255, 255, 0.1);
+  --mg-header-surface: rgba(255, 255, 255, 0.1);
+  --mg-header-surface-hover: rgba(255, 255, 255, 0.15);
+  --mg-header-bg: rgba(32, 33, 36, 0.95);
+  /* Component: .mg-corner-shine — vệt sáng góc trên trái */
+  --mg-corner-shine-core: rgba(247, 243, 241, 0.96);
+  --mg-corner-shine-mid: rgba(245, 238, 236, 0.58);
+  --mg-corner-shine-fade: rgba(245, 238, 236, 0);
+  --mg-corner-shine-blur: 8px;
+  --mg-corner-shine-streak: rgba(255, 255, 255, 0.42);
+  --mg-corner-shine-streak-soft: rgba(255, 255, 255, 0.12);
+  /* ----- Typography (rem) — menu, body, hero phụ; đồng bộ với tailwind.config.js fontFamily.sans ----- */
+  --mg-font-sans: "Montserrat", "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  /* Tiêu đề hero — Archivo */
+  --mg-font-hero-display: "Archivo", "Montserrat", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --mg-text-nav: 1.25rem;
+  --mg-text-nav-lg: 1.875rem;
+  --mg-text-tagline: 1.125rem;
+  --mg-text-tagline-lg: 1.375rem;
+  --mg-text-side-title: 1.125rem;
+  --mg-text-side-title-lg: 1.375rem;
+  --mg-text-side-line: 1.125rem;
+  --mg-text-side-line-lg: 1.25rem;
+  --mg-text-bar-body: 1.375rem;
+  --mg-text-bar-body-lg: 1.875rem;
+  --mg-text-brand-vertical: 2.125rem;
+  --mg-text-brand-vertical-lg: 3rem;
+  --mg-text-hero-sm: 4.25rem;
+  --mg-text-hero-md: 7.5rem;
+  --mg-text-hero-lg: 10rem;
+  --mg-text-hero-xl: 11rem;
+  /* ----- Border radius ----- */
+  --mg-radius-shell: 0;
+  --mg-radius-fold: 999px;
+  --mg-radius-header: var(--home-radius-md);
+  /* ----- Khoảng cách header (overlay hero) ----- */
+  --mg-header-clearance: 5rem;
+  /* Padding ngang .home-hero-container (fold không căn theo trục X) */
+  --mg-hero-pad-x: clamp(1rem, 4vw, 2.5rem);
+  /* Padding dọc thanh đen hero — fallback; giá trị thật trên .home-hero-bar (fold + container dùng chung) */
+  --mg-hero-bar-pad-y: clamp(1.25rem, 0.85rem + 2.4vw, 2.5rem);
+  /* ----- Legacy --home-* (nút / theme cũ dùng chung) ----- */
+  --home-primary: var(--mg-primary);
+  --home-primary-hover: #e54a1f;
+  --home-accent: var(--mg-secondary);
+  --home-heading: #ffffff;
+  --home-body: rgba(255, 255, 255, 0.9);
+  --home-white: #ffffff;
+  /* ----- FONT SIZE (font-space / font-plus) ----- */
+  --home-text-xs: 0.625rem;
+  --home-text-sm: 0.75rem;
+  --home-text-base: 0.875rem;
+  --home-text-md: 1rem;
+  --home-text-lg: 1.25rem;
+  --home-text-xl: 1.5rem;
+  --home-text-2xl: 1.875rem;
+  --home-text-3xl: 2.25rem;
+  --home-text-hero: 3rem;
+  /* ----- BORDER RADIUS ----- */
+  --home-radius-sm: 0.375rem;
+  --home-radius-md: 0.5rem;
+  --home-radius-card: 0.625rem;
+  --home-radius-lg: 0.75rem;
+  --home-radius-xl: 1rem;
+  --home-radius-full: 9999px;
+  /* Surface / viền dùng chung (component cũ) */
+  --home-surface: #edeff4;
+  --home-surface-light: #e9f3fd;
+  --home-border: #999a9d;
+  --mg-dropdown-surface: #2a2b2e;
+  --home-success: #00e676;
+  --home-success-10: rgba(0, 230, 118, 0.12);
+  --home-success-20: rgba(0, 230, 118, 0.2);
+}
+
+/* Component 5MG tái sử dụng (.mg-corner-shine, …) */
+
+/* =========================================================
+   Chữ gradient thương hiệu — biến :root (--mg-text-gradient*): trái #fee7cd → phải #fbb8a0
+   Dùng .text-gradient hoặc .mg-text-gradient (cùng một rule). Không cần bg-mg-text-hero + bg-clip-text + text-transparent.
+   ========================================================= */
+
+.mg-text-gradient,
+.text-gradient {
+  background-image: var(--mg-text-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Nền gradient hero — cùng nguồn với Tailwind bg-mg-hero */
+
+.mg-bg-hero {
+  background-image: var(--mg-hero-gradient);
+}
+
+/* =========================================================
+   .mg-corner-shine — base
+   ========================================================= */
+
+.mg-corner-shine {
+  position: absolute;
+  pointer-events: none;
+}
+
+/*
+ * Vệt góc trên-trái — góc 90° + cung.
+ * Gần góc/cung: #f5eeef đặc; mép mờ: chuyển dần sang #f5c1b7 rồi tan.
+ * Không mask + blur trên cùng pseudo.
+ */
+
+/* Rộng theo breakpoint: desktop ~½ viewport để vệt mềm tới vùng chữ Home (menu giữa) */
+
+.mg-corner-shine--top {
+  top: env(safe-area-inset-top, 0px);
+  left: 0;
+  z-index: 5;
+  /* Phone: nhỏ hơn để không “trắng” che header */
+  width: min(70vw, 300px);
+  /* Cao: home-hero-shine.js gán theo đáy .home-hero-title (fallback trước khi JS chạy) */
+  min-height: 200px;
+  height: min(58vh, 520px);
+}
+
+@media (min-width: 768px) {
+  .mg-corner-shine--top {
+    width: min(72vw, 580px);
+    min-height: 280px;
+    height: min(95vh, 840px);
+    opacity: 0.95;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mg-corner-shine--top {
+    width: min(50vw, 920px);
+    height: min(98vh, 980px);
+  }
+}
+
+/*
+ * Join us (contact.html): ảnh assets/images/light_white.webp — góc trên-trái;
+ * opacity 0 → .is-visible khi scroll tới #about-join-us-block (about-join-shine.js).
+ */
+
+.mg-corner-shine--join-contact {
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: min(58%, 320px);
+  height: auto;
+  max-height: min(42vw, 360px);
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: top left;
+     object-position: top left;
+  opacity: 0;
+  transition: opacity 0.32s ease-out;
+  will-change: opacity;
+  pointer-events: none;
+}
+
+.mg-corner-shine--join-contact.is-visible {
+  opacity: 0.95;
+}
+
+@media (min-width: 768px) {
+  .mg-corner-shine--join-contact {
+    width: min(48%, 400px);
+    max-height: min(38vw, 420px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .mg-corner-shine--join-contact {
+    width: min(42%, 480px);
+    max-height: min(34vw, 480px);
+  }
+}
+
+/* Cùng cường độ tối đa mobile như header */
+
+@media (max-width: 767px) {
+  .mg-corner-shine--join-contact.is-visible {
+    opacity: 0.62;
+  }
+}
+
+/* Sector mở rộng góc sang phải; blob ellipse kéo ngang */
+
+.mg-corner-shine--top::before {
+  content: "";
+  position: absolute;
+  left: -14%;
+  top: -12%;
+  width: 128%;
+  height: 104%;
+  background:
+    conic-gradient(
+      from -90deg at 0 0,
+      #f5eeef 0deg,
+      #f5eeef 32deg,
+      rgba(245, 193, 183, 0.78) 44deg,
+      rgba(245, 193, 183, 0.42) 60deg,
+      rgba(245, 193, 183, 0.16) 78deg,
+      rgba(245, 193, 183, 0) 102deg
+    ),
+    radial-gradient(
+      ellipse 125% 92% at 0 0,
+      #f5eeef 0%,
+      #f5eeef 42%,
+      rgba(245, 193, 183, 0.5) 58%,
+      rgba(245, 193, 183, 0.18) 74%,
+      rgba(245, 193, 183, 0.04) 88%,
+      transparent 100%
+    );
+  filter: blur(20px);
+}
+
+/* Cùng góc 0 0 — không transparent ở lõi (::after từng lõm trắng vì transparent ở giữa) */
+
+.mg-corner-shine--top::after {
+  content: "";
+  position: absolute;
+  left: -8%;
+  top: -5%;
+  width: 108%;
+  height: 100%;
+  background: radial-gradient(
+    ellipse 128% 90% at 0 0,
+    #f5eeef 0%,
+    #f5eeef 38%,
+    rgba(245, 193, 183, 0.52) 50%,
+    rgba(245, 193, 183, 0.28) 64%,
+    rgba(245, 193, 183, 0.1) 80%,
+    rgba(245, 193, 183, 0) 90%,
+    transparent 100%
+  );
+  filter: blur(16px);
+  opacity: 0.92;
+}
+
+@media (max-width: 767px) {
+  .mg-corner-shine--top::before {
+    filter: blur(18px);
+    opacity: 0.82;
+  }
+
+  .mg-corner-shine--top::after {
+    filter: blur(12px);
+    opacity: 0.72;
+  }
+}
+
+/* Menu: không còn vệt trong khối nav */
+
+.header-desktop-menu {
+  position: relative;
+}
+
+.header-desktop-nav {
+  position: relative;
+  z-index: 20;
+}
+
+/*
+ * Vệt dọc brand: trái đậm → phải tan, không vạch sáng giữa. left: brand-section-vline.js.
+ */
+
+.brand-section-vline {
+  width: clamp(16px, 4.5vw, 26px);
+  background: linear-gradient(
+    90deg,
+    rgba(12, 12, 14, 0.54) 0%,
+    rgba(10, 10, 12, 0.4) 38%,
+    rgba(8, 8, 10, 0.3) 68%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  box-shadow:
+    5px 0 28px rgba(0, 0, 0, 0.22),
+    12px 0 48px rgba(0, 0, 0, 0.13);
+}
+
+/* Góc đen trang trí (contact.html) */
+
+.about-join-us-fold {
+  position: absolute;
+  z-index: 0;
+  right: 0;
+  bottom: 0;
+  width: clamp(7rem, 22vw, 11rem);
+  height: clamp(7rem, 22vw, 11rem);
+  background: #0a0a0a;
+  clip-path: polygon(100% 0, 12% 100%, 100% 100%);
+  pointer-events: none;
+}
+
+/* Join us (contact.html): nền trong suốt khi #about-join-us-panel dùng .bg-mg-hero full width */
+
+.about-join-us-surface--on-mg-hero {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.about-join-us-title {
+  font-family: Georgia, "Times New Roman", ui-serif, serif;
+  font-weight: 900;
+  letter-spacing: -0.06em;
+  line-height: 0.9;
+  color: #0a0a0a;
+}
+
+/* “Vị trí thường xuyên tuyển” — chấm tròn cỡ cố định (không phụ thuộc Tailwind purge theo trang) */
+
+.about-join-positions-bullet {
+  flex-shrink: 0;
+  align-self: center;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #0a0a0a;
+}
+
+@media (min-width: 640px) {
+  .about-join-positions-bullet {
+    width: 9px;
+    height: 9px;
+  }
+}
+
+/* Hero trang chủ 5MG */
+
+main{
+  background-image: var( --mg-page-gradient);
+}
+
+.page-home,
+.page-about {
+  background-color: var(--mg-page-bg);
+  background-image: var(--mg-page-gradient);
+  background-repeat: no-repeat;
+  font-family: var(--mg-font-sans);
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Wrapper: header + main — vệt sáng trong header tràn xuống không bị cắt ranh giới section */
+
+.page-home-top {
+  position: relative;
+  overflow: visible;
+}
+
+/* Header trang home: nền gradient tách lớp; vệt .mg-corner-shine--top khi body.mg-header-corner-shine */
+
+.page-home .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 70;
+  border: 0 !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+  outline: none;
+  background-color: transparent !important;
+  background-image: none !important;
+  backdrop-filter: none;
+  overflow: visible;
+}
+
+.page-home .site-header-gradient-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  /* Kéo xuống vài px — lấp khe 1px / seam giữa header và hero trên màn siêu rộng */
+  bottom: -4px;
+  z-index: 0;
+  pointer-events: none;
+  border: 0 !important;
+  box-shadow: none !important;
+  background-image: var(--mg-hero-gradient);
+}
+
+.page-home .site-header-body {
+  position: relative;
+  z-index: 15;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
+
+.page-home .site-header .header-bar {
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
+
+body:not(.page-home) .site-header-gradient-layer {
+  display: none;
+}
+
+/* Vệt sáng header: chỉ hiện khi <body> có class .mg-header-corner-shine (opt-in từng trang) */
+
+body:not(.mg-header-corner-shine) .mg-corner-shine--top {
+  display: none !important;
+}
+
+.page-home .site-header .header-logo-link {
+  color: var(--mg-text-on-gradient);
+}
+
+.page-home .site-header .header-logo-link:hover {
+  color: var(--mg-text-on-gradient-soft);
+  opacity: 0.95;
+}
+
+.page-home .header-bar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+}
+
+/* Mobile + tablet (<lg): logo + menu 2 cột; inset ngang để không dính mép viewport */
+
+@media (max-width: 1023px) {
+  .page-home .site-header-body > div > .header-bar {
+    padding-left: clamp(0.75rem, 3.5vw, 1.5rem);
+    padding-right: clamp(0.75rem, 3.5vw, 1.5rem);
+    -moz-column-gap: clamp(0.5rem, 2vw, 1rem);
+         column-gap: clamp(0.5rem, 2vw, 1rem);
+    box-sizing: border-box;
+  }
+
+  .page-home .header-bar {
+    grid-template-columns: minmax(0, auto) minmax(0, 1fr);
+  }
+
+  .page-home .header-desktop-menu {
+    justify-self: center;
+    min-width: 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .page-home .site-header .header-desktop-menu ul.home-hero-nav-list {
+    max-width: none;
+    justify-content: center;
+    font-size: clamp(0.8125rem, 3.2vw, 0.9375rem);
+  }
+}
+
+/* Tablet 768–1023: một hàng menu + khoảng cách vừa — tránh wrap 2 dòng + gap 4rem từ rule md “đè” nhìn lệch */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .page-home .site-header .header-desktop-menu ul.home-hero-nav-list {
+    flex-wrap: nowrap;
+    -moz-column-gap: clamp(1rem, 2.5vw, 1.65rem);
+         column-gap: clamp(1rem, 2.5vw, 1.65rem);
+    font-size: clamp(0.875rem, 1.45vw, 1rem);
+  }
+}
+
+/* Vệt góc: cường độ tối đa × --mg-shine-scroll (0…1, gán bởi home-hero-shine.js khi cuộn) */
+
+body.mg-header-corner-shine .mg-corner-shine--top {
+  --mg-shine-opacity-max: 0.95;
+  --mg-shine-scroll: 1;
+  opacity: calc(var(--mg-shine-opacity-max) * var(--mg-shine-scroll));
+  transition: opacity 0.32s ease-out;
+  will-change: opacity;
+}
+
+/* Mobile: vệt góc nhạt hơn + lớp tối nhẹ phía trên bar để logo/menu đọc được */
+
+@media (max-width: 767px) {
+  body.mg-header-corner-shine .mg-corner-shine--top {
+    width: min(64vw, 280px);
+    min-height: 160px;
+    height: min(50vh, 420px);
+    --mg-shine-opacity-max: 0.62;
+  }
+
+  .page-home .site-header-body::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 4.5rem;
+    pointer-events: none;
+    z-index: 0;
+    background: linear-gradient(
+      180deg,
+      rgb(0 28 64 / 0.5) 0%,
+      rgb(0 40 88 / 0.12) 65%,
+      transparent 100%
+    );
+  }
+
+  .page-home .site-header-body > div {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.page-home .header-brand {
+  justify-self: start;
+  position: relative;
+  z-index: 25;
+}
+
+/* Modal: tắt vệt (ưu tiên hơn --mg-shine-scroll) */
+
+body.mg-header-corner-shine:has(.jmodal:not(.hidden)) .mg-corner-shine--top {
+  opacity: 0 !important;
+  transition: opacity 0.28s ease-out;
+}
+
+/* Trang service.html — vệt góc: ảnh light_bg.webp (chỉ .page-service; cần có trong dist) */
+
+body.page-service.mg-header-corner-shine .mg-corner-shine--top {
+  --mg-shine-opacity-max: 0.8;
+  z-index: 0;
+  width: min(64vw, 310px);
+  min-height: 182px;
+  height: min(52vh, 480px);
+  overflow: visible;
+  background-image: url("../images/light_bg.webp");
+  background-repeat: no-repeat;
+  background-position: left top;
+  /* contain = không cắt ảnh; khung lớn → ảnh lớn theo */
+  background-size: contain;
+}
+
+@media (min-width: 768px) {
+  body.page-service.mg-header-corner-shine .mg-corner-shine--top {
+    width: min(58vw, 480px);
+    min-height: 240px;
+    height: min(72vh, 660px);
+  }
+}
+
+@media (min-width: 1024px) {
+  body.page-service.mg-header-corner-shine .mg-corner-shine--top {
+    width: min(48vw, 840px);
+    height: min(84vh, 900px);
+  }
+}
+
+/* Tắt gradient mặc định (.mg-corner-shine--top::before/::after) — chỉ dùng ảnh */
+
+body.page-service.mg-header-corner-shine .mg-corner-shine--top::before,
+body.page-service.mg-header-corner-shine .mg-corner-shine--top::after {
+  display: none;
+}
+
+.page-home .header-desktop-menu {
+  position: relative;
+  z-index: 25;
+  isolation: isolate;
+}
+
+/* Desktop 3 cột: menu cột giữa — căn giữa (mobile/tablet cũng center ở khối max-width 1023) */
+
+@media (min-width: 1024px) {
+  .page-home .header-desktop-menu {
+    justify-self: center;
+  }
+}
+
+.page-home .header-desktop-nav {
+  position: relative;
+  z-index: 35;
+}
+
+/* Chữ menu luôn trên layer vệt sáng (nền header trong suốt) */
+
+.page-home .site-header .header-desktop-menu .home-hero-nav-list a {
+  position: relative;
+  z-index: 1;
+}
+
+/* Chỉ hiện trên home desktop để cân grid với logo */
+
+.header-bar-spacer {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .page-home .header-bar-spacer {
+    display: block;
+    width: 4.5rem;
+    justify-self: end;
+  }
+}
+
+.page-home .site-header .header-desktop-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.35rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .page-home .site-header .header-desktop-nav {
+    padding-top: 0.5rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* Trùng typography / màu với .home-hero-nav-list trên hero */
+
+.page-home .site-header .header-desktop-menu ul.home-hero-nav-list {
+  color: var(--mg-text-on-gradient);
+  justify-content: center;
+  max-width: 22rem;
+  font-weight: 300;
+  font-size: clamp(0.9375rem, 3.8vw, 1.25rem);
+  -moz-column-gap: clamp(1rem, 4vw, 2rem);
+       column-gap: clamp(1rem, 4vw, 2rem);
+  row-gap: 0.75rem;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+@media (min-width: 480px) {
+  .page-home .site-header .header-desktop-menu ul.home-hero-nav-list {
+    max-width: none;
+    -moz-column-gap: clamp(1.25rem, 5vw, 2rem);
+         column-gap: clamp(1.25rem, 5vw, 2rem);
+    font-size: clamp(1rem, 2.8vw, 1.35rem);
+  }
+}
+
+@media (min-width: 768px) {
+  .page-home .site-header .header-desktop-menu ul.home-hero-nav-list {
+    -moz-column-gap: 4rem;
+         column-gap: 4rem;
+    row-gap: 0.5rem;
+    font-size: var(--mg-text-nav);
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-home .site-header .header-desktop-menu ul.home-hero-nav-list {
+    -moz-column-gap: 6rem;
+         column-gap: 6rem;
+    font-size: var(--mg-text-nav-lg);
+  }
+}
+
+/* ≤1023px: gap rộng theo container (đặt sau min-width* để override 768/480/base) */
+
+@media (max-width: 1023px) {
+  .page-home .site-header .header-desktop-menu ul.home-hero-nav-list {
+    -moz-column-gap: clamp(1.5rem, 8vw, 3.25rem);
+         column-gap: clamp(1.5rem, 8vw, 3.25rem);
+    row-gap: 0.65rem;
+    justify-content: center;
+  }
+
+  .page-home .site-header .header-desktop-menu .home-hero-nav-list a {
+    padding: 0.45rem 0.7rem;
+    margin: -0.45rem -0.7rem;
+  }
+}
+
+.page-home .site-header .header-desktop-menu .home-hero-nav-is-active {
+  color: var(--mg-text-on-gradient);
+  font-weight: 600;
+}
+
+.page-home .site-header .header-desktop-menu .home-hero-nav-is-muted {
+  color: var(--mg-text-on-gradient-soft);
+  opacity: 0.95;
+}
+
+.page-home .site-header .header-desktop-menu .home-hero-nav-is-muted:hover {
+  opacity: 1;
+  color: var(--mg-text-on-gradient);
+}
+
+/* Hero band — vỏ + gradient + container + bar grid: Tailwind trong src/blocks/sections/home/index.html */
+
+.home-hero-nav {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .home-hero-nav {
+    padding-top: 2.5rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-hero-nav {
+    padding-top: 3.5rem;
+  }
+}
+
+.home-hero-nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  row-gap: 0.75rem;
+  -moz-column-gap: clamp(1rem, 4vw, 2rem);
+       column-gap: clamp(1rem, 4vw, 2rem);
+  max-width: 22rem;
+  color: var(--mg-text-on-gradient);
+  font-size: clamp(0.9375rem, 3.8vw, 1.25rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+@media (min-width: 480px) {
+  .home-hero-nav-list {
+    max-width: none;
+    -moz-column-gap: clamp(1.25rem, 5vw, 2rem);
+         column-gap: clamp(1.25rem, 5vw, 2rem);
+    font-size: clamp(1rem, 2.8vw, 1.35rem);
+  }
+}
+
+@media (min-width: 768px) {
+  .home-hero-nav-list {
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+    row-gap: 0.5rem;
+    font-size: var(--mg-text-nav);
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-hero-nav-list {
+    -moz-column-gap: 4rem;
+         column-gap: 4rem;
+    font-size: var(--mg-text-nav-lg);
+  }
+}
+
+.home-hero-nav-list a {
+  display: inline-block;
+  padding: 0.35rem 0.5rem;
+  margin: -0.35rem -0.5rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .home-hero-nav-list a {
+    padding: 0.25rem 0.35rem;
+    margin: -0.25rem -0.35rem;
+  }
+}
+
+.home-hero-nav-list a:hover {
+  opacity: 1;
+}
+
+.home-hero-nav-is-muted:hover {
+  opacity: 1;
+}
+
+.home-hero-nav-is-active {
+  font-weight: 600;
+}
+
+.home-hero-nav-is-muted {
+  opacity: 0.95;
+  transition: opacity 0.2s ease;
+}
+
+/* Fluid type — Archivo (biến --mg-font-hero-display trong home-theme.css); About dùng chung cỡ chữ */
+
+.home-hero-title,
+.home-hero-about-title {
+  font-family: var(--mg-font-hero-display);
+  font-weight: 900;
+  font-synthesis: none;
+  line-height: 1.2;
+  letter-spacing: -0.05em;
+  font-size: clamp(2.75rem, 10vw, 5.5rem);
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.home-hero-title {
+  text-transform: lowercase;
+}
+
+/* Chỉ dòng sau (media group) — kéo sát “five”; em bám cỡ tiêu đề, vw mượt theo khung */
+
+.home-hero-title .block + .block {
+  margin-top: clamp(-0.58rem, calc(-0.052em - 0.45vw), -0.26rem);
+}
+
+@media (min-width: 480px) {
+  .home-hero-title .block + .block {
+    margin-top: clamp(-0.95rem, calc(-0.075em - 0.55vw), -0.62rem);
+  }
+
+  .home-hero-title,
+  .home-hero-about-title {
+    font-size: clamp(3rem, 11vw, 5.5rem);
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-hero-title .block + .block {
+    margin-top: clamp(-1.55rem, calc(-0.082em - 0.65vw), -1.05rem);
+  }
+
+  .home-hero-title,
+  .home-hero-about-title {
+    font-size: clamp(4rem, 9.5vw, 7rem);
+    line-height: 1.2;
+  }
+}
+
+/* 1024+: fluid tới tối đa 7rem (khớp xl), tránh nhảy cỡ khi trước đó cap 10rem (--mg-text-hero-lg) */
+
+@media (min-width: 1024px) {
+  .home-hero-title .block + .block {
+    margin-top: clamp(-2.2rem, calc(-0.088em - 0.85vw), -1.6rem);
+  }
+
+  .home-hero-title,
+  .home-hero-about-title {
+    font-size: clamp(5.5rem, 7.5vw + 1rem, 7rem);
+    line-height: 1.18;
+  }
+}
+
+@media (min-width: 1440px) {
+  .home-hero-title .block + .block {
+    margin-top: -2.24rem;
+  }
+
+  .home-hero-title,
+  .home-hero-about-title {
+    font-size: 7rem;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Góc vuông BR + cạnh BL→TR là cung tròn lõm (clip SVG); nền + sao trong .home-hero-fold-layers / .home-hero-fold-star
+ * Phải: mép phải bar (viewport); fold con trực tiếp .home-hero-bar.
+ * Dọc: top:0 + translateY(-50%) — tâm trên ranh gradient↔bar.
+ * Lõm + sao: chỉ inset đáy = --mg-hero-bar-pad-y (khớp padding-bottom lưới bar, không cắt phía trên). */
+
+.home-hero-fold {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: auto;
+  transform: translateY(-50%);
+  z-index: 12;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.home-hero-fold-clip-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.home-hero-fold.home-hero-curve-fold {
+  width: min(58vw, 230px);
+  height: min(68vw, 255px);
+}
+
+/* Rất nhỏ: fold + sao gọn hơn, bớt “lõm” to (chỉ hero bar) */
+
+@media (max-width: 479px) {
+  .home-hero-bar .home-hero-fold.home-hero-curve-fold,
+  .about-join-us-surface .home-hero-fold--join-bar.home-hero-curve-fold {
+    width: min(50vw, 188px);
+    height: min(56vw, 210px);
+  }
+
+  .home-hero-bar .home-hero-fold.home-hero-curve-fold {
+    top: -30px;
+  }
+
+  .home-hero-bar .home-hero-fold-star,
+  .about-join-us-surface .home-hero-fold--join-bar .home-hero-fold-star {
+    max-height: 82%;
+    opacity: 0.9;
+  }
+}
+
+/* Wrapper: feDropShadow (#home-hero-fold-shadow-filter); inset đáy = padding bar — giống KOL layers-wrap */
+
+.home-hero-fold-layers-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: var(--mg-hero-bar-pad-y);
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: visible;
+  filter: url("#home-hero-fold-shadow-filter");
+}
+
+/* Clip chỉ lớp “giấy” */
+
+.home-hero-fold-layers {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  clip-path: url("#home-hero-fold-clip");
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.32) 0%,
+      rgba(255, 255, 255, 0.1) 24%,
+      rgba(255, 255, 255, 0) 44%
+    ),
+    linear-gradient(
+      135deg,
+      var(--mg-fold-from) 0%,
+      var(--mg-fold-mid) 28%,
+      var(--mg-fold-base) 55%,
+      var(--mg-fold-deep) 100%
+    );
+  box-shadow:
+    inset 10px 10px 18px rgba(255, 255, 255, 0.2),
+    inset -10px -12px 18px rgba(0, 0, 0, 0.12);
+}
+
+.home-hero-fold-layers::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    210deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.18) 52%,
+    transparent 64%
+  );
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+}
+
+.home-hero-fold-layers::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 2px 2px 0 rgba(255, 255, 255, 0.2);
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+/* About: góc fold thanh đen — nền trắng thật (SVG defs 0×0 không tô được màu) */
+
+.about-hero .home-hero-bar .home-hero-fold--about-white .home-hero-fold-layers {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0.12) 28%,
+      rgba(255, 255, 255, 0) 42%
+    ),
+    linear-gradient(145deg, #f3eeef 0%, #f4f4f5 52%, #e8e8ea 100%);
+  box-shadow:
+    inset 8px 8px 16px rgba(255, 255, 255, 0.65),
+    inset -8px -10px 14px rgba(0, 0, 0, 0.08);
+}
+
+.about-hero .home-hero-bar .home-hero-fold--about-white .home-hero-fold-layers::before {
+  background: linear-gradient(
+    210deg,
+    transparent 38%,
+    rgba(255, 255, 255, 0.45) 52%,
+    transparent 66%
+  );
+}
+
+/* Join us (contact): fold góc dưới-phải; kích thước trùng hero bar (media chung); lõm --mg-bar-bg */
+
+/* z-index 12 = như .home-hero-fold; phải > .container z-[2] thì mới che ul/li góc phải */
+
+/* bottom = đáy padding của surface (đồng bộ --join-fold-bottom với py-12 / sm:py-24) — tránh neo bottom:0 dính mép ngoài */
+
+.about-join-us-surface .home-hero-fold--join-bar.home-hero-curve-fold {
+  position: absolute;
+  right: 0;
+  bottom: var(--join-fold-bottom, 0px);
+  top: auto;
+  left: auto;
+  transform: none;
+  z-index: 12;
+}
+
+.about-join-us-surface .home-hero-fold--join-bar .home-hero-fold-layers-wrap {
+  filter: url("#home-hero-fold-shadow-filter-join");
+}
+
+.about-join-us-surface .home-hero-fold--join-bar .home-hero-fold-layers {
+  clip-path: url("#home-hero-fold-clip-join");
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.14) 0%,
+      rgba(255, 255, 255, 0) 42%
+    ),
+    linear-gradient(
+      145deg,
+      color-mix(in srgb, var(--mg-bar-bg) 88%, #2a2a2a) 0%,
+      var(--mg-bar-bg) 48%,
+      color-mix(in srgb, var(--mg-bar-bg) 72%, #000) 100%
+    );
+  /* Trùng .home-hero-fold-layers mặc định */
+  box-shadow:
+    inset 10px 10px 18px rgba(255, 255, 255, 0.2),
+    inset -10px -12px 18px rgba(0, 0, 0, 0.12);
+}
+
+.about-join-us-surface .home-hero-fold--join-bar .home-hero-fold-layers::before {
+  background: linear-gradient(
+    210deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.18) 52%,
+    transparent 64%
+  );
+  mix-blend-mode: soft-light;
+}
+
+/* Sao: cùng vùng dọc với lõm (chỉ inset đáy như padding-bottom bar) */
+
+.home-hero-fold-star-stage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: var(--mg-hero-bar-pad-y);
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.home-hero-fold-star {
+  display: block;
+  flex: 0 1 auto;
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: right center;
+     object-position: right center;
+  overflow: visible;
+  pointer-events: none;
+  /* ảnh star.png đã có bóng/viền — không thêm filter trùng */
+}
+
+.home-hero-star-outline {
+  clip-path: polygon(
+    50% 0%,
+    62% 35%,
+    100% 35%,
+    69% 57%,
+    82% 100%,
+    50% 74%,
+    18% 100%,
+    31% 57%,
+    0% 35%,
+    38% 35%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.65),
+    rgba(255, 255, 255, 0.1)
+  );
+  opacity: 0.5;
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.2));
+}
+
+.home-hero-star-inner {
+  clip-path: polygon(
+    50% 0%,
+    62% 35%,
+    100% 35%,
+    69% 57%,
+    82% 100%,
+    50% 74%,
+    18% 100%,
+    31% 57%,
+    0% 35%,
+    38% 35%
+  );
+  position: absolute;
+  inset: 2px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.14),
+    rgba(255, 255, 255, 0.03)
+  );
+}
+
+/* Sao — ẩn rất nhỏ để tránh chồng chữ; tablet/desktop hiển thị */
+
+.home-hero-star-a,
+.home-hero-star-b {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .home-hero-star-a,
+  .home-hero-star-b {
+    display: block;
+  }
+
+  .home-hero-star-a {
+    position: absolute;
+    right: 6%;
+    top: 56%;
+    z-index: 30;
+    width: 100px;
+    height: 100px;
+    pointer-events: none;
+  }
+
+  .home-hero-star-b {
+    position: absolute;
+    right: 18%;
+    top: 68%;
+    z-index: 30;
+    width: 72px;
+    height: 72px;
+    transform: rotate(16deg);
+    pointer-events: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-hero-star-a {
+    right: 10%;
+    top: 53%;
+    width: 200px;
+    height: 200px;
+  }
+
+  .home-hero-star-b {
+    right: 22%;
+    top: 64%;
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-hero-star-a {
+    right: 10%;
+    top: 53%;
+    width: 180px;
+    height: 180px;
+  }
+
+  .home-hero-star-b {
+    right: 22%;
+    top: 65%;
+    width: 110px;
+    height: 110px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .home-hero-star-a {
+    right: 11%;
+    top: 52%;
+    width: 230px;
+    height: 230px;
+  }
+
+  .home-hero-star-b {
+    right: 24%;
+    top: 66%;
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Tỷ lệ fold (góc vuông + cung lõm): mobile → desktop — hero bar + Join us (cùng kích thước) */
+
+@media (min-width: 480px) {
+  .home-hero-bar .home-hero-fold.home-hero-curve-fold,
+  .about-join-us-surface .home-hero-fold--join-bar.home-hero-curve-fold {
+    width: min(56vw, 236px);
+    height: min(62vw, 248px);
+  }
+}
+
+/* Tablet 768–1023: fold vừa khung — tránh cỡ 392px che hết bar trên iPad */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .home-hero-bar .home-hero-fold.home-hero-curve-fold,
+  .about-join-us-surface .home-hero-fold--join-bar.home-hero-curve-fold {
+    width: min(34vw, 260px);
+    height: min(40vw, 248px);
+  }
+}
+
+/* Laptop 1024–1439: fold vừa bar — bớt vw/cap để không che hết nội dung */
+
+@media (min-width: 1024px) {
+  .home-hero-bar .home-hero-fold.home-hero-curve-fold,
+  .about-join-us-surface .home-hero-fold--join-bar.home-hero-curve-fold {
+    width: min(32vw, 360px);
+    height: min(28vw, 318px);
+  }
+
+  .home-hero-bar .home-hero-fold.home-hero-curve-fold {
+    top: 57px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .home-hero-bar .home-hero-fold.home-hero-curve-fold,
+  .about-join-us-surface .home-hero-fold--join-bar.home-hero-curve-fold {
+    width: 350px;
+    height: 350px;
+  }
+
+  .home-hero-bar .home-hero-fold.home-hero-curve-fold {
+    top: 35px;
+  }
+}
+
+/* KOL slider: hai vòng trắng lớn chồng nửa + hotspot giữa — giống ref (halo mềm, giữa trắng rực) */
+
+.kol-swiper-stage {
+  position: relative;
+}
+
+/* Khung slide: min-height lớn + object-cover — không dùng contain (tránh vệt đen), không ép aspect quá thấp */
+
+.kol-slide-media {
+  min-height: min(92vw, 440px);
+}
+
+@media (min-width: 640px) {
+  .kol-slide-media {
+    min-height: min(78vw, 500px);
+  }
+}
+
+@media (min-width: 768px) {
+  .kol-slide-media {
+    min-height: min(62vw, 560px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .kol-slide-media {
+    min-height: min(52vw, 640px);
+  }
+}
+
+.kol-slide-top-lights {
+  --kol-top-d: clamp(120px, 28vw, 240px);
+  position: absolute;
+  /* Neo góc trên-trái slide; lệch thêm sang trái một chút */
+  left: calc(var(--kol-top-d) * -0.3);
+  top: 0;
+  z-index: 0;
+  width: 1px;
+  height: 1px;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.kol-slide-top-lights__blob {
+  position: absolute;
+  width: var(--kol-top-d);
+  height: var(--kol-top-d);
+  border-radius: 50%;
+  pointer-events: none;
+  box-sizing: border-box;
+  mix-blend-mode: screen;
+}
+
+/* Tâm A tại góc TL; B lệch +D/2 — chồng đúng 50% đường kính; gradient dài + blur lớn = mép tan như ảnh mẫu */
+
+.kol-slide-top-lights__blob--a {
+  left: calc(var(--kol-top-d) * -0.5);
+  top: calc(var(--kol-top-d) * -0.5);
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgb(255, 255, 255) 0%,
+    rgba(255, 255, 255, 0.72) 18%,
+    rgba(255, 255, 255, 0.32) 48%,
+    rgba(255, 255, 255, 0.08) 72%,
+    transparent 88%
+  );
+  filter: blur(22px);
+}
+
+.kol-slide-top-lights__blob--b {
+  left: calc(var(--kol-top-d) * -0.5 + var(--kol-top-d) * 0.5);
+  top: calc(var(--kol-top-d) * -0.5);
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgb(255, 255, 255) 0%,
+    rgba(255, 255, 255, 0.68) 20%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0.07) 74%,
+    transparent 90%
+  );
+  filter: blur(20px);
+}
+
+/* Điểm giao hai tâm: (D/4, 0) — thêm lõi trắng đặc hơn */
+
+.kol-slide-top-lights__hotspot {
+  position: absolute;
+  left: calc(var(--kol-top-d) * 0.25);
+  top: 0;
+  width: calc(var(--kol-top-d) * 0.5);
+  height: calc(var(--kol-top-d) * 0.62);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  box-sizing: border-box;
+  background: radial-gradient(
+    ellipse 100% 100% at 50% 50%,
+    rgb(255, 255, 255) 0%,
+    rgba(255, 255, 255, 0.65) 35%,
+    rgba(255, 255, 255, 0.15) 62%,
+    transparent 82%
+  );
+  filter: blur(14px);
+  mix-blend-mode: screen;
+}
+
+@media (min-width: 768px) {
+  .kol-slide-top-lights__blob--a {
+    filter: blur(28px);
+  }
+
+  .kol-slide-top-lights__blob--b {
+    filter: blur(26px);
+  }
+
+  .kol-slide-top-lights__hotspot {
+    filter: blur(18px);
+  }
+}
+
+/* KOL slider: lõm + sao — neo góc dưới-phải; clip + feDropShadow (#kol-fold-shadow-filter) trên .kol-swiper-fold-layers */
+
+.kol-swiper-fold {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: auto;
+  transform: none;
+  z-index: 4;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.kol-swiper-fold-clip-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.kol-swiper-fold.kol-swiper-curve-fold {
+  width: min(58vw, 230px);
+  height: min(68vw, 255px);
+}
+
+@media (max-width: 479px) {
+  .kol-swiper-stage .kol-swiper-fold.kol-swiper-curve-fold {
+    width: min(50vw, 188px);
+    height: min(56vw, 210px);
+  }
+
+  .kol-swiper-fold-star {
+    max-height: 82%;
+    opacity: 0.9;
+  }
+}
+
+/* Wrapper: feDropShadow — clip chỉ ở .kol-swiper-fold-layers để bóng không bị cắt */
+
+.kol-swiper-fold-layers-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: visible;
+  filter: url("#kol-fold-shadow-filter");
+}
+
+.kol-swiper-fold-layers {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  clip-path: url("#kol-fold-clip");
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.32) 0%,
+      rgba(255, 255, 255, 0.1) 24%,
+      rgba(255, 255, 255, 0) 44%
+    ),
+    linear-gradient(
+      135deg,
+      var(--mg-fold-from) 0%,
+      var(--mg-fold-mid) 28%,
+      var(--mg-fold-base) 55%,
+      var(--mg-fold-deep) 100%
+    );
+  box-shadow:
+    inset 10px 10px 18px rgba(255, 255, 255, 0.2),
+    inset -10px -12px 18px rgba(0, 0, 0, 0.12);
+}
+
+.kol-swiper-fold-layers::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    210deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.18) 52%,
+    transparent 64%
+  );
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+}
+
+.kol-swiper-fold-layers::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 2px 2px 0 rgba(255, 255, 255, 0.2);
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+.kol-swiper-fold-star-stage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  padding-right: 0;
+  box-sizing: border-box;
+  pointer-events: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.kol-swiper-fold-star {
+  display: block;
+  flex: 0 1 auto;
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: right bottom;
+     object-position: right bottom;
+  overflow: visible;
+  pointer-events: none;
+}
+
+@media (min-width: 480px) {
+  .kol-swiper-stage .kol-swiper-fold.kol-swiper-curve-fold {
+    width: min(56vw, 236px);
+    height: min(62vw, 248px);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .kol-swiper-stage .kol-swiper-fold.kol-swiper-curve-fold {
+    width: min(34vw, 260px);
+    height: min(40vw, 248px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .kol-swiper-stage .kol-swiper-fold.kol-swiper-curve-fold {
+    width: min(46vw, 520px);
+    height: min(40vw, 436px);
+  }
+}
+
+@media (min-width: 1440px) {
+  .kol-swiper-stage .kol-swiper-fold.kol-swiper-curve-fold {
+    width: 360px;
+    height: 360px;
+  }
+}
+
+/* KOL Swiper: chấm pagination to hơn, màu #f0552f */
+
+.celebrity-kols-pagination.swiper-pagination-horizontal .swiper-pagination-bullet,
+.celebrity-kols-pagination .swiper-pagination-bullet {
+  width: clamp(12px, 2vw, 12px);
+  height: clamp(12px, 2vw, 12px);
+  margin: 0 7px;
+  background: #f0552f;
+  opacity: 0.4;
+}
+
+.celebrity-kols-pagination.swiper-pagination-horizontal .swiper-pagination-bullet-active,
+.celebrity-kols-pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #f0552f;
+  transform: scale(1.12);
+}
+
+/* Header: màu từ biến */
+
+.mg-header-bar {
+  background-color: var(--mg-header-bg);
+  border-bottom: 1px solid var(--mg-header-border);
+}
+
+.mg-header-icon-btn {
+  border-radius: var(--mg-radius-header);
+}
+
+.mg-nav-desktop a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.mg-nav-desktop a:hover {
+  opacity: 1;
+}
+
+.mg-header-chip {
+  background: var(--mg-header-surface);
+  border-radius: var(--mg-radius-header);
+}
+
+.mg-header-chip:hover {
+  background: var(--mg-header-surface-hover);
+}
+
+/* ========================================================================
+   Trang About — header overlay (cùng band gradient hero)
+   ======================================================================== */
+
+.page-about .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 70;
+  border: 0 !important;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+  outline: none;
+  background-color: transparent !important;
+  background-image: none !important;
+  backdrop-filter: none;
+  overflow: visible;
+}
+
+.page-about .site-header-gradient-layer {
+  display: block !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -4px;
+  z-index: 0;
+  pointer-events: none;
+  border: 0 !important;
+  box-shadow: none !important;
+  background-image: var(--mg-hero-gradient) !important;
+}
+
+.page-about .site-header-body {
+  position: relative;
+  z-index: 15;
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
+
+.page-about .site-header .header-bar {
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
+
+.page-about .site-header .header-logo-link {
+  color: var(--mg-text-on-gradient);
+}
+
+.page-about .site-header .header-logo-link:hover {
+  color: var(--mg-text-on-gradient-soft);
+  opacity: 0.95;
+}
+
+/* About dùng chung .page-home cho bar/grid menu — không lặp rule mobile (tránh lệch căng phải) */
+
+/* Tiêu đề About: ‘bout / us — cỡ chữ dùng chung .home-hero-about-title ở trên */
+
+/* Hai dòng: ‘bout / us — line-height thấp, khoảng cách chủ yếu bằng margin âm */
+
+.home-hero-about-title--split {
+  line-height: 1;
+}
+
+.home-hero-about-title--split > .block {
+  line-height: 0.9;
+}
+
+.home-hero-about-title--split > .block + .block {
+  margin-top: clamp(-0.42rem, calc(-0.028em - 0.55vw), -0.16rem);
+}
+
+@media (min-width: 480px) {
+  .home-hero-about-title--split > .block + .block {
+    margin-top: clamp(-0.62rem, calc(-0.038em - 0.65vw), -0.3rem);
+  }
+}
+
+@media (min-width: 768px) {
+  .home-hero-about-title--split > .block + .block {
+    margin-top: clamp(-0.88rem, calc(-0.042em - 0.75vw), -0.48rem);
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-hero-about-title--split > .block + .block {
+    margin-top: clamp(-1.15rem, calc(-0.046em - 0.9vw), -0.72rem);
+  }
+}
+
+@media (min-width: 1440px) {
+  .home-hero-about-title--split > .block + .block {
+    margin-top: -1.2rem;
+  }
+}
+
+/* Mobile + tablet: một hàng ‘bout us — bỏ margin âm kéo dòng (chỉ dùng từ lg trở lên) */
+
+@media (max-width: 1023px) {
+  .home-hero-about-title--split > .block + .block {
+    margin-top: 0;
+  }
+}
+
+/* Gradient chữ About: hộp = độ rộng chữ (tránh block full-width → một màu) */
+
+.home-hero-about-title.text-gradient,
+.home-hero-about-title.mg-text-gradient {
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.home-hero-about-title.text-gradient > span,
+.home-hero-about-title.mg-text-gradient > span {
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 100%;
+}
+
+/* Brand “five / media group”: line-height đủ cho descender (g…); leading-[0.95] Tailwind hay cắt gốc chữ */
+
+.home-hero-about-brand {
+  font-family: var(--mg-font-hero-display);
+  line-height: 1.12;
+  padding-bottom: 0.14em;
+  overflow: visible;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.home-hero-about-brand > .block {
+  line-height: 1.12;
+}
+
+.home-hero-about-brand > .block + .block {
+  margin-top: clamp(-0.32rem, calc(-0.022em - 0.48vw), -0.1rem);
+}
+
+/* About careers bar — mockup: 5MG.VN dọc sát trái + JOIN US cao, hẹp; chừa descender J */
+
+.home-hero-bar-about-careers {
+  overflow: visible;
+}
+
+.home-hero-bar-about-careers .home-hero-bar-join-title {
+  margin: 0;
+  font-family: "Satoshi", "General Sans", "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-synthesis: none;
+  letter-spacing: -0.06em;
+  line-height: 0.86;
+  padding-bottom: 0.22em;
+  overflow: visible;
+  font-size: clamp(2.35rem, 8vw, 6.25rem);
+  transform: scale3d(0.86, 1.4, 1);
+  transform-origin: center center;
+}
+
+@media (min-width: 1024px) {
+  .home-hero-bar-about-careers .home-hero-bar-join-title {
+    transform-origin: left top;
+    text-align: left;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+
+/* Our Service — cùng block Home + trang service (cánh hoa, petal links)      */
+
+/* -------------------------------------------------------------------------- */
+
+.service-section {
+  color: var(--mg-service-text);
+}
+
+.service-section__title {
+  color: var(--mg-text-on-gradient);
+}
+
+/* Trang Dịch vụ: tiêu đề gradient (.text-gradient) — rule .service-section__title không được đè màu trắng */
+
+.service-section__title.text-gradient,
+.service-section__title.mg-text-gradient {
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  /* Hộp nền = độ rộng chữ (giống .home-hero-title). Block full-width → gradient trải cả container → chữ ngắn chỉ thấy một màu */
+  display: inline-block;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 100%;
+}
+
+/* Tiêu đề gradient khác trong section (vd. "The next level") — h2 + từng dòng w-fit để gradient bám theo chữ */
+
+.service-section h2.text-gradient,
+.service-section h2.mg-text-gradient {
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.service-section h2.text-gradient > span,
+.service-section h2.mg-text-gradient > span {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.service-section__flower-frame {
+  background: transparent;
+  filter: drop-shadow(0 10px 28px rgba(0, 0, 0, 0.22));
+  overflow: visible;
+}
+
+/* xl+: cố định bằng vw/px — không phụ thuộc % ô lưới (ô hẹp thì vẫn to, section xl:overflow-visible) */
+
+@media (min-width: 1280px) {
+  .service-section .service-section__flower-frame--sized {
+    width: min(76vw, 820px);
+    max-width: none;
+  }
+}
+
+@media (min-width: 1536px) {
+  .service-section .service-section__flower-frame--sized {
+    width: min(72vw, 920px);
+  }
+}
+
+.service-section__flower {
+  pointer-events: none;
+  opacity: 1;
+}
+
+/* auto: nếu để none, pointer xuyên thẳng xuống layer dưới — cánh <a> không hover/click được */
+
+.service-section__flower-petals {
+  pointer-events: auto;
+}
+
+/* Lớp chữ: trên vùng bấm, pointer-events none → bấm vẫn tới <a> */
+
+.service-section__flower-labels {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.service-flower-label-slot {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 50%;
+  box-sizing: border-box;
+}
+
+.service-flower-label-slot--tl {
+  top: 0;
+  left: -22px;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.service-flower-label-slot--tr {
+  top: 0;
+  left: 56%;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+/* Cánh dưới-trái — chữ "Sản xuất" căng giữa trong ô 50%×50% */
+
+.service-flower-label-slot--bl {
+  top: 50%;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .service-flower-label-slot--tl {
+    left: -36px;
+  }
+
+  .service-flower-label-slot--bl {
+    left: 0;
+  }
+}
+
+.service-flower-label-slot--br {
+  top: 50%;
+  left: 57%;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+/* Vùng bấm: chỉ clip-path, không chứa chữ */
+
+.service-flower-petal {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+}
+
+.service-flower-petal:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.85);
+  outline-offset: -2px;
+}
+
+.service-flower-petal--tl {
+  clip-path: polygon(0% 0%, 50% 0%, 50% 50%, 0% 50%);
+}
+
+.service-flower-petal--tr {
+  clip-path: polygon(50% 0%, 100% 0%, 100% 50%, 50% 50%);
+}
+
+.service-flower-petal--bl {
+  clip-path: polygon(0% 50%, 50% 50%, 50% 100%, 0% 100%);
+}
+
+.service-flower-petal--br {
+  clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
+}
+
+.service-flower-petal__nowrap {
+  white-space: nowrap;
+}
+
+/* Nhãn trên cánh hoa — cỡ chữ: Tailwind trên .service-section__flower-labels (home + serviceFolder) */
+
+.service-flower-petal__label {
+  max-width: 92%;
+  font-weight: 600;
+  font-synthesis: none;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--mg-service-text);
+}
+
+.service-flower-petal__label--lg {
+  line-height: 1;
+}
+
+.service-flower-label-slot--bl .service-flower-petal__label {
+  max-width: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+/* ========================================================================
+   Scroll reveal — mọi trang (class .reveal-on-scroll trên section/block)
+   ======================================================================== */
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translate3d(0, 1.35rem, 0);
+  transition:
+    opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.reveal-on-scroll--delay-1 {
+  transition-delay: 0.14s;
+}
+
+.reveal-on-scroll.reveal-on-scroll--delay-2 {
+  transition-delay: 0.26s;
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Các thành phần cho Header dùng chung all trang */
+
+/* ========================================================================
+   HEADER.CSS - Header Component Styles
+   ======================================================================== */
+
+/* ========================================================================
+   @LAYER COMPONENTS - Header Specific Components
+   ======================================================================== */
+
+/*
+ * .site-header: ép không viền dưới — khi mở F12 / resize, utility border-b hoặc preflight
+ * đôi khi tạo lại 1px; !important đảm bảo đồng bộ nền (đặc biệt trang home).
+ */
+
+.site-header {
+  border-bottom-width: 0 !important;
+  border-bottom-style: none !important;
+  border-bottom-color: transparent !important;
+}
+
+/* shadow-sm gỡ khỏi HTML — chỉ trang không phải home (tránh vạch dưới giả ở màn rộng / 2560px) */
+
+body:not(.page-home) .site-header {
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+/* Các thành phần Blaze Slider dùng chung all trang */
+
+/* ========================================================================
+   BLAZE-SLIDER.CSS - Blaze Slider Component Styles
+   ======================================================================== */
+
+/* ========================================================================
+   @LAYER COMPONENTS - Blaze Slider Components
+   ======================================================================== */
+
+/* Các thành phần cho Footer dùng chung all trang */
+
+/* ========================================================================
+   FOOTER.CSS - Footer Component Styles
+   ======================================================================== */
+
+/* ========================================================================
+   @LAYER COMPONENTS - Footer Specific Components
+   ======================================================================== */
+
+.hover\:bg-home-primary-hover:hover {
+  background-color: var(--home-primary-hover);
+}
+
+.hover\:text-gray-700:hover {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity, 1));
+}
+
+@media not all and (min-width: 768px) {
+  .max-md\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .max-md\:max-w-2xl {
+    max-width: 42rem;
+  }
+}
+
+@media (max-width: 479px) {
+  .max-\[479px\]\:text-center {
+    text-align: center;
+  }
+}
+
+@media (min-width: 640px) {
+  .sm\:right-8 {
+    right: 2rem;
+  }
+
+  .sm\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
+  .sm\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sm\:mb-2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .sm\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .sm\:mt-7 {
+    margin-top: 1.75rem;
+  }
+
+  .sm\:block {
+    display: block;
+  }
+
+  .sm\:h-10 {
+    height: 2.5rem;
+  }
+
+  .sm\:h-\[4\.75rem\] {
+    height: 4.75rem;
+  }
+
+  .sm\:w-10 {
+    width: 2.5rem;
+  }
+
+  .sm\:w-\[60\%\] {
+    width: 60%;
+  }
+
+  .sm\:max-w-36 {
+    max-width: 9rem;
+  }
+
+  .sm\:max-w-\[22rem\] {
+    max-width: 22rem;
+  }
+
+  .sm\:max-w-\[240px\] {
+    max-width: 240px;
+  }
+
+  .sm\:max-w-lg {
+    max-width: 32rem;
+  }
+
+  .sm\:max-w-md {
+    max-width: 28rem;
+  }
+
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sm\:items-start {
+    align-items: flex-start;
+  }
+
+  .sm\:justify-center {
+    justify-content: center;
+  }
+
+  .sm\:gap-10 {
+    gap: 2.5rem;
+  }
+
+  .sm\:gap-5 {
+    gap: 1.25rem;
+  }
+
+  .sm\:gap-6 {
+    gap: 1.5rem;
+  }
+
+  .sm\:gap-x-6 {
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
+  }
+
+  .sm\:gap-y-10 {
+    row-gap: 2.5rem;
+  }
+
+  .sm\:gap-y-8 {
+    row-gap: 2rem;
+  }
+
+  .sm\:space-y-10 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
+  }
+
+  .sm\:space-y-8 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+  }
+
+  .sm\:justify-self-center {
+    justify-self: center;
+  }
+
+  .sm\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .sm\:px-1 {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+
+  .sm\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .sm\:py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .sm\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .sm\:py-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .sm\:pt-24 {
+    padding-top: 6rem;
+  }
+
+  .sm\:text-left {
+    text-align: left;
+  }
+
+  .sm\:text-center {
+    text-align: center;
+  }
+
+  .sm\:text-\[13px\] {
+    font-size: 13px;
+  }
+
+  .sm\:text-\[40px\] {
+    font-size: 40px;
+  }
+
+  .sm\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .sm\:text-md {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .sm\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  .sm\:leading-snug {
+    line-height: 1.375;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+
+  .md\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+
+  .md\:col-start-1 {
+    grid-column-start: 1;
+  }
+
+  .md\:col-start-2 {
+    grid-column-start: 2;
+  }
+
+  .md\:col-start-3 {
+    grid-column-start: 3;
+  }
+
+  .md\:row-span-2 {
+    grid-row: span 2 / span 2;
+  }
+
+  .md\:row-start-1 {
+    grid-row-start: 1;
+  }
+
+  .md\:row-start-2 {
+    grid-row-start: 2;
+  }
+
+  .md\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .md\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .md\:mt-12 {
+    margin-top: 3rem;
+  }
+
+  .md\:mt-4 {
+    margin-top: 1rem;
+  }
+
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:grid {
+    display: grid;
+  }
+
+  .md\:h-11 {
+    height: 2.75rem;
+  }
+
+  .md\:h-20 {
+    height: 5rem;
+  }
+
+  .md\:h-full {
+    height: 100%;
+  }
+
+  .md\:min-h-0 {
+    min-height: 0px;
+  }
+
+  .md\:min-h-\[200px\] {
+    min-height: 200px;
+  }
+
+  .md\:w-11 {
+    width: 2.75rem;
+  }
+
+  .md\:w-\[min\(92vw\2c 400px\)\] {
+    width: min(92vw,400px);
+  }
+
+  .md\:max-w-2xl {
+    max-width: 42rem;
+  }
+
+  .md\:max-w-\[260px\] {
+    max-width: 260px;
+  }
+
+  .md\:max-w-lg {
+    max-width: 32rem;
+  }
+
+  .md\:max-w-none {
+    max-width: none;
+  }
+
+  .md\:translate-y-2 {
+    --tw-translate-y: 0.5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-\[minmax\(0\2c 1fr\)_minmax\(250px\2c min\(92vw\2c 400px\)\)_minmax\(0\2c 1fr\)\] {
+    grid-template-columns: minmax(0,1fr) minmax(250px,min(92vw,400px)) minmax(0,1fr);
+  }
+
+  .md\:flex-col {
+    flex-direction: column;
+  }
+
+  .md\:items-center {
+    align-items: center;
+  }
+
+  .md\:items-stretch {
+    align-items: stretch;
+  }
+
+  .md\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .md\:justify-end {
+    justify-content: flex-end;
+  }
+
+  .md\:justify-around {
+    justify-content: space-around;
+  }
+
+  .md\:gap-1 {
+    gap: 0.25rem;
+  }
+
+  .md\:gap-10 {
+    gap: 2.5rem;
+  }
+
+  .md\:gap-12 {
+    gap: 3rem;
+  }
+
+  .md\:gap-6 {
+    gap: 1.5rem;
+  }
+
+  .md\:gap-8 {
+    gap: 2rem;
+  }
+
+  .md\:gap-x-4 {
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+  }
+
+  .md\:gap-y-8 {
+    row-gap: 2rem;
+  }
+
+  .md\:space-y-10 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
+  }
+
+  .md\:space-y-14 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(3.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(3.5rem * var(--tw-space-y-reverse));
+  }
+
+  .md\:justify-self-stretch {
+    justify-self: stretch;
+  }
+
+  .md\:py-14 {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .md\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .md\:py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .md\:pb-8 {
+    padding-bottom: 2rem;
+  }
+
+  .md\:text-left {
+    text-align: left;
+  }
+
+  .md\:text-center {
+    text-align: center;
+  }
+
+  .md\:text-right {
+    text-align: right;
+  }
+
+  .md\:text-\[1\.125rem\] {
+    font-size: 1.125rem;
+  }
+
+  .md\:text-\[44px\] {
+    font-size: 44px;
+  }
+
+  .md\:text-\[length\:var\(--mg-text-side-line-lg\)\] {
+    font-size: var(--mg-text-side-line-lg);
+  }
+
+  .md\:text-\[length\:var\(--mg-text-side-title-lg\)\] {
+    font-size: var(--mg-text-side-title-lg);
+  }
+
+  .md\:text-\[length\:var\(--mg-text-tagline-lg\)\] {
+    font-size: var(--mg-text-tagline-lg);
+  }
+
+  .md\:text-md {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:leading-\[1\.08\] {
+    line-height: 1.08;
+  }
+
+  .md\:leading-\[1\.2\] {
+    line-height: 1.2;
+  }
+
+  .md\:tracking-normal {
+    letter-spacing: 0em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .lg\:-mt-6 {
+    margin-top: -1.5rem;
+  }
+
+  .lg\:mb-0 {
+    margin-bottom: 0px;
+  }
+
+  .lg\:ml-auto {
+    margin-left: auto;
+  }
+
+  .lg\:mt-8 {
+    margin-top: 2rem;
+  }
+
+  .lg\:mt-\[calc\(var\(--brand-icon-h\2c 0px\)\/-7\)\] {
+    margin-top: calc(var(--brand-icon-h,0px) / -7);
+  }
+
+  .lg\:block {
+    display: block;
+  }
+
+  .lg\:h-\[4\.25rem\] {
+    height: 4.25rem;
+  }
+
+  .lg\:h-full {
+    height: 100%;
+  }
+
+  .lg\:min-h-\[220px\] {
+    min-height: 220px;
+  }
+
+  .lg\:w-\[110px\] {
+    width: 110px;
+  }
+
+  .lg\:w-\[55\%\] {
+    width: 55%;
+  }
+
+  .lg\:w-\[min\(92vw\2c 500px\)\] {
+    width: min(92vw,500px);
+  }
+
+  .lg\:max-w-\[min\(46rem\2c 92vw\)\] {
+    max-width: min(46rem,92vw);
+  }
+
+  .lg\:max-w-lg {
+    max-width: 32rem;
+  }
+
+  .lg\:origin-center {
+    transform-origin: center;
+  }
+
+  .lg\:-rotate-90 {
+    --tw-rotate: -90deg;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .lg\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-\[110px_minmax\(0\2c 1fr\)_110px\] {
+    grid-template-columns: 110px minmax(0,1fr) 110px;
+  }
+
+  .lg\:grid-cols-\[320px_minmax\(0\2c 1fr\)\] {
+    grid-template-columns: 320px minmax(0,1fr);
+  }
+
+  .lg\:grid-cols-\[minmax\(0\2c 1fr\)_minmax\(250px\2c min\(92vw\2c 500px\)\)_minmax\(0\2c 1fr\)\] {
+    grid-template-columns: minmax(0,1fr) minmax(250px,min(92vw,500px)) minmax(0,1fr);
+  }
+
+  .lg\:grid-cols-\[minmax\(0\2c 320px\)_1fr\] {
+    grid-template-columns: minmax(0,320px) 1fr;
+  }
+
+  .lg\:grid-cols-\[minmax\(0\2c 4fr\)_minmax\(0\2c 5fr\)\] {
+    grid-template-columns: minmax(0,4fr) minmax(0,5fr);
+  }
+
+  .lg\:items-end {
+    align-items: flex-end;
+  }
+
+  .lg\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .lg\:justify-end {
+    justify-content: flex-end;
+  }
+
+  .lg\:justify-center {
+    justify-content: center;
+  }
+
+  .lg\:justify-around {
+    justify-content: space-around;
+  }
+
+  .lg\:gap-6 {
+    gap: 1.5rem;
+  }
+
+  .lg\:gap-8 {
+    gap: 2rem;
+  }
+
+  .lg\:gap-x-6 {
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
+  }
+
+  .lg\:gap-y-0 {
+    row-gap: 0px;
+  }
+
+  .lg\:space-y-14 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(3.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(3.5rem * var(--tw-space-y-reverse));
+  }
+
+  .lg\:space-y-16 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(4rem * var(--tw-space-y-reverse));
+  }
+
+  .lg\:whitespace-nowrap {
+    white-space: nowrap;
+  }
+
+  .lg\:object-right {
+    -o-object-position: right;
+       object-position: right;
+  }
+
+  .lg\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .lg\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .lg\:py-24 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .lg\:py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .lg\:pb-0 {
+    padding-bottom: 0px;
+  }
+
+  .lg\:text-right {
+    text-align: right;
+  }
+
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .lg\:text-\[14px\] {
+    font-size: 14px;
+  }
+
+  .lg\:text-\[18px\] {
+    font-size: 18px;
+  }
+
+  .lg\:text-\[52px\] {
+    font-size: 52px;
+  }
+
+  .lg\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .lg\:text-md {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .lg\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .lg\:leading-\[1\.35\] {
+    line-height: 1.35;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:order-1 {
+    order: 1;
+  }
+
+  .xl\:order-2 {
+    order: 2;
+  }
+
+  .xl\:order-3 {
+    order: 3;
+  }
+
+  .xl\:order-6 {
+    order: 6;
+  }
+
+  .xl\:row-span-2 {
+    grid-row: span 2 / span 2;
+  }
+
+  .xl\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .xl\:ml-auto {
+    margin-left: auto;
+  }
+
+  .xl\:block {
+    display: block;
+  }
+
+  .xl\:flex {
+    display: flex;
+  }
+
+  .xl\:grid {
+    display: grid;
+  }
+
+  .xl\:contents {
+    display: contents;
+  }
+
+  .xl\:hidden {
+    display: none;
+  }
+
+  .xl\:h-10 {
+    height: 2.5rem;
+  }
+
+  .xl\:h-24 {
+    height: 6rem;
+  }
+
+  .xl\:h-full {
+    height: 100%;
+  }
+
+  .xl\:min-h-0 {
+    min-height: 0px;
+  }
+
+  .xl\:min-h-\[min\(480px\2c 60svh\)\] {
+    min-height: min(480px,60svh);
+  }
+
+  .xl\:w-10 {
+    width: 2.5rem;
+  }
+
+  .xl\:w-\[200px\] {
+    width: 200px;
+  }
+
+  .xl\:w-auto {
+    width: auto;
+  }
+
+  .xl\:max-w-\[12rem\] {
+    max-width: 12rem;
+  }
+
+  .xl\:max-w-\[min\(100\%\2c 22rem\)\] {
+    max-width: min(100%,22rem);
+  }
+
+  .xl\:max-w-none {
+    max-width: none;
+  }
+
+  .xl\:shrink-0 {
+    flex-shrink: 0;
+  }
+
+  .xl\:-translate-y-2 {
+    --tw-translate-y: -0.5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .xl\:translate-y-2 {
+    --tw-translate-y: 0.5rem;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .xl\:grid-cols-\[360px_minmax\(0\2c 1fr\)\] {
+    grid-template-columns: 360px minmax(0,1fr);
+  }
+
+  .xl\:grid-cols-\[minmax\(0\2c 1fr\)_minmax\(250px\2c min\(92vw\2c 620px\)\)_minmax\(0\2c 1fr\)\] {
+    grid-template-columns: minmax(0,1fr) minmax(250px,min(92vw,620px)) minmax(0,1fr);
+  }
+
+  .xl\:flex-row {
+    flex-direction: row;
+  }
+
+  .xl\:flex-nowrap {
+    flex-wrap: nowrap;
+  }
+
+  .xl\:items-center {
+    align-items: center;
+  }
+
+  .xl\:items-stretch {
+    align-items: stretch;
+  }
+
+  .xl\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .xl\:justify-end {
+    justify-content: flex-end;
+  }
+
+  .xl\:justify-center {
+    justify-content: center;
+  }
+
+  .xl\:justify-between {
+    justify-content: space-between;
+  }
+
+  .xl\:gap-1\.5 {
+    gap: 0.375rem;
+  }
+
+  .xl\:gap-6 {
+    gap: 1.5rem;
+  }
+
+  .xl\:gap-x-10 {
+    -moz-column-gap: 2.5rem;
+         column-gap: 2.5rem;
+  }
+
+  .xl\:gap-x-8 {
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+  }
+
+  .xl\:gap-y-6 {
+    row-gap: 1.5rem;
+  }
+
+  .xl\:space-y-20 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(5rem * var(--tw-space-y-reverse));
+  }
+
+  .xl\:overflow-visible {
+    overflow: visible;
+  }
+
+  .xl\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .xl\:py-24 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .xl\:text-left {
+    text-align: left;
+  }
+
+  .xl\:text-right {
+    text-align: right;
+  }
+
+  .xl\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .xl\:text-\[1\.125rem\] {
+    font-size: 1.125rem;
+  }
+
+  .xl\:text-\[56px\] {
+    font-size: 56px;
+  }
+
+  .xl\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .xl\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .xl\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .xl\:leading-tight {
+    line-height: 1.25;
+  }
+}
+
+@media (min-width: 1440px) {
+  .min-\[1440px\]\:min-h-\[240px\] {
+    min-height: 240px;
+  }
+
+  .min-\[1440px\]\:max-w-\[820px\] {
+    max-width: 820px;
+  }
+
+  .min-\[1440px\]\:leading-\[1\.28\] {
+    line-height: 1.28;
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:h-11 {
+    height: 2.75rem;
+  }
+
+  .\32xl\:h-28 {
+    height: 7rem;
+  }
+
+  .\32xl\:w-11 {
+    width: 2.75rem;
+  }
+
+  .\32xl\:w-\[220px\] {
+    width: 220px;
+  }
+
+  .\32xl\:max-w-md {
+    max-width: 28rem;
+  }
+
+  .\32xl\:max-w-none {
+    max-width: none;
+  }
+
+  .\32xl\:gap-8 {
+    gap: 2rem;
+  }
+
+  .\32xl\:gap-x-10 {
+    -moz-column-gap: 2.5rem;
+         column-gap: 2.5rem;
+  }
+
+  .\32xl\:space-y-24 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(6rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(6rem * var(--tw-space-y-reverse));
+  }
+}
+
+.\[\&_strong\]\:font-semibold strong {
+  font-weight: 600;
+}
+
+.\[\&_strong\]\:text-\[var\(--mg-text-strong-on-bar\)\] strong {
+  color: var(--mg-text-strong-on-bar);
+}

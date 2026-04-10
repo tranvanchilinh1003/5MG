@@ -1,0 +1,83 @@
+<section
+    class="home-hero-shell relative z-50 mx-0 min-w-0 w-full overflow-hidden rounded-[var(--mg-radius-shell)]  font-sans shadow-none"
+    aria-label="5MG — Hero">
+    <div class="relative overflow-hidden bg-mg-hero pt-[max(env(safe-area-inset-top,0px),0.75rem)] reveal-on-scroll">
+
+        <div class="relative z-30 mx-auto box-border w-full container">
+            <div class="relative z-20 flex  flex-col items-center justify-center pt-8 sm:pt-24 text-center ">
+                <h1 class="home-hero-title text-gradient inline-block font-synthesis-none not-italic">
+                    <span class="block">five</span>
+                    <span class="block">media group</span>
+                </h1>
+                <p
+                    class="mt-6 text-center text-sm sm:text-sm md:text-md lg:text-lg xl:text-xl italic leading-[1.15] text-[var(--mg-text-on-gradient-soft)] md:mt-12 md:text-[length:var(--mg-text-tagline-lg)] md:leading-[1.08]">
+                    dare to be different<br />
+                    we are 5mg
+                </p>
+            </div>
+            <div
+                class="relative z-20 grid grid-cols-1 gap-5 pb-[clamp(1rem,3vw,2rem)] md:gap-8 md:pb-8 lg:grid-cols-[minmax(0,320px)_1fr] lg:pb-0">
+                <div class="mb-6 text-left text-[var(--mg-text-on-gradient)] max-[479px]:text-center mt-3">
+                    <h2
+                        class="text-md font-semibold uppercase leading-[1.25] md:text-[length:var(--mg-text-side-title-lg)] md:leading-[1.2]">
+                        THE NEXT LEVEL OF MEDIA</h2>
+                    <ul
+                        class="mb-0 mt-3 flex list-none flex-col gap-[0.2rem] p-0 text-sm sm:text-sm md:text-md lg:text-lg xl:text-xl font-normal uppercase tracking-[0.02em] text-[var(--mg-text-on-gradient-soft)] md:mt-4 md:gap-1 md:text-[length:var(--mg-text-side-line-lg)] md:tracking-normal">
+                        <li>KOLS - PRODUCTION</li>
+                        <li>SOCIAL PERFORMANCE</li>
+                        <li>TIKTOK TRENDING</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div
+        class="home-hero-bar relative z-[40] mt-0 w-full overflow-visible bg-[var(--mg-bar-bg)] text-[var(--mg-text-on-gradient)] shadow-[inset_0_-10px_40px_rgba(0,0,0,0.35)] [--mg-hero-bar-pad-y:clamp(1.25rem,0.85rem+2.4vw,2.5rem)] reveal-on-scroll reveal-on-scroll--delay-1">
+        <div class="home-hero-fold home-hero-curve-fold" aria-hidden="true">
+            <svg class="home-hero-fold-clip-defs" width="0" height="0" aria-hidden="true" focusable="false">
+                <defs>
+                    <clipPath id="home-hero-fold-clip" clipPathUnits="objectBoundingBox">
+                        <path d="M 1 1 L 0 1 C 0.45 1, 0.8 0.6, 1 0.15 L 1 0 Z" />
+                    </clipPath>
+                    <filter id="home-hero-fold-shadow-filter" x="-110%" y="-110%" width="320%" height="320%"
+                        color-interpolation-filters="sRGB">
+                        <feDropShadow in="SourceAlpha" dx="-28" dy="34" stdDeviation="26" flood-color="#000000"
+                            flood-opacity="0.24" result="home-hero-fold-shadow-soft" />
+                        <feDropShadow in="SourceAlpha" dx="-24" dy="30" stdDeviation="7" flood-color="#000000"
+                            flood-opacity="0.48" result="home-hero-fold-shadow-edge" />
+                        <feMerge>
+                            <feMergeNode in="home-hero-fold-shadow-soft" />
+                            <feMergeNode in="home-hero-fold-shadow-edge" />
+                            <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                    </filter>
+                </defs>
+            </svg>
+            <!-- Sao phía sau lớp fold; một phần bị fold che -->
+            <div class="home-hero-fold-star-stage">
+                <img class="home-hero-fold-star" src="assets/images/star.png" alt="" decoding="async" />
+            </div>
+            <div class="home-hero-fold-layers-wrap">
+                <div class="home-hero-fold-layers"></div>
+            </div>
+        </div>
+        <div
+            class="relative z-[2] mx-auto box-border grid min-h-0 w-full container grid-cols-1 items-start px-4 sm:px-0 gap-4 pt-[var(--mg-hero-bar-pad-y)] pb-[var(--mg-hero-bar-pad-y)] sm:gap-5 md:min-h-[200px] md:items-center md:gap-6 lg:grid-cols-[110px_minmax(0,1fr)_110px] lg:min-h-[220px] lg:gap-6 min-[1440px]:min-h-[240px]">
+            <div
+                class="home-hero-bar-brand mb-2 flex items-center justify-start sm:mb-2 sm:justify-center lg:mb-0 lg:h-full lg:justify-center">
+                <div
+                    class="home-hero-bar-brand-inner text-[clamp(1.75rem,5vw,var(--mg-text-brand-vertical))] font-black uppercase leading-none tracking-[-0.03em] text-[var(--mg-primary)] lg:origin-center lg:-rotate-90 lg:whitespace-nowrap">
+                    5MG.VN</div>
+            </div>
+            <div
+                class="home-hero-bar-body m-0 max-w-[46rem] text-left text-md sm:text-md lg:text-lg xl:text-xl leading-[1.5] text-pretty text-[var(--mg-text-bar)] sm:mx-auto sm:text-center lg:max-w-[min(46rem,92vw)] lg:leading-[1.35] min-[1440px]:max-w-[820px] min-[1440px]:leading-[1.28] [&_strong]:font-semibold [&_strong]:text-[var(--mg-text-strong-on-bar)]">
+                Với đội ngũ sáng lập từng dẫn dắt nhiều dự án lớn trong lĩnh vực
+                <strong>creative media</strong>, <strong>tổ chức sự kiện</strong> và
+                <strong>digital marketing</strong>, chúng tôi xây dựng một mô hình <br class="hidden xl:block" />
+                vận hành linh hoạt, ứng dụng công nghệ và luôn đặt con người làm trung tâm trong mọi chiến dịch truyền
+                thông.
+            </div>
+            <div class="home-hero-bar-trailing hidden min-h-px lg:block lg:w-[110px]" aria-hidden="true"></div>
+        </div>
+    </div>
+</section>

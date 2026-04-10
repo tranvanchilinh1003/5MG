@@ -1,0 +1,155 @@
+<!-- Nội dung Join us — include trong #about-join-us-panel (nền bg-mg-hero full width ở our-client) -->
+<div
+    class="about-join-us-surface about-join-us-surface--on-mg-hero relative flex flex-col overflow-visible rounded-none py-12 sm:py-24">
+    <!-- Vệt sáng: chỉ khi scroll tới khu Join (joinInView) VÀ đã mở tab (joinOpen) — Alpine ở #about-join-us-block -->
+    <img class="mg-corner-shine mg-corner-shine--join-contact" :class="{ 'is-visible': joinOpen && joinInView }"
+        src="assets/images/light_white.webp" alt="" width="640" height="640" decoding="async" />
+
+
+
+    <div class="relative z-[2] mx-auto container text-black">
+      <div class=" mb-6 max-w-5xl sm:mb-8 md:mb-10 xl:px-12 px-0">
+        <img
+          src="assets/images/join_us_black.png"
+          alt="JOIN US"
+          class=""
+          decoding="async"
+          loading="lazy" />
+      </div>
+      <div class="relative mx-auto max-w-5xl">
+            <p class="mt-5 text-base font-semibold leading-snug text-black sm:text-2xl md:mt-6">
+                Chúng tôi tìm kiếm những cá nhân:
+            </p>
+
+            <ul
+                class="mt-8 flex list-none flex-col gap-6 p-0 sm:mt-9 md:flex-row md:flex-wrap md:items-center md:justify-between md:gap-x-8 md:gap-y-6">
+                <li class="flex max-w-full items-center gap-3">
+                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-black shadow-sm"
+                        aria-hidden="true">
+                        <svg class="h-5 w-5 text-[#ff5a2d]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
+                            <path d="M9 18h6" />
+                            <path d="M10 22h4" />
+                        </svg>
+                    </span>
+                    <span class="text-sm font-normal leading-snug sm:text-base">Đam mê sáng tạo</span>
+                </li>
+                <li class="flex max-w-full items-center gap-3">
+                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-black shadow-sm"
+                        aria-hidden="true">
+                        <svg class="h-5 w-5 text-[#ff5a2d]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                        </svg>
+                    </span>
+                    <span class="text-sm font-normal leading-snug sm:text-base">Yêu thích truyền thông &amp; nội
+                        dung</span>
+                </li>
+                <li class="flex max-w-full items-center gap-3 md:max-w-[20rem]">
+                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-black shadow-sm"
+                        aria-hidden="true">
+                        <svg class="h-5 w-5 text-[#ff5a2d]" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                        </svg>
+                    </span>
+                    <span class="text-sm font-normal leading-snug sm:text-base">Sẵn sàng học hỏi và phát triển cùng
+                        các dự án lớn</span>
+                </li>
+            </ul>
+
+            <h4 class="mt-10  text-base font-semibold text-black sm:mt-24 sm:text-lg">
+                Vị trí thường xuyên tuyển:
+            </h4>
+
+            <ul class="mt-5 grid list-none grid-cols-1 gap-3 p-0 sm:grid-cols-2 sm:gap-4 md:mt-6" role="list">
+                <li
+                    class="flex items-center gap-2 rounded-xl border-2 border-black/40 px-4 py-3.5 text-left shadow-sm backdrop-blur-sm">
+                    <span class="about-join-positions-bullet" aria-hidden="true"></span>
+                    <span class="text-sm font-semibold leading-snug text-black sm:text-base">Senior Planning Executive
+                        (IMC)</span>
+                </li>
+                <li
+                    class="flex items-center gap-2 rounded-xl border-2 border-black/40 px-4 py-3.5 text-left shadow-sm backdrop-blur-sm">
+                    <span class="about-join-positions-bullet" aria-hidden="true"></span>
+                    <span class="text-sm font-semibold leading-snug text-black sm:text-base">Senior Account Executive
+                        (IMC)</span>
+                </li>
+                <li
+                    class="flex items-center gap-2 rounded-xl border-2 border-black/40 px-4 py-3.5 text-left shadow-sm backdrop-blur-sm">
+                    <span class="about-join-positions-bullet" aria-hidden="true"></span>
+                    <span class="text-sm font-semibold leading-snug text-black sm:text-base">Business Development
+                        Manager</span>
+                </li>
+                <li
+                    class="flex items-center gap-2 rounded-xl border-2 border-black/40 px-4 py-3.5 text-left shadow-sm backdrop-blur-sm">
+                    <span class="about-join-positions-bullet" aria-hidden="true"></span>
+                    <span class="text-sm font-semibold leading-snug text-black sm:text-base">Content Creator / Social
+                        Executive</span>
+                </li>
+            </ul>
+            <!-- Liên hệ tuyển dụng (CV); fold neo ngoài .container — home-hero.css -->
+            <p class="relative z-20 mt-10 text-center sm:mt-12">
+                <a href="mailto:fivemediagroup@5mg.vn"
+                    class="inline-flex items-center gap-1.5 rounded-full border-b-2 border-black/30 px-6 pb-1.5 pt-0.5 text-[0.9375rem] font-semibold leading-snug tracking-wide text-black/85 outline-none transition-colors duration-200 ease-out hover:border-black/55 hover:bg-transparent hover:text-black focus-visible:ring-2 focus-visible:ring-black/15 focus-visible:ring-offset-2">
+                    Gửi CV về email
+                    <span class="text-[0.85em] text-black/50" aria-hidden="true">→</span>
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Neo đáy fold theo đáy .container, không cần bottom: 90px. -->
+    <div class="pointer-events-none relative z-[12] h-0 w-full shrink-0 overflow-visible" aria-hidden="true">
+        <div class="home-hero-fold home-hero-curve-fold home-hero-fold--join-bar [--mg-hero-bar-pad-y:0px]">
+            <svg class="home-hero-fold-clip-defs" width="0" height="0" aria-hidden="true" focusable="false">
+                <defs>
+                    <clipPath id="home-hero-fold-clip-join" clipPathUnits="objectBoundingBox">
+                        <path d="M 1 1 L 0 1 C 0.45 1, 0.8 0.6, 1 0.15 L 1 0 Z" />
+                    </clipPath>
+                    <filter id="home-hero-fold-shadow-filter-join" x="-110%" y="-110%" width="320%" height="320%"
+                        color-interpolation-filters="sRGB">
+                        <feDropShadow in="SourceAlpha" dx="-28" dy="34" stdDeviation="26" flood-color="#000000"
+                            flood-opacity="0.24" result="home-hero-fold-shadow-soft-join" />
+                        <feDropShadow in="SourceAlpha" dx="-24" dy="30" stdDeviation="7" flood-color="#000000"
+                            flood-opacity="0.48" result="home-hero-fold-shadow-edge-join" />
+                        <feMerge>
+                            <feMergeNode in="home-hero-fold-shadow-soft-join" />
+                            <feMergeNode in="home-hero-fold-shadow-edge-join" />
+                            <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                    </filter>
+                </defs>
+            </svg>
+
+            <div class="home-hero-fold-star-stage">
+                <img class="home-hero-fold-star" src="assets/images/star.png" alt="" decoding="async" />
+            </div>
+
+            <div class="home-hero-fold-layers-wrap">
+                <div class="home-hero-fold-layers"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<section
+    class="container mx-auto flex min-h-[min(80vh,50rem)] max-w-5xl flex-col px-4 py-10 md:min-h-[min(85vh,54rem)] md:py-14">
+    <!-- Căng ngang trên: viền full width + tiêu đề -->
+    <div class="w-full shrink-0  pt-6 md:pt-8">
+        <h2
+            class="text-center text-[32px] font-black leading-[0.95] tracking-[-0.04em] sm:mb-8 sm:text-[40px]  md:text-[44px] lg:text-[52px] xl:mb-12 xl:text-[56px] uppercase font-bold text-black">
+            Contact</h2>
+    </div>
+    <!-- Giữa trống (co giãn theo chiều cao khối) -->
+    <div class="min-h-[clamp(2.5rem,10vh,6rem)] flex-1" aria-hidden="true"></div>
+    <!-- Căng ngang dưới: thương hiệu + viền -->
+    <div class="w-full shrink-0  pb-6 md:pb-8">
+        <p
+            class="home-hero-about-brand text-gradient mx-auto mb-0 flex w-fit max-w-full flex-col items-center text-center font-archivo font-black font-synthesis-none lowercase tracking-[-0.04em] [font-size:clamp(2.5rem,7.25vw,3rem)]">
+            <span class="block w-fit max-w-full">five</span>
+            <span class="block w-fit max-w-full">media group</span>
+        </p>
+    </div>
+</section>

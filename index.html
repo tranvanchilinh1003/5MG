@@ -1,0 +1,595 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+		<title>5MG — Five Media Group</title>
+		<meta name="description"
+			content="Five Media Group — creative media, tổ chức sự kiện và digital marketing. Dare to be different.">
+		<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+		<script type="text/javascript">
+			const API_URL = "https://panel.dongnai.net/api/v2/";
+		</script>
+        <!-- Add Inline Hidden Class for Fix CLS -->
+        <style>
+        .hidden {
+            display: none;
+        }
+		</style>
+		<!-- Font: @font-face trong assets/css/fonts.css (local woff2) -->
+		<!-- all css -->
+        <link rel="stylesheet" href="assets/css/index_styles.css" />
+		
+		<!-- 1. CAC THU VIEN CAN SU DUNG -->
+		<!-- Notification Library -->
+		<script src="assets/js/libs/notification.js" defer></script>
+		<!-- Initialize FastNotice -->
+		<script>
+			// Khởi tạo FastNotice với cấu hình tùy chỉnh sau khi DOM sẵn sàng
+			document.addEventListener('DOMContentLoaded', function () {
+			    window.fastNotice = new FastNotice({
+			        position: 'top-center',    // Vị trí mặc định
+			        duration: 3000,              // Thời gian hiển thị (ms)
+			        maxNotifications: 3          // Số notification tối đa
+			    });
+			});
+		</script>
+		<!-- Lucide Icons - Custom Build -->
+		<script src="assets/js/lucide-custom.min.js" defer></script>
+		<!-- jModal manager -->
+		<script src="assets/js/libs/jmodal.1.1.0.js" defer></script>
+		<!-- Load BlazeSlider Library -->
+		<script src="assets/js/libs/blaze-slider.js" defer></script>
+		<!-- Libs Tabs JS Thuần -->
+		<script src="assets/js/libs/tabs.js" defer></script>
+		<!-- Image Fallback Utility -->
+		<script src="assets/js/libs/image-fallback.js" defer></script>
+
+
+		<!-- 2. CAC CODE JS TU VIET. -->
+
+		<!-- Header Component JS. Vi no goi Cart nen nam sau Cart -->
+		<script src="assets/js/header.js" defer></script>
+		<script src="assets/js/home-hero-shine.js" defer></script>
+		<script src="assets/js/home-scroll-reveal.js" defer></script>
+		<script src="assets/js/brand-section-vline.js" defer></script>
+		<!-- Run BlazeSlider -->
+		<script src="assets/js/sliders.js" defer></script>
+
+		<!-- Alpine.js (local). Nằm dưới cùng vì defer + auto-run -->
+		<script src="assets/js/libs/alpinejs.3.15.0.js" defer></script>
+		
+		<script src="assets/js/swiper-bundle.min.js"></script>
+	</head>
+	<body class="page-home mg-header-corner-shine min-h-screen">
+		<div class="page-home-top">
+			<header class="site-header bg-white/95 backdrop-blur-md sticky top-0 z-50 border-0 shadow-none ring-0 outline-none" x-data="headerComponent()">
+  <!-- Top Bar -->
+  
+  <!-- Home: nền gradient tách lớp để vệt sáng nằm giữa nền và nội dung -->
+  <div class="site-header-gradient-layer" aria-hidden="true"></div>
+  <!-- Ánh sáng góc: ẩn mặc định; bật bằng class .mg-header-corner-shine trên <body> -->
+  <div class="mg-corner-shine mg-corner-shine--top" aria-hidden="true"></div>
+  <div class="site-header-body">
+    <div class="">
+      <div class="header-bar flex-between h-16 items-center lg:h-[4.25rem]">
+        <div class="header-brand shrink-0">
+          <a
+  href="/index.html"
+  class="header-logo-link inline-flex items-center font-semibold text-lg tracking-tight text-gray-900 transition-colors hover:text-gray-700 md:text-xl"
+>
+ 
+</a>
+        </div>
+        <!-- Navigation — hiển thị thẳng trên header mọi kích thước màn hình -->
+<div class="header-desktop-menu mg-nav-desktop relative flex min-w-0 items-center self-stretch">
+  <nav class="header-desktop-nav relative z-20" aria-label="Menu desktop">
+    <ul class="home-hero-nav-list">
+      <li><a class="home-hero-nav-is-muted" href="index.html">Home</a></li>
+      <li><a class="home-hero-nav-is-muted" href="about.html">About</a></li>
+      <li><a class="home-hero-nav-is-muted" href="service.html">Services</a></li>
+      <li><a class="home-hero-nav-is-muted" href="ourworks.html">Ourworks</a></li>
+    </ul>
+  </nav>
+</div>
+
+        <div class="header-bar-spacer" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+  
+</header>
+
+			<main class=" w-full min-w-0 overflow-x-clip">
+				<section
+    class="home-hero-shell relative z-50 mx-0 min-w-0 w-full overflow-hidden rounded-[var(--mg-radius-shell)]  font-sans shadow-none"
+    aria-label="5MG — Hero">
+    <div class="relative overflow-hidden bg-mg-hero pt-[max(env(safe-area-inset-top,0px),0.75rem)] reveal-on-scroll">
+
+        <div class="relative z-30 mx-auto box-border w-full container">
+            <div class="relative z-20 flex  flex-col items-center justify-center pt-8 sm:pt-24 text-center ">
+                <h1 class="home-hero-title text-gradient inline-block font-synthesis-none not-italic">
+                    <span class="block">five</span>
+                    <span class="block">media group</span>
+                </h1>
+                <p
+                    class="mt-6 text-center text-sm sm:text-sm md:text-md lg:text-lg xl:text-xl italic leading-[1.15] text-[var(--mg-text-on-gradient-soft)] md:mt-12 md:text-[length:var(--mg-text-tagline-lg)] md:leading-[1.08]">
+                    dare to be different<br />
+                    we are 5mg
+                </p>
+            </div>
+            <div
+                class="relative z-20 grid grid-cols-1 gap-5 pb-[clamp(1rem,3vw,2rem)] md:gap-8 md:pb-8 lg:grid-cols-[minmax(0,320px)_1fr] lg:pb-0">
+                <div class="mb-6 text-left text-[var(--mg-text-on-gradient)] max-[479px]:text-center mt-3">
+                    <h2
+                        class="text-md font-semibold uppercase leading-[1.25] md:text-[length:var(--mg-text-side-title-lg)] md:leading-[1.2]">
+                        THE NEXT LEVEL OF MEDIA</h2>
+                    <ul
+                        class="mb-0 mt-3 flex list-none flex-col gap-[0.2rem] p-0 text-sm sm:text-sm md:text-md lg:text-lg xl:text-xl font-normal uppercase tracking-[0.02em] text-[var(--mg-text-on-gradient-soft)] md:mt-4 md:gap-1 md:text-[length:var(--mg-text-side-line-lg)] md:tracking-normal">
+                        <li>KOLS - PRODUCTION</li>
+                        <li>SOCIAL PERFORMANCE</li>
+                        <li>TIKTOK TRENDING</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div
+        class="home-hero-bar relative z-[40] mt-0 w-full overflow-visible bg-[var(--mg-bar-bg)] text-[var(--mg-text-on-gradient)] shadow-[inset_0_-10px_40px_rgba(0,0,0,0.35)] [--mg-hero-bar-pad-y:clamp(1.25rem,0.85rem+2.4vw,2.5rem)] reveal-on-scroll reveal-on-scroll--delay-1">
+        <div class="home-hero-fold home-hero-curve-fold" aria-hidden="true">
+            <svg class="home-hero-fold-clip-defs" width="0" height="0" aria-hidden="true" focusable="false">
+                <defs>
+                    <clipPath id="home-hero-fold-clip" clipPathUnits="objectBoundingBox">
+                        <path d="M 1 1 L 0 1 C 0.45 1, 0.8 0.6, 1 0.15 L 1 0 Z" />
+                    </clipPath>
+                    <filter id="home-hero-fold-shadow-filter" x="-110%" y="-110%" width="320%" height="320%"
+                        color-interpolation-filters="sRGB">
+                        <feDropShadow in="SourceAlpha" dx="-28" dy="34" stdDeviation="26" flood-color="#000000"
+                            flood-opacity="0.24" result="home-hero-fold-shadow-soft" />
+                        <feDropShadow in="SourceAlpha" dx="-24" dy="30" stdDeviation="7" flood-color="#000000"
+                            flood-opacity="0.48" result="home-hero-fold-shadow-edge" />
+                        <feMerge>
+                            <feMergeNode in="home-hero-fold-shadow-soft" />
+                            <feMergeNode in="home-hero-fold-shadow-edge" />
+                            <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                    </filter>
+                </defs>
+            </svg>
+            <!-- Sao phía sau lớp fold; một phần bị fold che -->
+            <div class="home-hero-fold-star-stage">
+                <img class="home-hero-fold-star" src="assets/images/star.png" alt="" decoding="async" />
+            </div>
+            <div class="home-hero-fold-layers-wrap">
+                <div class="home-hero-fold-layers"></div>
+            </div>
+        </div>
+        <div
+            class="relative z-[2] mx-auto box-border grid min-h-0 w-full container grid-cols-1 items-start px-4 sm:px-0 gap-4 pt-[var(--mg-hero-bar-pad-y)] pb-[var(--mg-hero-bar-pad-y)] sm:gap-5 md:min-h-[200px] md:items-center md:gap-6 lg:grid-cols-[110px_minmax(0,1fr)_110px] lg:min-h-[220px] lg:gap-6 min-[1440px]:min-h-[240px]">
+            <div
+                class="home-hero-bar-brand mb-2 flex items-center justify-start sm:mb-2 sm:justify-center lg:mb-0 lg:h-full lg:justify-center">
+                <div
+                    class="home-hero-bar-brand-inner text-[clamp(1.75rem,5vw,var(--mg-text-brand-vertical))] font-black uppercase leading-none tracking-[-0.03em] text-[var(--mg-primary)] lg:origin-center lg:-rotate-90 lg:whitespace-nowrap">
+                    5MG.VN</div>
+            </div>
+            <div
+                class="home-hero-bar-body m-0 max-w-[46rem] text-left text-md sm:text-md lg:text-lg xl:text-xl leading-[1.5] text-pretty text-[var(--mg-text-bar)] sm:mx-auto sm:text-center lg:max-w-[min(46rem,92vw)] lg:leading-[1.35] min-[1440px]:max-w-[820px] min-[1440px]:leading-[1.28] [&_strong]:font-semibold [&_strong]:text-[var(--mg-text-strong-on-bar)]">
+                Với đội ngũ sáng lập từng dẫn dắt nhiều dự án lớn trong lĩnh vực
+                <strong>creative media</strong>, <strong>tổ chức sự kiện</strong> và
+                <strong>digital marketing</strong>, chúng tôi xây dựng một mô hình <br class="hidden xl:block" />
+                vận hành linh hoạt, ứng dụng công nghệ và luôn đặt con người làm trung tâm trong mọi chiến dịch truyền
+                thông.
+            </div>
+            <div class="home-hero-bar-trailing hidden min-h-px lg:block lg:w-[110px]" aria-hidden="true"></div>
+        </div>
+    </div>
+</section>
+				<section id="brand-section" class="relative overflow-hidden bg-[var(--mg-bar-bg)] text-white py-10 sm:py-16 lg:py-24 reveal-on-scroll">
+  <div class="absolute inset-y-0 left-0 hidden w-2/5 sm:block"></div>
+  <div class="absolute inset-y-0 right-0 hidden w-3/5 sm:block"></div>
+
+  <div
+    id="brand-section-vline"
+    class="brand-section-vline pointer-events-none absolute inset-y-0 z-[30] hidden -translate-x-1/2 lg:block"
+    style="left: 50%;"
+    aria-hidden="true"></div>
+
+  <div
+    class="relative z-10 mx-auto grid container grid-cols-1 items-start gap-y-8 sm:gap-y-10 lg:grid-cols-[minmax(0,4fr)_minmax(0,5fr)] lg:gap-x-6 lg:gap-y-0 xl:gap-x-10">
+    <div class="relative py-6 sm:py-10 md:py-14 lg:py-20">
+      <img src="/assets/images/logo_brad.webp" alt="" class="w-full max-w-full" decoding="async" />
+      <img src="/assets/images/logo_media.webp" alt="" class="mt-1 w-full max-w-full sm:mt-0" decoding="async" />
+    </div>
+
+    <div class="relative w-full min-w-0 py-6 sm:py-10 md:py-14 lg:py-20">
+      <div class="relative z-10 flex w-full min-w-0 flex-col gap-5 sm:gap-6 lg:gap-8">
+        <div
+          class="flex w-full items-start justify-center text-center lg:justify-start">
+          <img
+            id="brand-icon-brand"
+            src="/assets/images/icon_brand.webp"
+            alt=""
+            class="mx-auto h-auto w-[100%] max-w-xs shrink-0 object-contain sm:w-[60%] sm:max-w-md md:max-w-lg lg:mx-0 lg:w-[55%] lg:max-w-lg"
+            decoding="async" />
+        </div>
+
+        <div
+          class="flex w-full min-w-0 flex-col items-center text-center lg:-mt-6 lg:items-end lg:text-right">
+          <div
+            class="flex w-full shrink-0 justify-center text-[#ff4d1f] lg:mt-[calc(var(--brand-icon-h,0px)/-7)] lg:justify-end">
+            <img
+              src="/assets/images/logo_home.webp"
+              alt=""
+              class="h-auto w-auto max-w-[8.5rem] object-contain sm:max-w-36 lg:object-right"
+              decoding="async" />
+          </div>
+
+          <p
+            class="mx-auto mt-6 max-w-xl w-full leading-[1.45] text-white/88 text-[15px] sm:mt-7 sm:max-w-lg sm:text-base lg:mx-0 lg:ml-auto lg:mt-8 lg:max-w-lg lg:text-[18px] lg:leading-[1.35]">
+            Mang đến nhiều chiến dịch social hiệu quả và có sức #viral tự nhiên mạnh mẽ.<br />
+            Đạt được nhiều chiến dịch xếp hạng <br />
+            Top 1 - Top 2 trên các BXH SOCIAL CAMPAIGN uy tín.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+				<section
+  class="relative bg-[var(--mg-bar-bg)] py-14 text-white lg:py-24 [overflow-x:clip] overflow-y-visible reveal-on-scroll">
+  <div class="relative mx-auto container">
+    <div class="grid items-center gap-6 lg:grid-cols-[320px_minmax(0,1fr)] xl:grid-cols-[360px_minmax(0,1fr)]">
+      <!-- Cột trái -->
+      <div class="relative z-10 flex justify-center lg:justify-start">
+        <div class="relative">
+          <div
+            class="absolute -left-10 top-[-34px] h-[210px] w-[180px] border border-white/20 opacity-40 [clip-path:polygon(25%_0%,75%_0%,100%_50%,75%_100%,25%_100%,0%_50%)]"></div>
+          <img src="assets/images/partner.png" alt="" class="h-full w-full object-cover" />
+        </div>
+      </div>
+
+      <!-- Cột phải: 1 ảnh / slide; 2 vòng sáng góc trái-trên chồng nửa vòng -->
+      <div class="relative min-w-0">
+        <div class="kol-swiper-stage isolate">
+          <div class="kol-slide-top-lights" aria-hidden="true">
+            <div class="kol-slide-top-lights__blob kol-slide-top-lights__blob--a"></div>
+            <div class="kol-slide-top-lights__blob kol-slide-top-lights__blob--b"></div>
+            <div class="kol-slide-top-lights__hotspot"></div>
+          </div>
+          <div class="swiper celebrityKolsSlider relative z-[1] overflow-hidden pb-2">
+            <div class="swiper-wrapper">
+            <!-- Slide 1 — Nghệ sĩ -->
+            <div class="swiper-slide !h-auto">
+              <div
+                class="kol-slide-media relative w-full overflow-hidden rounded-none bg-black shadow-[0_18px_50px_rgba(0,0,0,0.55)]">
+                <img
+                  src="assets/images/celeb_nu.jpg"
+                  alt=""
+                  class="absolute inset-0 z-[2] h-full w-full object-cover object-center"
+                  decoding="async"
+                  loading="eager" />
+              </div>
+            </div>
+
+            <!-- Slide 2 — KOLs -->
+            <div class="swiper-slide !h-auto">
+              <div
+                class="kol-slide-media relative w-full overflow-hidden rounded-none bg-black shadow-[0_18px_50px_rgba(0,0,0,0.55)]">
+                <img
+                  src="assets/images/kols.jpg"
+                  alt=""
+                  class="absolute inset-0 z-[2] h-full w-full object-cover object-center"
+                  decoding="async"
+                  loading="eager" />
+              </div>
+            </div>
+
+            <!-- Slide 3 — Partner -->
+            <div class="swiper-slide !h-auto">
+              <div
+                class="kol-slide-media relative w-full overflow-hidden rounded-none bg-black shadow-[0_18px_50px_rgba(0,0,0,0.55)]">
+                <img
+                  src="assets/images/celeb_nam.jpg"
+                  alt=""
+                  class="absolute inset-0 z-[2] h-full w-full object-cover object-center"
+                  decoding="async"
+                  loading="eager" />
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="kol-swiper-fold kol-swiper-curve-fold" aria-hidden="true">
+            <svg class="kol-swiper-fold-clip-defs" width="0" height="0" aria-hidden="true" focusable="false">
+              <defs>
+                <clipPath id="kol-fold-clip" clipPathUnits="objectBoundingBox">
+                  <path d="M 1 1 L 0 1 C 0.45 1, 0.8 0.6, 1 0.15 L 1 0 Z" />
+                </clipPath>
+                <filter
+                  id="kol-fold-shadow-filter"
+                  x="-110%"
+                  y="-110%"
+                  width="320%"
+                  height="320%"
+                  color-interpolation-filters="sRGB">
+                  <feDropShadow
+                    in="SourceAlpha"
+                    dx="-28"
+                    dy="34"
+                    stdDeviation="26"
+                    flood-color="#000000"
+                    flood-opacity="0.24"
+                    result="kol-shadow-soft" />
+                  <feDropShadow
+                    in="SourceAlpha"
+                    dx="-24"
+                    dy="30"
+                    stdDeviation="7"
+                    flood-color="#000000"
+                    flood-opacity="0.48"
+                    result="kol-shadow-edge" />
+                  <feMerge>
+                    <feMergeNode in="kol-shadow-soft" />
+                    <feMergeNode in="kol-shadow-edge" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+            </svg>
+            <div class="kol-swiper-fold-star-stage">
+              <img class="kol-swiper-fold-star" src="assets/images/star.png" alt="" decoding="async" />
+            </div>
+            <div class="kol-swiper-fold-layers-wrap">
+              <div class="kol-swiper-fold-layers"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="celebrity-kols-pagination relative z-20 mt-8 flex justify-center"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    function initCelebrityKolsSlider() {
+      if (typeof Swiper === 'undefined') return;
+      var el = document.querySelector('.celebrityKolsSlider');
+      if (!el || el.dataset.kolSwiperInit === '1') return;
+      el.dataset.kolSwiperInit = '1';
+      new Swiper('.celebrityKolsSlider', {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        speed: 900,
+        loop: false,
+        rewind: true,
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.celebrity-kols-pagination',
+          clickable: true,
+        },
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initCelebrityKolsSlider);
+    } else {
+      initCelebrityKolsSlider();
+    }
+  })();
+</script>
+
+				<section
+  id="service"
+  class="service-section relative overflow-hidden py-10 sm:py-12 md:py-16 lg:py-20 xl:overflow-visible xl:py-24 bg-mg-hero reveal-on-scroll">
+  <div class="relative mx-auto container min-w-0 ">
+    <!-- Dưới md: một cột; md–lg: 3 cột (tablet hoa max 400px, lg 500px); xl: như cũ -->
+    <div
+      class="flex min-w-0 flex-col gap-8 sm:gap-10 md:grid md:grid-cols-[minmax(0,1fr)_minmax(250px,min(92vw,400px))_minmax(0,1fr)] md:items-stretch md:gap-x-4 md:gap-y-8 md:gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(250px,min(92vw,500px))_minmax(0,1fr)] xl:grid xl:grid-cols-[minmax(0,1fr)_minmax(250px,min(92vw,620px))_minmax(0,1fr)] xl:items-stretch xl:gap-x-8 xl:gap-y-6 2xl:gap-x-10">
+      <!-- Tiêu đề hàng 1 (md+); ẩn từ xl -->
+      <h2
+        class="service-section__title font-archivo order-0 w-full shrink-0 text-center text-[32px] font-black uppercase leading-[0.95] tracking-[-0.04em] sm:text-[40px] md:col-span-3 md:row-start-1 md:text-[44px] lg:text-[52px] xl:hidden xl:text-[56px]">
+        Our Service
+      </h2>
+      <!-- Cột 2: hoa -->
+      <div
+        class="order-1 flex w-full min-w-0 max-w-full items-center justify-center py-6 sm:py-8 md:col-start-2 md:row-start-2 md:row-span-2 md:min-h-0 md:py-6 lg:py-6 xl:order-2 xl:row-span-2 xl:min-h-[min(480px,60svh)] xl:overflow-visible xl:py-0">
+        <!-- md: max 400px; lg: 500px; xl: home-hero.css -->
+        <div
+          class="service-section__flower-frame service-section__flower-frame--sized relative mx-auto aspect-square w-full max-w-full bg-transparent md:w-[min(92vw,400px)] lg:w-[min(92vw,500px)] xl:w-auto xl:max-w-none">
+          <img
+            class="service-section__flower relative z-0 pointer-events-none h-full w-full select-none object-contain"
+            src="assets/images/flower.png"
+            width="512"
+            height="512"
+            alt=""
+            decoding="async" />
+          <nav
+            class="service-section__flower-petals absolute inset-0 z-[2]"
+            aria-label="Bốn dịch vụ — bốn ô vuông trên ảnh">
+            <a
+              class="service-flower-petal service-flower-petal--tl"
+              href="/service.html"
+              aria-label="Booking KOLs và Influencers"></a>
+            <a
+              class="service-flower-petal service-flower-petal--tr"
+              href="/service.html"
+              aria-label="Social Performance"></a>
+            <a
+              class="service-flower-petal service-flower-petal--bl"
+              href="/service.html"
+              aria-label="Sản xuất"></a>
+            <a
+              class="service-flower-petal service-flower-petal--br"
+              href="/service.html"
+              aria-label="TikTok Trending"></a>
+            <!-- Chữ trên cùng, pointer-events none → click xuyên xuống <a> -->
+            <div
+              class="service-section__flower-labels text-md sm:text-md md:text-[1.125rem] lg:text-2xl xl:text-3xl"
+              aria-hidden="true">
+              <div class="service-flower-label-slot service-flower-label-slot--tl">
+                <span class="service-flower-petal__label service-flower-petal__label--nudge-left">
+                  <span class="service-flower-petal__nowrap text-right">Booking KOLs</span><br />Influencers
+                </span>
+              </div>
+              <div class="service-flower-label-slot service-flower-label-slot--tr">
+                <span class="service-flower-petal__label">Social<br />Performance</span>
+              </div>
+              <div class="service-flower-label-slot service-flower-label-slot--bl">
+                <span class="service-flower-petal__label service-flower-petal__label--lg">Sản xuất</span>
+              </div>
+              <div class="service-flower-label-slot service-flower-label-slot--br">
+                <span class="service-flower-petal__label">TikTok<br />Trending</span>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Cột 1: KOLs — Our Service — AI -->
+      <div
+        class="order-2 flex min-w-0 flex-col space-y-6 text-center sm:space-y-8 md:col-start-1 md:row-start-2 md:row-span-2 md:h-full md:translate-y-2 md:justify-around md:text-right md:space-y-10 lg:justify-around lg:space-y-16 xl:order-1 xl:row-span-2 xl:h-full xl:justify-center xl:space-y-20 xl:translate-y-2 xl:text-right 2xl:space-y-24">
+        <div class="flex justify-center md:justify-end lg:justify-end xl:block">
+          <p
+            class="max-w-[20rem] text-md font-extrabold uppercase leading-[1.25] sm:max-w-[22rem] sm:text-md md:text-md xl:text-[1.125rem] xl:max-w-none">
+            1. Cung cấp KOLs/ Influencers<br />
+            tương thích & hiệu quả cho từng<br />
+            chiến dịch
+          </p>
+        </div>
+        <h2
+          class="service-section__title font-archivo hidden shrink-0 text-[32px] font-black uppercase leading-[0.95] tracking-[-0.04em] sm:text-[40px] md:text-[44px] lg:text-[52px] xl:block xl:text-[56px]">
+          Our Service
+        </h2>
+        <div class="flex justify-center md:justify-end xl:block">
+          <div class="w-full max-w-md sm:max-w-lg md:max-w-none xl:max-w-none">
+            <p class="text-md font-extrabold italic uppercase leading-tight sm:text-md lg:text-md xl:text-lg">
+              1. AI Content
+            </p>
+            <div class="mt-2 flex flex-col gap-y-1.5 text-xs font-bold uppercase leading-[1.4] sm:text-xs lg:text-sm xl:text-sm  ">
+              <p>- Social Content: Ảnh & Video AI</p>
+              <p>- Shortfilm AI</p>
+              <p>2. Shortfilm</p>
+              <p class="mt-3">3. Social Content</p>
+              <p class="mt-3">4. Livestream</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cột 3: copy — xl:contents -->
+      <div
+        class="order-3 min-w-0 space-y-8 text-center sm:space-y-10 max-md:mx-auto max-md:max-w-2xl md:col-start-3 md:row-start-2 md:row-span-2 md:mx-0 md:flex md:max-w-none md:flex-col md:justify-around md:space-y-14 md:text-left lg:justify-around lg:space-y-14 xl:contents xl:mx-0 xl:max-w-none">
+        <div class="xl:order-3 xl:flex xl:min-h-0 xl:-translate-y-2 xl:items-center xl:justify-start xl:text-left">
+          <div class="space-y-3 text-[12px] font-extrabold uppercase leading-[1.25] sm:text-[13px] lg:text-[14px]">
+            <p class="text-md font-extrabold italic uppercase leading-tight sm:text-md lg:text-md xl:text-lg">
+              1. Seeding all platforms
+              </p>
+              <span class="text-xs font-semibold tracking-[0.02em] text-[color:var(--mg-service-text-muted)] sm:text-xs lg:text-sm xl:text-sm">
+                - View / Like / Share / Comment / Followers..
+              </span>
+        
+              <p class="text-md font-extrabold italic uppercase leading-tight sm:text-md lg:text-md xl:text-lg">2. Voting</p>
+          </div>
+        </div>
+        <div class="xl:order-6 xl:flex xl:min-h-0 xl:-translate-y-2 xl:items-center xl:justify-start xl:text-left">
+          <div class="space-y-3 text-md font-extrabold uppercase leading-[1.25] sm:text-md lg:text-md xl:text-lg">
+            <p>1. Tạo mẫu CapCut trending</p>
+            <p>2. Thiết kế branding template</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+			</main>
+		</div>
+		<!-- Modals (ngoài header để z-index / overlay đúng) -->
+		
+
+		<!-- Footer -->
+        <footer class="relative overflow-hidden border-t border-[#ff5a2a] bg-[var(--mg-bar-bg)] text-[#ff5a2a]">
+  <div class="mx-auto container py-6 sm:py-8 lg:py-10">
+    <div
+      class="flex flex-col items-stretch gap-8 md:gap-10 xl:flex-row xl:flex-nowrap xl:items-center xl:justify-between xl:gap-6 2xl:gap-8">
+      <!-- Logo -->
+      <div class="flex shrink-0 justify-center xl:justify-start">
+        <img
+          src="/assets/images/logo.png"
+          alt="Five Media Group"
+          class="h-16 w-auto object-contain sm:h-[4.75rem] md:h-20 xl:h-24 2xl:h-28" />
+      </div>
+
+      <!-- Email + địa chỉ + hotline: cột 2 (mobile) → 2 cột (sm) → 3 cột (md) → xl: cùng một hàng với flex cha -->
+      <div class="grid w-full grid-cols-2 gap-6 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-8 md:grid-cols-2 md:gap-6 lg:grid-cols-4 xl:contents">
+        <!-- Email -->
+        <div class="flex flex-col items-center gap-2 text-center sm:items-start sm:text-left sm:px-1 xl:shrink-0 xl:gap-1.5">
+            <img src="/assets/images/email.png" alt="" class="h-8 w-8 shrink-0 object-contain sm:h-10 sm:w-10 md:h-11 md:w-11 xl:h-10 xl:w-10 2xl:h-11 2xl:w-11" />
+          <div class="max-w-full break-all text-sm font-extrabold uppercase leading-snug tracking-wide sm:text-md">
+            FIVEMEDIAGROUP@5MG.VN
+          </div>
+        </div>
+
+        <!-- Địa chỉ -->
+        <div class="flex flex-col items-center gap-2 text-center sm:items-start sm:text-left sm:px-1 xl:shrink-0 xl:gap-1.5">
+            <img src="/assets/images/address.png" alt="" class="h-8 w-8 shrink-0 object-contain sm:h-10 sm:w-10 md:h-11 md:w-11 xl:h-10 xl:w-10 2xl:h-11 2xl:w-11" />
+          <div class="max-w-full text-sm font-extrabold uppercase leading-snug tracking-wide sm:text-md xl:max-w-[12rem] xl:leading-tight 2xl:max-w-none">
+            <span class="block">45 DINH TIEN HOANG, SAIGON WARD,</span>
+            <span class="block">HO CHI MINH CITY</span>
+          </div>
+        </div>
+
+        <!-- Hotline -->
+        <div class="flex flex-col items-center gap-2 text-center sm:items-start sm:text-left sm:col-span-2 sm:justify-self-center md:col-span-1 md:justify-self-stretch xl:shrink-0 xl:gap-1.5">
+         <img src="/assets/images/phone.png" alt="" class="h-8 w-8 shrink-0 object-contain sm:h-10 sm:w-10 md:h-11 md:w-11 xl:h-10 xl:w-10 2xl:h-11 2xl:w-11" />
+          <div class="text-sm font-extrabold uppercase leading-snug tracking-wide sm:text-md">
+            <span class="block">HOTLINE TƯ VẤN</span>
+            <span class="block">09.3114.0488</span>
+          </div>
+        </div>
+        <div class="flex shrink-0 md:justify-start sm:justify-center justify-center xl:justify-end">
+          <img
+            src="/assets/images/fmg.png"
+            alt="Five Media Group"
+            class="h-auto w-full max-w-[200px] object-contain sm:max-w-[240px] md:max-w-[260px] xl:w-[200px] xl:max-w-none 2xl:w-[220px]" />
+        </div>
+      </div>
+
+  
+
+      <!-- Slogan -->
+      <p
+        class="mb-0 text-center sm:text-center md:text-center xl:text-left text-sm italic leading-relaxed tracking-tight text-[#ff5a2a] sm:text-md sm:leading-snug md:max-w-2xl md:mx-auto xl:ml-auto xl:max-w-[min(100%,22rem)] 2xl:max-w-md">
+        Đồng hành cùng chúng tôi, thương hiệu của bạn không chỉ được nhìn thấy — mà còn được ghi nhớ và yêu thích.
+      </p>
+    </div>
+  </div>
+</footer>
+<button id="scrollToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+class="fixed bottom-8 sm:right-8 right-3 w-12 h-12 bg-home-primary hover:bg-home-primary-hover text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 opacity-0 pointer-events-none z-50"
+aria-label="Scroll to top">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M10 5L5 10L6.25 11.25L10 7.5L13.75 11.25L15 10L10 5Z" fill="currentColor" />
+</svg>
+</button>
+
+<script>
+// Show/hide scroll to top button
+window.addEventListener('scroll', function () {
+  const scrollButton = document.getElementById('scrollToTop');
+  if (window.pageYOffset > 300) {
+    scrollButton.classList.remove('opacity-0', 'pointer-events-none');
+    scrollButton.classList.add('opacity-100');
+  } else {
+    scrollButton.classList.add('opacity-0', 'pointer-events-none');
+    scrollButton.classList.remove('opacity-100');
+  }
+});
+</script>
+	</body>
+</html>
