@@ -1,89 +1,4 @@
-
-<!DOCTYPE html>
-<html lang="vi">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-		<title>Dịch vụ — 5MG — Five Media Group</title>
-		<meta name="description"
-			content="Five Media Group — Our Service: KOL, Social Performance, sản xuất nội dung, TikTok trending.">
-		<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
-		<script type="text/javascript">
-			const API_URL = "https://panel.dongnai.net/api/v2/";
-		</script>
-        <style>
-        .hidden {
-            display: none;
-        }
-		</style>
-        <link rel="stylesheet" href="assets/css/service_styles.css" />
-		
-		<script src="assets/js/libs/notification.js" defer></script>
-		<script>
-			document.addEventListener('DOMContentLoaded', function () {
-			    window.fastNotice = new FastNotice({
-			        position: 'top-center',
-			        duration: 3000,
-			        maxNotifications: 3
-			    });
-			});
-		</script>
-		<script src="assets/js/lucide-custom.min.js" defer></script>
-		<script src="assets/js/libs/jmodal.1.1.0.js" defer></script>
-		<script src="assets/js/libs/blaze-slider.js" defer></script>
-		<script src="assets/js/libs/tabs.js" defer></script>
-		<script src="assets/js/libs/image-fallback.js" defer></script>
-
-		<script src="assets/js/header.js" defer></script>
-		<script src="assets/js/home-hero-shine.js" defer></script>
-		<script src="assets/js/home-scroll-reveal.js" defer></script>
-		<script src="assets/js/brand-section-vline.js" defer></script>
-		<script src="assets/js/sliders.js" defer></script>
-
-		<script src="assets/js/libs/alpinejs.3.15.0.js" defer></script>
-		<script src="assets/js/swiper-bundle.min.js"></script>
-	</head>
-	<body class="page-home page-service min-h-screen mg-header-corner-shine">
-		<div class="page-home-top">
-			<header class="site-header bg-white/95 backdrop-blur-md sticky top-0 z-50 border-0 shadow-none ring-0 outline-none" x-data="headerComponent()">
-  <!-- Top Bar -->
-  
-  <!-- Home: nền gradient tách lớp để vệt sáng nằm giữa nền và nội dung -->
-  <div class="site-header-gradient-layer" aria-hidden="true"></div>
-  <!-- Ánh sáng góc: ẩn mặc định; bật bằng class .mg-header-corner-shine trên <body> -->
-  <div class="mg-corner-shine mg-corner-shine--top" aria-hidden="true"></div>
-  <div class="site-header-body">
-    <div class="">
-      <div class="header-bar flex-between h-16 items-center lg:h-[4.25rem]">
-        <div class="header-brand shrink-0">
-          <a
-  href="/index.html"
-  class="header-logo-link inline-flex items-center font-semibold text-lg tracking-tight text-gray-900 transition-colors hover:text-gray-700 md:text-xl"
->
- 
-</a>
-        </div>
-        <!-- Navigation — hiển thị thẳng trên header mọi kích thước màn hình -->
-<div class="header-desktop-menu mg-nav-desktop relative flex min-w-0 items-center self-stretch">
-  <nav class="header-desktop-nav relative z-20" aria-label="Menu desktop">
-    <ul class="home-hero-nav-list">
-      <li><a class="home-hero-nav-is-muted" href="index.html">Home</a></li>
-      <li><a class="home-hero-nav-is-muted" href="about.html">About</a></li>
-      <li><a class="home-hero-nav-is-muted" href="service.html">Services</a></li>
-      <li><a class="home-hero-nav-is-muted" href="ourworks.html">Ourworks</a></li>
-    </ul>
-  </nav>
-</div>
-
-        <div class="header-bar-spacer" aria-hidden="true"></div>
-      </div>
-    </div>
-  </div>
-  
-</header>
-
-			<main class=" w-full min-w-0 overflow-x-clip">
-				<!-- Trang Dịch vụ — fragment riêng; responsive lưới giống blocks/sections/home/service.html -->
+<!-- Trang Dịch vụ — fragment riêng; responsive lưới giống blocks/sections/home/service.html -->
 <section
   id="service-page"
   class="service-section reveal-on-scroll relative overflow-hidden py-10 sm:py-12 md:py-16 lg:py-20 xl:overflow-visible xl:py-24 bg-mg-hero">
@@ -222,12 +137,12 @@
     </div>
   </div>
 </section>
-<section class="reveal-on-scroll reveal-on-scroll--delay-1 relative overflow-hidden text-white py-12 sm:py-20" >
+<section class="relative overflow-hidden text-white py-12 sm:py-20" >
   <div class="pointer-events-none absolute inset-0 z-0 flex min-h-full flex-col" aria-hidden="true">
     <div class="h-1/2 min-h-0 bg-mg-hero"></div>
     <div class="h-1/2 min-h-0 bg-[var(--mg-bar-bg)]"></div>
   </div>
-  <div class="relative z-[1] mx-auto w-full ">
+  <div class="relative z-[1] mx-auto w-full reveal-on-scroll reveal-on-scroll--delay-1">
     <div class="relative mx-auto container">
       <div class="relative overflow-hidden rounded-sm bg-transparent">
         <div class="swiper service-poster-swiper w-full" id="productionPosterSwiper">
@@ -332,87 +247,3 @@
     </div>
   </div>
 </section>
-			</main>
-		</div>
-		
-
-        <footer class="relative overflow-hidden border-t border-[#ff5a2a] bg-[var(--mg-bar-bg)] text-[#ff5a2a]">
-  <div class="mx-auto container py-6 sm:py-8 lg:py-10">
-    <div
-      class="flex flex-col items-stretch gap-8 md:gap-10 xl:flex-row xl:flex-nowrap xl:items-center xl:justify-between xl:gap-6 2xl:gap-8">
-      <!-- Logo -->
-      <div class="flex shrink-0 justify-center xl:justify-start">
-        <img
-          src="/assets/images/logo.png"
-          alt="Five Media Group"
-          class="h-16 w-auto object-contain sm:h-[4.75rem] md:h-20 xl:h-24 2xl:h-28" />
-      </div>
-
-      <!-- Email + địa chỉ + hotline: cột 2 (mobile) → 2 cột (sm) → 3 cột (md) → xl: cùng một hàng với flex cha -->
-      <div class="grid w-full grid-cols-2 gap-6 sm:grid-cols-2 sm:gap-x-6 sm:gap-y-8 md:grid-cols-2 md:gap-6 lg:grid-cols-4 xl:contents">
-        <!-- Email -->
-        <div class="flex flex-col items-center gap-2 text-center sm:items-start sm:text-left sm:px-1 xl:shrink-0 xl:gap-1.5">
-            <img src="/assets/images/email.png" alt="" class="h-8 w-8 shrink-0 object-contain sm:h-10 sm:w-10 md:h-11 md:w-11 xl:h-10 xl:w-10 2xl:h-11 2xl:w-11" />
-          <div class="max-w-full break-all text-sm font-extrabold uppercase leading-snug tracking-wide sm:text-md">
-            FIVEMEDIAGROUP@5MG.VN
-          </div>
-        </div>
-
-        <!-- Địa chỉ -->
-        <div class="flex flex-col items-center gap-2 text-center sm:items-start sm:text-left sm:px-1 xl:shrink-0 xl:gap-1.5">
-            <img src="/assets/images/address.png" alt="" class="h-8 w-8 shrink-0 object-contain sm:h-10 sm:w-10 md:h-11 md:w-11 xl:h-10 xl:w-10 2xl:h-11 2xl:w-11" />
-          <div class="max-w-full text-sm font-extrabold uppercase leading-snug tracking-wide sm:text-md xl:max-w-[12rem] xl:leading-tight 2xl:max-w-none">
-            <span class="block">45 DINH TIEN HOANG, SAIGON WARD,</span>
-            <span class="block">HO CHI MINH CITY</span>
-          </div>
-        </div>
-
-        <!-- Hotline -->
-        <div class="flex flex-col items-center gap-2 text-center sm:items-start sm:text-left sm:col-span-2 sm:justify-self-center md:col-span-1 md:justify-self-stretch xl:shrink-0 xl:gap-1.5">
-         <img src="/assets/images/phone.png" alt="" class="h-8 w-8 shrink-0 object-contain sm:h-10 sm:w-10 md:h-11 md:w-11 xl:h-10 xl:w-10 2xl:h-11 2xl:w-11" />
-          <div class="text-sm font-extrabold uppercase leading-snug tracking-wide sm:text-md">
-            <span class="block">HOTLINE TƯ VẤN</span>
-            <span class="block">09.3114.0488</span>
-          </div>
-        </div>
-        <div class="flex shrink-0 md:justify-start sm:justify-center justify-center xl:justify-end">
-          <img
-            src="/assets/images/fmg.png"
-            alt="Five Media Group"
-            class="h-auto w-full max-w-[200px] object-contain sm:max-w-[240px] md:max-w-[260px] xl:w-[200px] xl:max-w-none 2xl:w-[220px]" />
-        </div>
-      </div>
-
-  
-
-      <!-- Slogan -->
-      <p
-        class="mb-0 text-center sm:text-center md:text-center xl:text-left text-sm italic leading-relaxed tracking-tight text-[#ff5a2a] sm:text-md sm:leading-snug md:max-w-2xl md:mx-auto xl:ml-auto xl:max-w-[min(100%,22rem)] 2xl:max-w-md">
-        Đồng hành cùng chúng tôi, thương hiệu của bạn không chỉ được nhìn thấy — mà còn được ghi nhớ và yêu thích.
-      </p>
-    </div>
-  </div>
-</footer>
-<button id="scrollToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-class="fixed bottom-8 sm:right-8 right-3 w-12 h-12 bg-home-primary hover:bg-home-primary-hover text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 opacity-0 pointer-events-none z-50"
-aria-label="Scroll to top">
-<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M10 5L5 10L6.25 11.25L10 7.5L13.75 11.25L15 10L10 5Z" fill="currentColor" />
-</svg>
-</button>
-
-<script>
-// Show/hide scroll to top button
-window.addEventListener('scroll', function () {
-  const scrollButton = document.getElementById('scrollToTop');
-  if (window.pageYOffset > 300) {
-    scrollButton.classList.remove('opacity-0', 'pointer-events-none');
-    scrollButton.classList.add('opacity-100');
-  } else {
-    scrollButton.classList.add('opacity-0', 'pointer-events-none');
-    scrollButton.classList.remove('opacity-100');
-  }
-});
-</script>
-	</body>
-</html>
