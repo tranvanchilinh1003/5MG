@@ -105,7 +105,7 @@
 				<div
   class="about-hero home-hero-shell relative z-50 mx-0 min-w-0 w-full overflow-hidden font-sans shadow-none"
   aria-label="Five Media Group — About us">
-  <div class="reveal-on-scroll relative overflow-hidden bg-mg-hero pt-[max(env(safe-area-inset-top,0px),0.75rem)]">
+  <div class="relative overflow-hidden bg-mg-hero pt-[max(env(safe-area-inset-top,0px),0.75rem)]">
     <div class="relative z-30 mx-auto box-border w-full container">
       <div
         class="grid grid-cols-1 gap-6 pb-6 pt-4 min-[480px]:gap-10 min-[480px]:pb-8 min-[480px]:pt-5 md:gap-12 md:pb-12 md:pt-8 lg:grid-cols-12 lg:items-stretch lg:gap-x-4 lg:gap-y-6 lg:pb-16 lg:pt-12 xl:gap-x-10 min-[1440px]:gap-x-2">
@@ -172,7 +172,7 @@
   </div>
 
   <div
-    class="home-hero-bar reveal-on-scroll reveal-on-scroll--delay-1 relative z-[40] mt-0 w-full overflow-visible bg-[var(--mg-bar-bg)] text-[var(--mg-text-on-gradient)] shadow-[inset_0_-10px_40px_rgba(0,0,0,0.35)] [--mg-hero-bar-pad-y:clamp(1.25rem,0.85rem+2.4vw,2.5rem)]">
+    class="home-hero-bar relative z-[40] mt-0 w-full overflow-visible bg-[var(--mg-bar-bg)] text-[var(--mg-text-on-gradient)] shadow-[inset_0_-10px_40px_rgba(0,0,0,0.35)] [--mg-hero-bar-pad-y:clamp(1.25rem,0.85rem+2.4vw,2.5rem)]">
     
     <div class="home-hero-fold home-hero-curve-fold" aria-hidden="true">
       <svg class="home-hero-fold-clip-defs" width="0" height="0" aria-hidden="true" focusable="false">
@@ -251,7 +251,7 @@
 </div>
 				<section
   id="about-our-clients"
-  class="about-our-clients reveal-on-scroll relative overflow-x-clip overflow-y-visible bg-[#efefef] text-black"
+  class="about-our-clients relative overflow-x-clip overflow-y-visible bg-[#efefef] text-black"
   aria-labelledby="about-our-clients-heading">
   <style>
     #about-our-clients [x-cloak] {
@@ -259,6 +259,7 @@
     }
   </style>
 
+  <div class="reveal-on-scroll">
   <header
     class="relative z-[1] rounded-bl-[2.125rem] bg-[var(--mg-bar-bg)] px-4 pb-8  shadow-[14px_12px_40px_3px_rgba(0,0,0,0.68),24px_26px_76px_8px_rgba(0,0,0,0.52)] sm:rounded-bl-[2.5rem] sm:px-6 md:pb-10 lg:rounded-bl-[3rem]">
     <div class="container mx-auto">
@@ -294,6 +295,7 @@
       </div>
     </div>
   </div>
+  </div>
 
   <!-- Nút trong container; panel Join us full chiều ngang + bg-mg-hero (không bị giới hạn .container) -->
   <div
@@ -325,7 +327,7 @@
           <button
             type="button"
             id="about-join-us-toggle"
-            class="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--mg-primary)] px-6 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-[0_8px_24px_rgba(249,85,47,0.35)] transition hover:bg-[var(--mg-primary-deep)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f9552f] focus-visible:ring-offset-2 focus-visible:ring-offset-[#efefef] md:px-7 md:py-3.5 md:text-[0.9375rem] xl:gap-2.5 xl:px-10 xl:py-4 xl:text-base xl:tracking-[0.08em] xl:shadow-[0_12px_36px_rgba(249,85,47,0.38)]"
+            class="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--mg-primary)] px-6 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-[0_8px_24px_rgba(249,85,47,0.35)] transition duration-200 ease-out hover:-translate-y-1 hover:bg-[var(--mg-primary-deep)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f9552f] focus-visible:ring-offset-2 focus-visible:ring-offset-[#efefef] md:px-7 md:py-3.5 md:text-[0.9375rem] xl:gap-2.5 xl:px-10 xl:py-4 xl:text-base xl:tracking-[0.08em] xl:shadow-[0_12px_36px_rgba(249,85,47,0.38)]"
             @click="joinOpen = !joinOpen"
             :aria-expanded="joinOpen ? 'true' : 'false'"
             aria-controls="about-join-us-panel">
@@ -455,7 +457,7 @@
             <!-- Liên hệ tuyển dụng (CV); fold neo ngoài .container — home-hero.css -->
             <p class="relative z-20 mt-10 text-center sm:mt-12">
                 <a href="mailto:fivemediagroup@5mg.vn"
-                    class="inline-flex items-center gap-1.5 rounded-full border-b-2 border-black/30 px-6 pb-1.5 pt-0.5 text-[0.9375rem] font-semibold leading-snug tracking-wide text-black/85 outline-none transition-colors duration-200 ease-out hover:border-black/55 hover:bg-transparent hover:text-black focus-visible:ring-2 focus-visible:ring-black/15 focus-visible:ring-offset-2">
+                    class="inline-flex items-center gap-1.5 rounded-full border-b-2 border-black/30 px-6 pb-1.5 pt-0.5 text-[0.9375rem] font-semibold leading-snug tracking-wide text-black/85 outline-none transition duration-200 ease-out hover:-translate-y-0.5 hover:border-black/55 hover:bg-transparent hover:text-black focus-visible:ring-2 focus-visible:ring-black/15 focus-visible:ring-offset-2">
                     Gửi CV về email
                     <span class="text-[0.85em] text-black/50" aria-hidden="true">→</span>
                 </a>

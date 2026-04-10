@@ -1,37 +1,51 @@
 /**
- * Mọi trang: cuộn tới khối nào thì fade/slide vào (IntersectionObserver).
- * Phần tử: .reveal-on-scroll → thêm .is-revealed khi vào viewport.
+ * Scroll reveal: .reveal-on-scroll → .is-revealed khi vào viewport.
+ * CSS: opacity + scale nhẹ (~0.97) → 1. Banner/hero đầu mỗi trang không gắn class.
  */
 (function () {
   if (typeof IntersectionObserver === "undefined") return;
 
-  var nodes = document.querySelectorAll(".reveal-on-scroll");
-  if (!nodes.length) return;
+  var sel = ".reveal-on-scroll";
 
-  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (reduceMotion) {
-    nodes.forEach(function (el) {
+  function reveal(el) {
+    if (!el.classList.contains("is-revealed")) {
       el.classList.add("is-revealed");
-    });
-    return;
+    }
   }
 
-  var io = new IntersectionObserver(
-    function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("is-revealed");
-        io.unobserve(entry.target);
-      });
-    },
-    {
-      root: null,
-      rootMargin: "0px 0px -6% 0px",
-      threshold: [0, 0.06, 0.12],
-    }
-  );
+  function init() {
+    var nodes = document.querySelectorAll(sel);
+    if (!nodes.length) return;
 
-  nodes.forEach(function (el) {
-    io.observe(el);
-  });
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      nodes.forEach(reveal);
+      return;
+    }
+
+    var io = new IntersectionObserver(
+      function (entries) {
+        for (var i = 0; i < entries.length; i++) {
+          var e = entries[i];
+          if (!e.isIntersecting) continue;
+          reveal(e.target);
+          io.unobserve(e.target);
+        }
+      },
+      {
+        root: null,
+        rootMargin: "0px 0px -6% 0px",
+        threshold: 0.06,
+      }
+    );
+
+    for (var j = 0; j < nodes.length; j++) {
+      io.observe(nodes[j]);
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
 })();
