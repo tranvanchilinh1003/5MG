@@ -1398,8 +1398,8 @@ body:not(.page-home) header .header-desktop-menu .home-hero-nav-is-muted:hover {
   gap: 0.75rem;
 }
 
-.gap-6 {
-  gap: 1.5rem;
+.gap-4 {
+  gap: 1rem;
 }
 
 .gap-8 {
@@ -3376,7 +3376,7 @@ body.page-service.mg-header-corner-shine .mg-corner-shine--top::after {
   justify-content: center;
   max-width: 22rem;
   font-weight: 300;
-  font-size: clamp(0.9375rem, 3.8vw, 1.25rem);
+  font-size: clamp(1rem, 3.8vw, 1.25rem);
   -moz-column-gap: clamp(1rem, 4vw, 2rem);
        column-gap: clamp(1rem, 4vw, 2rem);
   row-gap: 0.75rem;
@@ -3987,6 +3987,10 @@ body.page-service.mg-header-corner-shine .mg-corner-shine--top::after {
     width: min(34vw, 260px);
     height: min(40vw, 248px);
   }
+
+  .home-hero-bar .home-hero-fold.home-hero-curve-fold {
+    top: -30px;
+  }
 }
 
 /* Laptop 1024–1439: fold vừa bar — bớt vw/cap để không che hết nội dung */
@@ -4011,7 +4015,7 @@ body.page-service.mg-header-corner-shine .mg-corner-shine--top::after {
   }
 
   .home-hero-bar .home-hero-fold.home-hero-curve-fold {
-    top: 35px;
+    top: 38px;
   }
 }
 
@@ -5061,16 +5065,20 @@ body:not(.page-home) .site-header {
     flex-direction: column;
   }
 
+  .md\:items-center {
+    align-items: center;
+  }
+
   .md\:items-stretch {
     align-items: stretch;
   }
 
-  .md\:justify-start {
-    justify-content: flex-start;
-  }
-
   .md\:justify-end {
     justify-content: flex-end;
+  }
+
+  .md\:justify-center {
+    justify-content: center;
   }
 
   .md\:justify-around {
@@ -5114,8 +5122,8 @@ body:not(.page-home) .site-header {
     margin-bottom: calc(3.5rem * var(--tw-space-y-reverse));
   }
 
-  .md\:justify-self-stretch {
-    justify-self: stretch;
+  .md\:justify-self-center {
+    justify-self: center;
   }
 
   .md\:px-4 {
