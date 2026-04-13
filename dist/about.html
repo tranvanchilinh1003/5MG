@@ -17,6 +17,14 @@
             display: none;
         }
 		</style>
+		<!-- Font local: chỉ preload woff2 (không ẩn body — tránh giật màn hình). Không CDN. -->
+<link rel="preload" href="assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/montserrat-vietnamese.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/inter-vietnamese.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/archivo-vietnamese.woff2" as="font" type="font/woff2" crossorigin />
+
 		<!-- Font: @font-face trong assets/css/fonts.css (local woff2) -->
 		<!-- all css -->
         <link rel="stylesheet" href="assets/css/about_styles.css" />
@@ -64,14 +72,16 @@
 	</head>
 	<body class="page-home page-about min-h-screen">
 		<div class="page-home-top">
-			<header class="site-header bg-white/95 backdrop-blur-md sticky top-0 z-50 border-0 shadow-none ring-0 outline-none" x-data="headerComponent()">
-  <!-- Top Bar -->
-  
-  <!-- Home: nền gradient tách lớp để vệt sáng nằm giữa nền và nội dung -->
+			<div class="site-header-group">
+  <!-- Home/About: nền gradient + vệt góc (ngoài <header>); bar/modals trong <header> -->
   <div class="site-header-gradient-layer" aria-hidden="true"></div>
-  <!-- Ánh sáng góc: ẩn mặc định; bật bằng class .mg-header-corner-shine trên <body> -->
-  <div class="mg-corner-shine mg-corner-shine--top" aria-hidden="true"></div>
-  <div class="site-header-body">
+  <!-- Vệt sáng góc trên trái header — DOM ngoài <header>, trong .site-header-group; bật bằng body.mg-header-corner-shine -->
+<div class="mg-corner-shine mg-corner-shine--top" aria-hidden="true"></div>
+
+  <header class="site-header bg-white/95 backdrop-blur-md sticky top-0 z-50 border-0 shadow-none ring-0 outline-none" x-data="headerComponent()">
+    <!-- Top Bar -->
+    
+    <div class="site-header-body">
     <div class="">
       <div class="header-bar flex-between h-16 items-center lg:h-[4.25rem]">
         <div class="header-brand shrink-0">
@@ -97,9 +107,10 @@
         <div class="header-bar-spacer" aria-hidden="true"></div>
       </div>
     </div>
-  </div>
-  
-</header>
+    </div>
+    
+  </header>
+</div>
 
 			<main class=" w-full min-w-0 overflow-x-clip">
 				<div class="about-hero home-hero-shell relative z-50 mx-0 min-w-0 w-full overflow-hidden font-sans shadow-none"
@@ -359,9 +370,11 @@
       <!-- Nội dung Join us — include trong #about-join-us-panel (nền bg-mg-hero full width ở our-client) -->
 <div
     class="about-join-us-surface about-join-us-surface--on-mg-hero relative flex flex-col overflow-visible rounded-none py-12 sm:py-24">
-    <!-- Vệt sáng: chỉ khi scroll tới khu Join (joinInView) VÀ đã mở tab (joinOpen) — Alpine ở #about-join-us-block -->
-    <img class="mg-corner-shine mg-corner-shine--join-contact" :class="{ 'is-visible': joinOpen && joinInView }"
-        src="assets/images/light_white.webp" alt="" width="640" height="640" decoding="async" />
+    <!-- Vệt sáng: component như header home (light-white-corner.png + mask/skew); chỉ khi joinOpen && joinInView -->
+    <div
+        class="mg-corner-shine mg-corner-shine--join-contact"
+        :class="{ 'is-visible': joinOpen && joinInView }"
+        aria-hidden="true"></div>
 
 
 

@@ -1218,16 +1218,16 @@ body:not(.page-home) header .header-desktop-menu .home-hero-nav-is-muted:hover {
   margin-bottom: 1.5rem;
 }
 
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
 .mt-3 {
   margin-top: 0.75rem;
 }
 
 .block {
   display: block;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .flex {
@@ -1411,20 +1411,8 @@ body:not(.page-home) header .header-desktop-menu .home-hero-nav-is-muted:hover {
        column-gap: 0.5rem;
 }
 
-.gap-y-1\.5 {
-  row-gap: 0.375rem;
-}
-
-.space-y-3 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
-}
-
-.space-y-6 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+.gap-y-5 {
+  row-gap: 1.25rem;
 }
 
 .space-y-8 > :not([hidden]) ~ :not([hidden]) {
@@ -1601,6 +1589,10 @@ body:not(.page-home) header .header-desktop-menu .home-hero-nav-is-muted:hover {
 
 .leading-\[1\.25\] {
   line-height: 1.25;
+}
+
+.leading-\[1\.2\] {
+  line-height: 1.2;
 }
 
 .leading-\[1\.4\] {
@@ -2851,167 +2843,197 @@ button.swiper-pagination-bullet{
   -webkit-text-fill-color: transparent;
 }
 
-/* Nền gradient hero — cùng nguồn với Tailwind bg-mg-hero */
-
-.mg-bg-hero {
-  background-image: var(--mg-hero-gradient);
-}
-
-/* =========================================================
-   .mg-corner-shine — base
-   ========================================================= */
-
 .mg-corner-shine {
   position: absolute;
   pointer-events: none;
 }
 
-/*
- * Vệt góc trên-trái — góc 90° + cung.
- * Gần góc/cung: #f5eeef đặc; mép mờ: chuyển dần sang #f5c1b7 rồi tan.
- * Không mask + blur trên cùng pseudo.
- */
-
-/* Rộng theo breakpoint: desktop ~½ viewport để vệt mềm tới vùng chữ Home (menu giữa) */
-
 .mg-corner-shine--top {
-  top: env(safe-area-inset-top, 0px);
-  left: 0;
-  z-index: 5;
-  /* Phone: nhỏ hơn để không “trắng” che header */
-  width: min(70vw, 300px);
-  /* Cao: home-hero-shine.js gán theo đáy .home-hero-title (fallback trước khi JS chạy) */
-  min-height: 200px;
-  height: min(58vh, 520px);
-}
-
-@media (min-width: 768px) {
-  .mg-corner-shine--top {
-    width: min(72vw, 580px);
-    min-height: 280px;
-    height: min(95vh, 840px);
-    opacity: 0.95;
-  }
-}
-
-@media (min-width: 1024px) {
-  .mg-corner-shine--top {
-    width: min(50vw, 920px);
-    height: min(98vh, 980px);
-  }
-}
-
-/*
- * Join us (contact.html): ảnh assets/images/light_white.webp — góc trên-trái;
- * opacity 0 → .is-visible khi scroll tới #about-join-us-block (about-join-shine.js).
- */
-
-.mg-corner-shine--join-contact {
   top: 0;
   left: 0;
   z-index: 1;
-  width: min(58%, 320px);
-  height: auto;
-  max-height: min(42vw, 360px);
-  -o-object-fit: contain;
-     object-fit: contain;
-  -o-object-position: top left;
-     object-position: top left;
-  opacity: 0;
-  transition: opacity 0.32s ease-out;
-  will-change: opacity;
-  pointer-events: none;
+  width: min(52vw, 860px);
+  height: min(62vh, 660px);
+  min-height: 260px;
+  overflow: hidden;
 }
-
-.mg-corner-shine--join-contact.is-visible {
-  opacity: 0.95;
-}
-
-@media (min-width: 768px) {
-  .mg-corner-shine--join-contact {
-    width: min(48%, 400px);
-    max-height: min(38vw, 420px);
-  }
-}
-
-@media (min-width: 1024px) {
-  .mg-corner-shine--join-contact {
-    width: min(42%, 480px);
-    max-height: min(34vw, 480px);
-  }
-}
-
-/* Cùng cường độ tối đa mobile như header */
-
-@media (max-width: 767px) {
-  .mg-corner-shine--join-contact.is-visible {
-    opacity: 0.62;
-  }
-}
-
-/* Sector mở rộng góc sang phải; blob ellipse kéo ngang */
 
 .mg-corner-shine--top::before {
   content: "";
   position: absolute;
-  left: -14%;
-  top: -12%;
-  width: 128%;
-  height: 104%;
+  left: -18%;
+  top: -26%;
+  width: 118%;
+  height: 118%;
+  border-radius: 0;
+  /* Vệt chính: chéo gần thẳng; lõi trắng rộng hơn + alpha cao hơn cho cảm giác “sáng trắng”. */
   background:
-    conic-gradient(
-      from -90deg at 0 0,
-      #f5eeef 0deg,
-      #f5eeef 32deg,
-      rgba(245, 193, 183, 0.78) 44deg,
-      rgba(245, 193, 183, 0.42) 60deg,
-      rgba(245, 193, 183, 0.16) 78deg,
-      rgba(245, 193, 183, 0) 102deg
+    linear-gradient(
+      to bottom right,
+      #FFFFFF 0%,
+      #FFFFFF 10%,
+      rgba(255, 255, 255, 0.99) 18%,
+      rgba(255, 255, 255, 0.82) 32%,
+      rgba(255, 255, 255, 0.45) 48%,
+      rgba(255, 255, 255, 0.16) 62%,
+      rgba(255, 255, 255, 0) 82%
     ),
     radial-gradient(
-      ellipse 125% 92% at 0 0,
-      #f5eeef 0%,
-      #f5eeef 42%,
-      rgba(245, 193, 183, 0.5) 58%,
-      rgba(245, 193, 183, 0.18) 74%,
-      rgba(245, 193, 183, 0.04) 88%,
-      transparent 100%
+      ellipse 118% 38% at 0% 0%,
+      rgba(255, 255, 255, 0.58) 0%,
+      rgba(255, 255, 255, 0.22) 44%,
+      rgba(255, 255, 255, 0) 78%
     );
-  filter: blur(20px);
+  filter: blur(9px);
+  /*
+   * Mask cũ (intersect hai linear): chỉ còn góc dưới-phải của pseudo — hợp với hình tròn lệch tâm,
+   * không hợp với vệt sáng đặt ở góc trên-trái → nhìn như “mất” hẳn. Một lớp chéo từ góc (0,0).
+   */
+  -webkit-mask-image: linear-gradient(
+    to bottom right,
+    #000 0%,
+    #000 32%,
+    rgba(0, 0, 0, 0.88) 48%,
+    rgba(0, 0, 0, 0.42) 66%,
+    transparent 88%
+  );
+  mask-image: linear-gradient(
+    to bottom right,
+    #000 0%,
+    #000 32%,
+    rgba(0, 0, 0, 0.88) 48%,
+    rgba(0, 0, 0, 0.42) 66%,
+    transparent 88%
+  );
 }
-
-/* Cùng góc 0 0 — không transparent ở lõi (::after từng lõm trắng vì transparent ở giữa) */
 
 .mg-corner-shine--top::after {
   content: "";
   position: absolute;
-  left: -8%;
-  top: -5%;
-  width: 108%;
-  height: 100%;
+  left: -14%;
+  top: -20%;
+  width: 105%;
+  height: 110%;
+  border-radius: 0;
   background: radial-gradient(
-    ellipse 128% 90% at 0 0,
-    #f5eeef 0%,
-    #f5eeef 38%,
-    rgba(245, 193, 183, 0.52) 50%,
-    rgba(245, 193, 183, 0.28) 64%,
-    rgba(245, 193, 183, 0.1) 80%,
-    rgba(245, 193, 183, 0) 90%,
-    transparent 100%
+    ellipse 118% 46% at 0% 0%,
+    rgba(255, 255, 255, 0.38) 0%,
+    rgba(255, 255, 255, 0.22) 36%,
+    rgba(255, 255, 255, 0.1) 58%,
+    rgba(255, 255, 255, 0.04) 80%,
+    rgba(255, 255, 255, 0) 100%
   );
-  filter: blur(16px);
-  opacity: 0.92;
+  filter: blur(20px);
+  -webkit-mask-image: linear-gradient(
+    to bottom right,
+    #000 0%,
+    #000 18%,
+    rgba(0, 0, 0, 0.72) 52%,
+    transparent 84%
+  );
+  mask-image: linear-gradient(
+    to bottom right,
+    #000 0%,
+    #000 18%,
+    rgba(0, 0, 0, 0.72) 52%,
+    transparent 84%
+  );
+}
+
+@media (min-width: 768px) {
+  .mg-corner-shine--top {
+    width: min(50vw, 820px);
+    height: min(66vh, 620px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .mg-corner-shine--top {
+    width: min(48vw, 860px);
+    height: min(70vh, 680px);
+  }
 }
 
 @media (max-width: 767px) {
+  .mg-corner-shine--top {
+    width: min(78vw, 420px);
+    height: min(42vh, 320px);
+  }
+
   .mg-corner-shine--top::before {
-    filter: blur(18px);
-    opacity: 0.82;
+    filter: blur(8px);
   }
 
   .mg-corner-shine--top::after {
-    filter: blur(12px);
-    opacity: 0.72;
+    filter: blur(14px);
+  }
+}
+
+/* Join us (about/contact): cùng ảnh + mask/skew như vệt góc header home (.light-white-corner.png) */
+
+.mg-corner-shine--join-contact {
+  top: 0;
+  left: 0;
+  z-index: 0;
+  overflow: visible;
+  width: min(44vw, 560px);
+  min-height: 200px;
+  height: min(48vh, 520px);
+  opacity: 0;
+  transition: opacity 0.32s ease-out;
+  background-image: url("../images/light_white.webp");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: contain;
+  transform: skewX(-5deg);
+  transform-origin: 0 0;
+  -webkit-mask-image: linear-gradient(
+    126deg,
+    #000 0%,
+    #000 34%,
+    rgba(0, 0, 0, 0.9) 48%,
+    rgba(0, 0, 0, 0.42) 60%,
+    rgba(0, 0, 0, 0.1) 71%,
+    transparent 82%
+  );
+  mask-image: linear-gradient(
+    126deg,
+    #000 0%,
+    #000 34%,
+    rgba(0, 0, 0, 0.9) 48%,
+    rgba(0, 0, 0, 0.42) 60%,
+    rgba(0, 0, 0, 0.1) 71%,
+    transparent 82%
+  );
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.mg-corner-shine--join-contact.is-visible {
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .mg-corner-shine--join-contact {
+    width: min(40vw, 600px);
+    height: min(50vh, 560px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .mg-corner-shine--join-contact {
+    width: min(36vw, 640px);
+    height: min(54vh, 600px);
+  }
+}
+
+@media (max-width: 767px) {
+  .mg-corner-shine--join-contact {
+    width: min(72vw, 300px);
+    min-height: 160px;
+    height: min(36vh, 360px);
   }
 }
 
@@ -3113,12 +3135,24 @@ main{
   overflow: visible;
 }
 
-/* Header trang home: nền gradient tách lớp; vệt .mg-corner-shine--top khi body.mg-header-corner-shine */
+/* Khối bọc gradient + vệt góc (ngoài <header>) + <header> — sticky một lớp */
 
-.page-home .site-header {
+.site-header-group {
+  position: relative;
+}
+
+.page-home .site-header-group {
   position: sticky;
   top: 0;
   z-index: 70;
+}
+
+/* Header trang home: thanh bar/modals; sticky nằm ở .site-header-group */
+
+.page-home .site-header {
+  position: relative;
+  z-index: 2;
+  top: auto;
   border: 0 !important;
   border-bottom: 0 !important;
   box-shadow: none !important;
@@ -3223,7 +3257,7 @@ body:not(.mg-header-corner-shine) .mg-corner-shine--top {
 /* Vệt góc: cường độ tối đa × --mg-shine-scroll (0…1, gán bởi home-hero-shine.js khi cuộn) */
 
 body.mg-header-corner-shine .mg-corner-shine--top {
-  --mg-shine-opacity-max: 0.95;
+  --mg-shine-opacity-max: 1;
   --mg-shine-scroll: 1;
   opacity: calc(var(--mg-shine-opacity-max) * var(--mg-shine-scroll));
   transition: opacity 0.32s ease-out;
@@ -3237,7 +3271,13 @@ body.mg-header-corner-shine .mg-corner-shine--top {
     width: min(64vw, 280px);
     min-height: 160px;
     height: min(50vh, 420px);
-    --mg-shine-opacity-max: 0.62;
+    --mg-shine-opacity-max: 0.78;
+  }
+
+  body.page-home.mg-header-corner-shine:not(.page-service) .mg-corner-shine--top {
+    width: min(72vw, 300px);
+    min-height: 160px;
+    height: min(36vh, 360px);
   }
 
   .page-home .site-header-body::before {
@@ -3272,6 +3312,67 @@ body.mg-header-corner-shine .mg-corner-shine--top {
 body.mg-header-corner-shine:has(.jmodal:not(.hidden)) .mg-corner-shine--top {
   opacity: 0 !important;
   transition: opacity 0.28s ease-out;
+}
+
+/*
+ * Trang home (không phải service): vệt góc = ảnh nguồn (trắng góc trên-trái, mép cong mềm).
+ * Sao chép từ light_white - Copy.png → light_white.webp (tên file URL an toàn).
+ */
+
+body.page-home.mg-header-corner-shine:not(.page-service) .mg-corner-shine--top {
+  z-index: 0;
+  overflow: visible;
+  background-image: url("../images/light_white.webp");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: contain;
+  width: min(44vw, 560px);
+  min-height: 200px;
+  height: min(48vh, 520px);
+  /* Mép mềm của PNG + mask chéo gần thẳng → biên sáng/tối ít “cung” hơn */
+  transform: skewX(-5deg);
+  transform-origin: 0 0;
+  -webkit-mask-image: linear-gradient(
+    126deg,
+    #000 0%,
+    #000 34%,
+    rgba(0, 0, 0, 0.9) 48%,
+    rgba(0, 0, 0, 0.42) 60%,
+    rgba(0, 0, 0, 0.1) 71%,
+    transparent 82%
+  );
+  mask-image: linear-gradient(
+    126deg,
+    #000 0%,
+    #000 34%,
+    rgba(0, 0, 0, 0.9) 48%,
+    rgba(0, 0, 0, 0.42) 60%,
+    rgba(0, 0, 0, 0.1) 71%,
+    transparent 82%
+  );
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+@media (min-width: 768px) {
+  body.page-home.mg-header-corner-shine:not(.page-service) .mg-corner-shine--top {
+    width: min(40vw, 600px);
+    height: min(50vh, 560px);
+  }
+}
+
+@media (min-width: 1024px) {
+  body.page-home.mg-header-corner-shine:not(.page-service) .mg-corner-shine--top {
+    width: min(36vw, 640px);
+    height: min(54vh, 600px);
+  }
+}
+
+body.page-home.mg-header-corner-shine:not(.page-service) .mg-corner-shine--top::before,
+body.page-home.mg-header-corner-shine:not(.page-service) .mg-corner-shine--top::after {
+  display: none;
 }
 
 /* Trang service.html — vệt góc: ảnh light_bg.webp (chỉ .page-service; cần có trong dist) */
@@ -4049,93 +4150,144 @@ body.page-service.mg-header-corner-shine .mg-corner-shine--top::after {
   }
 }
 
+.kol-swiper-stage {
+  position: relative;
+  isolation: isolate;
+}
+
 .kol-slide-top-lights {
-  --kol-top-d: clamp(120px, 28vw, 240px);
+  --kol-top-d: clamp(118px, 21vw, 185px);
   position: absolute;
-  /* Neo góc trên-trái slide; lệch thêm sang trái một chút */
-  left: calc(var(--kol-top-d) * -0.3);
-  top: 0;
+  left: calc(var(--kol-top-d) * -0.22);
+  top: calc(var(--kol-top-d) * -0.02);
+  /* nhích xuống */
   z-index: 0;
+  /* nằm dưới ảnh */
   width: 1px;
   height: 1px;
   overflow: visible;
   pointer-events: none;
 }
 
-.kol-slide-top-lights__blob {
-  position: absolute;
-  width: var(--kol-top-d);
-  height: var(--kol-top-d);
-  border-radius: 50%;
-  pointer-events: none;
-  box-sizing: border-box;
-  mix-blend-mode: screen;
-}
-
-/* Tâm A tại góc TL; B lệch +D/2 — chồng đúng 50% đường kính; gradient dài + blur lớn = mép tan như ảnh mẫu */
-
-.kol-slide-top-lights__blob--a {
-  left: calc(var(--kol-top-d) * -0.5);
-  top: calc(var(--kol-top-d) * -0.5);
-  background: radial-gradient(
-    circle at 50% 50%,
-    rgb(255, 255, 255) 0%,
-    rgba(255, 255, 255, 0.72) 18%,
-    rgba(255, 255, 255, 0.32) 48%,
-    rgba(255, 255, 255, 0.08) 72%,
-    transparent 88%
-  );
-  filter: blur(22px);
-}
-
-.kol-slide-top-lights__blob--b {
-  left: calc(var(--kol-top-d) * -0.5 + var(--kol-top-d) * 0.5);
-  top: calc(var(--kol-top-d) * -0.5);
-  background: radial-gradient(
-    circle at 50% 50%,
-    rgb(255, 255, 255) 0%,
-    rgba(255, 255, 255, 0.68) 20%,
-    rgba(255, 255, 255, 0.3) 50%,
-    rgba(255, 255, 255, 0.07) 74%,
-    transparent 90%
-  );
-  filter: blur(20px);
-}
-
-/* Điểm giao hai tâm: (D/4, 0) — thêm lõi trắng đặc hơn */
-
+.kol-slide-top-lights__blob,
 .kol-slide-top-lights__hotspot {
   position: absolute;
-  left: calc(var(--kol-top-d) * 0.25);
+  pointer-events: none;
+}
+
+.kol-slide-top-lights__blob--a {
+  width: calc(var(--kol-top-d) * 0.9);
+  height: calc(var(--kol-top-d) * 0.9);
+  left: calc(var(--kol-top-d) * -0.42);
+  top: calc(var(--kol-top-d) * -0.5);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 78% 50%,
+    rgba(245, 238, 239, 0.96) 0%,
+    rgba(245, 238, 239, 0.90) 18%,
+    rgba(245, 238, 239, 0.74) 36%,
+    rgba(245, 238, 239, 0.46) 56%,
+    rgba(245, 238, 239, 0.20) 74%,
+    rgba(245, 238, 239, 0.06) 88%,
+    rgba(245, 238, 239, 0) 100%
+  );
+  filter: blur(11px);
+  opacity: 1;
+}
+
+/* vòng phải: sáng mạnh hơn ở phía sát bầu dục */
+
+.kol-slide-top-lights__blob--b {
+  width: calc(var(--kol-top-d) * 0.9);
+  height: calc(var(--kol-top-d) * 0.9);
+  left: calc(var(--kol-top-d) * -0.04);
+  top: calc(var(--kol-top-d) * -0.5);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 22% 50%,
+    rgba(245, 238, 239, 0.96) 0%,
+    rgba(245, 238, 239, 0.90) 18%,
+    rgba(245, 238, 239, 0.74) 36%,
+    rgba(245, 238, 239, 0.46) 56%,
+    rgba(245, 238, 239, 0.20) 74%,
+    rgba(245, 238, 239, 0.06) 88%,
+    rgba(245, 238, 239, 0) 100%
+  );
+  filter: blur(11px);
+  opacity: 1;
+}
+
+/* bầu dục giữa: to hơn, sáng hơn */
+
+.kol-slide-top-lights__hotspot {
+  width: calc(var(--kol-top-d) * 0.68);
+  height: calc(var(--kol-top-d) * 0.78);
+  left: calc(var(--kol-top-d) * 0.22);
   top: 0;
-  width: calc(var(--kol-top-d) * 0.5);
-  height: calc(var(--kol-top-d) * 0.62);
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  pointer-events: none;
-  box-sizing: border-box;
   background: radial-gradient(
-    ellipse 100% 100% at 50% 50%,
-    rgb(255, 255, 255) 0%,
-    rgba(255, 255, 255, 0.65) 35%,
-    rgba(255, 255, 255, 0.15) 62%,
-    transparent 82%
+    ellipse 80% 80% at 50% 50%,
+    rgba(245, 238, 239, 1) 0%,
+    rgba(245, 238, 239, 0.96) 42%,
+    rgba(245, 238, 239, 0.78) 68%,
+    rgba(245, 238, 239, 0.38) 88%,
+    rgba(245, 238, 239, 0.12) 96%,
+    rgba(245, 238, 239, 0) 100%
   );
-  filter: blur(14px);
-  mix-blend-mode: screen;
+  mix-blend-mode: normal;
+  filter: blur(3px);
+  z-index: 1;
+  /* ✨ viền sáng */
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.95),   /* viền sắc */
+    0 0 10px rgba(255, 255, 255, 0.55),   /* glow gần */
+    0 0 26px rgba(245, 238, 239, 0.35);
+  /* glow xa */
+}
+
+.swiper.celebrityKolsSlider {
+  position: relative;
+  z-index: 2;
+  /* ảnh nằm trên ánh sáng */
+}
+
+.kol-slide-media {
+  position: relative;
+  z-index: 2;
 }
 
 @media (min-width: 768px) {
-  .kol-slide-top-lights__blob--a {
-    filter: blur(28px);
+  .kol-slide-top-lights {
+    --kol-top-d: clamp(132px, 19vw, 205px);
+    left: calc(var(--kol-top-d) * -0.24);
+    top: calc(var(--kol-top-d) * 0.02);
   }
 
+  .kol-slide-top-lights__blob--a,
   .kol-slide-top-lights__blob--b {
-    filter: blur(26px);
+    filter: blur(11px);
   }
 
   .kol-slide-top-lights__hotspot {
-    filter: blur(18px);
+    filter: blur(4px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .kol-slide-top-lights {
+    --kol-top-d: clamp(145px, 18vw, 220px);
+    left: calc(var(--kol-top-d) * -0.26);
+    top: calc(var(--kol-top-d) * 0.04);
+  }
+
+  .kol-slide-top-lights__blob--a,
+  .kol-slide-top-lights__blob--b {
+    filter: blur(12px);
+  }
+
+  .kol-slide-top-lights__hotspot {
+    filter: blur(5px);
   }
 }
 
@@ -4349,10 +4501,16 @@ body.page-service.mg-header-corner-shine .mg-corner-shine--top::after {
    Trang About — header overlay (cùng band gradient hero)
    ======================================================================== */
 
-.page-about .site-header {
+.page-about .site-header-group {
   position: sticky;
   top: 0;
   z-index: 70;
+}
+
+.page-about .site-header {
+  position: relative;
+  z-index: 2;
+  top: auto;
   border: 0 !important;
   border-bottom: 0 !important;
   box-shadow: none !important;
@@ -4884,12 +5042,6 @@ body:not(.page-home) .site-header {
     margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
   }
 
-  .sm\:space-y-8 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-y-reverse: 0;
-    margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(2rem * var(--tw-space-y-reverse));
-  }
-
   .sm\:justify-self-center {
     justify-self: center;
   }
@@ -4933,6 +5085,11 @@ body:not(.page-home) .site-header {
   .sm\:text-md {
     font-size: 1rem;
     line-height: 1.5;
+  }
+
+  .sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   .sm\:text-xs {
@@ -5110,10 +5267,10 @@ body:not(.page-home) .site-header {
     row-gap: 2rem;
   }
 
-  .md\:space-y-10 > :not([hidden]) ~ :not([hidden]) {
+  .md\:space-y-12 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
-    margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
+    margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(3rem * var(--tw-space-y-reverse));
   }
 
   .md\:space-y-14 > :not([hidden]) ~ :not([hidden]) {
@@ -5212,10 +5369,10 @@ body:not(.page-home) .site-header {
     margin-bottom: calc(3.5rem * var(--tw-space-y-reverse));
   }
 
-  .lg\:space-y-16 > :not([hidden]) ~ :not([hidden]) {
+  .lg\:space-y-20 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
-    margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(4rem * var(--tw-space-y-reverse));
+    margin-top: calc(5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(5rem * var(--tw-space-y-reverse));
   }
 
   .lg\:py-10 {
@@ -5351,8 +5508,8 @@ body:not(.page-home) .site-header {
     flex-shrink: 0;
   }
 
-  .xl\:translate-y-12 {
-    --tw-translate-y: 3rem;
+  .xl\:translate-y-14 {
+    --tw-translate-y: 3.5rem;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
@@ -5432,10 +5589,10 @@ body:not(.page-home) .site-header {
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
 
-  .xl\:space-y-20 > :not([hidden]) ~ :not([hidden]) {
+  .xl\:space-y-24 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
-    margin-top: calc(5rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(5rem * var(--tw-space-y-reverse));
+    margin-top: calc(6rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(6rem * var(--tw-space-y-reverse));
   }
 
   .xl\:self-stretch {
@@ -5464,6 +5621,11 @@ body:not(.page-home) .site-header {
     text-align: right;
   }
 
+  .xl\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
   .xl\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -5485,6 +5647,10 @@ body:not(.page-home) .site-header {
   .xl\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .xl\:leading-\[1\.15\] {
+    line-height: 1.15;
   }
 
   .xl\:leading-tight {
@@ -5517,8 +5683,8 @@ body:not(.page-home) .site-header {
     max-width: none;
   }
 
-  .\32xl\:translate-y-16 {
-    --tw-translate-y: 4rem;
+  .\32xl\:translate-y-20 {
+    --tw-translate-y: 5rem;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
@@ -5531,9 +5697,13 @@ body:not(.page-home) .site-header {
          column-gap: 2.5rem;
   }
 
-  .\32xl\:space-y-24 > :not([hidden]) ~ :not([hidden]) {
+  .\32xl\:space-y-32 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
-    margin-top: calc(6rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(6rem * var(--tw-space-y-reverse));
+    margin-top: calc(8rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(8rem * var(--tw-space-y-reverse));
+  }
+
+  .\32xl\:text-\[1\.75rem\] {
+    font-size: 1.75rem;
   }
 }

@@ -16,6 +16,14 @@
             display: none;
         }
 		</style>
+		<!-- Font local: chỉ preload woff2 (không ẩn body — tránh giật màn hình). Không CDN. -->
+<link rel="preload" href="assets/fonts/montserrat-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/montserrat-vietnamese.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/inter-vietnamese.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="assets/fonts/archivo-vietnamese.woff2" as="font" type="font/woff2" crossorigin />
+
         <link rel="stylesheet" href="assets/css/service_styles.css" />
 		
 		<script src="assets/js/libs/notification.js" defer></script>
@@ -43,16 +51,18 @@
 		<script src="assets/js/libs/alpinejs.3.15.0.js" defer></script>
 		<script src="assets/js/swiper-bundle.min.js"></script>
 	</head>
-	<body class="page-home page-service min-h-screen mg-header-corner-shine">
+	<body class="page-home page-service min-h-screen">
 		<div class="page-home-top">
-			<header class="site-header bg-white/95 backdrop-blur-md sticky top-0 z-50 border-0 shadow-none ring-0 outline-none" x-data="headerComponent()">
-  <!-- Top Bar -->
-  
-  <!-- Home: nền gradient tách lớp để vệt sáng nằm giữa nền và nội dung -->
+			<div class="site-header-group">
+  <!-- Home/About: nền gradient + vệt góc (ngoài <header>); bar/modals trong <header> -->
   <div class="site-header-gradient-layer" aria-hidden="true"></div>
-  <!-- Ánh sáng góc: ẩn mặc định; bật bằng class .mg-header-corner-shine trên <body> -->
-  <div class="mg-corner-shine mg-corner-shine--top" aria-hidden="true"></div>
-  <div class="site-header-body">
+  <!-- Vệt sáng góc trên trái header — DOM ngoài <header>, trong .site-header-group; bật bằng body.mg-header-corner-shine -->
+<div class="mg-corner-shine mg-corner-shine--top" aria-hidden="true"></div>
+
+  <header class="site-header bg-white/95 backdrop-blur-md sticky top-0 z-50 border-0 shadow-none ring-0 outline-none" x-data="headerComponent()">
+    <!-- Top Bar -->
+    
+    <div class="site-header-body">
     <div class="">
       <div class="header-bar flex-between h-16 items-center lg:h-[4.25rem]">
         <div class="header-brand shrink-0">
@@ -78,9 +88,10 @@
         <div class="header-bar-spacer" aria-hidden="true"></div>
       </div>
     </div>
-  </div>
-  
-</header>
+    </div>
+    
+  </header>
+</div>
 
 			<main class=" w-full min-w-0 overflow-x-clip">
 				<!-- Trang Dịch vụ — fragment riêng; responsive lưới giống blocks/sections/home/service.html -->
@@ -161,21 +172,22 @@
 
       <!-- Cột 1: KOLs — AI -->
       <div
-        class="order-2 flex min-w-0 flex-col space-y-6 text-center sm:space-y-8 md:col-start-1 md:row-start-2 md:row-span-2 md:h-full md:translate-y-2 md:justify-around md:text-right md:space-y-10 lg:justify-around lg:space-y-16 xl:order-1 xl:row-span-2 xl:h-full xl:justify-center xl:space-y-20 xl:translate-y-2 xl:text-right 2xl:space-y-24">
+        class="order-2 flex min-w-0 flex-col space-y-8 text-center sm:space-y-10 md:col-start-1 md:row-start-2 md:row-span-2 md:h-full md:translate-y-2 md:justify-around md:text-right md:space-y-12 lg:justify-around lg:space-y-20 xl:order-1 xl:row-span-2 xl:h-full xl:justify-center xl:space-y-24 xl:translate-y-2 xl:text-right 2xl:space-y-32">
         <div class="relative z-[100] flex justify-center md:justify-end lg:justify-end xl:block">
           <p
             class="max-w-[20rem] text-md font-extrabold uppercase leading-[1.25] sm:max-w-[22rem] sm:text-md md:text-md xl:text-[1.125rem] xl:max-w-none">
             1. Cung cấp KOLs/ Influencers<br />
-            tương thích & hiệu quả cho từng<br />
-            chiến dịch
+            <span
+              class="inline-block text-lg leading-[1.2] sm:text-xl md:text-xl xl:text-2xl xl:leading-[1.15] 2xl:text-[1.75rem]">tương thích &amp; hiệu quả</span><br />
+            cho từng chiến dịch
           </p>
         </div>
-        <div class="flex justify-center md:justify-end xl:block xl:translate-y-12 2xl:translate-y-16">
+        <div class="flex justify-center md:justify-end xl:block xl:translate-y-14 2xl:translate-y-20">
           <div class="w-full max-w-md sm:max-w-lg md:max-w-none xl:max-w-none">
             <p class="text-md font-extrabold italic uppercase leading-tight sm:text-md lg:text-md xl:text-lg">
               1. AI Content
             </p>
-            <div class="mt-2 flex flex-col gap-y-1.5 text-xs font-bold uppercase leading-[1.4] sm:text-xs lg:text-sm xl:text-sm">
+            <div class=" flex flex-col gap-y-5 text-xs font-bold uppercase leading-[1.4] sm:text-xs lg:text-sm xl:text-sm">
               <p>- Social Content: Ảnh & Video AI</p>
               <p>- Shortfilm AI</p>
               <p>2. Shortfilm</p>
@@ -191,7 +203,7 @@
         class="order-3 min-w-0 space-y-8 text-center sm:space-y-10 max-md:mx-auto max-md:max-w-2xl md:col-start-3 md:row-start-2 md:row-span-2 md:mx-0 md:flex md:max-w-none md:flex-col md:justify-around md:space-y-14 md:text-left lg:justify-around lg:space-y-14 xl:flex xl:flex-col xl:h-full xl:min-h-0 xl:justify-evenly xl:gap-0 xl:space-y-0 xl:self-stretch xl:text-left xl:mx-0 xl:max-w-none">
         <div
           class="flex min-h-0 w-full min-w-0 -translate-y-2 items-center justify-start text-left">
-          <div class="space-y-3 text-[12px] font-extrabold uppercase leading-[1.25] sm:text-[13px] lg:text-[14px]">
+          <div class="space-y-8 text-[12px] font-extrabold uppercase leading-[1.25] sm:text-[13px] lg:text-[14px]">
             <p class="text-md font-extrabold italic uppercase leading-tight sm:text-md lg:text-md xl:text-lg">
               1. Seeding all platforms<br />
               <span class="text-xs font-semibold tracking-[0.02em] text-[color:var(--mg-service-text-muted)] sm:text-xs lg:text-sm xl:text-sm">
@@ -213,7 +225,7 @@
 
         <div
           class="flex min-h-0 w-full min-w-0 -translate-y-2 items-center justify-start text-left">
-          <div class="space-y-3 text-md font-extrabold uppercase leading-[1.25] sm:text-md lg:text-md xl:text-lg">
+          <div class="space-y-8 text-md font-extrabold uppercase leading-[1.25] sm:text-md lg:text-md xl:text-lg">
             <p>1. Tạo mẫu CapCut trending</p>
             <p>2. Thiết kế branding template</p>
           </div>
@@ -317,6 +329,123 @@
                 <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
                   <img
                     src="./assets/images/Service_img/vin.jpg"
+                    alt="Showcase"
+                    class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
+                    loading="lazy"
+                    decoding="async" />
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-slide !h-auto">
+              <div
+                class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
+                <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
+                  <img
+                    src="./assets/images/Service_img/IMG_4448.jpg"
+                    alt="Showcase"
+                    class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
+                    loading="lazy"
+                    decoding="async" />
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-slide !h-auto">
+              <div
+                class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
+                <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
+                  <img
+                    src="./assets/images/Service_img/IMG_4449.jpg"
+                    alt="Showcase"
+                    class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
+                    loading="lazy"
+                    decoding="async" />
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-slide !h-auto">
+              <div
+                class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
+                <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
+                  <img
+                    src="./assets/images/Service_img/IMG_4450.jpg"
+                    alt="Showcase"
+                    class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
+                    loading="lazy"
+                    decoding="async" />
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-slide !h-auto">
+              <div
+                class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
+                <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
+                  <img
+                    src="./assets/images/Service_img/IMG_4451.jpg"
+                    alt="Showcase"
+                    class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
+                    loading="lazy"
+                    decoding="async" />
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-slide !h-auto">
+              <div
+                class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
+                <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
+                  <img
+                    src="./assets/images/Service_img/IMG_4452.jpg"
+                    alt="Showcase"
+                    class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
+                    loading="lazy"
+                    decoding="async" />
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-slide !h-auto">
+              <div
+                class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
+                <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
+                  <img
+                    src="./assets/images/Service_img/IMG_4453.jpg"
+                    alt="Showcase"
+                    class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
+                    loading="lazy"
+                    decoding="async" />
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-slide !h-auto">
+              <div
+                class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
+                <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
+                  <img
+                    src="./assets/images/Service_img/IMG_4454.jpg"
+                    alt="Showcase"
+                    class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
+                    loading="lazy"
+                    decoding="async" />
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-slide !h-auto">
+              <div
+                class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
+                <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
+                  <img
+                    src="./assets/images/Service_img/IMG_4455.jpg"
+                    alt="Showcase"
+                    class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
+                    loading="lazy"
+                    decoding="async" />
+                </figure>
+              </div>
+            </div>
+            <div class="swiper-slide !h-auto">
+              <div
+                class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
+                <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
+                  <img
+                    src="./assets/images/Service_img/IMG_4457.jpg"
                     alt="Showcase"
                     class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
                     loading="lazy"

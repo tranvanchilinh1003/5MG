@@ -114,9 +114,11 @@
       <!-- Nội dung Join us — include trong #about-join-us-panel (nền bg-mg-hero full width ở our-client) -->
 <div
     class="about-join-us-surface about-join-us-surface--on-mg-hero relative flex flex-col overflow-visible rounded-none py-12 sm:py-24">
-    <!-- Vệt sáng: chỉ khi scroll tới khu Join (joinInView) VÀ đã mở tab (joinOpen) — Alpine ở #about-join-us-block -->
-    <img class="mg-corner-shine mg-corner-shine--join-contact" :class="{ 'is-visible': joinOpen && joinInView }"
-        src="assets/images/light_white.webp" alt="" width="640" height="640" decoding="async" />
+    <!-- Vệt sáng: component như header home (light-white-corner.png + mask/skew); chỉ khi joinOpen && joinInView -->
+    <div
+        class="mg-corner-shine mg-corner-shine--join-contact"
+        :class="{ 'is-visible': joinOpen && joinInView }"
+        aria-hidden="true"></div>
 
 
 
