@@ -1,14 +1,6 @@
-<!-- Nội dung Join us — include trong #about-join-us-panel (nền bg-mg-hero full width ở our-client) -->
+<!-- Nội dung Join us — include trong #about-join-us-panel; vệt góc trong our-client (.about-join-us-shine-clip) -->
 <div
-    class="about-join-us-surface about-join-us-surface--on-mg-hero relative flex flex-col overflow-visible rounded-none py-12 sm:py-24">
-    <!-- Vệt sáng: component như header home (light-white-corner.png + mask/skew); chỉ khi joinOpen && joinInView -->
-    <div
-        class="mg-corner-shine mg-corner-shine--join-contact"
-        :class="{ 'is-visible': joinOpen && joinInView }"
-        aria-hidden="true"></div>
-
-
-
+    class="about-join-us-surface about-join-us-surface--on-mg-hero relative z-[1] flex flex-col overflow-visible rounded-none py-12 sm:py-24">
     <div class="relative z-[2] mx-auto container text-black">
       <div class=" mb-6 max-w-5xl sm:mb-8 md:mb-10 xl:px-12 px-0">
         <img

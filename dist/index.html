@@ -75,7 +75,7 @@
 			<div class="site-header-group">
   <!-- Home/About: nền gradient + vệt góc (ngoài <header>); bar/modals trong <header> -->
   <div class="site-header-gradient-layer" aria-hidden="true"></div>
-  <!-- Vệt sáng góc trên trái header — DOM ngoài <header>, trong .site-header-group; bật bằng body.mg-header-corner-shine -->
+  <!-- Vệt sáng góc trên trái — trong .site-header-group; bật bằng body.mg-header-corner-shine -->
 <div class="mg-corner-shine mg-corner-shine--top" aria-hidden="true"></div>
 
   <header class="site-header bg-white/95 backdrop-blur-md sticky top-0 z-50 border-0 shadow-none ring-0 outline-none" x-data="headerComponent()">
@@ -403,7 +403,7 @@
       class="flex min-w-0 flex-col gap-8 sm:gap-10 md:grid md:grid-cols-[minmax(0,1fr)_minmax(250px,min(92vw,400px))_minmax(0,1fr)] md:items-stretch md:gap-x-4 md:gap-y-8 md:gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(250px,min(92vw,500px))_minmax(0,1fr)] xl:grid xl:grid-cols-[minmax(0,1fr)_minmax(250px,min(92vw,620px))_minmax(0,1fr)] xl:items-stretch xl:gap-x-8 xl:gap-y-6 2xl:gap-x-10">
       <!-- Tiêu đề hàng 1 (md+); ẩn từ xl -->
       <h2
-        class="service-section__title font-archivo order-0 w-full shrink-0 text-center text-[32px] font-black uppercase leading-[0.95] tracking-[-0.04em] sm:text-[40px] md:col-span-3 md:row-start-1 md:text-[44px] lg:text-[52px] xl:hidden xl:text-[56px]">
+        class="service-section__title font-archivo order-0 w-full shrink-0 text-center text-[32px] font-black uppercase leading-[0.95] tracking-[-0.04em] sm:text-[40px] md:col-span-3 md:row-start-1 md:text-[44px] lg:text-[52px] xl:col-span-3 xl:row-start-1 xl:block xl:text-[56px] 2xl:hidden">
         Our Service
       </h2>
       <!-- Cột 2: hoa -->
@@ -472,7 +472,7 @@
           </p>
         </div>
         <h2
-          class="service-section__title font-archivo hidden shrink-0  2xl:whitespace-nowrap text-[32px] font-black uppercase leading-[0.95] tracking-[-0.04em] sm:text-[40px] md:text-[44px] lg:text-[52px] xl:block xl:text-[56px]">
+          class="service-section__title font-archivo hidden shrink-0 whitespace-nowrap text-[32px] font-black uppercase leading-[0.95] tracking-[-0.04em] sm:text-[40px] md:text-[44px] lg:text-[52px] 2xl:block 2xl:text-[56px]">
           Our Service
         </h2>
         <div class="flex justify-center md:justify-end xl:block">

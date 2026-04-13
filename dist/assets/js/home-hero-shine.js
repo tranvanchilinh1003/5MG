@@ -2,6 +2,7 @@
  * Vệt sáng header (.mg-corner-shine--top) chỉ chạy khi <body> có .mg-header-corner-shine.
  * 1) Chiều cao theo đáy .home-hero-title (+ blur) — chỉ khi có .home-hero-title (home).
  * 2) Độ mờ theo scroll: .home-hero-shell (home) hoặc #service-page / main (trang Dịch vụ).
+ * 3) z-index (applyCornerShineStacking): trên .site-header-gradient-layer (0), dưới thanh .site-header — không đè logo/menu.
  */
 (function () {
   var resizeT;
@@ -13,6 +14,14 @@
     if (w >= 1024) return Math.min(vh * 0.985, 980);
     if (w >= 768) return Math.min(vh * 0.95, 840);
     return Math.min(vh * 0.92, 740);
+  }
+
+  /** Neo lớp vệt giữa nền gradient và toàn bộ nội dung header (chữ/logo/menu) */
+  function applyCornerShineStacking() {
+    var shine = document.querySelector('.mg-corner-shine--top');
+    if (!shine) return;
+    /* 1 = trên gradient (0); << .site-header (50) và .site-header-body / .header-brand (15–35) */
+    shine.style.setProperty('z-index', '1');
   }
 
   /** Vùng hero/section dùng để tính --mg-shine-scroll khi cuộn */
@@ -76,6 +85,7 @@
     if (!document.body.classList.contains('mg-header-corner-shine')) return;
     var shine = document.querySelector('.mg-corner-shine--top');
     if (!shine) return;
+    applyCornerShineStacking();
     var hero = getShineScrollRoot();
     if (!hero) {
       shine.style.setProperty('--mg-shine-scroll', '1');

@@ -2548,6 +2548,16 @@ button.swiper-pagination-bullet{
     var(--mg-text-gradient-from) 0%,
     var(--mg-text-gradient-to) 100%
   );
+  /* Trang Service — tiêu đề “Service”: gradient sáng hơn (trắng kem → đào), vẫn cùng tông thương hiệu */
+  --mg-service-title-gradient-from: #fffefb;
+  --mg-service-title-gradient-mid: #fff2e6;
+  --mg-service-title-gradient-to: #ffd4bf;
+  --mg-service-title-gradient: linear-gradient(
+    115deg,
+    var(--mg-service-title-gradient-from) 0%,
+    var(--mg-service-title-gradient-mid) 45%,
+    var(--mg-service-title-gradient-to) 100%
+  );
   --mg-text-bar: rgba(255, 255, 255, 0.92);
   --mg-text-strong-on-bar: #ffffff;
   /* Góc “bẻ giấy” — xám xanh (#a0aab8), có highlight */
@@ -2775,22 +2785,26 @@ button.swiper-pagination-bullet{
   }
 }
 
-/* Join us (about/contact): cùng ảnh + mask/skew như vệt góc header home (.light-white-corner.png) */
+/*
+ * Join us: cùng nguồn + mask + breakpoint như vệt header home
+ * (body.page-home.mg-header-corner-shine .mg-corner-shine--top — light_white.webp).
+ * Vị trí neo theo góc #about-join-us-panel; hiện bằng .is-visible (Alpine).
+ */
 
 .mg-corner-shine--join-contact {
   top: 0;
   left: 0;
   z-index: 0;
   overflow: visible;
-  width: min(44vw, 560px);
-  min-height: 200px;
-  height: min(48vh, 520px);
   opacity: 0;
   transition: opacity 0.32s ease-out;
   background-image: url("../images/light_white.webp");
   background-repeat: no-repeat;
   background-position: left top;
   background-size: contain;
+  width: min(44vw, 560px);
+  min-height: 200px;
+  height: min(48vh, 520px);
   transform: skewX(-5deg);
   transform-origin: 0 0;
   -webkit-mask-image: linear-gradient(
@@ -2817,8 +2831,21 @@ button.swiper-pagination-bullet{
   mask-repeat: no-repeat;
 }
 
+.mg-corner-shine--join-contact::before,
+.mg-corner-shine--join-contact::after {
+  display: none;
+}
+
 .mg-corner-shine--join-contact.is-visible {
   opacity: 1;
+}
+
+@media (max-width: 767px) {
+  .mg-corner-shine--join-contact {
+    width: min(72vw, 300px);
+    min-height: 160px;
+    height: min(36vh, 360px);
+  }
 }
 
 @media (min-width: 768px) {
@@ -2835,11 +2862,62 @@ button.swiper-pagination-bullet{
   }
 }
 
-@media (max-width: 767px) {
-  .mg-corner-shine--join-contact {
-    width: min(72vw, 300px);
-    min-height: 160px;
-    height: min(36vh, 360px);
+/* Neo vệt góc trên-trái trong .about-join-us-shine-clip (= mép #about-join-us-panel); clip chống tràn block */
+
+#about-join-us-panel .about-join-us-shine-clip > .mg-corner-shine--join-contact {
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: auto;
+  margin: 0;
+}
+
+/* Join us panel (Alpine x-show): mở/đóng mượt hơn fade 200ms — trượt nhẹ + ease “out” */
+
+.about-join-panel-enter {
+  transition:
+    opacity 0.48s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.48s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.about-join-panel-enter-start {
+  opacity: 0;
+  transform: translate3d(0, 0.65rem, 0);
+}
+
+.about-join-panel-enter-end {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.about-join-panel-leave {
+  transition:
+    opacity 0.32s cubic-bezier(0.4, 0, 1, 1),
+    transform 0.32s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.about-join-panel-leave-start {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.about-join-panel-leave-end {
+  opacity: 0;
+  transform: translate3d(0, 0.4rem, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-join-panel-enter,
+  .about-join-panel-leave {
+    transition-duration: 0.01ms;
+    transition-property: opacity;
+  }
+
+  .about-join-panel-enter-start,
+  .about-join-panel-enter-end,
+  .about-join-panel-leave-start,
+  .about-join-panel-leave-end {
+    transform: none;
   }
 }
 
@@ -3181,10 +3259,10 @@ body.page-home.mg-header-corner-shine:not(.page-service) .mg-corner-shine--top::
   display: none;
 }
 
-/* Trang service.html — vệt góc: ảnh light_bg.webp (chỉ .page-service; cần có trong dist) */
+/* Trang service.html — vệt góc: ảnh light_bg.webp (chỉ .page-service) */
 
 body.page-service.mg-header-corner-shine .mg-corner-shine--top {
-  --mg-shine-opacity-max: 0.8;
+  --mg-shine-opacity-max: 0.7;
   z-index: 0;
   width: min(64vw, 310px);
   min-height: 182px;
@@ -4484,6 +4562,12 @@ body.page-service.mg-header-corner-shine .mg-corner-shine--top::after {
   color: var(--mg-service-text);
 }
 
+/* Anchor link #service-page */
+
+body.page-service #service-page {
+  scroll-margin-top: 1rem;
+}
+
 .service-section__title {
   color: var(--mg-text-on-gradient);
 }
@@ -4499,6 +4583,13 @@ body.page-service.mg-header-corner-shine .mg-corner-shine--top::after {
   width: -moz-fit-content;
   width: fit-content;
   max-width: 100%;
+}
+
+/* Trang Dịch vụ: tiêu đề gradient sáng hơn (--mg-service-title-gradient trong home-theme.css) */
+
+body.page-service #service-page .service-section__title.text-gradient,
+body.page-service #service-page .service-section__title.mg-text-gradient {
+  background-image: var(--mg-service-title-gradient);
 }
 
 /* Tiêu đề gradient khác trong section (vd. "The next level") — h2 + từng dòng w-fit để gradient bám theo chữ */
