@@ -1,27 +1,85 @@
 /**
  * Vệt sáng header (.mg-corner-shine--top) chỉ chạy khi <body> có .mg-header-corner-shine.
- * 1) Chiều cao theo đáy .home-hero-title (+ blur) — chỉ khi có .home-hero-title (home).
+ * 1) Chiều cao theo đáy .home-hero-title (+ bleed), kẹp [min, max]; đo lại mỗi lần scroll (tránh F5 khi đã cuộn xuống → kẹp min rồi kéo lên vẫn nhỏ).
  * 2) Độ mờ theo scroll: .home-hero-shell (home) hoặc #service-page / main (trang Dịch vụ).
- * 3) z-index (applyCornerShineStacking): trên .site-header-gradient-layer (0), dưới thanh .site-header — không đè logo/menu.
+ * 3) z-index: chỉnh trong CSS (.mg-corner-shine--top), không gán inline — tránh đè rule home/service.
+ * 4) Preload ảnh vệt góc rồi gán body.mg-header-shine-art--ready — CSS ẩn bg tới lúc đó, tránh chớp tắt.
  */
 (function () {
+  /** Cùng quy tắc với CSS url(../images/...) — lấy gốc từ link stylesheet thật, tránh 404 khi mở HTML không đúng thư mục. */
+  function resolveShineImageUrl(filename) {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+    var i;
+    var hrefAttr;
+    for (i = 0; i < links.length; i++) {
+      hrefAttr = links[i].getAttribute('href');
+      if (hrefAttr && hrefAttr.indexOf('assets/css') !== -1) {
+        return new URL('../images/' + filename, new URL(hrefAttr, document.baseURI)).href;
+      }
+    }
+    return new URL('assets/images/' + filename, document.baseURI).href;
+  }
+
+  function loadImageThen(src, cb) {
+    var img = new Image();
+    var done = false;
+    function end() {
+      if (done) return;
+      done = true;
+      cb();
+    }
+    img.onload = end;
+    img.onerror = end;
+    img.src = src;
+    if (img.complete && img.naturalWidth > 0) end();
+  }
+
+  /** Góc home/join: light_white.webp; trang service: light_bg.webp */
+  function ensureShineArtReadyClass() {
+    var b = document.body;
+    if (!b) return;
+    var needWhite =
+      (b.classList.contains('page-home') &&
+        !b.classList.contains('page-service') &&
+        b.classList.contains('mg-header-corner-shine')) ||
+      !!document.querySelector('.mg-corner-shine--join-contact');
+    var needBg = b.classList.contains('page-service');
+    if (!needWhite && !needBg) {
+      b.classList.add('mg-header-shine-art--ready');
+      return;
+    }
+    var left = 0;
+    function tick() {
+      left--;
+      if (left <= 0) b.classList.add('mg-header-shine-art--ready');
+    }
+    if (needWhite) {
+      left++;
+      loadImageThen(resolveShineImageUrl('light_white.webp'), tick);
+    }
+    if (needBg) {
+      left++;
+      loadImageThen(resolveShineImageUrl('light_bg.webp'), tick);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', ensureShineArtReadyClass);
+  } else {
+    ensureShineArtReadyClass();
+  }
+
   var resizeT;
   var scrollTicking = false;
 
-  function legacyHeightFloor() {
+  /** Sàn / trần px — tránh inline height 980px (cũ: Math.max(..., floor 980)) che cả hero */
+  function shineHeightBounds() {
     var vh = window.innerHeight;
     var w = window.innerWidth;
-    if (w >= 1024) return Math.min(vh * 0.985, 980);
-    if (w >= 768) return Math.min(vh * 0.95, 840);
-    return Math.min(vh * 0.92, 740);
-  }
-
-  /** Neo lớp vệt giữa nền gradient và toàn bộ nội dung header (chữ/logo/menu) */
-  function applyCornerShineStacking() {
-    var shine = document.querySelector('.mg-corner-shine--top');
-    if (!shine) return;
-    /* 1 = trên gradient (0); << .site-header (50) và .site-header-body / .header-brand (15–35) */
-    shine.style.setProperty('z-index', '1');
+    /* Trần px + vh đủ lớn — tránh kẹt thấp khi chỉ min(vh nhỏ, px) */
+    if (w >= 1024) return { min: 305, max: Math.min(Math.round(vh * 0.66), 775) };
+    if (w >= 768) return { min: 282, max: Math.min(Math.round(vh * 0.60), 720) };
+    return { min: 246, max: Math.min(Math.round(vh * 0.48), 600) };
   }
 
   /** Vùng hero/section dùng để tính --mg-shine-scroll khi cuộn */
@@ -39,10 +97,11 @@
     if (!shine || !title) return;
     var shineTop = shine.getBoundingClientRect().top;
     var titleBottom = title.getBoundingClientRect().bottom;
-    var bleedPx = 200;
-    var toTitle = titleBottom - shineTop + bleedPx;
-    var floor = legacyHeightFloor();
-    shine.style.height = Math.max(toTitle, floor, 400) + 'px';
+    var bleedPx = 485;
+    var measured = titleBottom - shineTop + bleedPx;
+    var b = shineHeightBounds();
+    var h = Math.min(Math.max(measured, b.min), b.max);
+    shine.style.height = h + 'px';
   }
 
   /** Hệ số 0…1: 1 = đủ sáng, 0 = hết hero (cuộn dần, cùng nhịp với header sticky) */
@@ -76,6 +135,8 @@
     if (scrollTicking) return;
     scrollTicking = true;
     requestAnimationFrame(function () {
+      /* Luôn đo lại chiều cao khi cuộn — F5 ở dưới banner rồi kéo lên: lần đầu title ngoài viewport khiến measured kẹp min, trước đây không sync lại khi scroll */
+      syncCornerShineHeight();
       updateShineScrollFade();
       scrollTicking = false;
     });
@@ -85,7 +146,6 @@
     if (!document.body.classList.contains('mg-header-corner-shine')) return;
     var shine = document.querySelector('.mg-corner-shine--top');
     if (!shine) return;
-    applyCornerShineStacking();
     var hero = getShineScrollRoot();
     if (!hero) {
       shine.style.setProperty('--mg-shine-scroll', '1');
@@ -105,6 +165,14 @@
     runMeasure();
     window.addEventListener('resize', debouncedSyncHeight);
     window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener(
+      'pageshow',
+      function () {
+        syncCornerShineHeight();
+        updateShineScrollFade();
+      },
+      { passive: true }
+    );
     if (document.fonts && document.fonts.ready) {
       document.fonts.ready.then(runMeasure);
     }

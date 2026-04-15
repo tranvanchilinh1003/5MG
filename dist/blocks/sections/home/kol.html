@@ -135,6 +135,9 @@
           clickable: true,
         },
       });
+      if (typeof window.bindMgSwiperHandSqueeze === 'function') {
+        window.bindMgSwiperHandSqueeze(el);
+      }
     }
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', initCelebrityKolsSlider);

@@ -1,15 +1,352 @@
-<section
-  id="ourworks-hero"
-  class="relative overflow-hidden bg-black text-white"
-  aria-labelledby="ourworks-heading">
-  <div
-    class="block h-14 w-full shrink-0 bg-[var(--mg-primary)] min-[480px]:h-20 md:h-28 lg:h-[10rem]"
-    aria-hidden="true"></div>
+<div class="block h-14 w-full shrink-0 bg-[var(--mg-primary)] min-[480px]:h-20 md:h-28 lg:h-[10rem]" aria-hidden="true">
+</div>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet" />
 
-  <div class="relative z-0 mx-auto container py-6 min-[480px]:py-8 md:py-10 lg:py-12">
-    <img
-      src="assets/images/ourworks.webp"
-      alt="Jollybee"
-      class="block h-auto w-full max-w-full sm:rounded-md lg:rounded-lg" />
+<section class="overflow-x-hidden bg-black py-10 md:py-16 font-['Montserrat'] text-[color:var(--mg-text-primary)]">
+  <div class="mx-auto container">
+
+    <div class="campaign-stage-wrap">
+      <div class="campaign-stage">
+
+        <div
+          class="grid h-full w-full min-w-0 grid-cols-[1fr_auto_1fr] grid-rows-[repeat(4,auto)] content-start items-start gap-x-6 gap-y-6">
+
+          <!-- Cột giữa: cỡ max của clamp (bản xl “đẹp” trên màn rộng) -->
+          <!-- pointer-events-none: chữ OUR/TOP không chặn hover các BXH bị translate vào vùng giữa -->
+          <div
+            class="col-start-2 row-start-1 row-span-4 z-10 flex min-w-0 max-w-full flex-col items-center justify-center self-stretch text-center mt-[-2.4rem] pointer-events-none">
+            <h1
+              class="w-full min-w-0 font-black leading-[0.87] font-archivo uppercase text-[color:var(--mg-text-primary)]">
+              <span class="block text-[23.25rem] tracking-[-0.1em]">OUR</span>
+              <span class="block -mt-[0.12em] ms-[-0.28em] text-[23.25rem] tracking-[-0.09em]">TOP</span>
+              <span class="block -mt-[0.06em] mt-[-0.16em] text-[9.5rem] tracking-[-0.11em]">CAMPAIGNS</span>
+            </h1>
+            <p class="mt-[-0.15em] text-[2.25rem] font-extrabold tracking-[-0.03em]">
+              5MG.VN
+            </p>
+          </div>
+
+          <div class="col-start-1 row-start-1 grid w-full min-w-0 grid-cols-2 justify-items-center gap-5 pt-6">
+            <div
+              class="bxh-card relative z-[1] flex min-w-0 max-w-full cursor-pointer flex-col items-center gap-5 text-center origin-center transition-transform duration-300 ease-out scale-100 hover:scale-[1.05] motion-reduce:transition-none motion-reduce:hover:scale-100">
+              <span
+                class="inline-flex origin-center items-baseline justify-center gap-[0.06em] font-anilez leading-[0.78] text-[color:var(--mg-text-primary)]">
+                <span class="inline-block shrink-0">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="h-10 w-10 shrink-0 origin-center skew-x-[-12deg] scale-x-[1.25] scale-y-[1.5]">
+                    <line x1="10" y1="3" x2="8" y2="21" />
+                    <line x1="16" y1="3" x2="14" y2="21" />
+                    <line x1="4" y1="9" x2="20" y2="9" />
+                    <line x1="3" y1="15" x2="19" y2="15" />
+                  </svg>
+                </span>
+                <span class="font-semibold not-italic text-[3.95rem] scale-y-[1.48] motion-reduce:scale-y-100">1</span>
+              </span>
+              <p class="max-w-none text-center text-[0.8125em] font-semibold leading-snug tracking-wide">
+                <span class="block whitespace-nowrap">MV Tết 2026</span>
+                <span class="block whitespace-nowrap">BXH Younet Media</span>
+              </p>
+            </div>
+            <div class="inline-flex flex-col items-center translate-x-6">
+              <div
+                class="bxh-card relative z-[1] flex min-w-0 max-w-full cursor-pointer flex-col items-center gap-5 text-center origin-center transition-transform duration-300 ease-out scale-100 hover:scale-[1.05] motion-reduce:transition-none motion-reduce:hover:scale-100">
+                <span
+                  class="inline-flex origin-center items-baseline justify-center gap-[0.06em] font-anilez leading-[0.78] text-[color:var(--mg-text-primary)]">
+                  <span class="inline-block shrink-0">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-10 w-10 shrink-0 origin-center skew-x-[-12deg] scale-x-[1.25] scale-y-[1.5]">
+                      <line x1="10" y1="3" x2="8" y2="21" />
+                      <line x1="16" y1="3" x2="14" y2="21" />
+                      <line x1="4" y1="9" x2="20" y2="9" />
+                      <line x1="3" y1="15" x2="19" y2="15" />
+                    </svg>
+                  </span>
+                  <span class="font-semibold not-italic text-[3.95rem] scale-y-[1.48] motion-reduce:scale-y-100">1</span>
+                </span>
+                <p class="max-w-none text-center text-[0.8125em] font-semibold leading-snug tracking-wide">
+                  <span class="block whitespace-nowrap">Social Trend Music</span>
+                  <span class="block whitespace-nowrap">BXH Younet Media</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cột phải hàng 1: #3 (trong, gần OUR) | #2 (mép phải); cả cụm -translate-x-3 lệch trái nhẹ -->
+          <div
+            class="col-start-3 row-start-1 grid w-full min-w-0 -translate-x-3 grid-cols-2 justify-items-end gap-5 pt-6">
+            <div class="inline-flex flex-col items-center -translate-x-4">
+              <div
+                class="bxh-card relative z-[1] flex min-w-0 max-w-full cursor-pointer flex-col items-center gap-4 text-center origin-center transition-transform duration-300 ease-out scale-100 hover:scale-[1.05] motion-reduce:transition-none motion-reduce:hover:scale-100">
+                <span
+                  class="inline-flex origin-center items-baseline justify-center gap-5 font-anilez leading-[0.78] text-[color:var(--mg-text-primary)]">
+                  <span class="inline-block shrink-0">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-10 w-10 shrink-0 origin-center skew-x-[-12deg] scale-x-[1.25] scale-y-[1.5]">
+                      <line x1="10" y1="3" x2="8" y2="21" />
+                      <line x1="16" y1="3" x2="14" y2="21" />
+                      <line x1="4" y1="9" x2="20" y2="9" />
+                      <line x1="3" y1="15" x2="19" y2="15" />
+                    </svg>
+                  </span>
+                  <span class="font-semibold not-italic text-[4.5rem] scale-y-[1.1] motion-reduce:scale-y-100">3</span>
+                </span>
+                <p class="max-w-none text-center text-[0.575em] font-semibold leading-snug tracking-wide uppercase">
+                  <span class="block whitespace-nowrap">GIỮA TÁN RỪNG XANH</span>
+                  <span class="block whitespace-nowrap">SỰ KIỆN THƯƠNG HIỆU</span>
+                  <span class="block whitespace-nowrap">01/2026 - BXH KOMPA</span>
+                </p>
+              </div>
+            </div>
+            <div class="inline-flex flex-col items-center md:translate-x-10">
+              <div
+                class="bxh-card relative z-[1] flex min-w-0 max-w-full cursor-pointer flex-col items-center gap-5 text-center origin-center transition-transform duration-300 ease-out scale-100 hover:scale-[1.05] motion-reduce:transition-none motion-reduce:hover:scale-100">
+                <span
+                  class="inline-flex origin-center items-baseline justify-center gap-[0.06em] font-anilez leading-[0.78] text-[color:var(--mg-text-primary)]">
+                  <span class="inline-block shrink-0">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"
+                      stroke-linecap="round" stroke-linejoin="round"
+                      class="origin-center skew-x-[-12deg] scale-x-[1.25] scale-y-[1.5]">
+                      <line x1="10" y1="3" x2="8" y2="21" />
+                      <line x1="16" y1="3" x2="14" y2="21" />
+                      <line x1="4" y1="9" x2="20" y2="9" />
+                      <line x1="3" y1="15" x2="19" y2="15" />
+                    </svg>
+                  </span>
+                  <span
+                    class="font-semibold not-italic text-[clamp(2.45rem,6vw,3.95rem)] scale-y-[1.48] motion-reduce:scale-y-100">2</span>
+                </span>
+                <p
+                  class="mx-auto w-fit max-w-full text-center text-[0.8125em] font-semibold leading-snug tracking-wide uppercase">
+                  <span class="block whitespace-nowrap">Chiến Dịch Nổi Bật</span>
+                  <span class="block whitespace-nowrap">THE JOLLY DAY: JOLLY 20</span>
+                  <span class="block whitespace-nowrap">11/2025</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-start-1 row-start-2 flex w-full min-w-0 -translate-y-10 flex-col items-center justify-self-center gap-5 text-center">
+            <div
+              class="bxh-card relative z-[1] flex min-w-0 max-w-full cursor-pointer flex-col items-center gap-6 text-center origin-center transition-transform duration-300 ease-out scale-100 hover:scale-[1.05] motion-reduce:transition-none motion-reduce:hover:scale-100">
+              <span
+                class="inline-flex origin-center items-baseline justify-center gap-[0.06em] font-anilez leading-[0.78] text-[color:var(--mg-text-primary)]">
+                <span class="inline-block shrink-0">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="h-10 w-10 shrink-0 origin-center skew-x-[-12deg] scale-x-[1.25] scale-y-[1.5]">
+                    <line x1="10" y1="3" x2="8" y2="21" />
+                    <line x1="16" y1="3" x2="14" y2="21" />
+                    <line x1="4" y1="9" x2="20" y2="9" />
+                    <line x1="3" y1="15" x2="19" y2="15" />
+                  </svg>
+                </span>
+                <span class="font-semibold not-italic text-[4.5rem] scale-y-[1.1] motion-reduce:scale-y-100">3</span>
+              </span>
+              <p
+                class="mx-auto w-fit max-w-full text-center text-[0.8125em] font-semibold leading-snug tracking-wide uppercase">
+                <span class="block whitespace-nowrap">Chiến Dịch tết bính ngọ</span>
+                <span class="block whitespace-nowrap">Tháng 1/2026</span>
+                <span class="block whitespace-nowrap">BXH SOCIALITE</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- #5: giữ cấu trúc xl — căn giữa trong ô, translate cố định như bản artboard -->
+          <div
+            class="col-start-3 row-start-2 flex w-full min-w-0 items-center justify-center justify-self-center">
+            <div class="inline-flex flex-col items-center -translate-x-14 -translate-y-10">
+              <div
+                class="bxh-card relative z-[1] flex min-w-0 max-w-full cursor-pointer flex-col items-center gap-4 text-center origin-center transition-transform duration-300 ease-out scale-100 hover:scale-[1.05] motion-reduce:transition-none motion-reduce:hover:scale-100">
+                <span
+                  class="inline-flex origin-center items-baseline justify-center gap-[0.06em] font-anilez leading-[0.78] text-[color:var(--mg-text-primary)]">
+                  <span class="inline-block shrink-0">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-10 w-10 shrink-0 origin-center skew-x-[-12deg] scale-x-[1.25] scale-y-[1.5]">
+                      <line x1="10" y1="3" x2="8" y2="21" />
+                      <line x1="16" y1="3" x2="14" y2="21" />
+                      <line x1="4" y1="9" x2="20" y2="9" />
+                      <line x1="3" y1="15" x2="19" y2="15" />
+                    </svg>
+                  </span>
+                  <span class="font-semibold not-italic text-[3.95rem] motion-reduce:scale-y-100">5</span>
+                </span>
+                <p class="max-w-none text-center text-[0.575em] font-semibold leading-snug tracking-wide uppercase">
+                  <span class="block whitespace-nowrap">GIỮA TÁN RỪNG XANH</span>
+                  <span class="block whitespace-nowrap">SỰ KIỆN NỔI BẬT TẾT BÍNH NGỌ</span>
+                  <span class="block whitespace-nowrap">BXH - SOCIALITE</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-start-1 row-start-3 grid w-full min-w-0 grid-cols-2 justify-items-center gap-5">
+            <div class="inline-flex flex-col items-center translate-x-12 -translate-y-10">
+              <div
+                class="bxh-card relative z-[1] flex min-w-0 max-w-full cursor-pointer flex-col items-center gap-8 text-center origin-center transition-transform duration-300 ease-out scale-100 hover:scale-[1.05] motion-reduce:transition-none motion-reduce:hover:scale-100">
+                <span
+                  class="inline-flex origin-center items-baseline justify-center gap-[0.06em] font-anilez leading-[0.78] text-[color:var(--mg-text-primary)]">
+                  <span class="inline-block shrink-0">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-10 w-10 shrink-0 origin-center skew-x-[-12deg] scale-x-[1.25] scale-y-[1.5]">
+                      <line x1="10" y1="3" x2="8" y2="21" />
+                      <line x1="16" y1="3" x2="14" y2="21" />
+                      <line x1="4" y1="9" x2="20" y2="9" />
+                      <line x1="3" y1="15" x2="19" y2="15" />
+                    </svg>
+                  </span>
+                  <span class="font-semibold not-italic text-[3.95rem] scale-y-[1.48] motion-reduce:scale-y-100">4</span>
+                </span>
+                <p
+                  class="mx-auto w-fit max-w-full text-center text-[0.8125em] font-semibold leading-snug tracking-wide uppercase">
+                  <span class="block whitespace-nowrap">TRENDING</span>
+                  <span class="block whitespace-nowrap">MUSIC YOUTUBE</span>
+                </p>
+              </div>
+            </div>
+            <div class="inline-flex flex-col items-center translate-x-14 -translate-y-24">
+              <div
+                class="bxh-card relative z-[1] flex min-w-0 max-w-full cursor-pointer flex-col items-center gap-8 text-center origin-center transition-transform duration-300 ease-out scale-100 hover:scale-[1.05] motion-reduce:transition-none motion-reduce:hover:scale-100">
+                <span
+                  class="inline-flex origin-center items-baseline justify-center gap-[0.06em] font-anilez leading-[0.78] text-[color:var(--mg-text-primary)]">
+                  <span class="inline-block shrink-0">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-10 w-10 shrink-0 origin-center skew-x-[-12deg] scale-x-[1.25] scale-y-[1.5]">
+                      <line x1="10" y1="3" x2="8" y2="21" />
+                      <line x1="16" y1="3" x2="14" y2="21" />
+                      <line x1="4" y1="9" x2="20" y2="9" />
+                      <line x1="3" y1="15" x2="19" y2="15" />
+                    </svg>
+                  </span>
+                  <span class="font-semibold not-italic text-[4.5rem] scale-y-[1.1] motion-reduce:scale-y-100">3</span>
+                </span>
+                <p
+                  class="inline-flex max-w-full flex-col items-center text-center text-[0.8125em] font-semibold leading-snug tracking-wide uppercase">
+                  <span class="whitespace-nowrap">Chiến Dịch tết bính ngọ</span>
+                  <span class="whitespace-nowrap">Tháng 2/2026</span>
+                  <span class="whitespace-nowrap">BXH SOCIALITE</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-start-3 row-start-3 grid w-full min-w-0 grid-cols-2 justify-items-end gap-5">
+            <div class="inline-flex flex-col items-center -translate-x-28 -translate-y-24">
+              <div
+                class="bxh-card relative z-[1] flex min-w-0 max-w-full cursor-pointer flex-col items-center gap-4 text-center origin-center transition-transform duration-300 ease-out scale-100 hover:scale-[1.05] motion-reduce:transition-none motion-reduce:hover:scale-100">
+                <span
+                  class="inline-flex origin-center items-baseline justify-center gap-[0.06em] font-anilez leading-[0.78] text-[color:var(--mg-text-primary)]">
+                  <span class="inline-block shrink-0">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-10 w-10 shrink-0 origin-center skew-x-[-12deg] scale-x-[1.25] scale-y-[1.5]">
+                      <line x1="10" y1="3" x2="8" y2="21" />
+                      <line x1="16" y1="3" x2="14" y2="21" />
+                      <line x1="4" y1="9" x2="20" y2="9" />
+                      <line x1="3" y1="15" x2="19" y2="15" />
+                    </svg>
+                  </span>
+                  <span class="font-semibold not-italic text-[4.5rem] scale-y-[1.1] motion-reduce:scale-y-100">6</span>
+                </span>
+                <p
+                  class="inline-flex max-w-full flex-col items-center text-center text-[0.575em] font-semibold leading-snug tracking-wide uppercase">
+                  <span class="block whitespace-nowrap">OMO CONCERT</span>
+                  <span class="block whitespace-nowrap">SỰ KIỆN ÂM NHẠC</span>
+                  <span class="block whitespace-nowrap">01/2026 - BXH SOCIALITE</span>
+                </p>
+              </div>
+            </div>
+            <div class="inline-flex flex-col items-center -translate-x-6 -translate-y-14">
+              <div
+                class="bxh-card relative z-[1] mx-auto flex min-w-0 max-w-full cursor-pointer flex-col items-center gap-5 text-center origin-center transition-transform duration-300 ease-out scale-100 hover:scale-[1.05] motion-reduce:transition-none motion-reduce:hover:scale-100">
+                <span
+                  class="inline-flex origin-center items-center justify-center gap-[0.06em] font-anilez leading-[0.78] text-[color:var(--mg-text-primary)]">
+                  <span class="inline-block shrink-0">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-10 w-10 shrink-0 origin-center skew-x-[-12deg] scale-x-[1.25] scale-y-[1.5]">
+                      <line x1="10" y1="3" x2="8" y2="21" />
+                      <line x1="16" y1="3" x2="14" y2="21" />
+                      <line x1="4" y1="9" x2="20" y2="9" />
+                      <line x1="3" y1="15" x2="19" y2="15" />
+                    </svg>
+                  </span>
+                  <span class="font-semibold not-italic text-[3.5rem] scale-y-[1.3] motion-reduce:scale-y-100">10</span>
+                </span>
+                <p class="max-w-[14rem] text-center text-[0.575em] font-semibold leading-snug tracking-wide uppercase">
+                  <span class="whitespace-nowrap">OMO PICKLEBALL TOUR 2025</span>
+                  <span class="whitespace-nowrap">SỰ KIỆN NỔI BẬT</span>
+                  <span class="whitespace-nowrap">BXH KOMPA</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-start-1 row-start-4 flex w-full min-w-0 flex-col items-center justify-self-center text-center">
+            <div class="inline-flex flex-col items-center translate-x-28 -translate-y-32">
+              <div
+                class="bxh-card relative z-[1] flex min-w-0 max-w-full cursor-pointer flex-col items-center gap-5 text-center origin-center transition-transform duration-300 ease-out scale-100 hover:scale-[1.05] motion-reduce:transition-none motion-reduce:hover:scale-100">
+                <span
+                  class="inline-flex origin-center items-baseline justify-center gap-[0.06em] font-anilez leading-[0.78] text-[color:var(--mg-text-primary)]">
+                  <span class="inline-block shrink-0">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-10 w-10 shrink-0 origin-center skew-x-[-12deg] scale-x-[1.25] scale-y-[1.5]">
+                      <line x1="10" y1="3" x2="8" y2="21" />
+                      <line x1="16" y1="3" x2="14" y2="21" />
+                      <line x1="4" y1="9" x2="20" y2="9" />
+                      <line x1="3" y1="15" x2="19" y2="15" />
+                    </svg>
+                  </span>
+                  <span class="font-semibold not-italic text-[4.5rem] scale-y-[1.1] motion-reduce:scale-y-100">3</span>
+                </span>
+                <p
+                  class="inline-flex max-w-full flex-col items-center text-center text-[0.8125em] font-semibold leading-snug tracking-wide uppercase">
+                  <span class="block whitespace-nowrap">CHIẾN DỊCH NỔI BẬT</span>
+                  <span class="block whitespace-nowrap">LỄ HỘI SĂN TUẦN LỘC</span>
+                  <span class="block whitespace-nowrap">12/2025</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-start-3 row-start-4 flex w-full min-w-0 flex-col items-center justify-self-center gap-4">
+            <div class="inline-flex flex-col items-center -translate-x-[13rem] -translate-y-[10rem]">
+              <div
+                class="bxh-card relative z-[1] flex min-w-0 max-w-full cursor-pointer flex-col items-center gap-4 text-center origin-center transition-transform duration-300 ease-out scale-100 hover:scale-[1.05] motion-reduce:transition-none motion-reduce:hover:scale-100">
+                <span
+                  class="inline-flex origin-center items-baseline justify-end gap-[0.06em] font-anilez leading-[0.78] text-[color:var(--mg-text-primary)]">
+                  <span class="inline-block shrink-0">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="h-10 w-10 shrink-0 origin-center skew-x-[-12deg] scale-x-[1.25] scale-y-[1.5]">
+                      <line x1="10" y1="3" x2="8" y2="21" />
+                      <line x1="16" y1="3" x2="14" y2="21" />
+                      <line x1="4" y1="9" x2="20" y2="9" />
+                      <line x1="3" y1="15" x2="19" y2="15" />
+                    </svg>
+                  </span>
+                  <span class="font-semibold not-italic text-[4.5rem] scale-y-[1.1] motion-reduce:scale-y-100">3</span>
+                </span>
+                <p
+                  class="inline-flex max-w-[14rem] flex-col items-center text-center text-[0.875em] font-semibold leading-snug tracking-wide uppercase">
+                  <span class="block whitespace-nowrap">SỰ KIỆN THƯƠNG HIỆU</span>
+                  <span class="block whitespace-nowrap">THE JOLLY DAY: JOLLY 20</span>
+                  <span class="block whitespace-nowrap">1/1 - 31/12/2025</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </section>

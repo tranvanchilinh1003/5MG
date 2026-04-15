@@ -24,6 +24,9 @@
 <link rel="preload" href="assets/fonts/inter-vietnamese.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="assets/fonts/archivo-vietnamese.woff2" as="font" type="font/woff2" crossorigin />
+<!-- Vệt góc WebP (decode sớm; đường dẫn tương đối cùng thư mục với HTML build) -->
+<link rel="preload" href="assets/images/light_white.webp" as="image" />
+<link rel="preload" href="assets/images/light_bg.webp" as="image" />
 
 		<!-- Font: @font-face trong assets/css/fonts.css (local woff2) -->
 		<!-- all css -->
@@ -97,9 +100,9 @@
   <nav class="header-desktop-nav relative z-20" aria-label="Menu desktop">
     <ul class="home-hero-nav-list">
       <li><a class="home-hero-nav-is-muted" href="index.html">Home</a></li>
-      <li><a class="home-hero-nav-is-muted" href="about.html">About</a></li>
       <li><a class="home-hero-nav-is-muted" href="service.html">Services</a></li>
       <li><a class="home-hero-nav-is-muted" href="ourworks.html">Ourworks</a></li>
+      <li><a class="home-hero-nav-is-muted" href="about.html">About</a></li>
     </ul>
   </nav>
 </div>
@@ -151,20 +154,20 @@
         <div
           class="order-2 flex max-lg:mx-auto max-lg:w-full max-lg:max-w-xl flex-col items-center gap-6 sm:gap-8 lg:order-none lg:col-span-4 xl:col-span-4">
           <p
-            class="home-hero-about-brand text-gradient mx-auto flex w-fit max-w-full flex-col items-center text-center font-archivo font-black font-synthesis-none lowercase mb-4 tracking-[-0.04em] [font-size:clamp(2.5rem,7.25vw,3rem)]">
-            <span class="block w-fit max-w-full">five</span>
-            <span class="block w-fit max-w-full">media group</span>
+            class="home-hero-about-brand text-gradient mx-auto flex w-fit max-w-full flex-col items-center text-center font-archivo font-black font-synthesis-none mb-4 tracking-[-0.04em] [font-size:clamp(2.5rem,7.25vw,3rem)]">
+            <span class="block w-fit max-w-full">Five</span>
+            <span class="block w-fit max-w-full">Media Group</span>
           </p>
 
           <nav class="flex w-full flex-col space-y-6 sm:space-y-10" aria-label="Dịch vụ chính">
             <a class="block w-full rounded-full border border-transparent bg-[linear-gradient(145deg,rgba(254,231,205,0.94)_0%,rgba(251,184,160,0.9)_52%,rgba(248,168,148,0.88)_100%)] px-7 py-[0.85rem] text-center font-sans text-sm font-normal font-synthesis-none uppercase tracking-[0.07em] text-[#3a2318] no-underline shadow-[0_6px_22px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.65)] backdrop-blur-[12px] transition-[transform,box-shadow,filter] duration-200 ease-out sm:text-sm md:text-base lg:text-lg xl:text-[1.5rem] hover:-translate-y-[2px] hover:brightness-[1.04] hover:shadow-[0_10px_28px_rgba(0,0,0,0.14),inset_0_1px_0_rgba(255,255,255,0.75)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-white/90"
-              href="index.html#service">Production</a>
+              href="service.html#service">Production</a>
             <a class="block w-full rounded-full border border-transparent bg-[linear-gradient(145deg,rgba(254,231,205,0.94)_0%,rgba(251,184,160,0.9)_52%,rgba(248,168,148,0.88)_100%)] px-7 py-[0.85rem] text-center font-sans text-sm font-normal font-synthesis-none uppercase tracking-[0.07em] text-[#3a2318] no-underline shadow-[0_6px_22px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.65)] backdrop-blur-[12px] transition-[transform,box-shadow,filter] duration-200 ease-out sm:text-sm md:text-base lg:text-lg xl:text-[1.5rem] hover:-translate-y-[2px] hover:brightness-[1.04] hover:shadow-[0_10px_28px_rgba(0,0,0,0.14),inset_0_1px_0_rgba(255,255,255,0.75)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-white/90"
-              href="index.html#service">Booking KOLs</a>
+              href="service.html#service">Booking KOLs</a>
             <a class="block w-full rounded-full border border-transparent bg-[linear-gradient(145deg,rgba(254,231,205,0.94)_0%,rgba(251,184,160,0.9)_52%,rgba(248,168,148,0.88)_100%)] px-7 py-[0.85rem] text-center font-sans text-sm font-normal font-synthesis-none uppercase tracking-[0.07em] text-[#3a2318] no-underline shadow-[0_6px_22px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.65)] backdrop-blur-[12px] transition-[transform,box-shadow,filter] duration-200 ease-out sm:text-sm md:text-base lg:text-lg xl:text-[1.5rem] hover:-translate-y-[2px] hover:brightness-[1.04] hover:shadow-[0_10px_28px_rgba(0,0,0,0.14),inset_0_1px_0_rgba(255,255,255,0.75)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-white/90"
-              href="index.html#service">Social Performance</a>
+              href="service.html#service">Social Performance</a>
             <a class="block w-full rounded-full border border-transparent bg-[linear-gradient(145deg,rgba(254,231,205,0.94)_0%,rgba(251,184,160,0.9)_52%,rgba(248,168,148,0.88)_100%)] px-7 py-[0.85rem] text-center font-sans text-sm font-normal font-synthesis-none uppercase tracking-[0.07em] text-[#3a2318] no-underline shadow-[0_6px_22px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.65)] backdrop-blur-[12px] transition-[transform,box-shadow,filter] duration-200 ease-out sm:text-sm md:text-base lg:text-lg xl:text-[1.5rem] hover:-translate-y-[2px] hover:brightness-[1.04] hover:shadow-[0_10px_28px_rgba(0,0,0,0.14),inset_0_1px_0_rgba(255,255,255,0.75)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-white/90"
-              href="index.html#service">TikTok Trending</a>
+              href="service.html#service">TikTok Trending</a>
           </nav>
         </div>
 
@@ -462,7 +465,8 @@
             </ul>
             <!-- Liên hệ tuyển dụng (CV); fold neo ngoài .container — home-hero.css -->
             <p class="relative z-20 mt-10 text-center sm:mt-12">
-                <a href="mailto:fivemediagroup@5mg.vn"
+                <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=fivemediagroup%405mg.vn"
+                    target="_blank" rel="noopener noreferrer"
                     class="inline-flex items-center gap-1.5 rounded-full border-b-2 border-black/30 px-6 pb-1.5 pt-0.5 text-[0.9375rem] font-semibold leading-snug tracking-wide text-black/85 outline-none transition duration-200 ease-out hover:-translate-y-0.5 hover:border-black/55 hover:bg-transparent hover:text-black focus-visible:ring-2 focus-visible:ring-black/15 focus-visible:ring-offset-2">
                     Gửi CV về email
                     <span class="text-[0.85em] text-black/50" aria-hidden="true">→</span>
@@ -517,9 +521,9 @@
     <!-- Căng ngang dưới: thương hiệu + viền -->
     <div class="w-full shrink-0  pb-6 md:pb-8">
         <p
-            class="home-hero-about-brand text-gradient mx-auto mb-0 flex w-fit max-w-full flex-col items-center text-center font-archivo font-black font-synthesis-none lowercase tracking-[-0.04em] [font-size:clamp(2.5rem,7.25vw,3rem)]">
-            <span class="block w-fit max-w-full">five</span>
-            <span class="block w-fit max-w-full">media group</span>
+            class="home-hero-about-brand text-gradient mx-auto mb-0 flex w-fit max-w-full flex-col items-center text-center font-archivo font-black font-synthesis-none tracking-[-0.04em] [font-size:clamp(2.5rem,7.25vw,3rem)]">
+            <span class="block w-fit max-w-full">Five</span>
+            <span class="block w-fit max-w-full">Media Group</span>
         </p>
     </div>
 </section>

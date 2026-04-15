@@ -898,6 +898,11 @@ img.loading {
 
 /* Fit utilities */
 
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 /* Gradient helpers */
 
 /* Shadow helpers */
@@ -1275,8 +1280,8 @@ body:not(.page-home) header .header-desktop-menu .home-hero-nav-is-muted:hover {
   margin-top: 0px;
 }
 
-.mt-1 {
-  margin-top: 0.25rem;
+.mt-10 {
+  margin-top: 2.5rem;
 }
 
 .mt-3 {
@@ -1351,6 +1356,14 @@ body:not(.page-home) header .header-desktop-menu .home-hero-nav-is-muted:hover {
   height: 100%;
 }
 
+.max-h-10 {
+  max-height: 2.5rem;
+}
+
+.max-h-8 {
+  max-height: 2rem;
+}
+
 .min-h-0 {
   min-height: 0px;
 }
@@ -1391,12 +1404,21 @@ body:not(.page-home) header .header-desktop-menu .home-hero-nav-is-muted:hover {
   width: auto;
 }
 
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .w-full {
   width: 100%;
 }
 
 .min-w-0 {
   min-width: 0px;
+}
+
+.max-w-\[11rem\] {
+  max-width: 11rem;
 }
 
 .max-w-\[200px\] {
@@ -1411,8 +1433,16 @@ body:not(.page-home) header .header-desktop-menu .home-hero-nav-is-muted:hover {
   max-width: 46rem;
 }
 
+.max-w-\[7\.5rem\] {
+  max-width: 7.5rem;
+}
+
 .max-w-\[8\.5rem\] {
   max-width: 8.5rem;
+}
+
+.max-w-\[9rem\] {
+  max-width: 9rem;
 }
 
 .max-w-full {
@@ -1458,6 +1488,18 @@ body:not(.page-home) header .header-desktop-menu .home-hero-nav-is-muted:hover {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -1480,6 +1522,14 @@ body:not(.page-home) header .header-desktop-menu .home-hero-nav-is-muted:hover {
 
 .justify-center {
   justify-content: center;
+}
+
+.justify-items-center {
+  justify-items: center;
+}
+
+.gap-1\.5 {
+  gap: 0.375rem;
 }
 
 .gap-2 {
@@ -1506,8 +1556,17 @@ body:not(.page-home) header .header-desktop-menu .home-hero-nav-is-muted:hover {
   gap: 0.2rem;
 }
 
+.gap-x-2 {
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+
 .gap-y-2 {
   row-gap: 0.5rem;
+}
+
+.gap-y-5 {
+  row-gap: 1.25rem;
 }
 
 .gap-y-8 {
@@ -1671,6 +1730,10 @@ body:not(.page-home) header .header-desktop-menu .home-hero-nav-is-muted:hover {
 
 .pb-\[var\(--mg-hero-bar-pad-y\)\] {
   padding-bottom: var(--mg-hero-bar-pad-y);
+}
+
+.pl-0 {
+  padding-left: 0px;
 }
 
 .pt-8 {
@@ -1929,6 +1992,12 @@ body:not(.page-home) header .header-desktop-menu .home-hero-nav-is-muted:hover {
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .transition-all {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1943,6 +2012,10 @@ body:not(.page-home) header .header-desktop-menu .home-hero-nav-is-muted:hover {
 
 .duration-300 {
   transition-duration: 300ms;
+}
+
+.ease-out {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
 @keyframes enter {
@@ -1963,6 +2036,10 @@ body:not(.page-home) header .header-desktop-menu .home-hero-nav-is-muted:hover {
   animation-duration: 300ms;
 }
 
+.ease-out {
+  animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
 .\[--mg-hero-bar-pad-y\:clamp\(1\.25rem\2c 0\.85rem\+2\.4vw\2c 2\.5rem\)\] {
   --mg-hero-bar-pad-y: clamp(1.25rem,0.85rem + 2.4vw,2.5rem);
 }
@@ -1981,6 +2058,24 @@ body:not(.page-home) header .header-desktop-menu .home-hero-nav-is-muted:hover {
    LOCAL FONTS — Archivo, Montserrat, Inter (variable woff2, không CDN)
    Subset: tiếng Việt + Latin (+ Latin Ext). Có thêm Space Grotesk / Plus Jakarta nếu dùng font-space / font-plus.
    ======================================================================== */
+
+/* --- Anilez — class Tailwind `font-anilez` dùng font-family "Anilez" (Storytype).
+ * Thêm file: src/assets/fonts/anilez.woff2 (chỉ woff2, tránh request .otf thừa). */
+
+@font-face {
+  font-family: "Anilez";
+
+  font-style: normal;
+
+  font-weight: 400;
+
+  font-display: swap;
+
+  src:
+    local("Anilez"),
+    local("Anilez Regular"),
+    url("../fonts/anilez.woff2") format("woff2");
+}
 
 /* --- Archivo (hero display) --- */
 
@@ -2938,6 +3033,51 @@ button.swiper-pagination-bullet{
   height: auto;
 }
 
+/* Swiper ảnh: grab / bóp (poster + popup service + KOL home) — class .mg-swiper--pressing gán bằng JS */
+
+.service-poster-swiper,
+.service-flower-dialog__swiper,
+.celebrityKolsSlider {
+  cursor: grab;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+}
+
+.service-poster-swiper.mg-swiper--pressing,
+.service-flower-dialog__swiper.mg-swiper--pressing,
+.celebrityKolsSlider.mg-swiper--pressing {
+  cursor: grabbing;
+}
+
+.service-poster-swiper .swiper-slide figure img,
+.service-flower-dialog__swiper .service-flower-dialog__img,
+.celebrityKolsSlider .kol-slide-media img {
+  transform-origin: center center;
+  transition: transform 0.14s ease-out;
+  will-change: transform;
+}
+
+.service-poster-swiper.mg-swiper--pressing .swiper-slide-active figure img,
+.service-flower-dialog__swiper.mg-swiper--pressing .swiper-slide-active .service-flower-dialog__img,
+.celebrityKolsSlider.mg-swiper--pressing .swiper-slide-active .kol-slide-media img {
+  transform: scale(0.94);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-poster-swiper .swiper-slide figure img,
+    .service-flower-dialog__swiper .service-flower-dialog__img,
+    .celebrityKolsSlider .kol-slide-media img {
+    transition: none;
+  }
+
+  .service-poster-swiper.mg-swiper--pressing .swiper-slide-active figure img,
+    .service-flower-dialog__swiper.mg-swiper--pressing .swiper-slide-active .service-flower-dialog__img,
+    .celebrityKolsSlider.mg-swiper--pressing .swiper-slide-active .kol-slide-media img {
+    transform: none;
+  }
+}
+
 /* Config theme trang Home (màu, font-size, border-radius) - sửa trong home-theme.css */
 
 /* ========================================================================
@@ -2950,6 +3090,8 @@ button.swiper-pagination-bullet{
   --mg-primary: #ff5a2d;
   --mg-primary-mid: #ff542a;
   --mg-primary-deep: #ff3f4a;
+  /* BXH / Our works — chữ cam nhấn (đồng bộ hero); dùng: color: var(--mg-text-primary) */
+  --mg-text-primary: #f8532e;
   --mg-secondary: #f56b99;
   /* Nền gradient hero (cam → hồng): bg-mg-hero, header overlay, mọi trang */
   --mg-hero-gradient: linear-gradient(
@@ -3024,6 +3166,110 @@ button.swiper-pagination-bullet{
   --mg-corner-shine-blur: 8px;
   --mg-corner-shine-streak: rgba(255, 255, 255, 0.42);
   --mg-corner-shine-streak-soft: rgba(255, 255, 255, 0.12);
+  /* Vệt góc CSS: mask chéo (mép mềm khi cần mask; home/join dùng radial bên dưới) */
+  --mg-corner-light-mask: linear-gradient(
+    126deg,
+    #000 0%,
+    #000 34%,
+    rgba(0, 0, 0, 0.9) 48%,
+    rgba(0, 0, 0, 0.42) 60%,
+    rgba(0, 0, 0, 0.1) 71%,
+    transparent 82%
+  );
+  /* Vệt góc: trắng lớn (::before, blur nhẹ); mép “)” (::after): dải mask + blur rõ */
+  --mg-corner-shine-solid: #f5eeef;
+  --mg-corner-shine-layer-g: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #ffffff 18%,
+    rgba(255, 255, 255, 0.99) 52%,
+    rgba(255, 255, 255, 0.97) 72%,
+    rgba(255, 255, 255, 0.88) 84%,
+    rgba(255, 255, 255, 0.35) 93%,
+    rgba(255, 255, 255, 0) 99%,
+    transparent 100%
+  );
+  /*
+   * Mép “)”: mask chỉ % (tránh calc(100% - var()) lỗi / vô hiệu trên vài engine).
+   * Dải ~cuối 14% theo hướng 128deg = vùng blur nhìn thấy được.
+   */
+  --mg-corner-shine-edge-strip-mask: linear-gradient(
+    128deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 78%,
+    rgba(0, 0, 0, 0.35) 86%,
+    rgba(0, 0, 0, 0.92) 93%,
+    #000 100%
+  );
+  --mg-corner-shine-glow-fill: #ffffff;
+  --mg-corner-shine-core-blur: 3px;
+  --mg-corner-shine-glow-blur: 18px;
+  --mg-corner-shine-glow-inset: -10px;
+  --mg-corner-shine-core-opacity: 1;
+  --mg-corner-shine-glow-opacity: 0.88;
+  /*
+   * Vệt góc home + join: asset WebP (mặc định light_white) = khớp mockup; đổi --mg-corner-shine-art-url nếu cần.
+   * Các biến sun/radial bên dưới giữ cho tùy chọn CSS-only sau này.
+   */
+  --mg-corner-shine-art-url: url("../images/light_white.webp");
+  --mg-corner-sun-silhouette-mask: radial-gradient(
+    circle at 0 0,
+    #000 0%,
+    #000 44%,
+    rgba(0, 0, 0, 0.72) 56%,
+    rgba(0, 0, 0, 0.22) 74%,
+    transparent 86%
+  );
+  --mg-corner-sun-mask-size: 132% 132%;
+  --mg-corner-shine-radial-main: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.99) 0%,
+    rgba(255, 255, 255, 0.88) 16%,
+    rgba(255, 255, 255, 0.52) 32%,
+    rgba(255, 255, 255, 0.2) 48%,
+    rgba(255, 255, 255, 0.05) 58%,
+    rgba(255, 255, 255, 0) 66%
+  );
+  --mg-corner-shine-radial-glow: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.42) 0%,
+    rgba(255, 255, 255, 0.16) 36%,
+    rgba(255, 255, 255, 0.05) 52%,
+    rgba(255, 255, 255, 0) 64%
+  );
+  --mg-corner-shine-radial-before-blur: 14px;
+  --mg-corner-shine-radial-after-blur: 32px;
+  --mg-corner-shine-radial-after-opacity: 0.82;
+  /* Đường kính đĩa so với khung clip (% cạnh khung) — >200% để fade trước mép thẳng dưới/phải */
+  --mg-corner-sun-disk-pct: 248%;
+  --mg-corner-sun-disk-pct-glow: 288%;
+  /*
+   * Polygon clip (legacy / trang khác).
+   */
+  --mg-corner-triangle-clip: polygon(
+    0 0,
+    100% 0,
+    97% 7%,
+    94% 14%,
+    90% 20%,
+    87% 27%,
+    83% 33%,
+    79% 39%,
+    75% 45%,
+    70% 50%,
+    65% 55%,
+    61% 61%,
+    55% 65%,
+    50% 70%,
+    45% 75%,
+    39% 79%,
+    33% 83%,
+    27% 87%,
+    20% 90%,
+    14% 94%,
+    7% 97%,
+    0 100%
+  );
   /* ----- Typography (rem) — menu, body, hero phụ; đồng bộ với tailwind.config.js fontFamily.sans ----- */
   --mg-font-sans: "Montserrat", "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   /* Tiêu đề hero — Archivo */
@@ -3231,9 +3477,7 @@ button.swiper-pagination-bullet{
 }
 
 /*
- * Join us: cùng nguồn + mask + breakpoint như vệt header home
- * (body.page-home.mg-header-corner-shine .mg-corner-shine--top — light_white.webp).
- * Vị trí neo theo góc #about-join-us-panel; hiện bằng .is-visible (Alpine).
+ * Join us: cùng asset vệt góc như header home.
  */
 
 .mg-corner-shine--join-contact {
@@ -3243,37 +3487,21 @@ button.swiper-pagination-bullet{
   overflow: visible;
   opacity: 0;
   transition: opacity 0.32s ease-out;
-  background-image: url("../images/light_white.webp");
+  width: min(44vw, 560px);
+  min-height: 198px;
+  height: min(38vh, 490px);
+  transform: skewX(-5deg);
+  transform-origin: 0 0;
+  clip-path: none;
+  background-color: transparent;
+  background-image: var(--mg-corner-shine-art-url);
   background-repeat: no-repeat;
   background-position: left top;
   background-size: contain;
-  width: min(44vw, 560px);
-  min-height: 200px;
-  height: min(48vh, 520px);
-  transform: skewX(-5deg);
-  transform-origin: 0 0;
-  -webkit-mask-image: linear-gradient(
-    126deg,
-    #000 0%,
-    #000 34%,
-    rgba(0, 0, 0, 0.9) 48%,
-    rgba(0, 0, 0, 0.42) 60%,
-    rgba(0, 0, 0, 0.1) 71%,
-    transparent 82%
-  );
-  mask-image: linear-gradient(
-    126deg,
-    #000 0%,
-    #000 34%,
-    rgba(0, 0, 0, 0.9) 48%,
-    rgba(0, 0, 0, 0.42) 60%,
-    rgba(0, 0, 0, 0.1) 71%,
-    transparent 82%
-  );
-  -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
+  pointer-events: none;
+  border-radius: 0;
+  -webkit-mask-image: none;
+  mask-image: none;
 }
 
 .mg-corner-shine--join-contact::before,
@@ -3285,25 +3513,27 @@ button.swiper-pagination-bullet{
   opacity: 1;
 }
 
-@media (max-width: 767px) {
-  .mg-corner-shine--join-contact {
-    width: min(72vw, 300px);
-    min-height: 160px;
-    height: min(36vh, 360px);
-  }
-}
-
 @media (min-width: 768px) {
   .mg-corner-shine--join-contact {
     width: min(40vw, 600px);
-    height: min(50vh, 560px);
+    min-height: 208px;
+    height: min(48vh, 570px);
   }
 }
 
 @media (min-width: 1024px) {
   .mg-corner-shine--join-contact {
     width: min(36vw, 640px);
-    height: min(54vh, 600px);
+    min-height: 218px;
+    height: min(56vh, 630px);
+  }
+}
+
+@media (max-width: 767px) {
+  .mg-corner-shine--join-contact {
+    width: min(72vw, 300px);
+    min-height: 175px;
+    height: min(27vh, 370px);
   }
 }
 
@@ -3522,6 +3752,13 @@ body:not(.page-home) .site-header-gradient-layer {
   display: none;
 }
 
+/* Chỉ hiện background vệt góc sau khi ảnh đã preload (class gán bởi home-hero-shine.js) — tránh chớp tắt khi tải chậm */
+
+body:not(.mg-header-shine-art--ready) .mg-corner-shine--top,
+body:not(.mg-header-shine-art--ready) .mg-corner-shine--join-contact {
+  background-image: none !important;
+}
+
 /* Vệt sáng header: chỉ hiện khi <body> có class .mg-header-corner-shine (opt-in từng trang) */
 
 body:not(.mg-header-corner-shine) .mg-corner-shine--top {
@@ -3603,12 +3840,6 @@ body.mg-header-corner-shine .mg-corner-shine--top {
     --mg-shine-opacity-max: 0.78;
   }
 
-  body.page-home.mg-header-corner-shine:not(.page-service) .mg-corner-shine--top {
-    width: min(72vw, 300px);
-    min-height: 160px;
-    height: min(36vh, 360px);
-  }
-
   .page-home .site-header-body::before {
     content: "";
     position: absolute;
@@ -3644,64 +3875,57 @@ body.mg-header-corner-shine:has(.jmodal:not(.hidden)) .mg-corner-shine--top {
 }
 
 /*
- * Trang home (không phải service): vệt góc = ảnh nguồn (trắng góc trên-trái, mép cong mềm).
- * Sao chép từ light_white - Copy.png → light_white.webp (tên file URL an toàn).
+ * Trang home: vệt góc = asset (--mg-corner-shine-art-url), khớp thiết kế; skew nhẹ; không pseudo.
  */
 
 body.page-home.mg-header-corner-shine:not(.page-service) .mg-corner-shine--top {
-  z-index: 0;
+  z-index: 1;
   overflow: visible;
-  background-image: url("../images/light_white.webp");
+  width: min(44vw, 560px);
+  min-height: 198px;
+  height: min(38vh, 490px);
+  transform: skewX(-5deg);
+  transform-origin: 0 0;
+  clip-path: none;
+  background-color: transparent;
+  background-image: var(--mg-corner-shine-art-url);
   background-repeat: no-repeat;
   background-position: left top;
   background-size: contain;
-  width: min(44vw, 560px);
-  min-height: 200px;
-  height: min(48vh, 520px);
-  /* Mép mềm của PNG + mask chéo gần thẳng → biên sáng/tối ít “cung” hơn */
-  transform: skewX(-5deg);
-  transform-origin: 0 0;
-  -webkit-mask-image: linear-gradient(
-    126deg,
-    #000 0%,
-    #000 34%,
-    rgba(0, 0, 0, 0.9) 48%,
-    rgba(0, 0, 0, 0.42) 60%,
-    rgba(0, 0, 0, 0.1) 71%,
-    transparent 82%
-  );
-  mask-image: linear-gradient(
-    126deg,
-    #000 0%,
-    #000 34%,
-    rgba(0, 0, 0, 0.9) 48%,
-    rgba(0, 0, 0, 0.42) 60%,
-    rgba(0, 0, 0, 0.1) 71%,
-    transparent 82%
-  );
-  -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
+  pointer-events: none;
+  border-radius: 0;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+body.page-home.mg-header-corner-shine:not(.page-service) .mg-corner-shine--top::before,
+body.page-home.mg-header-corner-shine:not(.page-service) .mg-corner-shine--top::after {
+  display: none;
 }
 
 @media (min-width: 768px) {
   body.page-home.mg-header-corner-shine:not(.page-service) .mg-corner-shine--top {
     width: min(40vw, 600px);
-    height: min(50vh, 560px);
+    min-height: 208px;
+    height: min(48vh, 570px);
   }
 }
 
 @media (min-width: 1024px) {
   body.page-home.mg-header-corner-shine:not(.page-service) .mg-corner-shine--top {
     width: min(36vw, 640px);
-    height: min(54vh, 600px);
+    min-height: 218px;
+    height: min(56vh, 630px);
   }
 }
 
-body.page-home.mg-header-corner-shine:not(.page-service) .mg-corner-shine--top::before,
-body.page-home.mg-header-corner-shine:not(.page-service) .mg-corner-shine--top::after {
-  display: none;
+@media (max-width: 767px) {
+  body.page-home.mg-header-corner-shine:not(.page-service) .mg-corner-shine--top {
+    width: min(72vw, 300px);
+    min-height: 175px;
+    height: min(27vh, 370px);
+    --mg-shine-opacity-max: 1;
+  }
 }
 
 /* Trang service.html — vệt góc: ảnh light_bg.webp (chỉ .page-service) */
@@ -3984,10 +4208,6 @@ body.page-service.mg-header-corner-shine .mg-corner-shine--top::after {
   font-size: clamp(2.75rem, 10vw, 5.5rem);
   max-width: 100%;
   overflow-wrap: anywhere;
-}
-
-.home-hero-title {
-  text-transform: lowercase;
 }
 
 /* Chỉ dòng sau (media group) — kéo sát “five”; em bám cỡ tiêu đề, vw mượt theo khung */
@@ -5106,7 +5326,7 @@ body.page-service #service-page .service-section__title.mg-text-gradient {
 
 .service-flower-label-slot--tl {
   top: 0;
-  left: -22px;
+  left: -28px;
   justify-content: flex-end;
   text-align: right;
 }
@@ -5130,7 +5350,17 @@ body.page-service #service-page .service-section__title.mg-text-gradient {
 
 @media (min-width: 640px) {
   .service-flower-label-slot--tl {
-    left: -36px;
+    left: -35px;
+  }
+
+  .service-flower-label-slot--bl {
+    left: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .service-flower-label-slot--tl {
+    left: -55px;
   }
 
   .service-flower-label-slot--bl {
@@ -5157,6 +5387,20 @@ body.page-service #service-page .service-section__title.mg-text-gradient {
   pointer-events: auto;
   -webkit-tap-highlight-color: transparent;
   text-decoration: none;
+}
+
+button.service-flower-petal {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+  display: block;
 }
 
 .service-flower-petal:focus-visible {
@@ -5206,6 +5450,255 @@ body.page-service #service-page .service-section__title.mg-text-gradient {
   text-align: center;
 }
 
+/* Popup cánh hoa (trang chủ) — <dialog> + Swiper — VIP: scale + fade + blur, glow, stagger */
+
+.service-flower-dialog {
+  margin: auto;
+  max-width: min(96vw, 66rem);
+  width: 100%;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: #fff;
+}
+
+.service-flower-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.68);
+  backdrop-filter: blur(14px) saturate(1.15);
+  transition: opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.service-flower-dialog[open]::backdrop {
+  animation: service-flower-backdrop-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes service-flower-backdrop-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.service-flower-dialog__panel {
+  overflow: hidden;
+  border-radius: 1rem;
+  /* Bo góc + transform/filter: clip-path tránh lỗi cắt góc trên Chrome khi VIP animation */
+  clip-path: inset(0 round 1rem);
+  isolation: isolate;
+  background-color: var(--mg-bar-bg, #1a1a1a);
+  background-image: linear-gradient(
+    165deg,
+    color-mix(in srgb, var(--mg-bar-bg, #1a1a1a) 92%, #2a2a2a) 0%,
+    var(--mg-bar-bg, #141414) 48%,
+    color-mix(in srgb, var(--mg-bar-bg, #1a1a1a) 88%, #0d0d0d) 100%
+  );
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 0 0 1px color-mix(in srgb, var(--mg-primary, #ff5a2d) 22%, transparent),
+    0 0 48px -8px color-mix(in srgb, var(--mg-primary, #ff5a2d) 35%, transparent),
+    0 1.75rem 3.5rem rgba(0, 0, 0, 0.55),
+    0 0.5rem 1.25rem rgba(0, 0, 0, 0.35);
+  transition:
+    opacity 0.48s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.52s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* [open] trước, --shown sau 2 rAF — panel: scale + fade + blur */
+
+.service-flower-dialog[open]:not(.service-flower-dialog--shown) .service-flower-dialog__panel {
+  opacity: 0;
+  transform: translateY(1.125rem) scale(0.94);
+  filter: blur(12px);
+  box-shadow:
+    0 0 0 0 transparent,
+    0 1rem 2rem rgba(0, 0, 0, 0.25);
+}
+
+.service-flower-dialog[open].service-flower-dialog--shown .service-flower-dialog__panel {
+  opacity: 1;
+  transform: none;
+  /* none: tránh lớp filter + transform làm vỡ clip bo góc với Swiper */
+  filter: none;
+}
+
+/* Stagger: toolbar → cả khối swiper (gồm prev / swiper / next) */
+
+.service-flower-dialog[open]:not(.service-flower-dialog--shown) .service-flower-dialog__toolbar,
+.service-flower-dialog[open]:not(.service-flower-dialog--shown) .service-flower-dialog__swiper-wrap {
+  opacity: 0;
+  transform: translateY(1rem);
+  filter: blur(8px);
+  transition: none;
+}
+
+.service-flower-dialog[open].service-flower-dialog--shown .service-flower-dialog__toolbar {
+  opacity: 1;
+  transform: none;
+  /* none thay blur(0): tránh lớp filter GPU bọc cả Swiper → fade slide không bị tối khi spam nút */
+  filter: none;
+  transition:
+    opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: 0.1s;
+}
+
+.service-flower-dialog[open].service-flower-dialog--shown .service-flower-dialog__swiper-wrap {
+  opacity: 1;
+  transform: none;
+  filter: none;
+  transition:
+    opacity 0.52s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.58s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.48s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: 0.22s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-flower-dialog[open]::backdrop {
+    animation: none;
+  }
+
+  .service-flower-dialog__panel {
+    transition: opacity 0.2s ease;
+    filter: none !important;
+    box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, 0.45);
+  }
+
+  .service-flower-dialog[open]:not(.service-flower-dialog--shown) .service-flower-dialog__panel {
+    transform: none;
+  }
+
+  .service-flower-dialog[open]:not(.service-flower-dialog--shown) .service-flower-dialog__toolbar,
+  .service-flower-dialog[open]:not(.service-flower-dialog--shown) .service-flower-dialog__swiper-wrap {
+    filter: none;
+    transform: none;
+  }
+
+  .service-flower-dialog[open].service-flower-dialog--shown .service-flower-dialog__toolbar,
+  .service-flower-dialog[open].service-flower-dialog--shown .service-flower-dialog__swiper-wrap {
+    transition: opacity 0.2s ease;
+    transition-delay: 0s !important;
+    filter: none;
+    transform: none;
+  }
+}
+
+.service-flower-dialog__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.65rem 0.75rem 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.service-flower-dialog__title {
+  flex: 1;
+  min-width: 0;
+  line-height: 1.2;
+}
+
+.service-flower-dialog__close {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 0;
+  border-radius: 0.25rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.service-flower-dialog__close:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.service-flower-dialog__swiper-wrap {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem 0.35rem 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .service-flower-dialog__swiper-wrap {
+    gap: 0.5rem;
+    padding: 0.75rem 0.5rem 1rem;
+  }
+}
+
+.service-flower-dialog__swiper {
+  min-width: 0;
+  width: 100%;
+  min-height: min(48svh, 380px);
+  overflow: hidden;
+}
+
+.service-flower-dialog__swiper .swiper-wrapper {
+  align-items: center;
+}
+
+.service-flower-dialog__nav {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 0;
+  border-radius: 0.25rem;
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.service-flower-dialog__nav:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.service-flower-dialog__slide-inner {
+  display: flex;
+  min-height: 0;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0;
+}
+
+.service-flower-dialog__figure {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-flower-dialog__img {
+  display: block;
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  max-height: min(62svh, 68vh);
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 /* ========================================================================
    Scroll reveal: fade + zoom nhẹ (~3%); không dùng scale(0) cho mượt, dịu mắt
    ======================================================================== */
@@ -5238,6 +5731,391 @@ body.page-service #service-page .service-section__title.mg-text-gradient {
     transform: none;
     transition: none;
   }
+}
+
+/* Brand logos: 5×5 mọi viewport (giống xl); mobile nhỏ hơn qua --brand-t / --brand-row5-pull */
+
+#brand-section {
+  --brand-t: 0.68;
+  --brand-row5-pull: calc(-0.5rem - 6px);
+}
+
+@media (min-width: 640px) {
+  #brand-section {
+    --brand-t: 1;
+    --brand-row5-pull: calc(-1.5rem - 10px);
+  }
+}
+
+#brand-section .brand-logos-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-rows:
+    minmax(calc(3.65rem * var(--brand-t)), auto)
+    minmax(calc(2.75rem * var(--brand-t)), auto)
+    minmax(calc(2.45rem * var(--brand-t)), auto)
+    minmax(calc(4.95rem * var(--brand-t)), auto)
+    minmax(calc(2.65rem * var(--brand-t)), auto);
+}
+
+#brand-section .brand-logos-grid > * {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#brand-section .brand-logos-grid > *:nth-child(-n + 5) {
+  max-width: none;
+  width: 100%;
+}
+
+/* Hàng 1: padding thay margin — margin tràn ra ngoài ô dễ bị overflow-x-clip cắt mất trên mobile */
+
+#brand-section .brand-logos-grid > *:nth-child(1) {
+  padding-inline-end: calc(1.85rem * var(--brand-t));
+}
+
+#brand-section .brand-logos-grid > *:nth-child(2) {
+  padding-inline-end: calc(2.35rem * var(--brand-t));
+}
+
+#brand-section .brand-logos-grid > *:nth-child(3) {
+  padding-inline-end: calc(1.65rem * var(--brand-t));
+}
+
+#brand-section .brand-logos-grid > *:nth-child(4) {
+  padding-inline-end: calc(2.1rem * var(--brand-t));
+}
+
+@media (min-width: 640px) {
+  #brand-section .brand-logos-grid > *:nth-child(1) {
+    padding-inline-end: 0;
+    margin-inline-end: 1.85rem;
+  }
+
+  #brand-section .brand-logos-grid > *:nth-child(2) {
+    padding-inline-end: 0;
+    margin-inline-end: 2.35rem;
+  }
+
+  #brand-section .brand-logos-grid > *:nth-child(3) {
+    padding-inline-end: 0;
+    margin-inline-end: 1.65rem;
+  }
+
+  #brand-section .brand-logos-grid > *:nth-child(4) {
+    padding-inline-end: 0;
+    margin-inline-end: 2.1rem;
+  }
+}
+
+#brand-section .brand-logos-grid > *:nth-child(15) img {
+  max-height: calc(2rem * var(--brand-t));
+  max-width: 70%;
+  width: auto;
+  height: auto;
+  margin-inline: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+/* Logo 20 — to hơn các ô thường */
+
+#brand-section .brand-logos-grid > *:nth-child(20) > img {
+  max-height: calc(4.35rem * var(--brand-t));
+  max-width: min(100%, 11.5rem);
+  width: auto;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media (min-width: 640px) {
+  #brand-section .brand-logos-grid > *:nth-child(20) > img {
+    max-height: calc(5rem * var(--brand-t));
+    max-width: min(100%, 13rem);
+  }
+}
+
+/* Các ô còn lại (không hàng 1): thu max-height theo mobile — tránh đè kích cỡ logo hàng 1 */
+
+#brand-section .brand-logos-grid > *:not(:nth-child(-n + 5)):not(:nth-child(20)) > img {
+  max-height: calc(3rem * var(--brand-t));
+}
+
+#brand-section .brand-logos-grid > *:nth-child(-n + 5) > img {
+  max-height: max(2.75rem, calc(4.75rem * var(--brand-t)));
+}
+
+#brand-section .brand-logos-grid > *:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#brand-section .brand-logos-grid > *:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#brand-section .brand-logos-grid > *:nth-child(3) {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+#brand-section .brand-logos-grid > *:nth-child(4) {
+  grid-column: 4;
+  grid-row: 1;
+}
+
+#brand-section .brand-logos-grid > *:nth-child(5) {
+  grid-column: 5;
+  grid-row: 1;
+}
+
+#brand-section .brand-logos-grid > *:nth-child(6) {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#brand-section .brand-logos-grid > *:nth-child(7) {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#brand-section .brand-logos-grid > *:nth-child(8) {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+#brand-section .brand-logos-grid > *:nth-child(9) {
+  grid-column: 4;
+  grid-row: 2;
+}
+
+#brand-section .brand-logos-grid > *:nth-child(10) {
+  grid-column: 5;
+  grid-row: 2;
+}
+
+#brand-section .brand-logos-grid > *:nth-child(11) {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+#brand-section .brand-logos-grid > *:nth-child(12) {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+#brand-section .brand-logos-grid > *:nth-child(13) {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+#brand-section .brand-logos-grid > *:nth-child(14) {
+  grid-column: 4;
+  grid-row: 3;
+}
+
+#brand-section .brand-logos-grid > *:nth-child(16) {
+  grid-column: 5;
+  grid-row: 3;
+}
+
+#brand-section .brand-logos-grid > *:nth-child(15) {
+  grid-column: 4;
+  grid-row: 4;
+}
+
+#brand-section .brand-logos-grid > *:nth-child(17) {
+  grid-column: 1;
+  grid-row: 4;
+}
+
+#brand-section .brand-logos-grid > *:nth-child(18) {
+  grid-column: 2;
+  grid-row: 4;
+}
+
+#brand-section .brand-logos-grid > *:nth-child(19) {
+  grid-column: 3;
+  grid-row: 4;
+}
+
+/* Hàng 5: đủ 5 cột — 24 cột 4, 25 cột 5 */
+
+#brand-section .brand-logos-grid > *:nth-child(24) {
+  grid-column: 4;
+  grid-row: 5;
+}
+
+#brand-section .brand-logos-grid > *:nth-child(25) {
+  grid-column: 5;
+  grid-row: 5;
+}
+
+#brand-section .brand-logos-grid > *:nth-child(21) {
+  grid-column: 1;
+  grid-row: 5;
+}
+
+#brand-section .brand-logos-grid > *:nth-child(22) {
+  grid-column: 2;
+  grid-row: 5;
+}
+
+#brand-section .brand-logos-grid > *:nth-child(23) {
+  grid-column: 3;
+  grid-row: 5;
+}
+
+/* Logo 20: hàng 4 cột 5 (chỗ trước đây là phần dưới ô cao logo 16) */
+
+#brand-section .brand-logos-grid > *:nth-child(20) {
+  grid-column: 5;
+  grid-row: 4;
+}
+
+/* Hàng cuối: bù gap giữa hàng 4 và 5 */
+
+#brand-section .brand-logos-grid > *:nth-child(21),
+#brand-section .brand-logos-grid > *:nth-child(22),
+#brand-section .brand-logos-grid > *:nth-child(23),
+#brand-section .brand-logos-grid > *:nth-child(24),
+#brand-section .brand-logos-grid > *:nth-child(25) {
+  margin-top: var(--brand-row5-pull);
+}
+
+/* Lệch nhẹ từng ô — tránh lưới quá đều (translate trên wrapper, hover scale vẫn trên img) */
+
+#brand-section .brand-logos-grid > *:nth-child(1) {
+  transform: translate3d(calc(0.35rem * var(--brand-t)), calc(-0.06rem * var(--brand-t)), 0);
+}
+
+#brand-section .brand-logos-grid > *:nth-child(2) {
+  transform: translate3d(calc(-0.28rem * var(--brand-t)), calc(0.12rem * var(--brand-t)), 0);
+}
+
+#brand-section .brand-logos-grid > *:nth-child(3) {
+  transform: translate3d(calc(0.14rem * var(--brand-t)), calc(0.08rem * var(--brand-t)), 0);
+}
+
+#brand-section .brand-logos-grid > *:nth-child(4) {
+  transform: translate3d(calc(-0.42rem * var(--brand-t)), calc(-0.04rem * var(--brand-t)), 0);
+}
+
+#brand-section .brand-logos-grid > *:nth-child(5) {
+  transform: translate3d(calc(0.2rem * var(--brand-t)), calc(0.1rem * var(--brand-t)), 0);
+}
+
+#brand-section .brand-logos-grid > *:nth-child(6) {
+  transform: translate3d(calc(-0.32rem * var(--brand-t)), calc(0.14rem * var(--brand-t)), 0);
+}
+
+#brand-section .brand-logos-grid > *:nth-child(7) {
+  transform: translate3d(calc(0.38rem * var(--brand-t)), calc(-0.08rem * var(--brand-t)), 0);
+}
+
+#brand-section .brand-logos-grid > *:nth-child(8) {
+  transform: translate3d(calc(-0.16rem * var(--brand-t)), calc(0.06rem * var(--brand-t)), 0);
+}
+
+#brand-section .brand-logos-grid > *:nth-child(9) {
+  transform: translate3d(calc(0.26rem * var(--brand-t)), calc(0.1rem * var(--brand-t)), 0);
+}
+
+#brand-section .brand-logos-grid > *:nth-child(10) {
+  transform: translate3d(calc(-0.36rem * var(--brand-t)), calc(-0.1rem * var(--brand-t)), 0);
+}
+
+#brand-section .brand-logos-grid > *:nth-child(11) {
+  transform: translate3d(calc(0.22rem * var(--brand-t)), calc(-0.1rem * var(--brand-t)), 0);
+}
+
+#brand-section .brand-logos-grid > *:nth-child(12) {
+  transform: translate3d(calc(-0.2rem * var(--brand-t)), calc(0.12rem * var(--brand-t)), 0);
+}
+
+#brand-section .brand-logos-grid > *:nth-child(13) {
+  transform: translate3d(calc(0.3rem * var(--brand-t)), calc(0.04rem * var(--brand-t)), 0);
+}
+
+#brand-section .brand-logos-grid > *:nth-child(14) {
+  transform: translate3d(calc(-0.24rem * var(--brand-t)), calc(-0.08rem * var(--brand-t)), 0);
+}
+
+/* Logo 15 — hàng 4 cột 4 */
+
+#brand-section .brand-logos-grid > *:nth-child(15) {
+  position: relative;
+  z-index: 2;
+  transform: translate3d(calc(-0.1rem * var(--brand-t)), calc(-1.05rem * var(--brand-t)), 0);
+}
+
+/* Logo 16 — cùng hàng 3 cột 5 */
+
+#brand-section .brand-logos-grid > *:nth-child(16) {
+  transform: translate3d(calc(0.12rem * var(--brand-t)), calc(-0.1rem * var(--brand-t)), 0);
+}
+
+/* Hàng 4: kéo lên gần hàng 3 */
+
+#brand-section .brand-logos-grid > *:nth-child(17) {
+  position: relative;
+  z-index: 2;
+  transform: translate3d(calc(0.4rem * var(--brand-t)), calc(-1.12rem * var(--brand-t)), 0);
+}
+
+#brand-section .brand-logos-grid > *:nth-child(18) {
+  position: relative;
+  z-index: 2;
+  transform: translate3d(calc(-0.18rem * var(--brand-t)), calc(-0.92rem * var(--brand-t)), 0);
+}
+
+#brand-section .brand-logos-grid > *:nth-child(19) {
+  position: relative;
+  z-index: 2;
+  transform: translate3d(calc(0.16rem * var(--brand-t)), calc(-1.02rem * var(--brand-t)), 0);
+}
+
+/* Logo 20 — hàng 4 cột 5 */
+
+#brand-section .brand-logos-grid > *:nth-child(20) {
+  position: relative;
+  z-index: 2;
+  transform: translate3d(calc(0.1rem * var(--brand-t)), calc(-1rem * var(--brand-t)), 0);
+}
+
+/* Hàng 5 (21–25): cùng translateY, chỉ lệch nhẹ X */
+
+#brand-section .brand-logos-grid > *:nth-child(21) {
+  transform: translate3d(calc(0.28rem * var(--brand-t)), calc(-0.05rem * var(--brand-t)), 0);
+}
+
+#brand-section .brand-logos-grid > *:nth-child(22) {
+  transform: translate3d(calc(-0.34rem * var(--brand-t)), calc(-0.05rem * var(--brand-t)), 0);
+}
+
+#brand-section .brand-logos-grid > *:nth-child(23) {
+  transform: translate3d(calc(0.18rem * var(--brand-t)), calc(-0.05rem * var(--brand-t)), 0);
+}
+
+#brand-section .brand-logos-grid > *:nth-child(24) {
+  transform: translate3d(calc(-0.06rem * var(--brand-t)), calc(-0.05rem * var(--brand-t)), 0);
+}
+
+#brand-section .brand-logos-grid > *:nth-child(25) {
+  transform: translate3d(calc(0.12rem * var(--brand-t)), calc(-0.05rem * var(--brand-t)), 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #brand-section .brand-logos-grid > * {
+    transform: none !important;
+    transition: none;
+  }
+}
+
+/* Logo hàng 4 kéo lên: tránh cắt khi logo nhô (mọi breakpoint vì lưới 5×5 luôn bật) */
+
+#brand-section.overflow-hidden {
+  overflow: visible;
 }
 
 /* Các thành phần cho Header dùng chung all trang */
@@ -5287,6 +6165,77 @@ body:not(.page-home) .site-header {
    @LAYER COMPONENTS - Footer Specific Components
    ======================================================================== */
 
+/**
+ * Artboard cố định — scale cả layout (một bản XL trong .campaign-stage).
+ * --campaign-artboard-w/h: bề ngang design (1440) và chiều cao dự trữ (px).
+ * Chiều cao > 900 vì khối OUR + 4 hàng BXH cao hơn 900px; chỉnh --campaign-artboard-h nếu bị cắt / dư khoảng.
+ */
+
+.campaign-stage-wrap {
+  --campaign-artboard-w: 1440;
+  --campaign-artboard-h: 650;
+  container-type: inline-size;
+  container-name: campaign-stage;
+  position: relative;
+  width: 100%;
+  max-width: calc(var(--campaign-artboard-w) * 1px);
+  margin-inline: auto;
+  height: 0;
+  padding-bottom: calc(var(--campaign-artboard-h) / var(--campaign-artboard-w) * 100%);
+  overflow: visible;
+}
+
+.campaign-stage {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: calc(var(--campaign-artboard-w) * 1px);
+  box-sizing: border-box;
+  transform-origin: top center;
+  transform: translateX(-50%)
+    scale(min(1, calc(100cqw / (var(--campaign-artboard-w) * 1px))));
+}
+
+/* Thẻ BXH: hover scale — tâm ổn định, vùng hit bám nội dung.
+   Không dùng isolation mặc định (mỗi thẻ 1 context) → hover một thẻ dễ khiến láng giềng repaint/đổi tone chữ.
+   backface-visibility + smoothing giảm nhấp nháy khi láng giềng có transform. */
+
+.campaign-stage .bxh-card {
+  transform-origin: center center;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 100%;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.campaign-stage .bxh-card:hover {
+  isolation: isolate;
+}
+
+@supports not (container-type: inline-size) {
+  .campaign-stage {
+    transform: translateX(-50%) scale(min(1, calc((100vw - 2rem) / var(--campaign-artboard-w, 1440))));
+  }
+}
+
+@media (min-width: 768px) {
+  @supports not (container-type: inline-size) {
+    .campaign-stage {
+      transform: translateX(-50%) scale(min(1, calc((100vw - 3rem) / var(--campaign-artboard-w, 1440))));
+    }
+  }
+}
+
+.hover\:scale-110:hover {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .hover\:bg-home-primary-hover:hover {
   background-color: var(--home-primary-hover);
 }
@@ -5294,6 +6243,50 @@ body:not(.page-home) .site-header {
 .hover\:text-gray-700:hover {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity, 1));
+}
+
+.hover\:brightness-110:hover {
+  --tw-brightness: brightness(1.1);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.group:hover .group-hover\:scale-110 {
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.group:hover .group-hover\:brightness-110 {
+  --tw-brightness: brightness(1.1);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-reduce\:transition-none {
+    transition-property: none;
+  }
+
+  .motion-reduce\:hover\:scale-100:hover {
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .motion-reduce\:hover\:brightness-100:hover {
+    --tw-brightness: brightness(1);
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  }
+
+  .group:hover .motion-reduce\:group-hover\:scale-100 {
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .group:hover .motion-reduce\:group-hover\:brightness-100 {
+    --tw-brightness: brightness(1);
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+  }
 }
 
 @media not all and (min-width: 768px) {
@@ -5331,8 +6324,8 @@ body:not(.page-home) .site-header {
     margin-bottom: 0.5rem;
   }
 
-  .sm\:mt-0 {
-    margin-top: 0px;
+  .sm\:mt-12 {
+    margin-top: 3rem;
   }
 
   .sm\:mt-7 {
@@ -5351,6 +6344,14 @@ body:not(.page-home) .site-header {
     height: 4.75rem;
   }
 
+  .sm\:max-h-10 {
+    max-height: 2.5rem;
+  }
+
+  .sm\:max-h-12 {
+    max-height: 3rem;
+  }
+
   .sm\:w-10 {
     width: 2.5rem;
   }
@@ -5363,12 +6364,28 @@ body:not(.page-home) .site-header {
     max-width: 9rem;
   }
 
+  .sm\:max-w-\[10\.5rem\] {
+    max-width: 10.5rem;
+  }
+
+  .sm\:max-w-\[10rem\] {
+    max-width: 10rem;
+  }
+
+  .sm\:max-w-\[13rem\] {
+    max-width: 13rem;
+  }
+
   .sm\:max-w-\[22rem\] {
     max-width: 22rem;
   }
 
   .sm\:max-w-\[240px\] {
     max-width: 240px;
+  }
+
+  .sm\:max-w-\[8\.5rem\] {
+    max-width: 8.5rem;
   }
 
   .sm\:max-w-lg {
@@ -5395,12 +6412,26 @@ body:not(.page-home) .site-header {
     gap: 2.5rem;
   }
 
+  .sm\:gap-2 {
+    gap: 0.5rem;
+  }
+
   .sm\:gap-5 {
     gap: 1.25rem;
   }
 
   .sm\:gap-6 {
     gap: 1.5rem;
+  }
+
+  .sm\:gap-x-4 {
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+  }
+
+  .sm\:gap-x-5 {
+    -moz-column-gap: 1.25rem;
+         column-gap: 1.25rem;
   }
 
   .sm\:gap-x-6 {
@@ -5410,6 +6441,10 @@ body:not(.page-home) .site-header {
 
   .sm\:gap-y-10 {
     row-gap: 2.5rem;
+  }
+
+  .sm\:gap-y-6 {
+    row-gap: 1.5rem;
   }
 
   .sm\:gap-y-8 {
@@ -5460,6 +6495,14 @@ body:not(.page-home) .site-header {
   .sm\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .sm\:pl-8 {
+    padding-left: 2rem;
+  }
+
+  .sm\:pt-10 {
+    padding-top: 2.5rem;
   }
 
   .sm\:pt-24 {
@@ -5554,6 +6597,10 @@ body:not(.page-home) .site-header {
     margin-top: 3rem;
   }
 
+  .md\:mt-14 {
+    margin-top: 3.5rem;
+  }
+
   .md\:mt-4 {
     margin-top: 1rem;
   }
@@ -5576,6 +6623,18 @@ body:not(.page-home) .site-header {
 
   .md\:h-full {
     height: 100%;
+  }
+
+  .md\:max-h-11 {
+    max-height: 2.75rem;
+  }
+
+  .md\:max-h-12 {
+    max-height: 3rem;
+  }
+
+  .md\:max-h-16 {
+    max-height: 4rem;
   }
 
   .md\:min-h-0 {
@@ -5709,6 +6768,14 @@ body:not(.page-home) .site-header {
 
   .md\:pb-8 {
     padding-bottom: 2rem;
+  }
+
+  .md\:pl-12 {
+    padding-left: 3rem;
+  }
+
+  .md\:pt-12 {
+    padding-top: 3rem;
   }
 
   .md\:text-left {
@@ -5910,6 +6977,10 @@ body:not(.page-home) .site-header {
     margin-bottom: calc(4rem * var(--tw-space-y-reverse));
   }
 
+  .lg\:overflow-visible {
+    overflow: visible;
+  }
+
   .lg\:whitespace-nowrap {
     white-space: nowrap;
   }
@@ -5941,6 +7012,10 @@ body:not(.page-home) .site-header {
 
   .lg\:pb-0 {
     padding-bottom: 0px;
+  }
+
+  .lg\:pl-14 {
+    padding-left: 3.5rem;
   }
 
   .lg\:text-right {
@@ -6180,13 +7255,12 @@ body:not(.page-home) .site-header {
     text-align: right;
   }
 
-  .xl\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-
   .xl\:text-\[1\.125rem\] {
     font-size: 1.125rem;
+  }
+
+  .xl\:text-\[1\.75rem\] {
+    font-size: 1.75rem;
   }
 
   .xl\:text-\[56px\] {

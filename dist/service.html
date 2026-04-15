@@ -23,6 +23,9 @@
 <link rel="preload" href="assets/fonts/inter-vietnamese.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="preload" href="assets/fonts/archivo-vietnamese.woff2" as="font" type="font/woff2" crossorigin />
+<!-- Vệt góc WebP (decode sớm; đường dẫn tương đối cùng thư mục với HTML build) -->
+<link rel="preload" href="assets/images/light_white.webp" as="image" />
+<link rel="preload" href="assets/images/light_bg.webp" as="image" />
 
         <link rel="stylesheet" href="assets/css/service_styles.css" />
 		
@@ -47,6 +50,7 @@
 		<script src="assets/js/home-scroll-reveal.js" defer></script>
 		<script src="assets/js/brand-section-vline.js" defer></script>
 		<script src="assets/js/sliders.js" defer></script>
+		<script src="assets/js/service-flower-modal.js" defer></script>
 
 		<script src="assets/js/libs/alpinejs.3.15.0.js" defer></script>
 		<script src="assets/js/swiper-bundle.min.js"></script>
@@ -78,9 +82,9 @@
   <nav class="header-desktop-nav relative z-20" aria-label="Menu desktop">
     <ul class="home-hero-nav-list">
       <li><a class="home-hero-nav-is-muted" href="index.html">Home</a></li>
-      <li><a class="home-hero-nav-is-muted" href="about.html">About</a></li>
       <li><a class="home-hero-nav-is-muted" href="service.html">Services</a></li>
       <li><a class="home-hero-nav-is-muted" href="ourworks.html">Ourworks</a></li>
+      <li><a class="home-hero-nav-is-muted" href="about.html">About</a></li>
     </ul>
   </nav>
 </div>
@@ -133,28 +137,32 @@
           <nav
             class="service-section__flower-petals absolute inset-0 z-[2]"
             aria-label="Bốn dịch vụ — bốn ô vuông trên ảnh">
-            <a
+            <button
+              type="button"
               class="service-flower-petal service-flower-petal--tl"
-              href="#service-page"
-              aria-label="Booking KOLs và Influencers"></a>
-            <a
+              data-service-flower="bki"
+              aria-label="Booking KOLs và Influencers — xem ảnh"></button>
+            <button
+              type="button"
               class="service-flower-petal service-flower-petal--tr"
-              href="#service-page"
-              aria-label="Social Performance"></a>
-            <a
+              data-service-flower="ss"
+              aria-label="Social Performance — xem ảnh"></button>
+            <button
+              type="button"
               class="service-flower-petal service-flower-petal--bl"
-              href="#service-page"
-              aria-label="Sản xuất"></a>
-            <a
+              data-service-flower="sx"
+              aria-label="Sản xuất — xem ảnh"></button>
+            <button
+              type="button"
               class="service-flower-petal service-flower-petal--br"
-              href="#service-page"
-              aria-label="TikTok Trending"></a>
+              data-service-flower="tt"
+              aria-label="TikTok Trending — xem ảnh"></button>
             <div
-              class="service-section__flower-labels text-md sm:text-md md:text-[1.125rem] lg:text-2xl xl:text-3xl"
+              class="service-section__flower-labels text-md sm:text-md md:text-[1.125rem] lg:text-2xl xl:text-[1.75rem]"
               aria-hidden="true">
               <div class="service-flower-label-slot service-flower-label-slot--tl">
                 <span class="service-flower-petal__label service-flower-petal__label--nudge-left">
-                  <span class="service-flower-petal__nowrap text-right">Booking KOLs</span><br />Influencers
+                  <span class="service-flower-petal__nowrap text-right">Booking </span><br /><span>KOLs</span><br />Influencers
                 </span>
               </div>
               <div class="service-flower-label-slot service-flower-label-slot--tr">
@@ -234,6 +242,42 @@
       </div>
     </div>
   </div>
+  <dialog
+    id="serviceFlowerDialog"
+    class="service-flower-dialog outline-none"
+    aria-labelledby="serviceFlowerDialogTitle">
+    <div class="service-flower-dialog__panel">
+      <div class="service-flower-dialog__toolbar">
+        <h2 id="serviceFlowerDialogTitle" class="service-flower-dialog__title font-archivo text-sm font-bold uppercase tracking-wide text-white sm:text-base"></h2>
+        <button
+          type="button"
+          class="service-flower-dialog__close"
+          data-service-flower-close
+          aria-label="Đóng">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="service-flower-dialog__swiper-wrap">
+        <button
+          type="button"
+          class="service-flower-dialog__nav service-flower-dialog__nav--prev"
+          data-service-flower-prev
+          aria-label="Ảnh trước">
+          <span aria-hidden="true">‹</span>
+        </button>
+        <div class="swiper service-flower-dialog__swiper" id="serviceFlowerModalSwiper">
+          <div class="swiper-wrapper"></div>
+        </div>
+        <button
+          type="button"
+          class="service-flower-dialog__nav service-flower-dialog__nav--next"
+          data-service-flower-next
+          aria-label="Ảnh sau">
+          <span aria-hidden="true">›</span>
+        </button>
+      </div>
+    </div>
+  </dialog>
 </section>
 <section class=" relative overflow-hidden text-white py-12 sm:py-20" >
   <div class="pointer-events-none absolute inset-0 z-0 flex min-h-full flex-col" aria-hidden="true">
@@ -251,7 +295,7 @@
                 class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
                 <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
                   <img
-                    src="./assets/images/Service_img/film_ngan.webp"
+                    src="./assets/images/Service_img/sx_film_ngan.webp"
                     alt="Film ngắn — quảng cáo"
                     class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
                     loading="lazy"
@@ -264,7 +308,7 @@
                 class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
                 <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
                   <img
-                    src="./assets/images/Service_img/kols_clear.webp"
+                    src="./assets/images/Service_img/bki_kols_clear.webp"
                     alt="KOL — booking"
                     class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
                     loading="lazy"
@@ -277,7 +321,7 @@
                 class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
                 <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
                   <img
-                    src="./assets/images/Service_img/livestream.webp"
+                    src="./assets/images/Service_img/sx_livestream.webp"
                     alt="Livestream"
                     class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
                     loading="lazy"
@@ -290,7 +334,7 @@
                 class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
                 <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
                   <img
-                    src="./assets/images/Service_img/social_content.webp"
+                    src="./assets/images/Service_img/sx_social_content.webp"
                     alt="Social content"
                     class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
                     loading="lazy"
@@ -303,7 +347,7 @@
                 class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
                 <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
                   <img
-                    src="./assets/images/Service_img/social_performance.webp"
+                    src="./assets/images/Service_img/ss_social_performance.webp"
                     alt="Social performance"
                     class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
                     loading="lazy"
@@ -316,7 +360,7 @@
                 class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
                 <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
                   <img
-                    src="./assets/images/Service_img/tiktokcapcut.webp"
+                    src="./assets/images/Service_img/tt_tiktokcapcut.webp"
                     alt="TikTok — CapCut"
                     class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
                     loading="lazy"
@@ -329,7 +373,7 @@
                 class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
                 <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
                   <img
-                    src="./assets/images/Service_img/vin.webp"
+                    src="./assets/images/Service_img/bki_vin.webp"
                     alt="Showcase"
                     class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
                     loading="lazy"
@@ -342,7 +386,7 @@
                 class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
                 <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
                   <img
-                    src="./assets/images/Service_img/omo.webp"
+                    src="./assets/images/Service_img/bki_omo.webp"
                     alt="Showcase"
                     class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
                     loading="lazy"
@@ -355,7 +399,7 @@
                 class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
                 <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
                   <img
-                    src="./assets/images/Service_img/ganier.webp"
+                    src="./assets/images/Service_img/bki_ganier.webp"
                     alt="Showcase"
                     class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
                     loading="lazy"
@@ -368,7 +412,7 @@
                 class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
                 <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
                   <img
-                    src="./assets/images/Service_img/ganier2.webp"
+                    src="./assets/images/Service_img/bki_ganier2.webp"
                     alt="Showcase"
                     class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
                     loading="lazy"
@@ -381,7 +425,7 @@
                 class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
                 <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
                   <img
-                    src="./assets/images/Service_img/klairs.webp"
+                    src="./assets/images/Service_img/bki_klairs.webp"
                     alt="Showcase"
                     class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
                     loading="lazy"
@@ -394,7 +438,7 @@
                 class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
                 <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
                   <img
-                    src="./assets/images/Service_img/lifebuoy.webp"
+                    src="./assets/images/Service_img/bki_lifebuoy.webp"
                     alt="Showcase"
                     class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
                     loading="lazy"
@@ -407,7 +451,7 @@
                 class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
                 <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
                   <img
-                    src="./assets/images/Service_img/luxa.webp"
+                    src="./assets/images/Service_img/bki_luxa.webp"
                     alt="Showcase"
                     class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
                     loading="lazy"
@@ -420,7 +464,7 @@
                 class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
                 <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
                   <img
-                    src="./assets/images/Service_img/she.webp"
+                    src="./assets/images/Service_img/bki_she.webp"
                     alt="Showcase"
                     class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
                     loading="lazy"
@@ -433,7 +477,7 @@
                 class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
                 <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
                   <img
-                    src="./assets/images/Service_img/sundate.webp"
+                    src="./assets/images/Service_img/bki_sundate.webp"
                     alt="Showcase"
                     class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
                     loading="lazy"
@@ -446,7 +490,7 @@
                 class="flex min-h-0 w-full flex-col items-center justify-center gap-3 py-3 md:min-h-[52svh] md:gap-4 md:px-4 md:py-5 lg:min-h-[56svh]">
                 <figure class="flex w-full max-w-full flex-col items-center md:max-w-[min(100%,79vw)]">
                   <img
-                    src="./assets/images/Service_img/ganier3.webp"
+                    src="./assets/images/Service_img/bki_ganier3.webp"
                     alt="Showcase"
                     class="mx-auto block h-auto w-full max-w-full object-contain md:max-h-[min(67svh,71vh)]"
                     loading="lazy"
