@@ -4049,10 +4049,10 @@ body.mg-header-corner-shine:has(.jmodal:not(.hidden)) .mg-corner-shine--top {
 }
 
 /*
- * Trang home: vệt góc = asset (--mg-corner-shine-art-url), khớp thiết kế; skew nhẹ; không pseudo.
+ * Trang có .page-home (home + service): vệt góc = light_white (--mg-corner-shine-art-url), skew nhẹ; không pseudo.
  */
 
-body.page-home.mg-header-corner-shine:not(.page-service) .mg-corner-shine--top {
+body.page-home.mg-header-corner-shine .mg-corner-shine--top {
   z-index: 1;
   overflow: visible;
   width: min(44vw, 560px);
@@ -4072,13 +4072,13 @@ body.page-home.mg-header-corner-shine:not(.page-service) .mg-corner-shine--top {
   mask-image: none;
 }
 
-body.page-home.mg-header-corner-shine:not(.page-service) .mg-corner-shine--top::before,
-body.page-home.mg-header-corner-shine:not(.page-service) .mg-corner-shine--top::after {
+body.page-home.mg-header-corner-shine .mg-corner-shine--top::before,
+body.page-home.mg-header-corner-shine .mg-corner-shine--top::after {
   display: none;
 }
 
 @media (min-width: 768px) {
-  body.page-home.mg-header-corner-shine:not(.page-service) .mg-corner-shine--top {
+  body.page-home.mg-header-corner-shine .mg-corner-shine--top {
     width: min(40vw, 600px);
     min-height: 208px;
     height: min(48vh, 570px);
@@ -4086,7 +4086,7 @@ body.page-home.mg-header-corner-shine:not(.page-service) .mg-corner-shine--top::
 }
 
 @media (min-width: 1024px) {
-  body.page-home.mg-header-corner-shine:not(.page-service) .mg-corner-shine--top {
+  body.page-home.mg-header-corner-shine .mg-corner-shine--top {
     width: min(36vw, 640px);
     min-height: 218px;
     height: min(56vh, 630px);
@@ -4094,7 +4094,7 @@ body.page-home.mg-header-corner-shine:not(.page-service) .mg-corner-shine--top::
 }
 
 @media (max-width: 767px) {
-  body.page-home.mg-header-corner-shine:not(.page-service) .mg-corner-shine--top {
+  body.page-home.mg-header-corner-shine .mg-corner-shine--top {
     width: min(72vw, 300px);
     min-height: 175px;
     height: min(27vh, 370px);
@@ -4102,42 +4102,10 @@ body.page-home.mg-header-corner-shine:not(.page-service) .mg-corner-shine--top::
   }
 }
 
-/* Trang service.html — vệt góc: ảnh light_bg.webp (chỉ .page-service) */
+/* Trang Dịch vụ (body có .page-service): vệt sáng mờ ~0.8 — bớt che tiêu đề Service / menu */
 
-body.page-service.mg-header-corner-shine .mg-corner-shine--top {
-  --mg-shine-opacity-max: 0.7;
-  z-index: 0;
-  width: min(64vw, 310px);
-  min-height: 182px;
-  height: min(52vh, 480px);
-  overflow: visible;
-  background-image: url("../images/light_bg.webp");
-  background-repeat: no-repeat;
-  background-position: left top;
-  /* contain = không cắt ảnh; khung lớn → ảnh lớn theo */
-  background-size: contain;
-}
-
-@media (min-width: 768px) {
-  body.page-service.mg-header-corner-shine .mg-corner-shine--top {
-    width: min(58vw, 480px);
-    min-height: 240px;
-    height: min(72vh, 660px);
-  }
-}
-
-@media (min-width: 1024px) {
-  body.page-service.mg-header-corner-shine .mg-corner-shine--top {
-    width: min(48vw, 840px);
-    height: min(84vh, 900px);
-  }
-}
-
-/* Tắt gradient mặc định (.mg-corner-shine--top::before/::after) — chỉ dùng ảnh */
-
-body.page-service.mg-header-corner-shine .mg-corner-shine--top::before,
-body.page-service.mg-header-corner-shine .mg-corner-shine--top::after {
-  display: none;
+body.page-home.page-service.mg-header-corner-shine .mg-corner-shine--top {
+  --mg-shine-opacity-max: 0.9;
 }
 
 .page-home .header-desktop-menu {
@@ -5880,12 +5848,126 @@ button.service-flower-petal {
   text-align: center;
 }
 
-/* Popup cánh hoa (trang chủ) — <dialog> + Swiper — VIP: scale + fade + blur, glow, stagger */
+/* Home service — mobile: card / nhịp thị giác (max-md ≈ Tailwind md:hidden) */
+
+@media (max-width: 767px) {
+  .service-section__mobile-services {
+    text-align: left;
+  }
+
+  .service-section__mobile-service-card {
+    border-radius: 14px;
+    padding: 1.125rem 1.25rem 1.2rem;
+    background: linear-gradient(
+      165deg,
+      rgba(255, 254, 252, 0.98) 0%,
+      rgba(255, 248, 242, 0.94) 48%,
+      rgba(255, 241, 234, 0.9) 100%
+    );
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.65) inset,
+      0 10px 32px rgba(40, 18, 10, 0.14);
+  }
+
+  .service-section__mobile-service-card__title {
+    margin: 0;
+    max-width: 100%;
+    font-size: 1.125rem;
+    font-weight: 900;
+    line-height: 1.12;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    text-align: left;
+    text-wrap: balance;
+    color: var(--mg-primary);
+  }
+
+  .service-section__mobile-service-card__rule {
+    height: 2px;
+    width: 2.75rem;
+    margin: 0.45rem 0 0.65rem;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--mg-primary) 0%, rgba(249, 84, 47, 0.2) 100%);
+  }
+
+  .service-section__mobile-service-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin: 0;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.45;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: var(--mg-page-bg);
+  }
+
+  .service-section__mobile-service-card__body p {
+    margin: 0;
+    text-wrap: pretty;
+  }
+
+  /* Dòng bắt đầu bằng số (1. 2. …): cùng màu + cùng độ đậm — tránh lead 800 + italic trông lệch màu */
+
+  .service-section__mobile-service-card__lead,
+  .service-section__mobile-service-card__line {
+    font-weight: 700;
+    color: var(--mg-page-bg);
+  }
+
+  .service-section__mobile-service-card__lead {
+    font-style: italic;
+    font-size: 1em;
+    letter-spacing: 0;
+  }
+
+  .service-section__mobile-service-card__lead--tight {
+    margin-top: 0.35rem;
+  }
+
+  .service-section__mobile-service-card__line--spaced {
+    margin-top: 0.35rem;
+  }
+
+  .service-section__mobile-service-card__sub {
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.4;
+    text-transform: none;
+    letter-spacing: 0.02em;
+    color: var(--mg-page-bg);
+  }
+
+  .service-section__mobile-service-card__sub--wide {
+    text-transform: none;
+  }
+
+  .service-section__mobile-service-card__note {
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.4;
+    text-transform: none;
+    letter-spacing: 0.015em;
+    color: var(--mg-page-bg);
+  }
+}
+
+/* Popup cánh hoa — desktop: modal giữa màn hình + lưới prev|swiper|next; tablet/mobile: media riêng */
 
 .service-flower-dialog {
-  margin: auto;
-  max-width: min(96vw, 66rem);
-  width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  box-sizing: border-box;
+  width: min(96vw, 66rem);
+  max-width: 100vw;
+  max-height: min(92dvh, 92vh);
+  overflow: hidden;
   border: 0;
   padding: 0;
   background: transparent;
@@ -6052,6 +6134,48 @@ button.service-flower-petal {
 
 .service-flower-dialog__close:hover {
   background: rgba(255, 255, 255, 0.16);
+}
+
+/* Tablet: modal rộng hơn, vùng ảnh ~70vh, nút cách mép wrapper rõ hơn, toolbar gọn */
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .service-flower-dialog {
+    width: min(88vw, 66rem);
+    max-height: min(90dvh, 90vh);
+  }
+
+  .service-flower-dialog__toolbar {
+    padding: 0.5rem 0.65rem 0.42rem;
+    gap: 0.5rem;
+  }
+
+  .service-flower-dialog__title {
+    font-size: 0.8125rem;
+    letter-spacing: 0.04em;
+  }
+
+  .service-flower-dialog__swiper-wrap {
+    gap: 0.75rem;
+    padding: 0.55rem 0.65rem 0.85rem;
+  }
+
+  .service-flower-dialog__swiper,
+  .service-flower-dialog__swiper .swiper-slide,
+  .service-flower-dialog__slide-inner,
+  .service-flower-dialog__figure {
+    min-height: min(70vh, 70dvh, 520px);
+    max-height: min(72vh, 72dvh, 560px);
+  }
+
+  .service-flower-dialog__swiper .service-flower-dialog__img {
+    min-height: min(70vh, 70dvh, 520px);
+    max-height: min(72vh, 72dvh, 560px);
+  }
+
+  .service-flower-dialog__nav {
+    width: 2.35rem;
+    height: 3rem;
+  }
 }
 
 .service-flower-dialog__swiper-wrap {
@@ -6247,6 +6371,124 @@ button.service-flower-petal {
   .service-flower-dialog__swiper:not(.mg-swiper--pressing):hover .swiper-slide-active .service-flower-dialog__img {
     transform: translateZ(0);
     filter: brightness(1);
+  }
+}
+
+/* Mobile: ảnh contain; khung swiper 32vh — bớt cao dư so với ảnh; mũi tên trong suốt */
+
+@media (max-width: 639px) {
+  .service-flower-dialog {
+    width: min(94vw, 420px);
+    max-width: min(94vw, 420px);
+    max-height: 88vh;
+  }
+
+  .service-flower-dialog__panel {
+    display: flex;
+    flex-direction: column;
+    max-height: 88vh;
+    min-height: 0;
+    border-radius: 0.65rem;
+    clip-path: inset(0 round 0.65rem);
+  }
+
+  .service-flower-dialog__toolbar {
+    flex-shrink: 0;
+    padding: 0.35rem 0.45rem 0.3rem;
+    gap: 0.4rem;
+  }
+
+  .service-flower-dialog__title {
+    font-size: 0.7rem;
+    line-height: 1.25;
+    letter-spacing: 0.05em;
+  }
+
+  .service-flower-dialog__close {
+    width: 3rem;
+    height: 3rem;
+    min-width: 3rem;
+    min-height: 3rem;
+    font-size: 1.85rem;
+    line-height: 1;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    color: #fff;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
+    transition: opacity 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .service-flower-dialog__close:hover,
+  .service-flower-dialog__close:focus-visible {
+    background: transparent;
+    opacity: 0.88;
+  }
+
+  .service-flower-dialog__swiper-wrap {
+    position: relative;
+    display: block;
+    flex: 1 1 auto;
+    min-height: 0;
+    padding: 0.25rem 0.45rem 0.45rem;
+  }
+
+  .service-flower-dialog__swiper {
+    --sf-slide-radius: 10px;
+    width: 100%;
+    height: 32vh;
+    min-height: 32vh;
+    max-height: 32vh;
+    flex: 1 1 auto;
+  }
+
+  .service-flower-dialog__swiper .swiper-slide,
+  .service-flower-dialog__slide-inner,
+  .service-flower-dialog__figure {
+    height: 100%;
+    min-height: 0;
+    max-height: 100%;
+  }
+
+  .service-flower-dialog__swiper .service-flower-dialog__img {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    min-height: 0;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: center;
+       object-position: center;
+    background: #0c0c0c;
+  }
+
+  .service-flower-dialog__nav {
+    position: absolute;
+    top: 50%;
+    z-index: 12;
+    transform: translateY(-50%);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 9999px;
+    background: transparent;
+    backdrop-filter: none;
+    box-shadow: none;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65);
+  }
+
+  .service-flower-dialog__nav--prev {
+    left: max(0.55rem, env(safe-area-inset-left, 0px));
+  }
+
+  .service-flower-dialog__nav--next {
+    right: max(0.55rem, env(safe-area-inset-right, 0px));
+  }
+
+  .service-flower-dialog__nav:hover {
+    background: transparent;
+    opacity: 0.88;
   }
 }
 

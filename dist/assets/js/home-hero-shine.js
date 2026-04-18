@@ -4,8 +4,10 @@
  * 2) Độ mờ theo scroll: .home-hero-shell (home) hoặc #service-page / main (trang Dịch vụ).
  * 3) z-index: chỉnh trong CSS (.mg-corner-shine--top), không gán inline — tránh đè rule home/service.
  * 4) Preload ảnh vệt góc rồi gán body.mg-header-shine-art--ready — CSS ẩn bg tới lúc đó, tránh chớp tắt.
+ *    Không chờ img.decode() mới gọi callback: decode có thể xếp hàng sau F5 / Ctrl+Shift+R → vệt góc trễ tải.
  */
 (function () {
+  var SHINE_ART_READY_TIMEOUT_MS = 4000;
   /** Cùng quy tắc với CSS url(../images/...) — lấy gốc từ link stylesheet thật, tránh 404 khi mở HTML không đúng thư mục. */
   function resolveShineImageUrl(filename) {
     var links = document.querySelectorAll('link[rel="stylesheet"]');
@@ -26,13 +28,9 @@
     function end() {
       if (done) return;
       done = true;
+      cb();
       if (typeof img.decode === 'function') {
-        img
-          .decode()
-          .then(cb)
-          .catch(cb);
-      } else {
-        cb();
+        img.decode().catch(function () {});
       }
     }
     img.onload = end;
@@ -41,41 +39,92 @@
     if (img.complete && img.naturalWidth > 0) end();
   }
 
-  /** Góc home + Join us About: light_white.webp; trang service: light_bg.webp */
+  /** Sao fold (star.png): decode sớm + fetchpriority — giảm pop-in sau hard refresh (ảnh đã có trong DOM). */
+  function primeFoldStarImages() {
+    var imgs = document.querySelectorAll('img.home-hero-fold-star[src], img.kol-swiper-fold-star[src]');
+    var i;
+    var img;
+    for (i = 0; i < imgs.length; i++) {
+      img = imgs[i];
+      try {
+        img.setAttribute('fetchpriority', 'high');
+      } catch (e) {}
+      if (img.complete && img.naturalWidth > 0) {
+        if (typeof img.decode === 'function') {
+          img.decode().catch(function () {});
+        }
+      } else {
+        img.addEventListener(
+          'load',
+          function () {
+            var el = this;
+            if (typeof el.decode === 'function') {
+              el.decode().catch(function () {});
+            }
+          },
+          { once: true }
+        );
+      }
+    }
+  }
+
+  function markShineArtReady() {
+    var b = document.body;
+    if (b && !b.classList.contains('mg-header-shine-art--ready')) {
+      b.classList.add('mg-header-shine-art--ready');
+    }
+    primeFoldStarImages();
+  }
+
+  /** Góc home + service + Join About: cùng light_white.webp (không còn light_bg cho header). */
   function ensureShineArtReadyClass() {
     var b = document.body;
     if (!b) return;
-    if (b.classList.contains('mg-header-shine-art--ready')) return;
+    if (b.classList.contains('mg-header-shine-art--ready')) {
+      primeFoldStarImages();
+      return;
+    }
     var needWhite =
-      (b.classList.contains('page-home') &&
-        !b.classList.contains('page-service') &&
-        b.classList.contains('mg-header-corner-shine')) ||
+      (b.classList.contains('page-home') && b.classList.contains('mg-header-corner-shine')) ||
       !!document.querySelector('.mg-corner-shine--join-contact');
-    var needBg = b.classList.contains('page-service');
-    if (!needWhite && !needBg) {
-      b.classList.add('mg-header-shine-art--ready');
+    if (!needWhite) {
+      markShineArtReady();
       return;
     }
     var left = 0;
+    var timeoutId = setTimeout(function () {
+      if (!document.body || document.body.classList.contains('mg-header-shine-art--ready')) return;
+      markShineArtReady();
+    }, SHINE_ART_READY_TIMEOUT_MS);
     function tick() {
       left--;
-      if (left <= 0) b.classList.add('mg-header-shine-art--ready');
+      if (left <= 0) {
+        clearTimeout(timeoutId);
+        markShineArtReady();
+      }
     }
     if (needWhite) {
       left++;
       loadImageThen(resolveShineImageUrl('light_white.webp'), tick);
     }
-    if (needBg) {
-      left++;
-      loadImageThen(resolveShineImageUrl('light_bg.webp'), tick);
-    }
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', ensureShineArtReadyClass);
-  } else {
-    ensureShineArtReadyClass();
+  function bindShineArtReady() {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', ensureShineArtReadyClass);
+    } else {
+      ensureShineArtReadyClass();
+    }
+    window.addEventListener(
+      'load',
+      function () {
+        ensureShineArtReadyClass();
+      },
+      { once: true }
+    );
   }
+
+  bindShineArtReady();
 
   var resizeT;
   var scrollTicking = false;
@@ -178,6 +227,7 @@
       function () {
         syncCornerShineHeight();
         updateShineScrollFade();
+        primeFoldStarImages();
       },
       { passive: true }
     );
