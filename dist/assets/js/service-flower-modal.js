@@ -13,12 +13,12 @@
       'bki_omo.webp',
       'bki_ganier.webp',
       'bki_ganier2.webp',
+      'bki_ganier3.webp',
       'bki_klairs.webp',
-      'bki_lifebuoy.webp',
+      'bki_lifeboy.webp',
       'bki_luxa.webp',
       'bki_she.webp',
       'bki_sundate.webp',
-      'bki_ganier3.webp',
     ],
     ss: ['ss_social_performance.webp'],
     sx: ['sx_film_ngan.webp', 'sx_livestream.webp', 'sx_social_content.webp'],
@@ -81,6 +81,10 @@
       wrapper.innerHTML = files.map((f, i) => slideHtml(f, i === 0)).join('');
 
       const multi = files.length > 1;
+      /* rewind: từ slide 0 “prev” → cuối sẽ animate translate một mạch qua mọi slide (như chạy 1 vòng).
+         loop (≥3 ảnh): nhảy cạnh ngắn qua slide clone — cuối ↔ đầu một bước. 2 ảnh: rewind vẫn chỉ cách 1 slide. */
+      const useLoop = multi && files.length >= 3;
+      const useRewind = multi && !useLoop;
       if (prevBtn) prevBtn.classList.toggle('hidden', !multi);
       if (nextBtn) nextBtn.classList.toggle('hidden', !multi);
 
@@ -92,15 +96,16 @@
       }
 
       // Phải mở dialog trước khi init Swiper — khi dialog đóng width ≈ 0, init sớm gây layout giật.
-      // Slide (không fade): clip bo góc ổn định với border-radius; rewind khi nhiều ảnh.
+      // Slide (không fade): clip bo góc ổn định với border-radius.
       swiperInstance = new Swiper(swiperEl, {
         slidesPerView: 1,
         spaceBetween: 0,
         speed: 480,
         effect: 'slide',
         autoHeight: false,
-        loop: false,
-        rewind: multi,
+        loop: useLoop,
+        ...(useLoop ? { loopAdditionalSlides: 1 } : {}),
+        rewind: useRewind,
         watchOverflow: false,
         resistanceRatio: 0.65,
         preventInteractionOnTransition: true,

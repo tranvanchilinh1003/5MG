@@ -87,7 +87,7 @@
     <div class="site-header-body">
     <div class="">
       <div class="header-bar flex-between h-16 items-center lg:h-[4.25rem]">
-        <div class="header-brand shrink-0">
+        <div class=" shrink-0">
           <a
   href="/index.html"
   class="header-logo-link inline-flex items-center font-semibold text-lg tracking-tight text-gray-900 transition-colors hover:text-gray-700 md:text-xl"
@@ -116,9 +116,12 @@
 </div>
 
 			<main class=" w-full min-w-0 overflow-x-clip">
-				<div class="about-hero home-hero-shell relative z-50 mx-0 min-w-0 w-full overflow-hidden font-sans shadow-none"
+				<div
+  class="about-hero home-hero-shell relative z-50 mx-0 min-w-0 w-full overflow-x-clip overflow-y-visible font-sans shadow-none"
   aria-label="Five Media Group — About us">
-  <div class="relative overflow-hidden bg-mg-hero pt-[max(env(safe-area-inset-top,0px),0.75rem)]">
+
+  <div
+    class="about-hero-main relative overflow-x-clip overflow-y-visible bg-mg-hero pt-[max(env(safe-area-inset-top,0px),0.75rem)] [--mg-hero-bar-pad-y:0px]">
     <div class="relative z-30 mx-auto box-border w-full container">
       <div
         class="grid grid-cols-1 gap-6 pb-6 pt-4 min-[480px]:gap-10 min-[480px]:pb-8 min-[480px]:pt-5 md:gap-12 md:pb-12 md:pt-8 lg:grid-cols-12 lg:items-stretch lg:gap-x-4 lg:gap-y-6 lg:pb-16 lg:pt-12 xl:gap-x-10 min-[1440px]:gap-x-2">
@@ -154,7 +157,7 @@
         <div
           class="order-2 flex max-lg:mx-auto max-lg:w-full max-lg:max-w-xl flex-col items-center gap-6 sm:gap-8 lg:order-none lg:col-span-4 xl:col-span-4">
           <p
-            class="home-hero-about-brand text-gradient mx-auto flex w-fit max-w-full flex-col items-center text-center font-archivo font-black font-synthesis-none mb-4 tracking-[-0.04em] [font-size:clamp(2.5rem,7.25vw,3rem)]">
+            class="home-hero-about-brand text-gradient mx-auto flex w-fit max-w-full flex-col items-center text-center font-archivo font-black font-synthesis-none mb-4 tracking-[-0.04em] [font-size:clamp(2.5rem,7.25vw,3.75rem)]">
             <span class="block w-fit max-w-full">Five</span>
             <span class="block w-fit max-w-full">Media Group</span>
           </p>
@@ -172,212 +175,153 @@
         </div>
 
         <div
-          class="order-3 relative flex min-h-0 min-w-0 flex-col items-center justify-center px-2 text-center min-[480px]:px-3 sm:px-0 lg:col-span-4 lg:min-h-[min(280px,32svh)] lg:items-end lg:px-0 lg:text-right xl:col-span-4">
+          class="order-3 relative flex min-h-0 min-w-0 flex-col items-center justify-start px-2 text-center min-[480px]:px-3 sm:px-0 lg:col-span-4 lg:min-h-[min(280px,32svh)] lg:items-end lg:px-0 lg:text-right xl:col-span-4">
           <h2
-            class="text-gradient mx-auto w-full min-w-0 max-w-full text-balance text-center font-bold uppercase leading-[1.05] tracking-[-0.03em] [font-size:clamp(1.375rem,4.2vw+0.35rem,3rem)] break-words lg:ml-0 lg:mr-0 lg:text-right lg:text-pretty">
+            class="text-gradient mx-auto w-full min-w-0 max-w-full text-balance text-center font-bold uppercase leading-[1.05] tracking-[-0.03em] [font-size:clamp(1.375rem,4.2vw+0.35rem,2.75rem)] break-words lg:ml-0 lg:mr-0 lg:text-right lg:text-pretty">
             <span class="block max-w-[22ch] max-lg:mx-auto lg:ml-auto lg:max-w-full lg:text-right">The next level</span>
             <span class="block max-w-full max-lg:mx-auto lg:ml-auto lg:text-right">of media</span>
           </h2>
         </div>
       </div>
     </div>
-  </div>
 
-  <div
-    class="home-hero-bar relative z-[40] mt-0 w-full overflow-visible bg-[var(--mg-bar-bg)] text-[var(--mg-text-on-gradient)] shadow-[inset_0_-10px_40px_rgba(0,0,0,0.35)] [--mg-hero-bar-pad-y:clamp(1.25rem,0.85rem+2.4vw,2.5rem)]">
-
-    <div class="home-hero-fold home-hero-curve-fold" aria-hidden="true">
+    <div class="home-hero-fold home-hero-curve-fold about-hero-fold-in-hero" aria-hidden="true">
       <svg class="home-hero-fold-clip-defs" width="0" height="0" aria-hidden="true" focusable="false">
         <defs>
           <clipPath id="home-hero-fold-clip" clipPathUnits="objectBoundingBox">
             <path d="M 1 1 L 0 1 C 0.45 1, 0.8 0.6, 1 0.15 L 1 0 Z" />
           </clipPath>
-          <filter id="home-hero-fold-shadow-filter" x="-110%" y="-110%" width="320%" height="320%"
+          <!-- Cùng id `home-hero-fold-shadow-filter` để url(#...) trong CSS resolve trên trang About (defs riêng About). -->
+          <!-- Ba lớp: halo rộng + thể tích lõm (blur lớn, không chỉ vạch mép) + nhấn cong; vẫn bám alpha clipPath -->
+          <filter id="home-hero-fold-shadow-filter" x="-180%" y="-180%" width="460%" height="460%"
             color-interpolation-filters="sRGB">
-            <feDropShadow in="SourceAlpha" dx="-28" dy="34" stdDeviation="26" flood-color="#000000" flood-opacity="0.24"
+            <feDropShadow in="SourceAlpha" dx="10" dy="54" stdDeviation="52" flood-color="#000000" flood-opacity="1"
               result="home-hero-fold-shadow-soft" />
-            <feDropShadow in="SourceAlpha" dx="-24" dy="30" stdDeviation="7" flood-color="#000000" flood-opacity="0.48"
-              result="home-hero-fold-shadow-edge" />
+            <feDropShadow in="SourceAlpha" dx="4" dy="36" stdDeviation="26" flood-color="#000000" flood-opacity="1"
+              result="home-hero-fold-shadow-mid" />
+            <feDropShadow in="SourceAlpha" dx="-2" dy="22" stdDeviation="18" flood-color="#000000" flood-opacity="1"
+              result="home-hero-fold-shadow-rim" />
             <feMerge>
               <feMergeNode in="home-hero-fold-shadow-soft" />
-              <feMergeNode in="home-hero-fold-shadow-edge" />
+              <feMergeNode in="home-hero-fold-shadow-mid" />
+              <feMergeNode in="home-hero-fold-shadow-rim" />
               <feMergeNode in="SourceGraphic" />
             </feMerge>
           </filter>
         </defs>
       </svg>
-
       <div class="home-hero-fold-star-stage">
         <img class="home-hero-fold-star" src="assets/images/star.png" alt="" decoding="async" />
       </div>
-
       <div class="home-hero-fold-layers-wrap">
         <div class="home-hero-fold-layers"></div>
       </div>
     </div>
-
-    <div
-    class="home-hero-bar-about-careers relative z-[2] mx-auto box-border grid min-h-0 w-full
-    grid-cols-1
-    gap-6 px-4 pt-[var(--mg-hero-bar-pad-y)] pb-[calc(var(--mg-hero-bar-pad-y)+0.5rem)]
-    sm:gap-7 sm:px-6
-    md:grid-cols-2 md:gap-4 md:px-0 md:items-center
-    lg:grid-cols-[minmax(72px,90px)_minmax(0,1fr)_minmax(0,1.2fr)] lg:items-center lg:gap-0
-    container">
-  
-    <div class="flex justify-center md:col-span-2 lg:col-span-1 lg:h-full lg:justify-center lg:self-stretch">
-      <div
-        class="home-hero-bar-brand-inner text-[clamp(1.75rem,5vw,var(--mg-text-brand-vertical))] font-black uppercase leading-none tracking-[-0.03em] text-[var(--mg-primary)] lg:flex lg:h-full lg:items-center lg:justify-center lg:origin-center lg:-rotate-90 lg:whitespace-nowrap">
-        5MG.VN
-      </div>
-    </div>
-  
-    <div
-      class="flex min-h-0 w-full min-w-0 max-w-full flex-col items-start justify-center self-stretch text-left md:items-center md:text-center lg:h-full lg:items-start lg:justify-center lg:text-left">
-      <img
-        src="assets/images/join_us.png"
-        alt="Join us"
-        class="block h-auto w-full max-w-[min(100%,20rem)] object-contain object-left pl-5 sm:max-w-[22rem] md:pl-0 md:mx-auto lg:mx-0 lg:max-w-[min(100%,32rem)] lg:object-left"
-        decoding="async" />
-    </div>
-  
-    <ul
-      class="m-0 min-w-0 list-none space-y-2 p-0
-      pl-5 lg:pl-6 xl:pl-8
-      text-sm font-bold uppercase leading-snug tracking-wide text-white/95
-      text-left md:text-left xl:text-left
-      sm:text-sm md:text-md md:text-[length:var(--mg-text-side-line-lg)] md:tracking-normal
-      lg:text-lg xl:text-xl lg:text-left
-      min-[480px]:space-y-2">
-      <li>Senior Planning Executive (IMC)</li>
-      <li>Business Development Manager</li>
-      <li>Senior Account Executive</li>
-      <li>Content Creator / Social Executive</li>
-    </ul>
-  </div>
-  </div>
-</div>
-				<section
-  id="about-our-clients"
-  class="about-our-clients relative overflow-x-clip overflow-y-visible bg-[#efefef] text-black"
-  aria-labelledby="about-our-clients-heading">
-  <style>
-    #about-our-clients [x-cloak] {
-      display: none !important;
-    }
-  </style>
-
-  <div class="reveal-on-scroll">
-  <header
-    class="relative z-[1] rounded-bl-[2.125rem] bg-[var(--mg-bar-bg)] px-4 pb-8  shadow-[14px_12px_40px_3px_rgba(0,0,0,0.68),24px_26px_76px_8px_rgba(0,0,0,0.52)] sm:rounded-bl-[2.5rem] sm:px-6 md:pb-10 lg:rounded-bl-[3rem]">
-    <div class="container mx-auto">
-      <h2
-        id="about-our-clients-heading"
-        class="text-right font-synthesis-none text-[3.625rem] font-black leading-[0.82] tracking-[-0.07em] text-[#f9552f] md:text-[5.5rem] lg:text-[6.875rem]">
-        <span class="block">Our</span>
-        <span class="block">Clients</span>
-      </h2>
-    </div>
-  </header>
-
-  <div class="container mx-auto  pt-8  md:pt-10  lg:pt-12">
-    <div
-      class="grid w-full min-w-0 grid-cols-1 gap-8 md:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] md:items-start md:gap-x-6 md:gap-y-0 lg:gap-x-8 xl:gap-x-10">
-      <div
-        class="flex w-full min-w-0 items-start justify-center md:-ml-6 md:justify-start lg:-ml-8">
-        <img
-          src="assets/images/user.webp"
-          alt="Hình ảnh minh họa đối tác"
-          class="mx-auto block h-auto w-full max-w-[220px] object-contain object-center sm:max-w-[260px] md:mx-0 md:max-w-full md:object-left"
-          loading="lazy"
-          decoding="async" />
-      </div>
-
-      <div class="min-w-0 bg-[#efefef]">
-        <img
-          src="assets/images/brand_about.webp"
-          alt="Thương hiệu và đối tác"
-          class="mx-auto block h-auto w-full max-w-full object-contain md:mx-0"
-          loading="lazy"
-          decoding="async" />
-      </div>
-    </div>
-  </div>
   </div>
 
-  <!-- Nút trong container; panel Join us full chiều ngang + bg-mg-hero (không bị giới hạn .container) -->
-  <div
-    id="about-join-us-block"
-    class="w-full min-w-0"
-    x-data="{
-      joinOpen: false,
-      joinInView: false,
-      init() {
-        var self = this;
-        var el = document.getElementById('about-join-us-block');
-        if (!el || typeof IntersectionObserver === 'undefined') return;
-        var io = new IntersectionObserver(
-          function (entries) {
-            entries.forEach(function (e) {
-              self.joinInView = e.isIntersecting;
-            });
-          },
-          { root: null, rootMargin: '0px 0px -8% 0px', threshold: [0, 0.12, 0.2] }
-        );
-        io.observe(el);
-      }
-    }">
+  <div class="home-hero-bar relative z-[40] mt-0 w-full overflow-hidden bg-white">
+
     <div
-      class="container mx-auto  py-6">
-      <div class="isolate flex w-full min-w-0 flex-col items-stretch">
+      class="container relative z-[2] mx-auto grid w-full grid-cols-1 items-center gap-4 py-6 md:grid-cols-[110px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[140px_minmax(0,1fr)] xl:grid-cols-[160px_minmax(0,1fr)]">
+
+      <div class="flex items-center justify-center md:justify-start">
         <div
-          class="relative z-20 flex shrink-0 flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-4">
-          <button
-            type="button"
-            id="about-join-us-toggle"
-            class="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--mg-primary)] px-6 py-3 text-sm font-bold uppercase tracking-wide text-white shadow-[0_8px_24px_rgba(249,85,47,0.35)] transition duration-200 ease-out hover:-translate-y-1 hover:bg-[var(--mg-primary-deep)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f9552f] focus-visible:ring-offset-2 focus-visible:ring-offset-[#efefef] md:px-7 md:py-3.5 md:text-[0.9375rem] xl:gap-2.5 xl:px-10 xl:py-4 xl:text-base xl:tracking-[0.08em] xl:shadow-[0_12px_36px_rgba(249,85,47,0.38)]"
-            @click="joinOpen = !joinOpen"
-            :aria-expanded="joinOpen ? 'true' : 'false'"
-            aria-controls="about-join-us-panel">
-            <span>Join us</span>
-            <svg
-              class="h-4 w-4 shrink-0 transition-transform duration-200 md:h-[1.125rem] md:w-[1.125rem] xl:h-5 xl:w-5"
-              :class="joinOpen ? 'rotate-180' : ''"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true">
-              <path d="M6 9l6 6 6-6" />
-            </svg>
-          </button>
+          class="font-bold uppercase leading-none tracking-[-0.04em] text-[var(--mg-primary)] text-[clamp(1.5rem,2vw,2.8rem)]">
+          5MG.VN
         </div>
       </div>
-    </div>
 
-    <div
-      id="about-join-us-panel"
-      x-cloak
-      x-show="joinOpen"
-      x-transition:enter="about-join-panel-enter"
-      x-transition:enter-start="about-join-panel-enter-start"
-      x-transition:enter-end="about-join-panel-enter-end"
-      x-transition:leave="about-join-panel-leave"
-      x-transition:leave-start="about-join-panel-leave-start"
-      x-transition:leave-end="about-join-panel-leave-end"
-      role="region"
-      aria-labelledby="about-join-us-toggle"
-      class="relative z-10 mt-8 w-full min-w-0 bg-mg-hero bg-cover bg-center bg-no-repeat">
-      <!-- Vệt góc: inset-0 + overflow-hidden để blur/gradient không tràn ra #about-join-us-block -->
-      <div class="about-join-us-shine-clip pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
-        <div
-          class="mg-corner-shine mg-corner-shine--join-contact z-0"
-          :class="{ 'is-visible': joinOpen && joinInView }"
-          aria-hidden="true"></div>
+      <div class="min-w-0">
+        <h2
+          class="about-hero-clients-title mx-auto flex w-full min-w-0 max-w-full flex-wrap items-baseline justify-center gap-x-2 gap-y-0.5 text-balance text-center font-archivo font-black uppercase leading-[0.88] tracking-[-0.05em] text-[var(--mg-primary)] min-[400px]:gap-x-3 min-[400px]:tracking-[-0.07em] sm:leading-[0.85] sm:tracking-[-0.08em] md:mx-0 md:justify-start md:gap-x-4 md:text-left md:leading-[0.82] md:tracking-[-0.09em] lg:gap-x-6 xl:gap-x-10 [font-size:clamp(1.5rem,calc(0.85rem+7.2vw),10.5rem)] min-[480px]:[font-size:clamp(2.15rem,calc(0.5rem+8.5vw),10.5rem)] md:[font-size:clamp(2.75rem,calc(0.35rem+9vw),10.5rem)]">
+          <span class="italic">OUR</span>
+          <span class="not-italic">CLIENTS</span>
+        </h2>
       </div>
-      <!-- Nội dung Join us — include trong #about-join-us-panel; vệt góc trong our-client (.about-join-us-shine-clip) -->
+
+    </div>
+    <!-- Join us: cùng nền #efefef với lưới Our clients phía trên; panel mở ra vẫn bg-mg-hero -->
+    <div id="about-join-us-block" class="w-full min-w-0 bg-white text-black" x-data="{
+        joinOpen: false,
+        joinInView: false,
+        init() {
+          var self = this;
+          var el = document.getElementById('about-join-us-block');
+          if (!el || typeof IntersectionObserver === 'undefined') return;
+          var io = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (e) {
+                self.joinInView = e.isIntersecting;
+              });
+            },
+            { root: null, rootMargin: '0px 0px -8% 0px', threshold: [0, 0.12, 0.2] }
+          );
+          io.observe(el);
+        }
+      }">
+      <div class="container mx-auto px-4 py-2 sm:px-6 md:px-0">
+        <div class="isolate flex w-full min-w-0 flex-col items-stretch">
+          <div class="relative z-20 flex shrink-0 flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-4">
+            <button
+              type="button"
+              id="about-join-us-toggle"
+              class="about-join-cta group font-archivo"
+              :class="{ 'about-join-cta--open': joinOpen }"
+              @click="joinOpen = !joinOpen"
+              :aria-expanded="joinOpen ? 'true' : 'false'"
+              aria-controls="about-join-us-panel">
+              <span class="about-join-cta__glow" aria-hidden="true"></span>
+              <span class="about-join-cta__body">
+                <span class="about-join-cta__icon" aria-hidden="true">
+                  <svg class="about-join-cta__star" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M11.5268 2.29489C11.5706 2.20635 11.6383 2.13183 11.7223 2.07972C11.8062 2.02761 11.903 2 12.0018 2C12.1006 2 12.1974 2.02761 12.2813 2.07972C12.3653 2.13183 12.433 2.20635 12.4768 2.29489L14.7868 6.97389C14.939 7.28186 15.1636 7.5483 15.4414 7.75035C15.7192 7.95239 16.0419 8.08401 16.3818 8.13389L21.5478 8.88989C21.6457 8.90408 21.7376 8.94537 21.8133 9.00909C21.8889 9.07282 21.9452 9.15644 21.9758 9.2505C22.0064 9.34456 22.0101 9.4453 21.9864 9.54133C21.9627 9.63736 21.9126 9.72485 21.8418 9.79389L18.1058 13.4319C17.8594 13.672 17.6751 13.9684 17.5686 14.2955C17.4622 14.6227 17.4369 14.9708 17.4948 15.3099L18.3768 20.4499C18.3941 20.5477 18.3835 20.6485 18.3463 20.7406C18.3091 20.8327 18.2467 20.9125 18.1663 20.9709C18.086 21.0293 17.9908 21.0639 17.8917 21.0708C17.7926 21.0777 17.6935 21.0566 17.6058 21.0099L12.9878 18.5819C12.6835 18.4221 12.345 18.3386 12.0013 18.3386C11.6576 18.3386 11.3191 18.4221 11.0148 18.5819L6.3978 21.0099C6.31013 21.0563 6.2112 21.0772 6.11225 21.0701C6.0133 21.0631 5.91832 21.0285 5.83809 20.9701C5.75787 20.9118 5.69563 20.8321 5.65846 20.7401C5.62128 20.6482 5.61066 20.5476 5.6278 20.4499L6.5088 15.3109C6.567 14.9716 6.54178 14.6233 6.43534 14.2959C6.32889 13.9686 6.14441 13.672 5.8978 13.4319L2.1618 9.79489C2.09039 9.72593 2.03979 9.63829 2.01576 9.54197C1.99173 9.44565 1.99524 9.34451 2.02588 9.25008C2.05652 9.15566 2.11307 9.07174 2.18908 9.00788C2.26509 8.94402 2.3575 8.90279 2.4558 8.88889L7.6208 8.13389C7.96106 8.08439 8.28419 7.95295 8.56238 7.75088C8.84058 7.54881 9.0655 7.28216 9.2178 6.97389L11.5268 2.29489Z"
+                      fill="url(#aboutJoinCtaFill)" stroke="url(#aboutJoinCtaStroke)" stroke-linecap="round" stroke-linejoin="round" />
+                    <defs>
+                      <linearGradient id="aboutJoinCtaFill" x1="-0.5" y1="9" x2="16" y2="-1.5" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#ffb38a" />
+                        <stop offset="0.45" stop-color="#f9542f" />
+                        <stop offset="1" stop-color="#f56b99" />
+                      </linearGradient>
+                      <linearGradient id="aboutJoinCtaStroke" x1="-0.5" y1="9" x2="16" y2="-1.5" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#fff0e8" />
+                        <stop offset="0.5" stop-color="#f9542f" />
+                        <stop offset="1" stop-color="#c43114" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </span>
+                <span class="about-join-cta__label">Join us</span>
+                <svg
+                  class="about-join-cta__chev h-4 w-4 shrink-0 md:h-[1.125rem] md:w-[1.125rem]"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.25"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </span>
+            </button>
+
+          </div>
+        </div>
+      </div>
+
+      <div id="about-join-us-panel" x-cloak x-show="joinOpen" x-transition:enter="about-join-panel-enter"
+        x-transition:enter-start="about-join-panel-enter-start" x-transition:enter-end="about-join-panel-enter-end"
+        x-transition:leave="about-join-panel-leave" x-transition:leave-start="about-join-panel-leave-start"
+        x-transition:leave-end="about-join-panel-leave-end" role="region" aria-labelledby="about-join-us-toggle"
+        class="relative z-10 mt-8 w-full min-w-0 bg-mg-hero bg-cover bg-center bg-no-repeat">
+        <!-- Vệt góc: inset-0 + overflow-hidden để blur/gradient không tràn ra #about-join-us-block -->
+        <div class="about-join-us-shine-clip pointer-events-none absolute inset-0 z-0 overflow-hidden"
+          aria-hidden="true">
+          <div class="mg-corner-shine mg-corner-shine--join-contact z-0"
+            :class="{ 'is-visible': joinOpen && joinInView }" aria-hidden="true"></div>
+        </div>
+        <!-- Nội dung Join us — include trong #about-join-us-panel; vệt góc trong our-client (.about-join-us-shine-clip) -->
 <div
     class="about-join-us-surface about-join-us-surface--on-mg-hero relative z-[1] flex flex-col overflow-visible rounded-none py-12 sm:py-24">
     <div class="relative z-[2] mx-auto container text-black">
@@ -527,17 +471,257 @@
         </p>
     </div>
 </section>
+      </div>
     </div>
   </div>
-</section>
 
+
+</div>
+				<section id="about-our-clients"
+  class="about-our-clients relative overflow-x-clip overflow-y-visible bg-white text-black"
+  aria-labelledby="about-our-clients-heading">
+
+  <div class="reveal-on-scroll">
+    <div class="container mx-auto py-8 md:pt-10 lg:py-12">
+      <header class="container mx-auto mb-8 flex justify-end px-4 sm:px-6 lg:mb-10">
+        <h2 id="about-our-clients-heading "
+          class="inline-flex max-w-full items-start font-black uppercase leading-none tracking-[-0.04em] text-[var(--mg-primary)] gap-2">
+          <span
+            class="clients-and shrink-0 self-start pt-[0.06em] text-[clamp(1rem,3.35vw,2.5rem)] leading-none tracking-[-0.08em] sm:pt-[0.1em] italic">AND</span>
+          <span class="min-w-0 text-right text-[clamp(2rem,6.7vw,5rem)] leading-[0.98] tracking-[-0.07em]">MEDIA PARTNER</span>
+        </h2>
+      </header>
+      <div
+        class="grid w-full min-w-0 grid-cols-1 gap-8 md:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] md:items-start md:gap-x-6 md:gap-y-0 lg:gap-x-8 xl:gap-x-10">
+        <div class="flex w-full min-w-0 items-start justify-center md:-ml-6 md:justify-start lg:-ml-8">
+          <img src="assets/images/user.webp" alt="Hình ảnh minh họa đối tác"
+            class="mx-auto block h-auto w-full max-w-[220px] object-contain object-center sm:max-w-[260px] md:mx-0 md:max-w-full md:object-left"
+            loading="lazy" decoding="async" />
+        </div>
+
+        <div class="min-w-0 bg-white pt-6">
+
+          <div class="mx-auto w-full">
+            <div class="about-clients-logos">
+
+            <!-- ===== TOP BRANDS ===== -->
+            <div class="space-y-3 sm:space-y-4 lg:space-y-4">
+              <!-- Dưới 520px: lưới 4 cột × 3 hàng (h2: Danisa | Pizza | Shopee×2; h3: bốn logo còn lại); từ 520px: flex + lưới 6 cột -->
+              <div
+                class="about-clients-top-merge max-[519px]:grid max-[519px]:grid-cols-4 max-[519px]:gap-x-2 max-[519px]:gap-y-2 max-[519px]:items-center max-[519px]:justify-items-center min-[520px]:flex min-[520px]:w-full min-[520px]:flex-col min-[520px]:gap-4">
+                <div
+                  class="flex flex-wrap items-center justify-center gap-x-4 gap-y-3 max-[519px]:contents sm:justify-evenly sm:gap-y-3 min-[520px]:flex min-[520px]:flex-wrap min-[520px]:justify-center min-[520px]:gap-x-4 min-[520px]:gap-y-3">
+                  <img src="assets/images/brand/vingroup.webp" alt="Vingroup"
+                    class="h-[32px] w-auto shrink-0 object-contain max-[519px]:justify-self-center sm:h-[30px] md:h-[34px] lg:h-[47px] xl:h-[60px]" />
+                  <img src="assets/images/brand/msb.webp" alt="MSB"
+                    class="h-[22px] w-auto shrink-0 object-contain max-[519px]:justify-self-center sm:h-[20px] md:h-[26px] lg:h-[40px] xl:h-[42px]" />
+                  <img src="assets/images/brand/hdbank.webp" alt="HDBank"
+                    class="h-[20px] w-auto shrink-0 object-contain max-[519px]:justify-self-center sm:h-[20px] md:h-[26px] lg:h-[40px] xl:h-[42px]" />
+                  <img src="assets/images/brand/omo.webp" alt="OMO"
+                    class="h-[28px] w-auto shrink-0 object-contain max-[519px]:justify-self-center sm:h-[28px] md:h-[40px] lg:h-[64px] xl:h-[68px]" />
+                  <img src="assets/images/brand/danisa.webp" alt="Danisa"
+                    class="h-[26px] w-auto max-w-full shrink-0 object-contain max-[519px]:justify-self-center sm:h-[26px] md:h-[56px] lg:h-[80px] xl:h-[84px]" />
+                </div>
+
+                <div
+                  class="max-[519px]:contents grid min-w-0 grid-cols-6 items-center gap-x-3 gap-y-4 sm:gap-x-3 sm:gap-y-4 min-[520px]:grid-cols-6 min-[520px]:gap-x-4 min-[520px]:gap-y-4 md:-translate-y-6 lg:gap-x-5">
+                  <div
+                    class="col-span-2 flex min-w-0 max-w-full flex-nowrap items-center justify-center gap-x-1 max-[519px]:contents sm:gap-x-2 min-[520px]:col-span-2 min-[520px]:justify-start min-[520px]:gap-x-8 md:gap-x-2 lg:gap-x-4 xl:gap-x-12">
+                    <img src="assets/images/brand/pizza.webp" alt="The Pizza Company"
+                      class="h-[30px] w-auto shrink-0 object-contain max-[519px]:justify-self-center sm:h-[26px] md:h-[42px] lg:h-[55px] xl:h-[68px]" />
+                    <img src="assets/images/brand/shopee.webp" alt="Shopee"
+                      class="h-[32px] w-auto shrink-0 object-contain max-[519px]:col-span-2 max-[519px]:justify-self-center sm:h-[26px] md:h-[30px] lg:h-[43px] xl:h-[46px]" />
+                  </div>
+                  <div class="flex min-w-0 justify-center max-[519px]:contents">
+                    <img src="assets/images/brand/heineken.webp" alt="Heineken"
+                      class="h-[44px] w-auto max-w-full object-contain max-[519px]:justify-self-center sm:h-[36px] md:h-[56px] lg:h-[59px] xl:h-[62px]" />
+                  </div>
+                  <div class="flex min-w-0 justify-center max-[519px]:contents">
+                    <img src="assets/images/brand/shopeefood.webp" alt="ShopeeFood"
+                      class="h-[64px] w-auto max-w-full object-contain max-[519px]:justify-self-center sm:h-[48px] md:h-[88px] lg:h-[94px] xl:h-[100px]" />
+                  </div>
+                  <div class="flex min-w-0 justify-center max-[519px]:contents">
+                    <img src="assets/images/brand/kun.webp" alt="Kun"
+                      class="h-[40px] w-auto max-w-full object-contain max-[519px]:justify-self-center sm:h-[34px] md:h-[52px] lg:h-[55px] xl:h-[58px]" />
+                  </div>
+                  <div class="flex min-w-0 justify-start max-[519px]:contents min-[520px]:justify-start">
+                    <img src="assets/images/brand/sundate.webp" alt="Sun Date"
+                      class="h-[32px] w-auto max-w-full object-contain max-[519px]:justify-self-center sm:h-[26px] md:h-[44px] lg:h-[68px] xl:h-[72px]" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- row 3 + 4: dưới lg mỗi logo một ô (contents); từ lg gom PS×3 + Loreal×3 + Jollibee 2×2 -->
+              <div
+                class=" grid grid-cols-4 items-stretch justify-items-stretch gap-x-3 gap-y-3 overflow-visible max-lg:justify-items-center sm:gap-y-4 min-[520px]:grid-cols-6 min-[520px]:items-center min-[520px]:gap-x-4 md:gap-x-5 md:gap-y-1 md:-translate-y-8 lg:justify-items-stretch lg:gap-x-5 lg:-translate-y-6 xl:-translate-y-0">
+                <div
+                  class="about-clients-ps-trio max-lg:contents lg:col-span-3 lg:flex lg:min-w-0 lg:flex-nowrap lg:items-center lg:justify-start lg:gap-x-4 lg:pl-0 lg:pr-0 xl:gap-x-8 xl:pl-0 2xl:pl-12">
+                  <div class="flex min-w-0 items-center justify-center py-1 lg:contents">
+                    <img src="assets/images/brand/ps.webp" alt="PS"
+                      class="h-[24px] w-auto max-w-full shrink-0 object-contain sm:h-[22px] md:h-[32px] lg:h-[30px] xl:h-[36px]" />
+                  </div>
+                  <div class="flex min-w-0 items-center justify-center py-1 lg:contents">
+                    <img src="assets/images/brand/biore.webp" alt="Biore"
+                      class="h-[24px] w-auto max-w-full shrink-0 object-contain sm:h-[22px] md:h-[32px] lg:h-[30px] xl:h-[36px]" />
+                  </div>
+                  <div class="flex min-w-0 items-center justify-center py-1 lg:contents">
+                    <img src="assets/images/brand/za.webp" alt="ZA"
+                      class="about-clients-za-img h-[26px] w-auto max-w-full shrink-0 object-contain sm:h-[24px] md:h-[36px] lg:h-[40px] xl:h-[42px]" />
+                  </div>
+                </div>
+                <div
+                  class="about-clients-loreal-trio max-lg:contents lg:relative lg:z-[1] lg:col-span-1 lg:flex lg:min-w-0 lg:flex-nowrap lg:items-center lg:justify-center lg:gap-x-5 lg:overflow-visible lg:-mx-5 xl:gap-x-0 2xl:gap-x-12">
+                  <div class="flex min-w-0 items-center justify-center py-1 lg:contents">
+                    <img src="assets/images/brand/loreal.webp" alt="Loreal"
+                      class="mx-auto h-[13px] w-auto max-w-full shrink-0 object-contain sm:h-[12px] md:h-[16px] lg:mx-6 lg:h-[17px] xl:mx-7 xl:h-[18px]" />
+                  </div>
+                  <div class="flex min-w-0 items-center justify-center py-1 lg:contents">
+                    <img src="assets/images/brand/phiklash.webp" alt="Phiklash"
+                      class="mx-auto h-[18px] w-auto max-w-full shrink-0 object-contain sm:h-[18px] md:h-[23px] lg:h-[23px] xl:h-[24px] xl:mr-3 2xl:mr-0" />
+                  </div>
+                  <div class="flex min-w-0 items-center justify-center py-1 lg:contents">
+                    <img src="assets/images/brand/klairs.webp" alt="Klairs"
+                      class="mx-auto h-[20px] w-auto max-w-full shrink-0 object-contain sm:h-[20px] md:h-[31px] lg:h-[32px] xl:h-[34px]" />
+                  </div>
+                </div>
+                <div
+                  class="about-clients-brand-row2-wrap max-[519px]:contents lg:contents">
+                  <div
+                    class="about-clients-jollibee-cell col-span-1 row-span-1 flex min-w-0 items-center justify-center self-center max-[519px]:col-start-4 max-[519px]:row-start-2 max-[519px]:row-span-2 max-[519px]:z-[1] max-[519px]:mx-0 max-[519px]:justify-center max-lg:mx-auto max-lg:mr-0 lg:col-span-2 lg:row-span-2 lg:mr-8 lg:justify-end lg:justify-self-auto lg:pr-0">
+                    <img src="assets/images/brand/jollibee.webp" alt="Jollibee"
+                      class="h-[2.75rem] w-auto max-w-full object-contain max-lg:max-h-[3.25rem] sm:h-[2.875rem] md:h-[4rem] md:max-w-[min(100%,5.5rem)] lg:h-[5.375rem] lg:max-w-[min(100%,9.875rem)] xl:h-[5.75rem] xl:max-w-[min(100%,10.5rem)]" />
+                  </div>
+
+                  <div
+                    class="about-clients-brand-slot about-clients-brand-slot--1 flex min-w-0 justify-center max-[519px]:col-start-1 max-[519px]:row-start-3 md:items-center">
+                    <img src="assets/images/brand/banilaco.webp" alt="Banila Co"
+                      class="h-[22px] w-auto max-w-full object-contain sm:h-[22px] md:h-[28px] lg:h-[29px] xl:h-[31px]" />
+                  </div>
+                  <div
+                    class="about-clients-brand-slot about-clients-brand-slot--2 flex min-w-0 justify-center max-[519px]:col-start-2 max-[519px]:row-start-3 md:items-center">
+                    <img src="assets/images/brand/babe.webp" alt="Babe"
+                      class="h-[24px] w-auto max-w-full object-contain sm:h-[24px] md:h-[31px] lg:h-[32px] xl:h-[34px]" />
+                  </div>
+                  <div
+                    class="about-clients-brand-slot about-clients-brand-slot--3 flex min-w-0 justify-center max-[519px]:col-start-3 max-[519px]:row-start-2 md:items-center">
+                    <img src="assets/images/brand/aromatica.webp" alt="Aromatica"
+                      class="h-[18px] w-auto max-w-full object-contain sm:h-[18px] md:h-[25px] lg:h-[25px] xl:h-[27px]" />
+                  </div>
+                  <div
+                    class="about-clients-brand-slot about-clients-brand-slot--4 flex min-w-0 justify-center max-[519px]:col-start-3 max-[519px]:row-start-3 md:items-center">
+                    <img src="assets/images/brand/anessa.webp" alt="Anessa"
+                      class="h-[22px] w-auto max-w-full object-contain sm:h-[22px] md:h-[29px] lg:h-[29px] xl:h-[31px]" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- row 5 -->
+              <div class="grid grid-cols-4 items-center gap-y-2 sm:grid-cols-4 sm:gap-y-2 lg:gap-y-2 translate-y-0 md:-translate-y-4">
+                <div class="flex min-w-0 justify-end">
+                  <img src="assets/images/brand/enchanteur.webp" alt="Enchanteur"
+                    class="h-[36px] w-auto max-w-full object-contain sm:h-[40px] md:h-[42px] lg:h-[45px] xl:h-[48px]" />
+                </div>
+                <div class="flex min-w-0 justify-center sm:justify-end">
+                  <img src="assets/images/brand/dove.webp" alt="Dove"
+                    class="h-[36px] w-auto max-w-full object-contain sm:h-[38px] md:h-[40px] lg:h-[43px] xl:h-[68px]" />
+                </div>
+                <div class="flex min-w-0 justify-center">
+                  <img src="assets/images/brand/garnier.webp" alt="Garnier"
+                    class="h-[34px] w-auto max-w-full object-contain sm:h-[36px] md:h-[38px] lg:h-[42px] xl:h-[45px]" />
+                </div>
+                <div class="flex min-w-0 justify-center sm:justify-start">
+                  <img src="assets/images/brand/cetaphil.webp" alt="Cetaphil"
+                    class="h-[36px] w-auto max-w-full object-contain sm:h-[38px] md:h-[40px] lg:h-[43px] xl:h-[46px]" />
+                </div>
+              </div>
+            </div>
+           <!-- ===== TITLE ===== -->
+    
+            <!-- ===== MEDIA PARTNER ===== -->
+            <div
+              class="max-lg:grid max-lg:grid-cols-5 max-lg:items-center max-lg:justify-items-center max-lg:gap-x-3 lg:flex lg:flex-col sm:gap-y-0 gap-y-2  lg:pt-8 pt-0">
+              <!-- row 1 — max-lg:contents để 6 ô nhảy vào lưới 5 cột cha (cùng hàng 2) → mobile tối đa ~3 hàng cho cả 14 logo -->
+              <div
+                class="max-lg:contents lg:grid lg:grid-cols-6 lg:items-center lg:gap-x-4 lg:gap-y-4">
+                <div class="flex min-w-0 justify-start">
+                  <img src="assets/images/brand/dantri-media.webp" alt="Dantri"
+                    class="h-[28px] w-auto max-w-full object-contain sm:h-[30px] md:h-[32px] lg:h-[35px] xl:h-[38px]" />
+                </div>
+                <div class="flex min-w-0 justify-center">
+                  <img src="assets/images/brand/vietnamnet.webp" alt="Vietnamnet"
+                    class="h-[36px] w-auto max-w-full object-contain sm:h-[40px] md:h-[42px] lg:h-[45px] xl:h-[48px]" />
+                </div>
+                <div class="flex min-w-0 justify-center">
+                  <img src="assets/images/brand/thanhnien.webp" alt="Thanh Nien"
+                    class="h-[28px] w-auto max-w-full object-contain sm:h-[30px] md:h-[32px] lg:h-[35px] xl:h-[38px]" />
+                </div>
+                <div class="flex min-w-0 justify-center">
+                  <img src="assets/images/brand/zing.webp" alt="Zing"
+                    class="h-[36px] w-auto max-w-full object-contain sm:h-[40px] md:h-[42px] lg:h-[45px] xl:h-[48px]" />
+                </div>
+                <div class="flex min-w-0 justify-center">
+                  <img src="assets/images/brand/nguoilaodong.webp" alt="Nguoi Lao Dong"
+                    class="h-[30px] w-auto max-w-full object-contain sm:h-[32px] md:h-[34px] lg:h-[27px] xl:h-[29px]" />
+                </div>
+                <div class="flex min-w-0 justify-center">
+                  <img src="assets/images/brand/afamily.webp" alt="Afamily"
+                    class="h-[40px] w-auto max-w-full object-contain sm:h-[44px] md:h-[48px] lg:h-[53px] xl:h-[58px]" />
+                </div>
+              </div>
+
+              <!-- row 2 -->
+              <div
+                class="max-lg:contents  lg:grid lg:grid-cols-8 lg:items-center lg:gap-x-4 lg:gap-y-4">
+                <div class="flex min-w-0 justify-center">
+                  <img src="assets/images/brand/anninhthudo.webp" alt="An Ninh Thu Do"
+                    class="h-[38px] w-auto max-w-full object-contain sm:h-[40px] md:h-[44px] lg:h-[48px] xl:h-[52px]" />
+                </div>
+                <div class="flex min-w-0 justify-center">
+                  <img src="assets/images/brand/24h.webp" alt="24h"
+                    class="h-[34px] w-auto max-w-full object-contain sm:h-[36px] md:h-[40px] lg:h-[34px] xl:h-[38px]" />
+                </div>
+                <div class="flex min-w-0 justify-center">
+                  <img src="assets/images/brand/tuoitre.webp" alt="Tuổi Trẻ"
+                    class="h-[34px] w-auto max-w-full object-contain sm:h-[36px] md:h-[40px] lg:h-[34px] xl:h-[38px]" />
+                </div>
+                <div class="flex min-w-0 justify-center">
+                  <img src="assets/images/brand/kenh14.webp" alt="Kenh14"
+                    class="h-[38px] w-auto max-w-full object-contain sm:h-[42px] md:h-[45px] lg:h-[49px] xl:h-[52px]" />
+                </div>
+                <div class="flex min-w-0 justify-center max-lg:col-span-2">
+                  <img src="assets/images/brand/vnexpress.webp" alt="VNExpress"
+                    class="h-[24px] w-auto max-w-full object-contain sm:h-[26px] md:h-[27px] lg:h-[29px] xl:h-[31px]" />
+                </div>
+                <div class="flex min-w-0 justify-center">
+                  <img src="assets/images/brand/yan.webp" alt="YAN"
+                    class="h-[30px] w-auto max-w-full object-contain sm:h-[32px] md:h-[34px] lg:h-[37px] xl:h-[40px]" />
+                </div>
+                <div class="flex min-w-0 justify-center">
+                  <img src="assets/images/brand/2sao.webp" alt="2Sao"
+                    class="h-[34px] w-auto max-w-full object-contain sm:h-[36px] md:h-[40px] lg:h-[44px] xl:h-[48px]" />
+                </div>
+                <div class="flex min-w-0 justify-center">
+                  <img src="assets/images/brand/ngoisao-media.webp" alt="Ngoi Sao"
+                    class="h-[28px] w-auto max-w-full object-contain sm:h-[30px] md:h-[32px] lg:h-[35px] xl:h-[38px]" />
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
 			</main>
 		</div>
 		<!-- Modals (ngoài header để z-index / overlay đúng) -->
 		
 
 		<!-- Footer -->
-        <footer class="relative overflow-hidden border-t border-[#ff5a2a] bg-[var(--mg-bar-bg)] text-[#ff5a2a]">
+        <footer class="relative overflow-hidden border-t border-[#ff5a2a] bg-[var(--mg-bar-bg)] text-[var(--mg-primary)]">
   <div class="mx-auto container py-6 sm:py-8 lg:py-10">
     <div
       class="flex flex-col items-stretch gap-8 md:gap-10 xl:flex-row xl:flex-nowrap xl:items-center xl:justify-between xl:gap-6 2xl:gap-8">
