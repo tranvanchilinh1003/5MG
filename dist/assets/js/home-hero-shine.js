@@ -26,7 +26,14 @@
     function end() {
       if (done) return;
       done = true;
-      cb();
+      if (typeof img.decode === 'function') {
+        img
+          .decode()
+          .then(cb)
+          .catch(cb);
+      } else {
+        cb();
+      }
     }
     img.onload = end;
     img.onerror = end;
@@ -34,10 +41,11 @@
     if (img.complete && img.naturalWidth > 0) end();
   }
 
-  /** Góc home/join: light_white.webp; trang service: light_bg.webp */
+  /** Góc home + Join us About: light_white.webp; trang service: light_bg.webp */
   function ensureShineArtReadyClass() {
     var b = document.body;
     if (!b) return;
+    if (b.classList.contains('mg-header-shine-art--ready')) return;
     var needWhite =
       (b.classList.contains('page-home') &&
         !b.classList.contains('page-service') &&

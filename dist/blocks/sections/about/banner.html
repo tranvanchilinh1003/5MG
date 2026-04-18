@@ -123,7 +123,7 @@
 
     </div>
     <!-- Join us: cùng nền #efefef với lưới Our clients phía trên; panel mở ra vẫn bg-mg-hero -->
-    <div id="about-join-us-block" class="w-full min-w-0 bg-white text-black" x-data="{
+    <div id="about-join-us-block" class="relative w-full min-w-0 bg-white text-black" x-data="{
         joinOpen: false,
         joinInView: false,
         init() {
@@ -141,6 +141,8 @@
           io.observe(el);
         }
       }">
+      <img src="assets/images/light_white.webp" alt="" width="2" height="2" decoding="async" fetchpriority="high"
+        class="pointer-events-none absolute -left-[9999px] top-0 h-px w-px opacity-0" aria-hidden="true" />
       <div class="container mx-auto px-4 py-2 sm:px-6 md:px-0">
         <div class="isolate flex w-full min-w-0 flex-col items-stretch">
           <div class="relative z-20 flex shrink-0 flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-4">
@@ -201,9 +203,9 @@
         <div class="about-join-us-shine-clip pointer-events-none absolute inset-0 z-0 overflow-hidden"
           aria-hidden="true">
           <div class="mg-corner-shine mg-corner-shine--join-contact z-0"
-            :class="{ 'is-visible': joinOpen && joinInView }" aria-hidden="true"></div>
+            :class="{ 'is-visible': joinOpen }" aria-hidden="true"></div>
         </div>
-        <!-- Nội dung Join us — include trong #about-join-us-panel; vệt góc trong our-client (.about-join-us-shine-clip) -->
+        <!-- Nội dung Join us — include trong #about-join-us-panel; vệt sáng = light_white.webp (preload + home-hero-shine.js), không dùng light_bg -->
 <div
     class="about-join-us-surface about-join-us-surface--on-mg-hero relative z-[1] flex flex-col overflow-visible rounded-none py-12 sm:py-24">
     <div class="relative z-[2] mx-auto container text-black">
@@ -325,7 +327,8 @@
             </svg>
 
             <div class="home-hero-fold-star-stage">
-                <img class="home-hero-fold-star" src="assets/images/star.png" alt="" decoding="async" />
+                <img class="home-hero-fold-star" src="assets/images/star.png" alt="" decoding="async" loading="eager"
+                    fetchpriority="low" />
             </div>
 
             <div class="home-hero-fold-layers-wrap">

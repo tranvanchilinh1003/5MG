@@ -1145,6 +1145,10 @@ body:not(.page-home) header .header-desktop-menu .home-hero-nav-is-muted:hover {
   inset: 0px;
 }
 
+.-left-\[9999px\] {
+  left: -9999px;
+}
+
 .bottom-8 {
   bottom: 2rem;
 }
@@ -1387,6 +1391,10 @@ body:not(.page-home) header .header-desktop-menu .home-hero-nav-is-muted:hover {
   height: auto;
 }
 
+.h-px {
+  height: 1px;
+}
+
 .min-h-0 {
   min-height: 0px;
 }
@@ -1434,6 +1442,10 @@ body:not(.page-home) header .header-desktop-menu .home-hero-nav-is-muted:hover {
 
 .w-full {
   width: 100%;
+}
+
+.w-px {
+  width: 1px;
 }
 
 .min-w-0 {

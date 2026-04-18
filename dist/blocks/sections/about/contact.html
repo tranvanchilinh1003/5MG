@@ -1,4 +1,4 @@
-<!-- Nội dung Join us — include trong #about-join-us-panel; vệt góc trong our-client (.about-join-us-shine-clip) -->
+<!-- Nội dung Join us — include trong #about-join-us-panel; vệt sáng = light_white.webp (preload + home-hero-shine.js), không dùng light_bg -->
 <div
     class="about-join-us-surface about-join-us-surface--on-mg-hero relative z-[1] flex flex-col overflow-visible rounded-none py-12 sm:py-24">
     <div class="relative z-[2] mx-auto container text-black">
@@ -120,7 +120,8 @@
             </svg>
 
             <div class="home-hero-fold-star-stage">
-                <img class="home-hero-fold-star" src="assets/images/star.png" alt="" decoding="async" />
+                <img class="home-hero-fold-star" src="assets/images/star.png" alt="" decoding="async" loading="eager"
+                    fetchpriority="low" />
             </div>
 
             <div class="home-hero-fold-layers-wrap">
