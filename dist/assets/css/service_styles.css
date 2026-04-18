@@ -1030,6 +1030,7 @@ body:has(.jmodal:not(.hidden)) header.header {
 /* Menu desktop — nền sáng (trang không phải home) */
 
 body:not(.page-home) header .header-desktop-menu ul.home-hero-nav-list {
+  flex-wrap: nowrap;
   color: rgb(17 24 39 / 0.92);
   justify-content: flex-end;
   max-width: none;
@@ -1037,20 +1038,60 @@ body:not(.page-home) header .header-desktop-menu ul.home-hero-nav-list {
   font-size: 0.9375rem;
   -moz-column-gap: 1.25rem;
        column-gap: 1.25rem;
-  row-gap: 0.25rem;
+  row-gap: 0;
   letter-spacing: -0.02em;
 }
 
-@media (max-width: 1023px) {
+/* Phone: menu căng space-between */
+
+@media (max-width: 767px) {
+  body:not(.page-home) header .header-desktop-menu,
+        body:not(.page-home) header .header-desktop-nav {
+    width: 100%;
+  }
+
+  body:not(.page-home) header .header-desktop-nav {
+    justify-content: flex-start;
+  }
+
   body:not(.page-home) header .header-desktop-menu ul.home-hero-nav-list {
-    -moz-column-gap: clamp(1.35rem, 7vw, 2.75rem);
-         column-gap: clamp(1.35rem, 7vw, 2.75rem);
-    row-gap: 0.65rem;
+    flex: 1 1 auto;
+    flex-wrap: nowrap;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    justify-content: space-between;
+    -moz-column-gap: 0.25rem;
+         column-gap: 0.25rem;
+    row-gap: 0;
   }
 
   body:not(.page-home) header .header-desktop-menu .home-hero-nav-list a {
     padding: 0.45rem 0.7rem;
     margin: -0.45rem -0.7rem;
+  }
+}
+
+/* Tablet: căn giữa như cũ */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  body:not(.page-home) header .header-desktop-menu,
+        body:not(.page-home) header .header-desktop-nav {
+    width: 100%;
+  }
+
+  body:not(.page-home) header .header-desktop-nav {
+    justify-content: center;
+  }
+
+  body:not(.page-home) header .header-desktop-menu ul.home-hero-nav-list {
+    flex: none;
+    width: auto;
+    max-width: none;
+    justify-content: center;
+    -moz-column-gap: clamp(1rem, 2.5vw, 2rem);
+         column-gap: clamp(1rem, 2.5vw, 2rem);
+    row-gap: 0;
   }
 }
 
@@ -3486,37 +3527,63 @@ body:not(.mg-header-corner-shine) .mg-corner-shine--top {
 /* Mobile + tablet (<lg): logo + menu 2 cột; inset ngang để không dính mép viewport */
 
 @media (max-width: 1023px) {
-  .page-home .site-header-body > div > .header-bar {
-    padding-left: clamp(0.75rem, 3.5vw, 1.5rem);
-    padding-right: clamp(0.75rem, 3.5vw, 1.5rem);
-    -moz-column-gap: clamp(0.5rem, 2vw, 1rem);
-         column-gap: clamp(0.5rem, 2vw, 1rem);
-    box-sizing: border-box;
-  }
-
   .page-home .header-bar {
     grid-template-columns: minmax(0, auto) minmax(0, 1fr);
   }
+}
 
+/* Chỉ phone: menu căng space-between — tablet/lg dùng center như cũ */
+
+@media (max-width: 767px) {
+  .page-home .header-desktop-menu {
+    justify-self: stretch;
+    min-width: 0;
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .page-home .site-header .header-desktop-nav {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .page-home .site-header .header-desktop-menu ul.home-hero-nav-list {
+    flex-wrap: nowrap;
+    row-gap: 0;
+    width: 100%;
+    max-width: none;
+    justify-content: space-between;
+    -moz-column-gap: 0.25rem;
+         column-gap: 0.25rem;
+    font-size: clamp(0.75rem, 3.2vw, 0.875rem);
+  }
+
+  .page-home .site-header .header-desktop-menu .home-hero-nav-list a {
+    padding: 0.35rem 0.45rem;
+    margin: -0.35rem -0.45rem;
+  }
+}
+
+/* Tablet 768–1023: căn giữa menu + cỡ chữ */
+
+@media (min-width: 768px) and (max-width: 1023px) {
   .page-home .header-desktop-menu {
     justify-self: center;
-    min-width: 0;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .page-home .site-header .header-desktop-nav {
     width: 100%;
     justify-content: center;
   }
 
   .page-home .site-header .header-desktop-menu ul.home-hero-nav-list {
+    flex: none;
+    flex-wrap: nowrap;
+    width: auto;
     max-width: none;
     justify-content: center;
-    font-size: clamp(0.8125rem, 3.2vw, 0.9375rem);
-  }
-}
-
-/* Tablet 768–1023: một hàng menu + khoảng cách vừa — tránh wrap 2 dòng + gap 4rem từ rule md “đè” nhìn lệch */
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .page-home .site-header .header-desktop-menu ul.home-hero-nav-list {
-    flex-wrap: nowrap;
     -moz-column-gap: clamp(1rem, 2.5vw, 1.65rem);
          column-gap: clamp(1rem, 2.5vw, 1.65rem);
     font-size: clamp(0.875rem, 1.45vw, 1rem);
@@ -3643,7 +3710,7 @@ body.page-home.page-service.mg-header-corner-shine .mg-corner-shine--top {
   isolation: isolate;
 }
 
-/* Desktop 3 cột: menu cột giữa — căn giữa (mobile/tablet cũng center ở khối max-width 1023) */
+/* Desktop lg+: menu cột giữa — căn giữa */
 
 @media (min-width: 1024px) {
   .page-home .header-desktop-menu {
@@ -3694,9 +3761,10 @@ body.page-home.page-service.mg-header-corner-shine .mg-corner-shine--top {
   }
 }
 
-/* Trùng typography / màu với .home-hero-nav-list trên hero */
+/* Trùng typography / màu với .home-hero-nav-list trên hero — header: luôn một hàng (không wrap như hero) */
 
 .page-home .site-header .header-desktop-menu ul.home-hero-nav-list {
+  flex-wrap: nowrap;
   color: var(--mg-text-on-gradient);
   justify-content: center;
   max-width: 22rem;
@@ -3704,7 +3772,7 @@ body.page-home.page-service.mg-header-corner-shine .mg-corner-shine--top {
   font-size: clamp(1rem, 3.8vw, 1.25rem);
   -moz-column-gap: clamp(1rem, 4vw, 2rem);
        column-gap: clamp(1rem, 4vw, 2rem);
-  row-gap: 0.75rem;
+  row-gap: 0;
   letter-spacing: -0.02em;
   line-height: 1.2;
 }
@@ -3732,22 +3800,6 @@ body.page-home.page-service.mg-header-corner-shine .mg-corner-shine--top {
     -moz-column-gap: 6rem;
          column-gap: 6rem;
     font-size: var(--mg-text-nav-lg);
-  }
-}
-
-/* ≤1023px: gap rộng theo container (đặt sau min-width* để override 768/480/base) */
-
-@media (max-width: 1023px) {
-  .page-home .site-header .header-desktop-menu ul.home-hero-nav-list {
-    -moz-column-gap: clamp(1.5rem, 8vw, 3.25rem);
-         column-gap: clamp(1.5rem, 8vw, 3.25rem);
-    row-gap: 0.65rem;
-    justify-content: center;
-  }
-
-  .page-home .site-header .header-desktop-menu .home-hero-nav-list a {
-    padding: 0.45rem 0.7rem;
-    margin: -0.45rem -0.7rem;
   }
 }
 
@@ -5404,7 +5456,7 @@ button.service-flower-petal {
     max-width: 100%;
     font-size: 1.125rem;
     font-weight: 900;
-    line-height: 1.12;
+    line-height: 1.14;
     letter-spacing: -0.04em;
     text-transform: uppercase;
     text-align: left;
@@ -5458,6 +5510,12 @@ button.service-flower-petal {
 
   .service-section__mobile-service-card__line--spaced {
     margin-top: 0.35rem;
+  }
+
+  /* Dòng __line (vd. 1. Cung cấp…): nhỏ hơn body 14px → ~13.68px */
+
+  .service-section__mobile-service-card__line {
+    font-size: 0.855rem;
   }
 
   .service-section__mobile-service-card__sub {
@@ -6465,6 +6523,29 @@ button.service-flower-petal {
 
 body:not(.page-home) .site-header {
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+/* Phone: menu full ô bar — bỏ giới hạn container + căng theo cột lưới (space-between có chỗ) */
+
+@media (max-width: 767px) {
+  .site-header .header-bar .header-desktop-menu {
+    justify-self: stretch;
+    max-width: none;
+    width: 100%;
+    min-width: 0;
+    margin-inline: 0;
+    padding-inline: 0;
+  }
+
+  .site-header .header-desktop-nav {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .site-header .header-desktop-menu ul.home-hero-nav-list {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
 }
 
 /* Các thành phần Blaze Slider dùng chung all trang */
