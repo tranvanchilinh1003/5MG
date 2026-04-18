@@ -4249,6 +4249,19 @@ body.page-service.mg-header-corner-shine .mg-corner-shine--top::after {
   filter: none;
 }
 
+.about-hero .home-hero-fold-layers {
+  position: absolute;
+  inset: 0;
+  clip-path: url("#home-hero-fold-clip");
+  overflow: hidden;
+}
+
+.about-hero .home-hero-fold-layers-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 /* About: góc fold thanh đen — nền trắng thật (SVG defs 0×0 không tô được màu) */
 
 .about-hero .home-hero-bar .home-hero-fold--about-white .home-hero-fold-layers {
@@ -5429,7 +5442,7 @@ body.page-service #service-page .service-section__title.mg-text-gradient {
 
 @media (min-width: 1024px) {
   .service-flower-label-slot--tl {
-    left: -55px;
+    left: -50px;
   }
 
   .service-flower-label-slot--bl {
