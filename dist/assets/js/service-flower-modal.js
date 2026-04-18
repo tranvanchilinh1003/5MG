@@ -81,9 +81,8 @@
       wrapper.innerHTML = files.map((f, i) => slideHtml(f, i === 0)).join('');
 
       const multi = files.length > 1;
-      /* rewind: từ slide 0 “prev” → cuối sẽ animate translate một mạch qua mọi slide (như chạy 1 vòng).
-         loop (≥3 ảnh): nhảy cạnh ngắn qua slide clone — cuối ↔ đầu một bước. 2 ảnh: rewind vẫn chỉ cách 1 slide. */
-      const useLoop = multi && files.length >= 3;
+      /* loop với đúng 3 slide hay lỗi Swiper (sau 1 vòng chỉ còn 2 slide). Loop chỉ từ ≥4; 2–3 slide dùng rewind. */
+      const useLoop = multi && files.length >= 4;
       const useRewind = multi && !useLoop;
       if (prevBtn) prevBtn.classList.toggle('hidden', !multi);
       if (nextBtn) nextBtn.classList.toggle('hidden', !multi);
