@@ -7096,6 +7096,14 @@ body:not(.page-home) .site-header {
  * Artboard cố định — scale cả layout (một bản XL trong .campaign-stage).
  * --campaign-artboard-w/h: bề ngang design (1440) và chiều cao dự trữ (px).
  * Chiều cao > 900 vì khối OUR + 4 hàng BXH cao hơn 900px; chỉnh --campaign-artboard-h nếu bị cắt / dư khoảng.
+ *
+ * Safari / MacBook:
+ * - Mặc định scale theo 100vw (− padding gần đúng) → chạy được Safari 11.1+ (có min() trong calc).
+ * - Chỉ khi @supports (container-type + 1cqw) mới dùng 100cqw → Safari 16+ / macOS Ventura+ chính xác theo khối cha.
+ * - margin-left/right trước margin-inline: Safari < 14.1 bỏ qua margin-inline.
+ *
+ * MacBook Pro 15" (Retina, chế độ hiển thị mặc định): ~1440×900 CSS px — trùng bề ngang design 1440,
+ * scale gần 1; chiều cao khả dụng thực tế ~780–860px (trừ thanh Safari), nên có media laptop thấp bên dưới.
  */
 
 .campaign-stage-wrap {
@@ -7106,6 +7114,8 @@ body:not(.page-home) .site-header {
   position: relative;
   width: 100%;
   max-width: calc(var(--campaign-artboard-w) * 1px);
+  margin-left: auto;
+  margin-right: auto;
   margin-inline: auto;
   height: 0;
   padding-bottom: calc(var(--campaign-artboard-h) / var(--campaign-artboard-w) * 100%);
@@ -7119,13 +7129,28 @@ body:not(.page-home) .site-header {
   width: calc(var(--campaign-artboard-w) * 1px);
   box-sizing: border-box;
   transform-origin: top center;
-  transform: translateX(-50%)
-    scale(min(1, calc(100cqw / (var(--campaign-artboard-w) * 1px))));
+  /* Nền: viewport — mọi Safari/Mac không cần container queries */
+  transform: translateX(-50%) scale(min(1, calc((100vw - 2rem) / var(--campaign-artboard-w, 1440))));
+}
+
+@media (min-width: 768px) {
+  .campaign-stage {
+    transform: translateX(-50%) scale(min(1, calc((100vw - 3rem) / var(--campaign-artboard-w, 1440))));
+  }
+}
+
+/* Nâng cấp: đúng theo chiều rộng container (Safari 16+ khi cả hai điều kiện đúng) */
+
+@supports (container-type: inline-size) and (width: 1cqw) {
+  .campaign-stage {
+    transform: translateX(-50%)
+      scale(min(1, calc(100cqw / (var(--campaign-artboard-w) * 1px))));
+  }
 }
 
 /* Thẻ BXH: hover scale — tâm ổn định, vùng hit bám nội dung.
    Không dùng isolation mặc định (mỗi thẻ 1 context) → hover một thẻ dễ khiến láng giềng repaint/đổi tone chữ.
-   backface-visibility + smoothing giảm nhấp nháy khi láng giềng có transform. */
+   backface-visibility giảm nhấp nháy khi láng giềng có transform. */
 
 .campaign-stage .bxh-card {
   transform-origin: center center;
@@ -7134,26 +7159,19 @@ body:not(.page-home) .site-header {
   max-width: 100%;
   box-sizing: border-box;
   backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Không dùng -webkit-font-smoothing ở đây: Safari + transform hay bị chữ mờ/nhòe;
+     Firefox chỉ đọc -moz-osx-font-smoothing, Safari không dùng prefix đó. */
 }
 
 .campaign-stage .bxh-card:hover {
   isolation: isolate;
 }
 
-@supports not (container-type: inline-size) {
-  .campaign-stage {
-    transform: translateX(-50%) scale(min(1, calc((100vw - 2rem) / var(--campaign-artboard-w, 1440))));
-  }
-}
+/* Laptop màn thấp (MacBook Pro 15" + Safari toàn màn hình, v.v.): tăng tỷ lệ chiều cao khung artboard để BXH ít bị cắt */
 
-@media (min-width: 768px) {
-  @supports not (container-type: inline-size) {
-    .campaign-stage {
-      transform: translateX(-50%) scale(min(1, calc((100vw - 3rem) / var(--campaign-artboard-w, 1440))));
-    }
+@media (min-width: 1100px) and (max-height: 940px) {
+  .campaign-stage-wrap {
+    --campaign-artboard-h: 720;
   }
 }
 
