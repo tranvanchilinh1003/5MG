@@ -4030,6 +4030,12 @@ body.page-home.page-service.mg-header-corner-shine .mg-corner-shine--top {
   transform: translateY(0px);
 }
 
+/* Lấp khe 1px hero cam ↔ bar trắng; cạnh dưới khi inspect .home-hero-fold là khung DevTools (box chữ nhật), không phải border CSS */
+
+.about-hero .home-hero-bar {
+  margin-top: -1px;
+}
+
 /* Rất nhỏ: fold + sao gọn hơn, bớt “lõm” to (chỉ hero bar) */
 
 @media (max-width: 479px) {
@@ -5210,6 +5216,15 @@ body.page-home.page-service.mg-header-corner-shine .mg-corner-shine--top {
 
 body.page-service #service-page {
   scroll-margin-top: 1rem;
+}
+
+/*
+ * Hai <section> liền nhau: #service-posters chỉ có nền trong lớp absolute → mép ghép lộ <main> (gradient tối)
+ * trông như vạch đen khi inspect/resize. Nền hero trên thẻ section + margin âm lấp khe 1px.
+ */
+
+body.page-service #service-posters {
+  margin-top: -1px;
 }
 
 .service-section__title {
