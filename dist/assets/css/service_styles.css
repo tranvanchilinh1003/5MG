@@ -5437,18 +5437,42 @@ button.service-flower-petal {
   }
 
   .service-section__mobile-service-card {
-    border-radius: 14px;
+    position: relative;
+    isolation: isolate;
+    border-radius: 16px;
     padding: 1.125rem 1.25rem 1.2rem;
     background: linear-gradient(
       165deg,
-      rgba(255, 254, 252, 0.98) 0%,
-      rgba(255, 248, 242, 0.94) 48%,
-      rgba(255, 241, 234, 0.9) 100%
+      rgba(255, 255, 255, 0.58) 0%,
+      rgba(255, 242, 232, 0.52) 46%,
+      rgba(255, 224, 208, 0.46) 100%
     );
-    border: 1px solid rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.28);
     box-shadow:
-      0 1px 0 rgba(255, 255, 255, 0.65) inset,
-      0 10px 32px rgba(40, 18, 10, 0.14);
+      inset 0 1px 0 rgba(255, 255, 255, 0.25),
+      0 14px 36px rgba(0, 0, 0, 0.2);
+  }
+
+  .service-section__mobile-service-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    border-radius: inherit;
+    background: linear-gradient(
+      122deg,
+      rgba(255, 255, 255, 0.48) 0%,
+      rgba(255, 255, 255, 0.14) 32%,
+      transparent 52%
+    );
+    pointer-events: none;
+  }
+
+  .service-section__mobile-service-card > * {
+    position: relative;
+    z-index: 1;
   }
 
   .service-section__mobile-service-card__title {
@@ -5462,6 +5486,7 @@ button.service-flower-petal {
     text-align: left;
     text-wrap: balance;
     color: var(--mg-primary);
+    text-shadow: 0 2px 8px rgba(255, 80, 40, 0.28);
   }
 
   .service-section__mobile-service-card__rule {
@@ -5482,7 +5507,7 @@ button.service-flower-petal {
     line-height: 1.45;
     letter-spacing: 0.01em;
     text-transform: uppercase;
-    color: var(--mg-page-bg);
+    color: rgba(0, 0, 0, 0.88);
   }
 
   .service-section__mobile-service-card__body p {
@@ -5495,7 +5520,7 @@ button.service-flower-petal {
   .service-section__mobile-service-card__lead,
   .service-section__mobile-service-card__line {
     font-weight: 700;
-    color: var(--mg-page-bg);
+    color: rgba(0, 0, 0, 0.88);
   }
 
   .service-section__mobile-service-card__lead {
@@ -5524,7 +5549,7 @@ button.service-flower-petal {
     line-height: 1.4;
     text-transform: none;
     letter-spacing: 0.02em;
-    color: var(--mg-page-bg);
+    color: rgba(0, 0, 0, 0.82);
   }
 
   .service-section__mobile-service-card__sub--wide {
@@ -5537,7 +5562,7 @@ button.service-flower-petal {
     line-height: 1.4;
     text-transform: none;
     letter-spacing: 0.015em;
-    color: var(--mg-page-bg);
+    color: rgba(0, 0, 0, 0.82);
   }
 }
 
@@ -6634,6 +6659,26 @@ body:not(.page-home) .site-header {
 }
 
 /* Khối clients + join panel (trang About) — tách khỏi inline <style> our-client.html */
+
+/* Lấp khe 1px: nền gradient của <main> không lọt giữa banner About và section clients */
+
+.page-about #about-our-clients {
+  margin-top: -1px;
+  border: 0;
+  outline: none;
+  /* Trùng với banner (home-hero-bar): trắng đục */
+  background-color: #ffffff;
+  background-image: none;
+  /*
+   * .about-hero có z-50 — shadow/filter của fold (overflow-y-visible) vẽ ĐÈ lên sibling phía dưới
+   * khi #about-our-clients để z-index: auto → lộ sắc tối/cam ở mép (hay thấy bên phải).
+   */
+  z-index: 55;
+}
+
+.page-about #about-our-clients > .reveal-on-scroll {
+  background-color: #ffffff;
+}
 
 #about-our-clients [x-cloak],
 #about-join-us-panel[x-cloak] {
